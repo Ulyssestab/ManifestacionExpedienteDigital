@@ -1,0 +1,546 @@
+C:\Users\cesar.tabares\source\repos\ManifestacionEnLinea\ManifestacionEnLinea\bin\ManifestacionEnLinea.dll.config
+C:\Users\cesar.tabares\source\repos\ManifestacionEnLinea\ManifestacionEnLinea\bin\ManifestacionEnLinea.dll
+C:\Users\cesar.tabares\source\repos\ManifestacionEnLinea\ManifestacionEnLinea\bin\ManifestacionEnLinea.pdb
+C:\Users\cesar.tabares\source\repos\ManifestacionEnLinea\ManifestacionEnLinea\bin\roslyn\csc.exe
+C:\Users\cesar.tabares\source\repos\ManifestacionEnLinea\ManifestacionEnLinea\bin\roslyn\csc.exe.config
+C:\Users\cesar.tabares\source\repos\ManifestacionEnLinea\ManifestacionEnLinea\bin\roslyn\csc.rsp
+C:\Users\cesar.tabares\source\repos\ManifestacionEnLinea\ManifestacionEnLinea\bin\roslyn\csi.exe
+C:\Users\cesar.tabares\source\repos\ManifestacionEnLinea\ManifestacionEnLinea\bin\roslyn\csi.rsp
+C:\Users\cesar.tabares\source\repos\ManifestacionEnLinea\ManifestacionEnLinea\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\cesar.tabares\source\repos\ManifestacionEnLinea\ManifestacionEnLinea\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\cesar.tabares\source\repos\ManifestacionEnLinea\ManifestacionEnLinea\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\cesar.tabares\source\repos\ManifestacionEnLinea\ManifestacionEnLinea\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\cesar.tabares\source\repos\ManifestacionEnLinea\ManifestacionEnLinea\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\cesar.tabares\source\repos\ManifestacionEnLinea\ManifestacionEnLinea\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\cesar.tabares\source\repos\ManifestacionEnLinea\ManifestacionEnLinea\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\cesar.tabares\source\repos\ManifestacionEnLinea\ManifestacionEnLinea\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\cesar.tabares\source\repos\ManifestacionEnLinea\ManifestacionEnLinea\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\cesar.tabares\source\repos\ManifestacionEnLinea\ManifestacionEnLinea\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\cesar.tabares\source\repos\ManifestacionEnLinea\ManifestacionEnLinea\bin\roslyn\System.AppContext.dll
+C:\Users\cesar.tabares\source\repos\ManifestacionEnLinea\ManifestacionEnLinea\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\cesar.tabares\source\repos\ManifestacionEnLinea\ManifestacionEnLinea\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\cesar.tabares\source\repos\ManifestacionEnLinea\ManifestacionEnLinea\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\cesar.tabares\source\repos\ManifestacionEnLinea\ManifestacionEnLinea\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\cesar.tabares\source\repos\ManifestacionEnLinea\ManifestacionEnLinea\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\cesar.tabares\source\repos\ManifestacionEnLinea\ManifestacionEnLinea\bin\roslyn\vbc.exe
+C:\Users\cesar.tabares\source\repos\ManifestacionEnLinea\ManifestacionEnLinea\bin\roslyn\vbc.exe.config
+C:\Users\cesar.tabares\source\repos\ManifestacionEnLinea\ManifestacionEnLinea\bin\roslyn\vbc.rsp
+C:\Users\cesar.tabares\source\repos\ManifestacionEnLinea\ManifestacionEnLinea\bin\roslyn\VBCSCompiler.exe
+C:\Users\cesar.tabares\source\repos\ManifestacionEnLinea\ManifestacionEnLinea\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\cesar.tabares\source\repos\ManifestacionEnLinea\ManifestacionEnLinea\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\cesar.tabares\source\repos\ManifestacionEnLinea\ManifestacionEnLinea\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\cesar.tabares\source\repos\ManifestacionEnLinea\ManifestacionEnLinea\obj\Debug\ManifestacionEnLinea.csprojAssemblyReference.cache
+C:\Users\cesar.tabares\source\repos\ManifestacionEnLinea\ManifestacionEnLinea\obj\Debug\ManifestacionEnLinea.csproj.CoreCompileInputs.cache
+C:\Users\cesar.tabares\source\repos\ManifestacionEnLinea\ManifestacionEnLinea\obj\Debug\ManifestacionEnLinea.csproj.CopyComplete
+C:\Users\cesar.tabares\source\repos\ManifestacionEnLinea\ManifestacionEnLinea\obj\Debug\ManifestacionEnLinea.dll
+C:\Users\cesar.tabares\source\repos\ManifestacionEnLinea\ManifestacionEnLinea\obj\Debug\ManifestacionEnLinea.pdb
+C:\Users\cesar.tabares\source\repos\ManifestacionEnLinea\ManifestacionEnLinea\bin\BouncyCastle.Crypto.dll
+C:\Users\cesar.tabares\source\repos\ManifestacionEnLinea\ManifestacionEnLinea\bin\Common.Logging.Core.dll
+C:\Users\cesar.tabares\source\repos\ManifestacionEnLinea\ManifestacionEnLinea\bin\Common.Logging.dll
+C:\Users\cesar.tabares\source\repos\ManifestacionEnLinea\ManifestacionEnLinea\bin\itext.barcodes.dll
+C:\Users\cesar.tabares\source\repos\ManifestacionEnLinea\ManifestacionEnLinea\bin\itext.forms.dll
+C:\Users\cesar.tabares\source\repos\ManifestacionEnLinea\ManifestacionEnLinea\bin\itext.io.dll
+C:\Users\cesar.tabares\source\repos\ManifestacionEnLinea\ManifestacionEnLinea\bin\itext.kernel.dll
+C:\Users\cesar.tabares\source\repos\ManifestacionEnLinea\ManifestacionEnLinea\bin\itext.layout.dll
+C:\Users\cesar.tabares\source\repos\ManifestacionEnLinea\ManifestacionEnLinea\bin\itext.pdfa.dll
+C:\Users\cesar.tabares\source\repos\ManifestacionEnLinea\ManifestacionEnLinea\bin\itext.sign.dll
+C:\Users\cesar.tabares\source\repos\ManifestacionEnLinea\ManifestacionEnLinea\bin\itext.styledxmlparser.dll
+C:\Users\cesar.tabares\source\repos\ManifestacionEnLinea\ManifestacionEnLinea\bin\itext.svg.dll
+C:\Users\cesar.tabares\source\repos\ManifestacionEnLinea\ManifestacionEnLinea\bin\BouncyCastle.Crypto.xml
+C:\Users\cesar.tabares\source\repos\ManifestacionEnLinea\ManifestacionEnLinea\bin\Common.Logging.pdb
+C:\Users\cesar.tabares\source\repos\ManifestacionEnLinea\ManifestacionEnLinea\bin\Common.Logging.xml
+C:\Users\cesar.tabares\source\repos\ManifestacionEnLinea\ManifestacionEnLinea\bin\Common.Logging.Core.pdb
+C:\Users\cesar.tabares\source\repos\ManifestacionEnLinea\ManifestacionEnLinea\bin\Common.Logging.Core.xml
+C:\Users\cesar.tabares\source\repos\ManifestacionEnLinea\ManifestacionEnLinea\bin\itext.barcodes.xml
+C:\Users\cesar.tabares\source\repos\ManifestacionEnLinea\ManifestacionEnLinea\bin\itext.forms.xml
+C:\Users\cesar.tabares\source\repos\ManifestacionEnLinea\ManifestacionEnLinea\bin\itext.io.xml
+C:\Users\cesar.tabares\source\repos\ManifestacionEnLinea\ManifestacionEnLinea\bin\itext.kernel.xml
+C:\Users\cesar.tabares\source\repos\ManifestacionEnLinea\ManifestacionEnLinea\bin\itext.layout.xml
+C:\Users\cesar.tabares\source\repos\ManifestacionEnLinea\ManifestacionEnLinea\bin\itext.pdfa.xml
+C:\Users\cesar.tabares\source\repos\ManifestacionEnLinea\ManifestacionEnLinea\bin\itext.sign.xml
+C:\Users\cesar.tabares\source\repos\ManifestacionEnLinea\ManifestacionEnLinea\bin\itext.styledxmlparser.xml
+C:\Users\cesar.tabares\source\repos\ManifestacionEnLinea\ManifestacionEnLinea\bin\itext.svg.xml
+C:\Users\cesar.tabares\Desktop\ADMINITRADOR APLICACIONES\SISTEMAS SIN SESSION\ManifestacionEnLinea\ManifestacionEnLinea\bin\ManifestacionEnLinea.dll.config
+C:\Users\cesar.tabares\Desktop\ADMINITRADOR APLICACIONES\SISTEMAS SIN SESSION\ManifestacionEnLinea\ManifestacionEnLinea\bin\ManifestacionEnLinea.dll
+C:\Users\cesar.tabares\Desktop\ADMINITRADOR APLICACIONES\SISTEMAS SIN SESSION\ManifestacionEnLinea\ManifestacionEnLinea\bin\ManifestacionEnLinea.pdb
+C:\Users\cesar.tabares\Desktop\ADMINITRADOR APLICACIONES\SISTEMAS SIN SESSION\ManifestacionEnLinea\ManifestacionEnLinea\bin\roslyn\csc.exe
+C:\Users\cesar.tabares\Desktop\ADMINITRADOR APLICACIONES\SISTEMAS SIN SESSION\ManifestacionEnLinea\ManifestacionEnLinea\bin\roslyn\csc.exe.config
+C:\Users\cesar.tabares\Desktop\ADMINITRADOR APLICACIONES\SISTEMAS SIN SESSION\ManifestacionEnLinea\ManifestacionEnLinea\bin\roslyn\csc.rsp
+C:\Users\cesar.tabares\Desktop\ADMINITRADOR APLICACIONES\SISTEMAS SIN SESSION\ManifestacionEnLinea\ManifestacionEnLinea\bin\roslyn\csi.exe
+C:\Users\cesar.tabares\Desktop\ADMINITRADOR APLICACIONES\SISTEMAS SIN SESSION\ManifestacionEnLinea\ManifestacionEnLinea\bin\roslyn\csi.rsp
+C:\Users\cesar.tabares\Desktop\ADMINITRADOR APLICACIONES\SISTEMAS SIN SESSION\ManifestacionEnLinea\ManifestacionEnLinea\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\cesar.tabares\Desktop\ADMINITRADOR APLICACIONES\SISTEMAS SIN SESSION\ManifestacionEnLinea\ManifestacionEnLinea\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\cesar.tabares\Desktop\ADMINITRADOR APLICACIONES\SISTEMAS SIN SESSION\ManifestacionEnLinea\ManifestacionEnLinea\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\cesar.tabares\Desktop\ADMINITRADOR APLICACIONES\SISTEMAS SIN SESSION\ManifestacionEnLinea\ManifestacionEnLinea\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\cesar.tabares\Desktop\ADMINITRADOR APLICACIONES\SISTEMAS SIN SESSION\ManifestacionEnLinea\ManifestacionEnLinea\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\cesar.tabares\Desktop\ADMINITRADOR APLICACIONES\SISTEMAS SIN SESSION\ManifestacionEnLinea\ManifestacionEnLinea\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\cesar.tabares\Desktop\ADMINITRADOR APLICACIONES\SISTEMAS SIN SESSION\ManifestacionEnLinea\ManifestacionEnLinea\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\cesar.tabares\Desktop\ADMINITRADOR APLICACIONES\SISTEMAS SIN SESSION\ManifestacionEnLinea\ManifestacionEnLinea\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\cesar.tabares\Desktop\ADMINITRADOR APLICACIONES\SISTEMAS SIN SESSION\ManifestacionEnLinea\ManifestacionEnLinea\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\cesar.tabares\Desktop\ADMINITRADOR APLICACIONES\SISTEMAS SIN SESSION\ManifestacionEnLinea\ManifestacionEnLinea\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\cesar.tabares\Desktop\ADMINITRADOR APLICACIONES\SISTEMAS SIN SESSION\ManifestacionEnLinea\ManifestacionEnLinea\bin\roslyn\System.AppContext.dll
+C:\Users\cesar.tabares\Desktop\ADMINITRADOR APLICACIONES\SISTEMAS SIN SESSION\ManifestacionEnLinea\ManifestacionEnLinea\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\cesar.tabares\Desktop\ADMINITRADOR APLICACIONES\SISTEMAS SIN SESSION\ManifestacionEnLinea\ManifestacionEnLinea\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\cesar.tabares\Desktop\ADMINITRADOR APLICACIONES\SISTEMAS SIN SESSION\ManifestacionEnLinea\ManifestacionEnLinea\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\cesar.tabares\Desktop\ADMINITRADOR APLICACIONES\SISTEMAS SIN SESSION\ManifestacionEnLinea\ManifestacionEnLinea\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\cesar.tabares\Desktop\ADMINITRADOR APLICACIONES\SISTEMAS SIN SESSION\ManifestacionEnLinea\ManifestacionEnLinea\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\cesar.tabares\Desktop\ADMINITRADOR APLICACIONES\SISTEMAS SIN SESSION\ManifestacionEnLinea\ManifestacionEnLinea\bin\roslyn\vbc.exe
+C:\Users\cesar.tabares\Desktop\ADMINITRADOR APLICACIONES\SISTEMAS SIN SESSION\ManifestacionEnLinea\ManifestacionEnLinea\bin\roslyn\vbc.exe.config
+C:\Users\cesar.tabares\Desktop\ADMINITRADOR APLICACIONES\SISTEMAS SIN SESSION\ManifestacionEnLinea\ManifestacionEnLinea\bin\roslyn\vbc.rsp
+C:\Users\cesar.tabares\Desktop\ADMINITRADOR APLICACIONES\SISTEMAS SIN SESSION\ManifestacionEnLinea\ManifestacionEnLinea\bin\roslyn\VBCSCompiler.exe
+C:\Users\cesar.tabares\Desktop\ADMINITRADOR APLICACIONES\SISTEMAS SIN SESSION\ManifestacionEnLinea\ManifestacionEnLinea\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\cesar.tabares\Desktop\ADMINITRADOR APLICACIONES\SISTEMAS SIN SESSION\ManifestacionEnLinea\ManifestacionEnLinea\bin\BouncyCastle.Crypto.dll
+C:\Users\cesar.tabares\Desktop\ADMINITRADOR APLICACIONES\SISTEMAS SIN SESSION\ManifestacionEnLinea\ManifestacionEnLinea\bin\Common.Logging.Core.dll
+C:\Users\cesar.tabares\Desktop\ADMINITRADOR APLICACIONES\SISTEMAS SIN SESSION\ManifestacionEnLinea\ManifestacionEnLinea\bin\Common.Logging.dll
+C:\Users\cesar.tabares\Desktop\ADMINITRADOR APLICACIONES\SISTEMAS SIN SESSION\ManifestacionEnLinea\ManifestacionEnLinea\bin\itext.barcodes.dll
+C:\Users\cesar.tabares\Desktop\ADMINITRADOR APLICACIONES\SISTEMAS SIN SESSION\ManifestacionEnLinea\ManifestacionEnLinea\bin\itext.forms.dll
+C:\Users\cesar.tabares\Desktop\ADMINITRADOR APLICACIONES\SISTEMAS SIN SESSION\ManifestacionEnLinea\ManifestacionEnLinea\bin\itext.io.dll
+C:\Users\cesar.tabares\Desktop\ADMINITRADOR APLICACIONES\SISTEMAS SIN SESSION\ManifestacionEnLinea\ManifestacionEnLinea\bin\itext.kernel.dll
+C:\Users\cesar.tabares\Desktop\ADMINITRADOR APLICACIONES\SISTEMAS SIN SESSION\ManifestacionEnLinea\ManifestacionEnLinea\bin\itext.layout.dll
+C:\Users\cesar.tabares\Desktop\ADMINITRADOR APLICACIONES\SISTEMAS SIN SESSION\ManifestacionEnLinea\ManifestacionEnLinea\bin\itext.pdfa.dll
+C:\Users\cesar.tabares\Desktop\ADMINITRADOR APLICACIONES\SISTEMAS SIN SESSION\ManifestacionEnLinea\ManifestacionEnLinea\bin\itext.sign.dll
+C:\Users\cesar.tabares\Desktop\ADMINITRADOR APLICACIONES\SISTEMAS SIN SESSION\ManifestacionEnLinea\ManifestacionEnLinea\bin\itext.styledxmlparser.dll
+C:\Users\cesar.tabares\Desktop\ADMINITRADOR APLICACIONES\SISTEMAS SIN SESSION\ManifestacionEnLinea\ManifestacionEnLinea\bin\itext.svg.dll
+C:\Users\cesar.tabares\Desktop\ADMINITRADOR APLICACIONES\SISTEMAS SIN SESSION\ManifestacionEnLinea\ManifestacionEnLinea\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\cesar.tabares\Desktop\ADMINITRADOR APLICACIONES\SISTEMAS SIN SESSION\ManifestacionEnLinea\ManifestacionEnLinea\bin\Microsoft.SqlServer.Types.dll
+C:\Users\cesar.tabares\Desktop\ADMINITRADOR APLICACIONES\SISTEMAS SIN SESSION\ManifestacionEnLinea\ManifestacionEnLinea\bin\BouncyCastle.Crypto.xml
+C:\Users\cesar.tabares\Desktop\ADMINITRADOR APLICACIONES\SISTEMAS SIN SESSION\ManifestacionEnLinea\ManifestacionEnLinea\bin\Common.Logging.pdb
+C:\Users\cesar.tabares\Desktop\ADMINITRADOR APLICACIONES\SISTEMAS SIN SESSION\ManifestacionEnLinea\ManifestacionEnLinea\bin\Common.Logging.xml
+C:\Users\cesar.tabares\Desktop\ADMINITRADOR APLICACIONES\SISTEMAS SIN SESSION\ManifestacionEnLinea\ManifestacionEnLinea\bin\Common.Logging.Core.pdb
+C:\Users\cesar.tabares\Desktop\ADMINITRADOR APLICACIONES\SISTEMAS SIN SESSION\ManifestacionEnLinea\ManifestacionEnLinea\bin\Common.Logging.Core.xml
+C:\Users\cesar.tabares\Desktop\ADMINITRADOR APLICACIONES\SISTEMAS SIN SESSION\ManifestacionEnLinea\ManifestacionEnLinea\bin\itext.barcodes.xml
+C:\Users\cesar.tabares\Desktop\ADMINITRADOR APLICACIONES\SISTEMAS SIN SESSION\ManifestacionEnLinea\ManifestacionEnLinea\bin\itext.forms.xml
+C:\Users\cesar.tabares\Desktop\ADMINITRADOR APLICACIONES\SISTEMAS SIN SESSION\ManifestacionEnLinea\ManifestacionEnLinea\bin\itext.io.xml
+C:\Users\cesar.tabares\Desktop\ADMINITRADOR APLICACIONES\SISTEMAS SIN SESSION\ManifestacionEnLinea\ManifestacionEnLinea\bin\itext.kernel.xml
+C:\Users\cesar.tabares\Desktop\ADMINITRADOR APLICACIONES\SISTEMAS SIN SESSION\ManifestacionEnLinea\ManifestacionEnLinea\bin\itext.layout.xml
+C:\Users\cesar.tabares\Desktop\ADMINITRADOR APLICACIONES\SISTEMAS SIN SESSION\ManifestacionEnLinea\ManifestacionEnLinea\bin\itext.pdfa.xml
+C:\Users\cesar.tabares\Desktop\ADMINITRADOR APLICACIONES\SISTEMAS SIN SESSION\ManifestacionEnLinea\ManifestacionEnLinea\bin\itext.sign.xml
+C:\Users\cesar.tabares\Desktop\ADMINITRADOR APLICACIONES\SISTEMAS SIN SESSION\ManifestacionEnLinea\ManifestacionEnLinea\bin\itext.styledxmlparser.xml
+C:\Users\cesar.tabares\Desktop\ADMINITRADOR APLICACIONES\SISTEMAS SIN SESSION\ManifestacionEnLinea\ManifestacionEnLinea\bin\itext.svg.xml
+C:\Users\cesar.tabares\Desktop\ADMINITRADOR APLICACIONES\SISTEMAS SIN SESSION\ManifestacionEnLinea\ManifestacionEnLinea\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\cesar.tabares\Desktop\ADMINITRADOR APLICACIONES\SISTEMAS SIN SESSION\ManifestacionEnLinea\ManifestacionEnLinea\obj\Debug\ManifestacionEnLinea.csproj.AssemblyReference.cache
+C:\Users\cesar.tabares\Desktop\ADMINITRADOR APLICACIONES\SISTEMAS SIN SESSION\ManifestacionEnLinea\ManifestacionEnLinea\obj\Debug\ManifestacionEnLinea.csproj.CoreCompileInputs.cache
+C:\Users\cesar.tabares\Desktop\ADMINITRADOR APLICACIONES\SISTEMAS SIN SESSION\ManifestacionEnLinea\ManifestacionEnLinea\obj\Debug\ManifestacionEnLinea.csproj.CopyComplete
+C:\Users\cesar.tabares\Desktop\ADMINITRADOR APLICACIONES\SISTEMAS SIN SESSION\ManifestacionEnLinea\ManifestacionEnLinea\obj\Debug\ManifestacionEnLinea.dll
+C:\Users\cesar.tabares\Desktop\ADMINITRADOR APLICACIONES\SISTEMAS SIN SESSION\ManifestacionEnLinea\ManifestacionEnLinea\obj\Debug\ManifestacionEnLinea.pdb
+C:\ManifestacionEnLinea\ManifestacionEnLinea\bin\ManifestacionEnLinea.dll.config
+C:\ManifestacionEnLinea\ManifestacionEnLinea\bin\ManifestacionEnLinea.dll
+C:\ManifestacionEnLinea\ManifestacionEnLinea\bin\ManifestacionEnLinea.pdb
+C:\ManifestacionEnLinea\ManifestacionEnLinea\bin\roslyn\csc.exe
+C:\ManifestacionEnLinea\ManifestacionEnLinea\bin\roslyn\csc.exe.config
+C:\ManifestacionEnLinea\ManifestacionEnLinea\bin\roslyn\csc.rsp
+C:\ManifestacionEnLinea\ManifestacionEnLinea\bin\roslyn\csi.exe
+C:\ManifestacionEnLinea\ManifestacionEnLinea\bin\roslyn\csi.rsp
+C:\ManifestacionEnLinea\ManifestacionEnLinea\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\ManifestacionEnLinea\ManifestacionEnLinea\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\ManifestacionEnLinea\ManifestacionEnLinea\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\ManifestacionEnLinea\ManifestacionEnLinea\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\ManifestacionEnLinea\ManifestacionEnLinea\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\ManifestacionEnLinea\ManifestacionEnLinea\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\ManifestacionEnLinea\ManifestacionEnLinea\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\ManifestacionEnLinea\ManifestacionEnLinea\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\ManifestacionEnLinea\ManifestacionEnLinea\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\ManifestacionEnLinea\ManifestacionEnLinea\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\ManifestacionEnLinea\ManifestacionEnLinea\bin\roslyn\System.AppContext.dll
+C:\ManifestacionEnLinea\ManifestacionEnLinea\bin\roslyn\System.Collections.Immutable.dll
+C:\ManifestacionEnLinea\ManifestacionEnLinea\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\ManifestacionEnLinea\ManifestacionEnLinea\bin\roslyn\System.IO.FileSystem.dll
+C:\ManifestacionEnLinea\ManifestacionEnLinea\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\ManifestacionEnLinea\ManifestacionEnLinea\bin\roslyn\System.Reflection.Metadata.dll
+C:\ManifestacionEnLinea\ManifestacionEnLinea\bin\roslyn\vbc.exe
+C:\ManifestacionEnLinea\ManifestacionEnLinea\bin\roslyn\vbc.exe.config
+C:\ManifestacionEnLinea\ManifestacionEnLinea\bin\roslyn\vbc.rsp
+C:\ManifestacionEnLinea\ManifestacionEnLinea\bin\roslyn\VBCSCompiler.exe
+C:\ManifestacionEnLinea\ManifestacionEnLinea\bin\roslyn\VBCSCompiler.exe.config
+C:\ManifestacionEnLinea\ManifestacionEnLinea\bin\BouncyCastle.Crypto.dll
+C:\ManifestacionEnLinea\ManifestacionEnLinea\bin\Common.Logging.Core.dll
+C:\ManifestacionEnLinea\ManifestacionEnLinea\bin\Common.Logging.dll
+C:\ManifestacionEnLinea\ManifestacionEnLinea\bin\itext.barcodes.dll
+C:\ManifestacionEnLinea\ManifestacionEnLinea\bin\itext.forms.dll
+C:\ManifestacionEnLinea\ManifestacionEnLinea\bin\itext.io.dll
+C:\ManifestacionEnLinea\ManifestacionEnLinea\bin\itext.kernel.dll
+C:\ManifestacionEnLinea\ManifestacionEnLinea\bin\itext.layout.dll
+C:\ManifestacionEnLinea\ManifestacionEnLinea\bin\itext.pdfa.dll
+C:\ManifestacionEnLinea\ManifestacionEnLinea\bin\itext.sign.dll
+C:\ManifestacionEnLinea\ManifestacionEnLinea\bin\itext.styledxmlparser.dll
+C:\ManifestacionEnLinea\ManifestacionEnLinea\bin\itext.svg.dll
+C:\ManifestacionEnLinea\ManifestacionEnLinea\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\ManifestacionEnLinea\ManifestacionEnLinea\bin\Microsoft.SqlServer.Types.dll
+C:\ManifestacionEnLinea\ManifestacionEnLinea\bin\BouncyCastle.Crypto.xml
+C:\ManifestacionEnLinea\ManifestacionEnLinea\bin\Common.Logging.pdb
+C:\ManifestacionEnLinea\ManifestacionEnLinea\bin\Common.Logging.xml
+C:\ManifestacionEnLinea\ManifestacionEnLinea\bin\Common.Logging.Core.pdb
+C:\ManifestacionEnLinea\ManifestacionEnLinea\bin\Common.Logging.Core.xml
+C:\ManifestacionEnLinea\ManifestacionEnLinea\bin\itext.barcodes.xml
+C:\ManifestacionEnLinea\ManifestacionEnLinea\bin\itext.forms.xml
+C:\ManifestacionEnLinea\ManifestacionEnLinea\bin\itext.io.xml
+C:\ManifestacionEnLinea\ManifestacionEnLinea\bin\itext.kernel.xml
+C:\ManifestacionEnLinea\ManifestacionEnLinea\bin\itext.layout.xml
+C:\ManifestacionEnLinea\ManifestacionEnLinea\bin\itext.pdfa.xml
+C:\ManifestacionEnLinea\ManifestacionEnLinea\bin\itext.sign.xml
+C:\ManifestacionEnLinea\ManifestacionEnLinea\bin\itext.styledxmlparser.xml
+C:\ManifestacionEnLinea\ManifestacionEnLinea\bin\itext.svg.xml
+C:\ManifestacionEnLinea\ManifestacionEnLinea\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\ManifestacionEnLinea\ManifestacionEnLinea\obj\Debug\ManifestacionEnLinea.csproj.AssemblyReference.cache
+C:\ManifestacionEnLinea\ManifestacionEnLinea\obj\Debug\ManifestacionEnLinea.csproj.CoreCompileInputs.cache
+C:\ManifestacionEnLinea\ManifestacionEnLinea\obj\Debug\ManifestacionEnLinea.csproj.CopyComplete
+C:\ManifestacionEnLinea\ManifestacionEnLinea\obj\Debug\ManifestacionEnLinea.dll
+C:\ManifestacionEnLinea\ManifestacionEnLinea\obj\Debug\ManifestacionEnLinea.pdb
+C:\ManifestacionEnLinea_V1.0\ManifestacionEnLinea\bin\ManifestacionEnLinea.dll.config
+C:\ManifestacionEnLinea_V1.0\ManifestacionEnLinea\bin\ManifestacionEnLinea.dll
+C:\ManifestacionEnLinea_V1.0\ManifestacionEnLinea\bin\ManifestacionEnLinea.pdb
+C:\ManifestacionEnLinea_V1.0\ManifestacionEnLinea\bin\roslyn\csc.exe
+C:\ManifestacionEnLinea_V1.0\ManifestacionEnLinea\bin\roslyn\csc.exe.config
+C:\ManifestacionEnLinea_V1.0\ManifestacionEnLinea\bin\roslyn\csc.rsp
+C:\ManifestacionEnLinea_V1.0\ManifestacionEnLinea\bin\roslyn\csi.exe
+C:\ManifestacionEnLinea_V1.0\ManifestacionEnLinea\bin\roslyn\csi.rsp
+C:\ManifestacionEnLinea_V1.0\ManifestacionEnLinea\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\ManifestacionEnLinea_V1.0\ManifestacionEnLinea\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\ManifestacionEnLinea_V1.0\ManifestacionEnLinea\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\ManifestacionEnLinea_V1.0\ManifestacionEnLinea\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\ManifestacionEnLinea_V1.0\ManifestacionEnLinea\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\ManifestacionEnLinea_V1.0\ManifestacionEnLinea\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\ManifestacionEnLinea_V1.0\ManifestacionEnLinea\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\ManifestacionEnLinea_V1.0\ManifestacionEnLinea\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\ManifestacionEnLinea_V1.0\ManifestacionEnLinea\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\ManifestacionEnLinea_V1.0\ManifestacionEnLinea\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\ManifestacionEnLinea_V1.0\ManifestacionEnLinea\bin\roslyn\System.AppContext.dll
+C:\ManifestacionEnLinea_V1.0\ManifestacionEnLinea\bin\roslyn\System.Collections.Immutable.dll
+C:\ManifestacionEnLinea_V1.0\ManifestacionEnLinea\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\ManifestacionEnLinea_V1.0\ManifestacionEnLinea\bin\roslyn\System.IO.FileSystem.dll
+C:\ManifestacionEnLinea_V1.0\ManifestacionEnLinea\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\ManifestacionEnLinea_V1.0\ManifestacionEnLinea\bin\roslyn\System.Reflection.Metadata.dll
+C:\ManifestacionEnLinea_V1.0\ManifestacionEnLinea\bin\roslyn\vbc.exe
+C:\ManifestacionEnLinea_V1.0\ManifestacionEnLinea\bin\roslyn\vbc.exe.config
+C:\ManifestacionEnLinea_V1.0\ManifestacionEnLinea\bin\roslyn\vbc.rsp
+C:\ManifestacionEnLinea_V1.0\ManifestacionEnLinea\bin\roslyn\VBCSCompiler.exe
+C:\ManifestacionEnLinea_V1.0\ManifestacionEnLinea\bin\roslyn\VBCSCompiler.exe.config
+C:\ManifestacionEnLinea_V1.0\ManifestacionEnLinea\bin\BouncyCastle.Crypto.dll
+C:\ManifestacionEnLinea_V1.0\ManifestacionEnLinea\bin\Common.Logging.Core.dll
+C:\ManifestacionEnLinea_V1.0\ManifestacionEnLinea\bin\Common.Logging.dll
+C:\ManifestacionEnLinea_V1.0\ManifestacionEnLinea\bin\itext.barcodes.dll
+C:\ManifestacionEnLinea_V1.0\ManifestacionEnLinea\bin\itext.forms.dll
+C:\ManifestacionEnLinea_V1.0\ManifestacionEnLinea\bin\itext.io.dll
+C:\ManifestacionEnLinea_V1.0\ManifestacionEnLinea\bin\itext.kernel.dll
+C:\ManifestacionEnLinea_V1.0\ManifestacionEnLinea\bin\itext.layout.dll
+C:\ManifestacionEnLinea_V1.0\ManifestacionEnLinea\bin\itext.pdfa.dll
+C:\ManifestacionEnLinea_V1.0\ManifestacionEnLinea\bin\itext.sign.dll
+C:\ManifestacionEnLinea_V1.0\ManifestacionEnLinea\bin\itext.styledxmlparser.dll
+C:\ManifestacionEnLinea_V1.0\ManifestacionEnLinea\bin\itext.svg.dll
+C:\ManifestacionEnLinea_V1.0\ManifestacionEnLinea\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\ManifestacionEnLinea_V1.0\ManifestacionEnLinea\bin\Microsoft.SqlServer.Types.dll
+C:\ManifestacionEnLinea_V1.0\ManifestacionEnLinea\bin\BouncyCastle.Crypto.xml
+C:\ManifestacionEnLinea_V1.0\ManifestacionEnLinea\bin\Common.Logging.pdb
+C:\ManifestacionEnLinea_V1.0\ManifestacionEnLinea\bin\Common.Logging.xml
+C:\ManifestacionEnLinea_V1.0\ManifestacionEnLinea\bin\Common.Logging.Core.pdb
+C:\ManifestacionEnLinea_V1.0\ManifestacionEnLinea\bin\Common.Logging.Core.xml
+C:\ManifestacionEnLinea_V1.0\ManifestacionEnLinea\bin\itext.barcodes.xml
+C:\ManifestacionEnLinea_V1.0\ManifestacionEnLinea\bin\itext.forms.xml
+C:\ManifestacionEnLinea_V1.0\ManifestacionEnLinea\bin\itext.io.xml
+C:\ManifestacionEnLinea_V1.0\ManifestacionEnLinea\bin\itext.kernel.xml
+C:\ManifestacionEnLinea_V1.0\ManifestacionEnLinea\bin\itext.layout.xml
+C:\ManifestacionEnLinea_V1.0\ManifestacionEnLinea\bin\itext.pdfa.xml
+C:\ManifestacionEnLinea_V1.0\ManifestacionEnLinea\bin\itext.sign.xml
+C:\ManifestacionEnLinea_V1.0\ManifestacionEnLinea\bin\itext.styledxmlparser.xml
+C:\ManifestacionEnLinea_V1.0\ManifestacionEnLinea\bin\itext.svg.xml
+C:\ManifestacionEnLinea_V1.0\ManifestacionEnLinea\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\ManifestacionEnLinea_V1.0\ManifestacionEnLinea\obj\Debug\ManifestacionEnLinea.csproj.AssemblyReference.cache
+C:\ManifestacionEnLinea_V1.0\ManifestacionEnLinea\obj\Debug\ManifestacionEnLinea.csproj.CoreCompileInputs.cache
+C:\ManifestacionEnLinea_V1.0\ManifestacionEnLinea\obj\Debug\ManifestacionEnLinea.csproj.CopyComplete
+C:\ManifestacionEnLinea_V1.0\ManifestacionEnLinea\obj\Debug\ManifestacionEnLinea.dll
+C:\ManifestacionEnLinea_V1.0\ManifestacionEnLinea\obj\Debug\ManifestacionEnLinea.pdb
+C:\ManifestacionEnLinea_V2.0\ManifestacionEnLinea\bin\ManifestacionEnLinea.dll.config
+C:\ManifestacionEnLinea_V2.0\ManifestacionEnLinea\bin\ManifestacionEnLinea.dll
+C:\ManifestacionEnLinea_V2.0\ManifestacionEnLinea\bin\ManifestacionEnLinea.pdb
+C:\ManifestacionEnLinea_V2.0\ManifestacionEnLinea\bin\roslyn\csc.exe
+C:\ManifestacionEnLinea_V2.0\ManifestacionEnLinea\bin\roslyn\csc.exe.config
+C:\ManifestacionEnLinea_V2.0\ManifestacionEnLinea\bin\roslyn\csc.rsp
+C:\ManifestacionEnLinea_V2.0\ManifestacionEnLinea\bin\roslyn\csi.exe
+C:\ManifestacionEnLinea_V2.0\ManifestacionEnLinea\bin\roslyn\csi.rsp
+C:\ManifestacionEnLinea_V2.0\ManifestacionEnLinea\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\ManifestacionEnLinea_V2.0\ManifestacionEnLinea\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\ManifestacionEnLinea_V2.0\ManifestacionEnLinea\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\ManifestacionEnLinea_V2.0\ManifestacionEnLinea\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\ManifestacionEnLinea_V2.0\ManifestacionEnLinea\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\ManifestacionEnLinea_V2.0\ManifestacionEnLinea\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\ManifestacionEnLinea_V2.0\ManifestacionEnLinea\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\ManifestacionEnLinea_V2.0\ManifestacionEnLinea\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\ManifestacionEnLinea_V2.0\ManifestacionEnLinea\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\ManifestacionEnLinea_V2.0\ManifestacionEnLinea\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\ManifestacionEnLinea_V2.0\ManifestacionEnLinea\bin\roslyn\System.AppContext.dll
+C:\ManifestacionEnLinea_V2.0\ManifestacionEnLinea\bin\roslyn\System.Collections.Immutable.dll
+C:\ManifestacionEnLinea_V2.0\ManifestacionEnLinea\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\ManifestacionEnLinea_V2.0\ManifestacionEnLinea\bin\roslyn\System.IO.FileSystem.dll
+C:\ManifestacionEnLinea_V2.0\ManifestacionEnLinea\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\ManifestacionEnLinea_V2.0\ManifestacionEnLinea\bin\roslyn\System.Reflection.Metadata.dll
+C:\ManifestacionEnLinea_V2.0\ManifestacionEnLinea\bin\roslyn\vbc.exe
+C:\ManifestacionEnLinea_V2.0\ManifestacionEnLinea\bin\roslyn\vbc.exe.config
+C:\ManifestacionEnLinea_V2.0\ManifestacionEnLinea\bin\roslyn\vbc.rsp
+C:\ManifestacionEnLinea_V2.0\ManifestacionEnLinea\bin\roslyn\VBCSCompiler.exe
+C:\ManifestacionEnLinea_V2.0\ManifestacionEnLinea\bin\roslyn\VBCSCompiler.exe.config
+C:\ManifestacionEnLinea_V2.0\ManifestacionEnLinea\bin\BouncyCastle.Crypto.dll
+C:\ManifestacionEnLinea_V2.0\ManifestacionEnLinea\bin\Common.Logging.Core.dll
+C:\ManifestacionEnLinea_V2.0\ManifestacionEnLinea\bin\Common.Logging.dll
+C:\ManifestacionEnLinea_V2.0\ManifestacionEnLinea\bin\itext.barcodes.dll
+C:\ManifestacionEnLinea_V2.0\ManifestacionEnLinea\bin\itext.forms.dll
+C:\ManifestacionEnLinea_V2.0\ManifestacionEnLinea\bin\itext.io.dll
+C:\ManifestacionEnLinea_V2.0\ManifestacionEnLinea\bin\itext.kernel.dll
+C:\ManifestacionEnLinea_V2.0\ManifestacionEnLinea\bin\itext.layout.dll
+C:\ManifestacionEnLinea_V2.0\ManifestacionEnLinea\bin\itext.pdfa.dll
+C:\ManifestacionEnLinea_V2.0\ManifestacionEnLinea\bin\itext.sign.dll
+C:\ManifestacionEnLinea_V2.0\ManifestacionEnLinea\bin\itext.styledxmlparser.dll
+C:\ManifestacionEnLinea_V2.0\ManifestacionEnLinea\bin\itext.svg.dll
+C:\ManifestacionEnLinea_V2.0\ManifestacionEnLinea\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\ManifestacionEnLinea_V2.0\ManifestacionEnLinea\bin\Microsoft.SqlServer.Types.dll
+C:\ManifestacionEnLinea_V2.0\ManifestacionEnLinea\bin\BouncyCastle.Crypto.xml
+C:\ManifestacionEnLinea_V2.0\ManifestacionEnLinea\bin\Common.Logging.pdb
+C:\ManifestacionEnLinea_V2.0\ManifestacionEnLinea\bin\Common.Logging.xml
+C:\ManifestacionEnLinea_V2.0\ManifestacionEnLinea\bin\Common.Logging.Core.pdb
+C:\ManifestacionEnLinea_V2.0\ManifestacionEnLinea\bin\Common.Logging.Core.xml
+C:\ManifestacionEnLinea_V2.0\ManifestacionEnLinea\bin\itext.barcodes.xml
+C:\ManifestacionEnLinea_V2.0\ManifestacionEnLinea\bin\itext.forms.xml
+C:\ManifestacionEnLinea_V2.0\ManifestacionEnLinea\bin\itext.io.xml
+C:\ManifestacionEnLinea_V2.0\ManifestacionEnLinea\bin\itext.kernel.xml
+C:\ManifestacionEnLinea_V2.0\ManifestacionEnLinea\bin\itext.layout.xml
+C:\ManifestacionEnLinea_V2.0\ManifestacionEnLinea\bin\itext.pdfa.xml
+C:\ManifestacionEnLinea_V2.0\ManifestacionEnLinea\bin\itext.sign.xml
+C:\ManifestacionEnLinea_V2.0\ManifestacionEnLinea\bin\itext.styledxmlparser.xml
+C:\ManifestacionEnLinea_V2.0\ManifestacionEnLinea\bin\itext.svg.xml
+C:\ManifestacionEnLinea_V2.0\ManifestacionEnLinea\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\ManifestacionEnLinea_V2.0\ManifestacionEnLinea\obj\Debug\ManifestacionEnLinea.csproj.AssemblyReference.cache
+C:\ManifestacionEnLinea_V2.0\ManifestacionEnLinea\obj\Debug\ManifestacionEnLinea.csproj.CoreCompileInputs.cache
+C:\ManifestacionEnLinea_V2.0\ManifestacionEnLinea\obj\Debug\ManifestacionEnLinea.csproj.CopyComplete
+C:\ManifestacionEnLinea_V2.0\ManifestacionEnLinea\obj\Debug\ManifestacionEnLinea.dll
+C:\ManifestacionEnLinea_V2.0\ManifestacionEnLinea\obj\Debug\ManifestacionEnLinea.pdb
+C:\ManifestacionEnLineaV3\ManifestacionEnLinea\bin\ManifestacionEnLinea.dll.config
+C:\ManifestacionEnLineaV3\ManifestacionEnLinea\bin\ManifestacionEnLinea.dll
+C:\ManifestacionEnLineaV3\ManifestacionEnLinea\bin\ManifestacionEnLinea.pdb
+C:\ManifestacionEnLineaV3\ManifestacionEnLinea\bin\roslyn\csc.exe
+C:\ManifestacionEnLineaV3\ManifestacionEnLinea\bin\roslyn\csc.exe.config
+C:\ManifestacionEnLineaV3\ManifestacionEnLinea\bin\roslyn\csc.rsp
+C:\ManifestacionEnLineaV3\ManifestacionEnLinea\bin\roslyn\csi.exe
+C:\ManifestacionEnLineaV3\ManifestacionEnLinea\bin\roslyn\csi.rsp
+C:\ManifestacionEnLineaV3\ManifestacionEnLinea\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\ManifestacionEnLineaV3\ManifestacionEnLinea\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\ManifestacionEnLineaV3\ManifestacionEnLinea\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\ManifestacionEnLineaV3\ManifestacionEnLinea\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\ManifestacionEnLineaV3\ManifestacionEnLinea\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\ManifestacionEnLineaV3\ManifestacionEnLinea\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\ManifestacionEnLineaV3\ManifestacionEnLinea\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\ManifestacionEnLineaV3\ManifestacionEnLinea\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\ManifestacionEnLineaV3\ManifestacionEnLinea\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\ManifestacionEnLineaV3\ManifestacionEnLinea\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\ManifestacionEnLineaV3\ManifestacionEnLinea\bin\roslyn\System.AppContext.dll
+C:\ManifestacionEnLineaV3\ManifestacionEnLinea\bin\roslyn\System.Collections.Immutable.dll
+C:\ManifestacionEnLineaV3\ManifestacionEnLinea\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\ManifestacionEnLineaV3\ManifestacionEnLinea\bin\roslyn\System.IO.FileSystem.dll
+C:\ManifestacionEnLineaV3\ManifestacionEnLinea\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\ManifestacionEnLineaV3\ManifestacionEnLinea\bin\roslyn\System.Reflection.Metadata.dll
+C:\ManifestacionEnLineaV3\ManifestacionEnLinea\bin\roslyn\vbc.exe
+C:\ManifestacionEnLineaV3\ManifestacionEnLinea\bin\roslyn\vbc.exe.config
+C:\ManifestacionEnLineaV3\ManifestacionEnLinea\bin\roslyn\vbc.rsp
+C:\ManifestacionEnLineaV3\ManifestacionEnLinea\bin\roslyn\VBCSCompiler.exe
+C:\ManifestacionEnLineaV3\ManifestacionEnLinea\bin\roslyn\VBCSCompiler.exe.config
+C:\ManifestacionEnLineaV3\ManifestacionEnLinea\bin\BouncyCastle.Crypto.dll
+C:\ManifestacionEnLineaV3\ManifestacionEnLinea\bin\Common.Logging.Core.dll
+C:\ManifestacionEnLineaV3\ManifestacionEnLinea\bin\Common.Logging.dll
+C:\ManifestacionEnLineaV3\ManifestacionEnLinea\bin\itext.barcodes.dll
+C:\ManifestacionEnLineaV3\ManifestacionEnLinea\bin\itext.forms.dll
+C:\ManifestacionEnLineaV3\ManifestacionEnLinea\bin\itext.io.dll
+C:\ManifestacionEnLineaV3\ManifestacionEnLinea\bin\itext.kernel.dll
+C:\ManifestacionEnLineaV3\ManifestacionEnLinea\bin\itext.layout.dll
+C:\ManifestacionEnLineaV3\ManifestacionEnLinea\bin\itext.pdfa.dll
+C:\ManifestacionEnLineaV3\ManifestacionEnLinea\bin\itext.sign.dll
+C:\ManifestacionEnLineaV3\ManifestacionEnLinea\bin\itext.styledxmlparser.dll
+C:\ManifestacionEnLineaV3\ManifestacionEnLinea\bin\itext.svg.dll
+C:\ManifestacionEnLineaV3\ManifestacionEnLinea\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\ManifestacionEnLineaV3\ManifestacionEnLinea\bin\Microsoft.SqlServer.Types.dll
+C:\ManifestacionEnLineaV3\ManifestacionEnLinea\bin\BouncyCastle.Crypto.xml
+C:\ManifestacionEnLineaV3\ManifestacionEnLinea\bin\Common.Logging.pdb
+C:\ManifestacionEnLineaV3\ManifestacionEnLinea\bin\Common.Logging.xml
+C:\ManifestacionEnLineaV3\ManifestacionEnLinea\bin\Common.Logging.Core.pdb
+C:\ManifestacionEnLineaV3\ManifestacionEnLinea\bin\Common.Logging.Core.xml
+C:\ManifestacionEnLineaV3\ManifestacionEnLinea\bin\itext.barcodes.xml
+C:\ManifestacionEnLineaV3\ManifestacionEnLinea\bin\itext.forms.xml
+C:\ManifestacionEnLineaV3\ManifestacionEnLinea\bin\itext.io.xml
+C:\ManifestacionEnLineaV3\ManifestacionEnLinea\bin\itext.kernel.xml
+C:\ManifestacionEnLineaV3\ManifestacionEnLinea\bin\itext.layout.xml
+C:\ManifestacionEnLineaV3\ManifestacionEnLinea\bin\itext.pdfa.xml
+C:\ManifestacionEnLineaV3\ManifestacionEnLinea\bin\itext.sign.xml
+C:\ManifestacionEnLineaV3\ManifestacionEnLinea\bin\itext.styledxmlparser.xml
+C:\ManifestacionEnLineaV3\ManifestacionEnLinea\bin\itext.svg.xml
+C:\ManifestacionEnLineaV3\ManifestacionEnLinea\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\ManifestacionEnLineaV3\ManifestacionEnLinea\obj\Debug\ManifestacionEnLinea.csproj.CoreCompileInputs.cache
+C:\ManifestacionEnLineaV3\ManifestacionEnLinea\obj\Debug\ManifestacionEnLinea.csproj.CopyComplete
+C:\ManifestacionEnLineaV3\ManifestacionEnLinea\obj\Debug\ManifestacionEnLinea.dll
+C:\ManifestacionEnLineaV3\ManifestacionEnLinea\obj\Debug\ManifestacionEnLinea.pdb
+C:\ManifestacionEnLineaV3\ManifestacionEnLinea\obj\Debug\ManifestacionEnLinea.csproj.AssemblyReference.cache
+C:\ManifestacionEnLineaV3\ManifestacionEnLinea\bin\Newtonsoft.Json.dll
+C:\ManifestacionEnLineaV3\ManifestacionEnLinea\bin\Newtonsoft.Json.xml
+C:\ManifestacionEnLineav4\ManifestacionEnLinea\bin\ManifestacionEnLinea.dll.config
+C:\ManifestacionEnLineav4\ManifestacionEnLinea\bin\ManifestacionEnLinea.dll
+C:\ManifestacionEnLineav4\ManifestacionEnLinea\bin\ManifestacionEnLinea.pdb
+C:\ManifestacionEnLineav4\ManifestacionEnLinea\bin\roslyn\csc.exe
+C:\ManifestacionEnLineav4\ManifestacionEnLinea\bin\roslyn\csc.exe.config
+C:\ManifestacionEnLineav4\ManifestacionEnLinea\bin\roslyn\csc.rsp
+C:\ManifestacionEnLineav4\ManifestacionEnLinea\bin\roslyn\csi.exe
+C:\ManifestacionEnLineav4\ManifestacionEnLinea\bin\roslyn\csi.rsp
+C:\ManifestacionEnLineav4\ManifestacionEnLinea\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\ManifestacionEnLineav4\ManifestacionEnLinea\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\ManifestacionEnLineav4\ManifestacionEnLinea\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\ManifestacionEnLineav4\ManifestacionEnLinea\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\ManifestacionEnLineav4\ManifestacionEnLinea\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\ManifestacionEnLineav4\ManifestacionEnLinea\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\ManifestacionEnLineav4\ManifestacionEnLinea\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\ManifestacionEnLineav4\ManifestacionEnLinea\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\ManifestacionEnLineav4\ManifestacionEnLinea\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\ManifestacionEnLineav4\ManifestacionEnLinea\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\ManifestacionEnLineav4\ManifestacionEnLinea\bin\roslyn\System.AppContext.dll
+C:\ManifestacionEnLineav4\ManifestacionEnLinea\bin\roslyn\System.Collections.Immutable.dll
+C:\ManifestacionEnLineav4\ManifestacionEnLinea\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\ManifestacionEnLineav4\ManifestacionEnLinea\bin\roslyn\System.IO.FileSystem.dll
+C:\ManifestacionEnLineav4\ManifestacionEnLinea\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\ManifestacionEnLineav4\ManifestacionEnLinea\bin\roslyn\System.Reflection.Metadata.dll
+C:\ManifestacionEnLineav4\ManifestacionEnLinea\bin\roslyn\vbc.exe
+C:\ManifestacionEnLineav4\ManifestacionEnLinea\bin\roslyn\vbc.exe.config
+C:\ManifestacionEnLineav4\ManifestacionEnLinea\bin\roslyn\vbc.rsp
+C:\ManifestacionEnLineav4\ManifestacionEnLinea\bin\roslyn\VBCSCompiler.exe
+C:\ManifestacionEnLineav4\ManifestacionEnLinea\bin\roslyn\VBCSCompiler.exe.config
+C:\ManifestacionEnLineav4\ManifestacionEnLinea\bin\BouncyCastle.Crypto.dll
+C:\ManifestacionEnLineav4\ManifestacionEnLinea\bin\Common.Logging.Core.dll
+C:\ManifestacionEnLineav4\ManifestacionEnLinea\bin\Common.Logging.dll
+C:\ManifestacionEnLineav4\ManifestacionEnLinea\bin\itext.barcodes.dll
+C:\ManifestacionEnLineav4\ManifestacionEnLinea\bin\itext.forms.dll
+C:\ManifestacionEnLineav4\ManifestacionEnLinea\bin\itext.io.dll
+C:\ManifestacionEnLineav4\ManifestacionEnLinea\bin\itext.kernel.dll
+C:\ManifestacionEnLineav4\ManifestacionEnLinea\bin\itext.layout.dll
+C:\ManifestacionEnLineav4\ManifestacionEnLinea\bin\itext.pdfa.dll
+C:\ManifestacionEnLineav4\ManifestacionEnLinea\bin\itext.sign.dll
+C:\ManifestacionEnLineav4\ManifestacionEnLinea\bin\itext.styledxmlparser.dll
+C:\ManifestacionEnLineav4\ManifestacionEnLinea\bin\itext.svg.dll
+C:\ManifestacionEnLineav4\ManifestacionEnLinea\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\ManifestacionEnLineav4\ManifestacionEnLinea\bin\Microsoft.SqlServer.Types.dll
+C:\ManifestacionEnLineav4\ManifestacionEnLinea\bin\Newtonsoft.Json.dll
+C:\ManifestacionEnLineav4\ManifestacionEnLinea\bin\BouncyCastle.Crypto.xml
+C:\ManifestacionEnLineav4\ManifestacionEnLinea\bin\Common.Logging.pdb
+C:\ManifestacionEnLineav4\ManifestacionEnLinea\bin\Common.Logging.xml
+C:\ManifestacionEnLineav4\ManifestacionEnLinea\bin\Common.Logging.Core.pdb
+C:\ManifestacionEnLineav4\ManifestacionEnLinea\bin\Common.Logging.Core.xml
+C:\ManifestacionEnLineav4\ManifestacionEnLinea\bin\itext.barcodes.xml
+C:\ManifestacionEnLineav4\ManifestacionEnLinea\bin\itext.forms.xml
+C:\ManifestacionEnLineav4\ManifestacionEnLinea\bin\itext.io.xml
+C:\ManifestacionEnLineav4\ManifestacionEnLinea\bin\itext.kernel.xml
+C:\ManifestacionEnLineav4\ManifestacionEnLinea\bin\itext.layout.xml
+C:\ManifestacionEnLineav4\ManifestacionEnLinea\bin\itext.pdfa.xml
+C:\ManifestacionEnLineav4\ManifestacionEnLinea\bin\itext.sign.xml
+C:\ManifestacionEnLineav4\ManifestacionEnLinea\bin\itext.styledxmlparser.xml
+C:\ManifestacionEnLineav4\ManifestacionEnLinea\bin\itext.svg.xml
+C:\ManifestacionEnLineav4\ManifestacionEnLinea\bin\Newtonsoft.Json.xml
+C:\ManifestacionEnLineav4\ManifestacionEnLinea\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\ManifestacionEnLineav4\ManifestacionEnLinea\obj\Debug\ManifestacionEnLinea.csproj.AssemblyReference.cache
+C:\ManifestacionEnLineav4\ManifestacionEnLinea\obj\Debug\ManifestacionEnLinea.csproj.CoreCompileInputs.cache
+C:\ManifestacionEnLineav4\ManifestacionEnLinea\obj\Debug\ManifestacionEnLinea.csproj.CopyComplete
+C:\ManifestacionEnLineav4\ManifestacionEnLinea\obj\Debug\ManifestacionEnLinea.dll
+C:\ManifestacionEnLineav4\ManifestacionEnLinea\obj\Debug\ManifestacionEnLinea.pdb
+C:\Proyectos\ManifestacionEnLineav4\ManifestacionEnLinea\bin\ManifestacionEnLinea.dll.config
+C:\Proyectos\ManifestacionEnLineav4\ManifestacionEnLinea\bin\ManifestacionEnLinea.dll
+C:\Proyectos\ManifestacionEnLineav4\ManifestacionEnLinea\bin\ManifestacionEnLinea.pdb
+C:\Proyectos\ManifestacionEnLineav4\ManifestacionEnLinea\bin\roslyn\csc.exe
+C:\Proyectos\ManifestacionEnLineav4\ManifestacionEnLinea\bin\roslyn\csc.exe.config
+C:\Proyectos\ManifestacionEnLineav4\ManifestacionEnLinea\bin\roslyn\csc.rsp
+C:\Proyectos\ManifestacionEnLineav4\ManifestacionEnLinea\bin\roslyn\csi.exe
+C:\Proyectos\ManifestacionEnLineav4\ManifestacionEnLinea\bin\roslyn\csi.rsp
+C:\Proyectos\ManifestacionEnLineav4\ManifestacionEnLinea\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Proyectos\ManifestacionEnLineav4\ManifestacionEnLinea\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Proyectos\ManifestacionEnLineav4\ManifestacionEnLinea\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Proyectos\ManifestacionEnLineav4\ManifestacionEnLinea\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Proyectos\ManifestacionEnLineav4\ManifestacionEnLinea\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Proyectos\ManifestacionEnLineav4\ManifestacionEnLinea\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Proyectos\ManifestacionEnLineav4\ManifestacionEnLinea\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Proyectos\ManifestacionEnLineav4\ManifestacionEnLinea\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Proyectos\ManifestacionEnLineav4\ManifestacionEnLinea\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Proyectos\ManifestacionEnLineav4\ManifestacionEnLinea\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Proyectos\ManifestacionEnLineav4\ManifestacionEnLinea\bin\roslyn\System.AppContext.dll
+C:\Proyectos\ManifestacionEnLineav4\ManifestacionEnLinea\bin\roslyn\System.Collections.Immutable.dll
+C:\Proyectos\ManifestacionEnLineav4\ManifestacionEnLinea\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Proyectos\ManifestacionEnLineav4\ManifestacionEnLinea\bin\roslyn\System.IO.FileSystem.dll
+C:\Proyectos\ManifestacionEnLineav4\ManifestacionEnLinea\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Proyectos\ManifestacionEnLineav4\ManifestacionEnLinea\bin\roslyn\System.Reflection.Metadata.dll
+C:\Proyectos\ManifestacionEnLineav4\ManifestacionEnLinea\bin\roslyn\vbc.exe
+C:\Proyectos\ManifestacionEnLineav4\ManifestacionEnLinea\bin\roslyn\vbc.exe.config
+C:\Proyectos\ManifestacionEnLineav4\ManifestacionEnLinea\bin\roslyn\vbc.rsp
+C:\Proyectos\ManifestacionEnLineav4\ManifestacionEnLinea\bin\roslyn\VBCSCompiler.exe
+C:\Proyectos\ManifestacionEnLineav4\ManifestacionEnLinea\bin\roslyn\VBCSCompiler.exe.config
+C:\Proyectos\ManifestacionEnLineav4\ManifestacionEnLinea\bin\BouncyCastle.Crypto.dll
+C:\Proyectos\ManifestacionEnLineav4\ManifestacionEnLinea\bin\Common.Logging.Core.dll
+C:\Proyectos\ManifestacionEnLineav4\ManifestacionEnLinea\bin\Common.Logging.dll
+C:\Proyectos\ManifestacionEnLineav4\ManifestacionEnLinea\bin\itext.barcodes.dll
+C:\Proyectos\ManifestacionEnLineav4\ManifestacionEnLinea\bin\itext.forms.dll
+C:\Proyectos\ManifestacionEnLineav4\ManifestacionEnLinea\bin\itext.io.dll
+C:\Proyectos\ManifestacionEnLineav4\ManifestacionEnLinea\bin\itext.kernel.dll
+C:\Proyectos\ManifestacionEnLineav4\ManifestacionEnLinea\bin\itext.layout.dll
+C:\Proyectos\ManifestacionEnLineav4\ManifestacionEnLinea\bin\itext.pdfa.dll
+C:\Proyectos\ManifestacionEnLineav4\ManifestacionEnLinea\bin\itext.sign.dll
+C:\Proyectos\ManifestacionEnLineav4\ManifestacionEnLinea\bin\itext.styledxmlparser.dll
+C:\Proyectos\ManifestacionEnLineav4\ManifestacionEnLinea\bin\itext.svg.dll
+C:\Proyectos\ManifestacionEnLineav4\ManifestacionEnLinea\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Proyectos\ManifestacionEnLineav4\ManifestacionEnLinea\bin\Microsoft.SqlServer.Types.dll
+C:\Proyectos\ManifestacionEnLineav4\ManifestacionEnLinea\bin\Newtonsoft.Json.dll
+C:\Proyectos\ManifestacionEnLineav4\ManifestacionEnLinea\bin\BouncyCastle.Crypto.xml
+C:\Proyectos\ManifestacionEnLineav4\ManifestacionEnLinea\bin\Common.Logging.pdb
+C:\Proyectos\ManifestacionEnLineav4\ManifestacionEnLinea\bin\Common.Logging.xml
+C:\Proyectos\ManifestacionEnLineav4\ManifestacionEnLinea\bin\Common.Logging.Core.pdb
+C:\Proyectos\ManifestacionEnLineav4\ManifestacionEnLinea\bin\Common.Logging.Core.xml
+C:\Proyectos\ManifestacionEnLineav4\ManifestacionEnLinea\bin\itext.barcodes.xml
+C:\Proyectos\ManifestacionEnLineav4\ManifestacionEnLinea\bin\itext.forms.xml
+C:\Proyectos\ManifestacionEnLineav4\ManifestacionEnLinea\bin\itext.io.xml
+C:\Proyectos\ManifestacionEnLineav4\ManifestacionEnLinea\bin\itext.kernel.xml
+C:\Proyectos\ManifestacionEnLineav4\ManifestacionEnLinea\bin\itext.layout.xml
+C:\Proyectos\ManifestacionEnLineav4\ManifestacionEnLinea\bin\itext.pdfa.xml
+C:\Proyectos\ManifestacionEnLineav4\ManifestacionEnLinea\bin\itext.sign.xml
+C:\Proyectos\ManifestacionEnLineav4\ManifestacionEnLinea\bin\itext.styledxmlparser.xml
+C:\Proyectos\ManifestacionEnLineav4\ManifestacionEnLinea\bin\itext.svg.xml
+C:\Proyectos\ManifestacionEnLineav4\ManifestacionEnLinea\bin\Newtonsoft.Json.xml
+C:\Proyectos\ManifestacionEnLineav4\ManifestacionEnLinea\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Proyectos\ManifestacionEnLineav4\ManifestacionEnLinea\obj\Debug\ManifestacionEnLinea.csproj.AssemblyReference.cache
+C:\Proyectos\ManifestacionEnLineav4\ManifestacionEnLinea\obj\Debug\ManifestacionEnLinea.csproj.CoreCompileInputs.cache
+C:\Proyectos\ManifestacionEnLineav4\ManifestacionEnLinea\obj\Debug\ManifestacionEnLinea.csproj.CopyComplete
+C:\Proyectos\ManifestacionEnLineav4\ManifestacionEnLinea\obj\Debug\ManifestacionEnLinea.dll
+C:\Proyectos\ManifestacionEnLineav4\ManifestacionEnLinea\obj\Debug\ManifestacionEnLinea.pdb
+C:\Proyectos\ManifestacionEnLineav4.5\ManifestacionEnLinea\bin\ManifestacionEnLinea.dll.config
+C:\Proyectos\ManifestacionEnLineav4.5\ManifestacionEnLinea\bin\ManifestacionEnLinea.dll
+C:\Proyectos\ManifestacionEnLineav4.5\ManifestacionEnLinea\bin\ManifestacionEnLinea.pdb
+C:\Proyectos\ManifestacionEnLineav4.5\ManifestacionEnLinea\bin\BouncyCastle.Crypto.dll
+C:\Proyectos\ManifestacionEnLineav4.5\ManifestacionEnLinea\bin\Common.Logging.Core.dll
+C:\Proyectos\ManifestacionEnLineav4.5\ManifestacionEnLinea\bin\Common.Logging.dll
+C:\Proyectos\ManifestacionEnLineav4.5\ManifestacionEnLinea\bin\itext.barcodes.dll
+C:\Proyectos\ManifestacionEnLineav4.5\ManifestacionEnLinea\bin\itext.forms.dll
+C:\Proyectos\ManifestacionEnLineav4.5\ManifestacionEnLinea\bin\itext.io.dll
+C:\Proyectos\ManifestacionEnLineav4.5\ManifestacionEnLinea\bin\itext.kernel.dll
+C:\Proyectos\ManifestacionEnLineav4.5\ManifestacionEnLinea\bin\itext.layout.dll
+C:\Proyectos\ManifestacionEnLineav4.5\ManifestacionEnLinea\bin\itext.pdfa.dll
+C:\Proyectos\ManifestacionEnLineav4.5\ManifestacionEnLinea\bin\itext.sign.dll
+C:\Proyectos\ManifestacionEnLineav4.5\ManifestacionEnLinea\bin\itext.styledxmlparser.dll
+C:\Proyectos\ManifestacionEnLineav4.5\ManifestacionEnLinea\bin\itext.svg.dll
+C:\Proyectos\ManifestacionEnLineav4.5\ManifestacionEnLinea\bin\Microsoft.SqlServer.Types.dll
+C:\Proyectos\ManifestacionEnLineav4.5\ManifestacionEnLinea\bin\Newtonsoft.Json.dll
+C:\Proyectos\ManifestacionEnLineav4.5\ManifestacionEnLinea\bin\BouncyCastle.Crypto.xml
+C:\Proyectos\ManifestacionEnLineav4.5\ManifestacionEnLinea\bin\Common.Logging.pdb
+C:\Proyectos\ManifestacionEnLineav4.5\ManifestacionEnLinea\bin\Common.Logging.xml
+C:\Proyectos\ManifestacionEnLineav4.5\ManifestacionEnLinea\bin\Common.Logging.Core.pdb
+C:\Proyectos\ManifestacionEnLineav4.5\ManifestacionEnLinea\bin\Common.Logging.Core.xml
+C:\Proyectos\ManifestacionEnLineav4.5\ManifestacionEnLinea\bin\itext.barcodes.xml
+C:\Proyectos\ManifestacionEnLineav4.5\ManifestacionEnLinea\bin\itext.forms.xml
+C:\Proyectos\ManifestacionEnLineav4.5\ManifestacionEnLinea\bin\itext.io.xml
+C:\Proyectos\ManifestacionEnLineav4.5\ManifestacionEnLinea\bin\itext.kernel.xml
+C:\Proyectos\ManifestacionEnLineav4.5\ManifestacionEnLinea\bin\itext.layout.xml
+C:\Proyectos\ManifestacionEnLineav4.5\ManifestacionEnLinea\bin\itext.pdfa.xml
+C:\Proyectos\ManifestacionEnLineav4.5\ManifestacionEnLinea\bin\itext.sign.xml
+C:\Proyectos\ManifestacionEnLineav4.5\ManifestacionEnLinea\bin\itext.styledxmlparser.xml
+C:\Proyectos\ManifestacionEnLineav4.5\ManifestacionEnLinea\bin\itext.svg.xml
+C:\Proyectos\ManifestacionEnLineav4.5\ManifestacionEnLinea\bin\Newtonsoft.Json.xml
+C:\Proyectos\ManifestacionEnLineav4.5\ManifestacionEnLinea\obj\Debug\ManifestacionEnLinea.csproj.AssemblyReference.cache
+C:\Proyectos\ManifestacionEnLineav4.5\ManifestacionEnLinea\obj\Debug\ManifestacionEnLinea.csproj.CoreCompileInputs.cache
+C:\Proyectos\ManifestacionEnLineav4.5\ManifestacionEnLinea\obj\Debug\ManifestacionEnLinea.csproj.CopyComplete
+C:\Proyectos\ManifestacionEnLineav4.5\ManifestacionEnLinea\obj\Debug\ManifestacionEnLinea.dll
+C:\Proyectos\ManifestacionEnLineav4.5\ManifestacionEnLinea\obj\Debug\ManifestacionEnLinea.pdb

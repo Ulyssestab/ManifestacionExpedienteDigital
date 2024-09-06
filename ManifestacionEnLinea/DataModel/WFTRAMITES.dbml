@@ -1,0 +1,214 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="WFTRAMITES" Class="WFTRAMITESDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=10.1.111.188,1433;Initial Catalog=WFTRAMITES;User ID=sa" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="WFTRAMITESConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.SIS_TRACAT_ABSTENCIONES" Member="SIS_TRACAT_ABSTENCIONES">
+    <Type Name="SIS_TRACAT_ABSTENCIONES">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="STATUSREGISTROTABLA" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="ALTAREGISTROTABLA" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="BAJAREGISTROTABLA" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="USUARIOBAJA" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="USUARIOALTA" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="CVE_CAT_EST" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CVE_CAT_ORI" Type="System.String" DbType="NChar(17)" CanBeNull="true" />
+      <Column Name="OBS" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="PISO" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="OBS_ELIMINAR" Type="System.String" DbType="NChar(250)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Tramite" Member="Tramite">
+    <Type Name="Tramite">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ClaveCatastralOriginal" Type="System.String" DbType="NVarChar(17)" CanBeNull="true" />
+      <Column Name="ClaveCatastralEstandar" Type="System.String" DbType="NVarChar(31)" CanBeNull="true" />
+      <Column Name="FechaInicial" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="FechaFinal" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="FK_CatEstatus" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Pagado" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Condonado" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="FK_Cat_Notaria" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Prioridad" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Observaciones" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="FK_Cat_TipodeProcesoTramite" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FK_NombreUsuario" Type="System.String" DbType="NVarChar(120) NOT NULL" CanBeNull="false" />
+      <Column Name="Region" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Manzana" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Lote" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Departamento" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FK_Cat_TipodePredio" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NumeroCuenta" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Delegacion" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NumeroTramite" Type="System.String" DbType="NVarChar(30) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="FK_Cat_Solicitante" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NombrePersonalSolicitante" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="ObservacionAclaracion" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+      <Column Name="Procede" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Entidad" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Tipo" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Año" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Consecutivo" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Derivada" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TipoBusqueda" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Bloqueado" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Reserva" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Rechazado" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="NumeroClave" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NumeroCuentas" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Excentopago" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="FK_Cat_TipoClaveCatastralGenerada" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="FK_Cat_TipoInspeccion" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="PagarReingreso" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="NumeroTramiteSIC" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="NumeroTramiteValuacion" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="ProntoPago" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Sector" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="Localidad" Type="System.String" DbType="NVarChar(4)" CanBeNull="true" />
+      <Column Name="Predio" Type="System.String" DbType="NVarChar(5)" CanBeNull="true" />
+      <Column Name="Edificio" Type="System.String" DbType="NVarChar(2)" CanBeNull="true" />
+      <Column Name="Unidad" Type="System.String" DbType="NVarChar(4)" CanBeNull="true" />
+      <Column Name="Zona" Type="System.String" DbType="NVarChar(2)" CanBeNull="true" />
+      <Column Name="FK_Cat_Municipio" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="RequiereCartografia" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ObjectId_Cartografico" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Condominio" Type="System.String" DbType="NVarChar(4)" CanBeNull="true" />
+      <Column Name="OtroEstado" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
+      <Column Name="Folio" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Corett" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="FK_Cat_Dependencia" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Habilitado" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="SuperficieConstruccion" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="SuperficieTerreno" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="usuarioSolicitante" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="Observaciones_Rechazo_Direccion" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="FK_CatCoordinacion" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="USUARIOCANCELA" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SeguimientoTramite" Member="SeguimientoTramite">
+    <Type Name="SeguimientoTramite">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FK_NumeroTramite" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="FK_Cat_TipoProcesoTramite" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FK_Cat_Coordinacion" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FK_Cat_EstatusTramite" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Tarea" Type="System.String" DbType="NVarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="TipoFlujo" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Observaciones" Type="System.String" DbType="NVarChar(450)" CanBeNull="true" />
+      <Column Name="Duracion" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Orden" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FK_Cat_OpcionesSistema" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FOLIOPAGOAVALUO" Member="FOLIOPAGOAVALUO">
+    <Type Name="FOLIOPAGOAVALUO">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CUENTACATASTRAL" Type="System.String" DbType="NVarChar(17)" CanBeNull="true" />
+      <Column Name="REFERENCIAFOLIO" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="DECLARACION" Type="System.String" DbType="VarChar(7)" CanBeNull="true" />
+      <Column Name="FOLIOSIC" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="NOMBRE" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="CORREOELECTRONICO" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="FECHAALTA" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="FECHAEJERCIDO" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ESTADO" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="OBSERVACIONES" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="STATUSREGISTROTABLA" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SIS_TRACAT_MC_AV" Member="SIS_TRACAT_MC_AV">
+    <Type Name="SIS_TRACAT_MC_AV">
+      <Column Name="OBJECTID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="STATUSREGISTROTABLA" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="ALTAREGISTROTABLA" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="BAJAREGISTROTABLA" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="USUARIOALTA" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="USUARIOBAJA" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="FOLIO_TRAMITE" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="TIPO_TRAMITE" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="CVE_CAT_EST" Type="System.String" DbType="NVarChar(31)" CanBeNull="true" />
+      <Column Name="CVE_CAT_ORI" Type="System.String" DbType="NVarChar(31)" CanBeNull="true" />
+      <Column Name="CVE_PREDIAL" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="OBSERVACIONES" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="TRAMITADOR" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="EN_USO" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="IMAGEN" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="SOLICITANTE" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="PROPIETARIO" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="UBICACION" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="NOTIFICACION" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="NOTIFICACION_RECHAZO" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="AVALUO" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="FOLIO_PAGO_AVALUO" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="IGUAL_CARTOGRAFIA" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CORREOELECTRONICO" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="CONTROLFOLIO" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SIS_TRACAT_MC" Member="SIS_TRACAT_MC">
+    <Type Name="SIS_TRACAT_MC">
+      <Column Name="OBJECTID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="STATUSREGISTROTABLA" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="ALTAREGISTROTABLA" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="BAJAREGISTROTABLA" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="USUARIOALTA" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="USUARIOBAJA" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="FOLIO_TRAMITE" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="TIPO_TRAMITE" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="CVE_CAT_EST" Type="System.String" DbType="NVarChar(31)" CanBeNull="true" />
+      <Column Name="CVE_CAT_ORI" Type="System.String" DbType="NVarChar(31)" CanBeNull="true" />
+      <Column Name="CVE_PREDIAL" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="OBSERVACIONES" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="TRAMITADOR" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="EN_USO" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="IMAGEN" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="SOLICITANTE" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="PROPIETARIO" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="UBICACION" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="NOTIFICACION" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="NOTIFICACION_RECHAZO" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="AVALUO" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="FOLIO_PAGO_AVALUO" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="IGUAL_CARTOGRAFIA" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CORREOELECTRONICO" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="CONTROLFOLIO" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SIS_TRACAT_AC" Member="SIS_TRACAT_AC">
+    <Type Name="SIS_TRACAT_AC">
+      <Column Name="OBJECTID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="STATUSREGISTROTABLA" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="ALTAREGISTROTABLA" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="BAJAREGISTROTABLA" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="USUARIOALTA" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="USUARIOBAJA" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="TIPO_TRAMITE" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="FOLIO_TRAMITE" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CVE_CAT_EST" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CVE_CAT_ORI" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="OBSERVACIONES" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="TRAMITADOR" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="SOLICITANTE" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="UBICACION" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="FOLIO_MC" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="FOLIO_PAGO_AVALUO" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="NO_NOTARIA" Type="System.String" DbType="NVarChar(5)" CanBeNull="true" />
+      <Column Name="NO_ESCRITURA" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="NATURALEZA_DEL_ACTO" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="BANDERA_EXTERNO" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="BANDERA_ACEPTADO" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="BANDERA_TD" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CORREOELECTRONICO" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="CONTROLFOLIO" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.COORDENADAS_MANIFESTACION_AVALUO" Member="COORDENADAS_MANIFESTACION_AVALUO">
+    <Type Name="COORDENADAS_MANIFESTACION_AVALUO">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CVE_CAT_ORI" Type="System.String" DbType="NVarChar(17)" CanBeNull="true" />
+      <Column Name="STATUSREGISTROTABLA" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LATITUD" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LONGITUD" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UTM_X" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UTM_Y" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

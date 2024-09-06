@@ -1,0 +1,330 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_PublishTargetUrl>C:\Publicados\ManifestacionEnLinea</_PublishTargetUrl>
+    <History>True|2024-09-02T21:20:14.0865070Z;</History>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/BouncyCastle.Crypto.dll">
+      <publishTime>11/29/2022 11:28:50</publishTime>
+    </File>
+    <File Include="bin/Common.Logging.Core.dll">
+      <publishTime>11/29/2022 11:28:40</publishTime>
+    </File>
+    <File Include="bin/Common.Logging.Core.pdb">
+      <publishTime>11/29/2022 11:28:40</publishTime>
+    </File>
+    <File Include="bin/Common.Logging.dll">
+      <publishTime>11/29/2022 11:28:40</publishTime>
+    </File>
+    <File Include="bin/Common.Logging.pdb">
+      <publishTime>11/29/2022 11:28:40</publishTime>
+    </File>
+    <File Include="bin/itext.barcodes.dll">
+      <publishTime>11/29/2022 11:28:50</publishTime>
+    </File>
+    <File Include="bin/itext.forms.dll">
+      <publishTime>11/29/2022 11:28:50</publishTime>
+    </File>
+    <File Include="bin/itext.io.dll">
+      <publishTime>11/29/2022 11:28:50</publishTime>
+    </File>
+    <File Include="bin/itext.kernel.dll">
+      <publishTime>11/29/2022 11:28:50</publishTime>
+    </File>
+    <File Include="bin/itext.layout.dll">
+      <publishTime>11/29/2022 11:28:50</publishTime>
+    </File>
+    <File Include="bin/itext.pdfa.dll">
+      <publishTime>11/29/2022 11:28:50</publishTime>
+    </File>
+    <File Include="bin/itext.sign.dll">
+      <publishTime>11/29/2022 11:28:50</publishTime>
+    </File>
+    <File Include="bin/itext.styledxmlparser.dll">
+      <publishTime>11/29/2022 11:28:50</publishTime>
+    </File>
+    <File Include="bin/itext.svg.dll">
+      <publishTime>11/29/2022 11:28:50</publishTime>
+    </File>
+    <File Include="bin/ManifestacionEnLinea.dll">
+      <publishTime>09/02/2024 15:20:13</publishTime>
+    </File>
+    <File Include="bin/ManifestacionEnLinea.pdb">
+      <publishTime>09/02/2024 15:20:13</publishTime>
+    </File>
+    <File Include="bin/Microsoft.SqlServer.Types.dll">
+      <publishTime>11/29/2022 11:28:50</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>03/08/2023 01:09:56</publishTime>
+    </File>
+    <File Include="Connected Services/ControlDeFolioDesa/ManifestacionEnLinea.ControlDeFolioDesa.AgregarFolioAvaluoCatastralResponse.datasource">
+      <publishTime>11/29/2022 11:28:36</publishTime>
+    </File>
+    <File Include="Connected Services/ControlDeFolioDesa/ManifestacionEnLinea.ControlDeFolioDesa.AgregarFolioResponse.datasource">
+      <publishTime>11/29/2022 11:28:36</publishTime>
+    </File>
+    <File Include="Connected Services/ControlDeFolioDesa/ManifestacionEnLinea.ControlDeFolioDesa.AgregarLevantamientoResponse.datasource">
+      <publishTime>11/29/2022 11:28:36</publishTime>
+    </File>
+    <File Include="Connected Services/ControlDeFolioDesa/ManifestacionEnLinea.ControlDeFolioDesa.AgregarPlanoCertificadoResponse.datasource">
+      <publishTime>11/29/2022 11:28:36</publishTime>
+    </File>
+    <File Include="Connected Services/ControlDeFolioDesa/ManifestacionEnLinea.ControlDeFolioDesa.FolioResp.datasource">
+      <publishTime>11/29/2022 11:28:36</publishTime>
+    </File>
+    <File Include="Connected Services/ControlDeFolioDesa/ManifestacionEnLinea.ControlDeFolioDesa.HelloWorld2Response.datasource">
+      <publishTime>11/29/2022 11:28:36</publishTime>
+    </File>
+    <File Include="Connected Services/ControlDeFolioDesa/ManifestacionEnLinea.ControlDeFolioDesa.HelloWorldResponse.datasource">
+      <publishTime>11/29/2022 11:28:36</publishTime>
+    </File>
+    <File Include="Connected Services/ControlDeFolioDesa/ManifestacionEnLinea.ControlDeFolioDesa.MarcarComoTerminadoPorFolioSICResponse.datasource">
+      <publishTime>11/29/2022 11:28:36</publishTime>
+    </File>
+    <File Include="Connected Services/ControlDeFolioDesa/ManifestacionEnLinea.ControlDeFolioDesa.MarcarComoTerminadoResponse.datasource">
+      <publishTime>11/29/2022 11:28:36</publishTime>
+    </File>
+    <File Include="Connected Services/ControlFolios/ManifestacionEnLinea.ControlFolios.AgregarFolioAvaluoCatastralResponse.datasource">
+      <publishTime>11/29/2022 11:28:36</publishTime>
+    </File>
+    <File Include="Connected Services/ControlFolios/ManifestacionEnLinea.ControlFolios.AgregarFolioResponse.datasource">
+      <publishTime>11/29/2022 11:28:36</publishTime>
+    </File>
+    <File Include="Connected Services/ControlFolios/ManifestacionEnLinea.ControlFolios.AgregarLevantamientoResponse.datasource">
+      <publishTime>11/29/2022 11:28:36</publishTime>
+    </File>
+    <File Include="Connected Services/ControlFolios/ManifestacionEnLinea.ControlFolios.AgregarPlanoCertificadoResponse.datasource">
+      <publishTime>11/29/2022 11:28:36</publishTime>
+    </File>
+    <File Include="Connected Services/ControlFolios/ManifestacionEnLinea.ControlFolios.FolioResp.datasource">
+      <publishTime>11/29/2022 11:28:36</publishTime>
+    </File>
+    <File Include="Connected Services/ControlFolios/ManifestacionEnLinea.ControlFolios.MarcarComoTerminadoPorFolioSICResponse.datasource">
+      <publishTime>11/29/2022 11:28:36</publishTime>
+    </File>
+    <File Include="Connected Services/ControlFolios/ManifestacionEnLinea.ControlFolios.MarcarComoTerminadoResponse.datasource">
+      <publishTime>11/29/2022 11:28:36</publishTime>
+    </File>
+    <File Include="Connected Services/DeclaracionPagos/ManifestacionEnLinea.DeclaracionPagos.costoCIEResponse.datasource">
+      <publishTime>02/17/2023 13:01:02</publishTime>
+    </File>
+    <File Include="Connected Services/DeclaracionPagos/ManifestacionEnLinea.DeclaracionPagos.validaDeclaracionReferenciaPROESPAResponse.datasource">
+      <publishTime>02/17/2023 13:01:02</publishTime>
+    </File>
+    <File Include="Connected Services/DeclaracionPagos/ManifestacionEnLinea.DeclaracionPagos.validaDeclaracionReferenciaRegCivilResponse.datasource">
+      <publishTime>02/17/2023 13:01:02</publishTime>
+    </File>
+    <File Include="Connected Services/DeclaracionPagos/ManifestacionEnLinea.DeclaracionPagos.validaDeclaracionReferenciaResponse.datasource">
+      <publishTime>02/17/2023 13:01:02</publishTime>
+    </File>
+    <File Include="Connected Services/DeclaracionPagos/ManifestacionEnLinea.DeclaracionPagos.validaDeclaracionReferenciaRPPResponse.datasource">
+      <publishTime>02/17/2023 13:01:02</publishTime>
+    </File>
+    <File Include="Connected Services/DeclaracionPagos/ManifestacionEnLinea.DeclaracionPagos.validaDeclaracionResponse.datasource">
+      <publishTime>02/17/2023 13:01:02</publishTime>
+    </File>
+    <File Include="Connected Services/PagosCaja/ManifestacionEnLinea.PagosCaja.firmarResponse.datasource">
+      <publishTime>02/21/2023 10:56:50</publishTime>
+    </File>
+    <File Include="Connected Services/PagosCaja/ManifestacionEnLinea.PagosCaja.GetBienesResponse.datasource">
+      <publishTime>02/21/2023 10:56:50</publishTime>
+    </File>
+    <File Include="Connected Services/PagosCaja/ManifestacionEnLinea.PagosCaja.getInformacionReciboResponse.datasource">
+      <publishTime>02/21/2023 10:56:50</publishTime>
+    </File>
+    <File Include="Connected Services/PagosCaja/ManifestacionEnLinea.PagosCaja.GetResguardoEmpleadoResponse.datasource">
+      <publishTime>02/21/2023 10:56:50</publishTime>
+    </File>
+    <File Include="Connected Services/PagosCaja/ManifestacionEnLinea.PagosCaja.usarFolioReciboResponse.datasource">
+      <publishTime>02/21/2023 10:56:50</publishTime>
+    </File>
+    <File Include="DataModel/GDB01001.dbml">
+      <publishTime>11/29/2022 11:28:36</publishTime>
+    </File>
+    <File Include="DataModel/WFTRAMITES.dbml">
+      <publishTime>05/30/2024 12:02:22</publishTime>
+    </File>
+    <File Include="DescargaBoleta.aspx">
+      <publishTime>02/20/2024 15:36:42</publishTime>
+    </File>
+    <File Include="Documentos.aspx">
+      <publishTime>06/30/2024 16:36:10</publishTime>
+    </File>
+    <File Include="FormularioPago.aspx">
+      <publishTime>01/18/2024 10:31:12</publishTime>
+    </File>
+    <File Include="Imagenes/CapturaSeleccionDocumentos.JPG">
+      <publishTime>11/29/2022 11:28:36</publishTime>
+    </File>
+    <File Include="Imagenes/CapturaSeleccionDocumentos.png">
+      <publishTime>11/29/2022 11:28:36</publishTime>
+    </File>
+    <File Include="Imagenes/FormatoClaves/AGS_CLAVE.JPG">
+      <publishTime>11/29/2022 11:28:36</publishTime>
+    </File>
+    <File Include="Imagenes/FormatoClaves/ASI_CLAVE.jpg">
+      <publishTime>11/29/2022 11:28:36</publishTime>
+    </File>
+    <File Include="Imagenes/FormatoClaves/CAL_CLAVE.JPG">
+      <publishTime>11/29/2022 11:28:36</publishTime>
+    </File>
+    <File Include="Imagenes/FormatoClaves/COS_CLAVE.JPG">
+      <publishTime>11/29/2022 11:28:36</publishTime>
+    </File>
+    <File Include="Imagenes/FormatoClaves/JES_CLAVE.JPG">
+      <publishTime>11/29/2022 11:28:36</publishTime>
+    </File>
+    <File Include="Imagenes/FormatoClaves/JOS_CLAVE.JPG">
+      <publishTime>11/29/2022 11:28:36</publishTime>
+    </File>
+    <File Include="Imagenes/FormatoClaves/LLA_CLAVE.JPG">
+      <publishTime>11/29/2022 11:28:36</publishTime>
+    </File>
+    <File Include="Imagenes/FormatoClaves/PAB_CLAVE.JPG">
+      <publishTime>11/29/2022 11:28:36</publishTime>
+    </File>
+    <File Include="Imagenes/FormatoClaves/RIN_CLAVE.JPG">
+      <publishTime>11/29/2022 11:28:36</publishTime>
+    </File>
+    <File Include="Imagenes/FormatoClaves/SFC_CLAVE.JPG">
+      <publishTime>11/29/2022 11:28:36</publishTime>
+    </File>
+    <File Include="Imagenes/FormatoClaves/TEP_CLAVE.JPG">
+      <publishTime>11/29/2022 11:28:36</publishTime>
+    </File>
+    <File Include="Imagenes/Iconos/Bienvenido.jpg">
+      <publishTime>11/29/2022 11:28:36</publishTime>
+    </File>
+    <File Include="Imagenes/Iconos/Chrome_logo.png">
+      <publishTime>11/29/2022 11:28:36</publishTime>
+    </File>
+    <File Include="Imagenes/Iconos/favicon2.ico">
+      <publishTime>11/29/2022 11:28:36</publishTime>
+    </File>
+    <File Include="Imagenes/Iconos/FirefoxVentanas.png">
+      <publishTime>11/29/2022 11:28:36</publishTime>
+    </File>
+    <File Include="Imagenes/Iconos/fondo.jpg">
+      <publishTime>11/29/2022 11:28:36</publishTime>
+    </File>
+    <File Include="Imagenes/Iconos/icon-pdf.png">
+      <publishTime>11/29/2022 11:28:36</publishTime>
+    </File>
+    <File Include="Imagenes/Iconos/info.png">
+      <publishTime>11/29/2022 11:28:36</publishTime>
+    </File>
+    <File Include="Imagenes/Iconos/Loading.gif">
+      <publishTime>11/29/2022 11:28:36</publishTime>
+    </File>
+    <File Include="Imagenes/Iconos/mantenimiento.jpg">
+      <publishTime>11/29/2022 11:28:36</publishTime>
+    </File>
+    <File Include="Imagenes/Iconos/mantenimiento.png">
+      <publishTime>11/29/2022 11:28:36</publishTime>
+    </File>
+    <File Include="Imagenes/Iconos/popupbloqueados.png">
+      <publishTime>11/29/2022 11:28:36</publishTime>
+    </File>
+    <File Include="Imagenes/Iconos/REQUISITOSMANIFENLINEA.jpg">
+      <publishTime>11/29/2022 11:28:36</publishTime>
+    </File>
+    <File Include="Imagenes/Iconos/simbologia.png">
+      <publishTime>11/29/2022 11:28:36</publishTime>
+    </File>
+    <File Include="Imagenes/Iconos/VideoTutorial.png">
+      <publishTime>11/29/2022 11:28:36</publishTime>
+    </File>
+    <File Include="Imagenes/Pago/AVALUO.png">
+      <publishTime>03/21/2023 14:43:34</publishTime>
+    </File>
+    <File Include="Imagenes/Pago/CapturaMetodopago.JPG">
+      <publishTime>11/29/2022 11:28:36</publishTime>
+    </File>
+    <File Include="Imagenes/Pago/CapturaMetodopago.PNG">
+      <publishTime>02/15/2023 13:00:34</publishTime>
+    </File>
+    <File Include="Imagenes/Pago/CapturaMetodopago2.png">
+      <publishTime>02/15/2023 13:21:56</publishTime>
+    </File>
+    <File Include="Imagenes/Pago/Capturametodopago3.JPG">
+      <publishTime>11/29/2022 11:28:36</publishTime>
+    </File>
+    <File Include="Imagenes/Pago/CapturaMetodopago4.PNG">
+      <publishTime>02/15/2023 13:31:22</publishTime>
+    </File>
+    <File Include="Imagenes/Pago/ReciboCajas.png">
+      <publishTime>03/15/2023 11:11:56</publishTime>
+    </File>
+    <File Include="Imagenes/Predial/AGUASCALIENTESPREDIAL.jpg">
+      <publishTime>11/29/2022 11:28:38</publishTime>
+    </File>
+    <File Include="Imagenes/Predial/ASIENTOSPREDIAL.jpg">
+      <publishTime>11/29/2022 11:28:38</publishTime>
+    </File>
+    <File Include="Imagenes/Predial/ASIENTOSPREDIAL.png">
+      <publishTime>11/29/2022 11:28:38</publishTime>
+    </File>
+    <File Include="Imagenes/Predial/CALVILLOPREDIAL.jpg">
+      <publishTime>11/29/2022 11:28:38</publishTime>
+    </File>
+    <File Include="Imagenes/Predial/CALVILLOPREDIAL2.jpg">
+      <publishTime>11/29/2022 11:28:38</publishTime>
+    </File>
+    <File Include="Imagenes/Predial/COSIOPREDIAL.jpg">
+      <publishTime>11/29/2022 11:28:38</publishTime>
+    </File>
+    <File Include="Imagenes/Predial/ELLLANOPREDIAL.jpg">
+      <publishTime>11/29/2022 11:28:38</publishTime>
+    </File>
+    <File Include="Imagenes/Predial/JESUSMARIAPREDIAL.jpg">
+      <publishTime>11/29/2022 11:28:38</publishTime>
+    </File>
+    <File Include="Imagenes/Predial/PABELLONPREDIAL.jpg">
+      <publishTime>11/29/2022 11:28:38</publishTime>
+    </File>
+    <File Include="Imagenes/Predial/RINCONPREDIAL.jpg">
+      <publishTime>11/29/2022 11:28:38</publishTime>
+    </File>
+    <File Include="Imagenes/Predial/SANFCOPREDIAL.jpg">
+      <publishTime>11/29/2022 11:28:38</publishTime>
+    </File>
+    <File Include="Imagenes/Predial/SANJOSEPREDIAL.jpg">
+      <publishTime>11/29/2022 11:28:38</publishTime>
+    </File>
+    <File Include="Imagenes/Predial/TEPEZALAPREDIAL.jpg">
+      <publishTime>11/29/2022 11:28:38</publishTime>
+    </File>
+    <File Include="index.aspx">
+      <publishTime>01/18/2024 10:37:42</publishTime>
+    </File>
+    <File Include="InformacionPredio.aspx">
+      <publishTime>06/10/2024 09:43:16</publishTime>
+    </File>
+    <File Include="PaginaError.aspx">
+      <publishTime>11/29/2022 11:28:38</publishTime>
+    </File>
+    <File Include="Pago.aspx">
+      <publishTime>01/04/2024 17:07:28</publishTime>
+    </File>
+    <File Include="Properties/DataSources/System.Xml.Linq.XElement.datasource">
+      <publishTime>02/17/2023 13:01:02</publishTime>
+    </File>
+    <File Include="SaveMapHandler.ashx">
+      <publishTime>05/29/2024 11:00:58</publishTime>
+    </File>
+    <File Include="SubirArchivos.aspx">
+      <publishTime>05/31/2024 10:29:42</publishTime>
+    </File>
+    <File Include="UbicarPredio.aspx">
+      <publishTime>05/31/2024 15:09:50</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>09/02/2024 15:20:13</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

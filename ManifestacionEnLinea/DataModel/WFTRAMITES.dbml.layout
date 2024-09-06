@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 20.375" name="WFTRAMITES">
+  <DataContextMoniker Name="/WFTRAMITESDataContext" />
+  <nestedChildShapes>
+    <classShape Id="dcddd7c9-d120-4863-8b94-8bca508c5792" absoluteBounds="0.75, 6.375, 2, 2.9247054036458331">
+      <DataClassMoniker Name="/WFTRAMITESDataContext/SIS_TRACAT_ABSTENCIONES" />
+      <nestedChildShapes>
+        <elementListCompartment Id="49dbb7b7-efe0-4606-acf2-dfa77ee1bac0" absoluteBounds="0.765, 6.835, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a682658e-de44-45cd-aa75-ae4e611288f3" absoluteBounds="3.125, 7, 2, 13.116681315104165">
+      <DataClassMoniker Name="/WFTRAMITESDataContext/Tramite" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5e3a9cda-7e3e-4138-a3b5-50d86d68a9da" absoluteBounds="3.14, 7.46, 1.9700000000000002, 12.556681315104166" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="56959304-b45d-4a21-ab6b-1f5f0b344901" absoluteBounds="5.5, 7, 2, 2.9247054036458331">
+      <DataClassMoniker Name="/WFTRAMITESDataContext/SeguimientoTramite" />
+      <nestedChildShapes>
+        <elementListCompartment Id="50712d17-7f22-4501-995d-cbb0f409e1dd" absoluteBounds="5.515, 7.46, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="74f93635-de6b-46df-8e2f-d7f684cc4e66" absoluteBounds="0.625, 9.75, 2, 3.1170068359375">
+      <DataClassMoniker Name="/WFTRAMITESDataContext/FOLIOPAGOAVALUO" />
+      <nestedChildShapes>
+        <elementListCompartment Id="150a1fc6-e167-4a99-81ce-1ed1c84ea77a" absoluteBounds="0.64000000000000012, 10.21, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f140ab76-31e7-4678-a993-31b566e73911" absoluteBounds="5.875, 1.125, 2, 5.6169254557291657">
+      <DataClassMoniker Name="/WFTRAMITESDataContext/SIS_TRACAT_MC_AV" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8942b8e3-9347-4453-88e7-a20438731764" absoluteBounds="5.89, 1.585, 1.9700000000000002, 5.0569254557291661" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7b8c6e6c-aaec-43d1-b24c-95fb6b742b58" absoluteBounds="3.25, 1.125, 2, 5.6169254557291657">
+      <DataClassMoniker Name="/WFTRAMITESDataContext/SIS_TRACAT_MC" />
+      <nestedChildShapes>
+        <elementListCompartment Id="657dba42-1e5d-4296-854d-2bc508b1bb75" absoluteBounds="3.265, 1.585, 1.9700000000000002, 5.0569254557291661" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3f1ba0ff-9d45-4654-97ed-6b195c5340a3" absoluteBounds="0.75, 1.125, 2, 5.4246240234375">
+      <DataClassMoniker Name="/WFTRAMITESDataContext/SIS_TRACAT_AC" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6bdf804c-0185-4623-9ea5-f28866f16fe4" absoluteBounds="0.76500000000000012, 1.585, 1.9700000000000002, 4.8646240234375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="acc447d1-6430-4a78-a7f0-34a3df09b81b" absoluteBounds="8.625, 1.125, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/WFTRAMITESDataContext/COORDENADAS_MANIFESTACION_AVALUO" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ceceddd6-55fb-49ef-b520-ba2fa30f0efd" absoluteBounds="8.64, 1.585, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:tns="http://tempuri.org/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="MarcarComoTerminadoPorFolioSIC">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="clave" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="folio_SIC" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="folio_SIC_mani" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MarcarComoTerminadoPorFolioSICResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MarcarComoTerminadoPorFolioSICResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MarcarComoTerminado">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="clave" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="folioSIC" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MarcarComoTerminadoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MarcarComoTerminadoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AgregarFolio">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="folio" type="tns:FolioSolicitud" />
+            <s:element minOccurs="0" maxOccurs="1" name="clave" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="FolioSolicitud">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="nombreSolicitante" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="observacion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="folio_SIC" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="mani_con_avaluo" nillable="true" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="AgregarFolioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AgregarFolioResult" type="tns:FolioResp" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="FolioResp">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="clave" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="id_folio" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="res" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="msg" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="AgregarFolioAvaluoCatastral">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="folio" type="tns:FolioSolicitud" />
+            <s:element minOccurs="0" maxOccurs="1" name="clave" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AgregarFolioAvaluoCatastralResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AgregarFolioAvaluoCatastralResult" type="tns:FolioResp" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AgregarLevantamiento">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="folio" type="tns:FolioSolicitud" />
+            <s:element minOccurs="0" maxOccurs="1" name="clave" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AgregarLevantamientoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AgregarLevantamientoResult" type="tns:FolioResp" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AgregarPlanoCertificado">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="folio" type="tns:FolioSolicitud" />
+            <s:element minOccurs="0" maxOccurs="1" name="clave" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AgregarPlanoCertificadoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AgregarPlanoCertificadoResult" type="tns:FolioResp" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="MarcarComoTerminadoPorFolioSICSoapIn">
+    <wsdl:part name="parameters" element="tns:MarcarComoTerminadoPorFolioSIC" />
+  </wsdl:message>
+  <wsdl:message name="MarcarComoTerminadoPorFolioSICSoapOut">
+    <wsdl:part name="parameters" element="tns:MarcarComoTerminadoPorFolioSICResponse" />
+  </wsdl:message>
+  <wsdl:message name="MarcarComoTerminadoSoapIn">
+    <wsdl:part name="parameters" element="tns:MarcarComoTerminado" />
+  </wsdl:message>
+  <wsdl:message name="MarcarComoTerminadoSoapOut">
+    <wsdl:part name="parameters" element="tns:MarcarComoTerminadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="AgregarFolioSoapIn">
+    <wsdl:part name="parameters" element="tns:AgregarFolio" />
+  </wsdl:message>
+  <wsdl:message name="AgregarFolioSoapOut">
+    <wsdl:part name="parameters" element="tns:AgregarFolioResponse" />
+  </wsdl:message>
+  <wsdl:message name="AgregarFolioAvaluoCatastralSoapIn">
+    <wsdl:part name="parameters" element="tns:AgregarFolioAvaluoCatastral" />
+  </wsdl:message>
+  <wsdl:message name="AgregarFolioAvaluoCatastralSoapOut">
+    <wsdl:part name="parameters" element="tns:AgregarFolioAvaluoCatastralResponse" />
+  </wsdl:message>
+  <wsdl:message name="AgregarLevantamientoSoapIn">
+    <wsdl:part name="parameters" element="tns:AgregarLevantamiento" />
+  </wsdl:message>
+  <wsdl:message name="AgregarLevantamientoSoapOut">
+    <wsdl:part name="parameters" element="tns:AgregarLevantamientoResponse" />
+  </wsdl:message>
+  <wsdl:message name="AgregarPlanoCertificadoSoapIn">
+    <wsdl:part name="parameters" element="tns:AgregarPlanoCertificado" />
+  </wsdl:message>
+  <wsdl:message name="AgregarPlanoCertificadoSoapOut">
+    <wsdl:part name="parameters" element="tns:AgregarPlanoCertificadoResponse" />
+  </wsdl:message>
+  <wsdl:portType name="CatastroControlFoliosSoap">
+    <wsdl:operation name="MarcarComoTerminadoPorFolioSIC">
+      <wsdl:input message="tns:MarcarComoTerminadoPorFolioSICSoapIn" />
+      <wsdl:output message="tns:MarcarComoTerminadoPorFolioSICSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MarcarComoTerminado">
+      <wsdl:input message="tns:MarcarComoTerminadoSoapIn" />
+      <wsdl:output message="tns:MarcarComoTerminadoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AgregarFolio">
+      <wsdl:input message="tns:AgregarFolioSoapIn" />
+      <wsdl:output message="tns:AgregarFolioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AgregarFolioAvaluoCatastral">
+      <wsdl:input message="tns:AgregarFolioAvaluoCatastralSoapIn" />
+      <wsdl:output message="tns:AgregarFolioAvaluoCatastralSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AgregarLevantamiento">
+      <wsdl:input message="tns:AgregarLevantamientoSoapIn" />
+      <wsdl:output message="tns:AgregarLevantamientoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AgregarPlanoCertificado">
+      <wsdl:input message="tns:AgregarPlanoCertificadoSoapIn" />
+      <wsdl:output message="tns:AgregarPlanoCertificadoSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CatastroControlFoliosSoap" type="tns:CatastroControlFoliosSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="MarcarComoTerminadoPorFolioSIC">
+      <soap:operation soapAction="http://tempuri.org/MarcarComoTerminadoPorFolioSIC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MarcarComoTerminado">
+      <soap:operation soapAction="http://tempuri.org/MarcarComoTerminado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AgregarFolio">
+      <soap:operation soapAction="http://tempuri.org/AgregarFolio" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AgregarFolioAvaluoCatastral">
+      <soap:operation soapAction="http://tempuri.org/AgregarFolioAvaluoCatastral" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AgregarLevantamiento">
+      <soap:operation soapAction="http://tempuri.org/AgregarLevantamiento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AgregarPlanoCertificado">
+      <soap:operation soapAction="http://tempuri.org/AgregarPlanoCertificado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="CatastroControlFoliosSoap12" type="tns:CatastroControlFoliosSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="MarcarComoTerminadoPorFolioSIC">
+      <soap12:operation soapAction="http://tempuri.org/MarcarComoTerminadoPorFolioSIC" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MarcarComoTerminado">
+      <soap12:operation soapAction="http://tempuri.org/MarcarComoTerminado" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AgregarFolio">
+      <soap12:operation soapAction="http://tempuri.org/AgregarFolio" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AgregarFolioAvaluoCatastral">
+      <soap12:operation soapAction="http://tempuri.org/AgregarFolioAvaluoCatastral" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AgregarLevantamiento">
+      <soap12:operation soapAction="http://tempuri.org/AgregarLevantamiento" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AgregarPlanoCertificado">
+      <soap12:operation soapAction="http://tempuri.org/AgregarPlanoCertificado" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CatastroControlFolios">
+    <wsdl:port name="CatastroControlFoliosSoap" binding="tns:CatastroControlFoliosSoap">
+      <soap:address location="http://egobierno2.aguascalientes.gob.mx/IRC/ServiciosIRC/CatastroControlFolios.asmx" />
+    </wsdl:port>
+    <wsdl:port name="CatastroControlFoliosSoap12" binding="tns:CatastroControlFoliosSoap12">
+      <soap12:address location="http://egobierno2.aguascalientes.gob.mx/IRC/ServiciosIRC/CatastroControlFolios.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

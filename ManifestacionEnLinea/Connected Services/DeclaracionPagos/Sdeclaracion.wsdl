@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:tns="https://eservicios2.aguascalientes.gob.mx/WsIngresos/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" targetNamespace="https://eservicios2.aguascalientes.gob.mx/WsIngresos/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="https://eservicios2.aguascalientes.gob.mx/WsIngresos/">
+      <s:element name="validaDeclaracion">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="declaracion" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="validaDeclaracionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="validaDeclaracionResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="validaDeclaracionReferencia">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="referencia" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="validaDeclaracionReferenciaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="validaDeclaracionReferenciaResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="validaDeclaracionReferenciaRegCivil">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="referencia" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="validaDeclaracionReferenciaRegCivilResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="validaDeclaracionReferenciaRegCivilResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="validaDeclaracionReferenciaRPP">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="referencia" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="validaDeclaracionReferenciaRPPResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="validaDeclaracionReferenciaRPPResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="validaDeclaracionReferenciaPROESPA">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="referencia" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="validaDeclaracionReferenciaPROESPAResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="validaDeclaracionReferenciaPROESPAResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="costoCIE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cie" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="costoCIEResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="costoCIEResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="validaDeclaracionSoapIn">
+    <wsdl:part name="parameters" element="tns:validaDeclaracion" />
+  </wsdl:message>
+  <wsdl:message name="validaDeclaracionSoapOut">
+    <wsdl:part name="parameters" element="tns:validaDeclaracionResponse" />
+  </wsdl:message>
+  <wsdl:message name="validaDeclaracionReferenciaSoapIn">
+    <wsdl:part name="parameters" element="tns:validaDeclaracionReferencia" />
+  </wsdl:message>
+  <wsdl:message name="validaDeclaracionReferenciaSoapOut">
+    <wsdl:part name="parameters" element="tns:validaDeclaracionReferenciaResponse" />
+  </wsdl:message>
+  <wsdl:message name="validaDeclaracionReferenciaRegCivilSoapIn">
+    <wsdl:part name="parameters" element="tns:validaDeclaracionReferenciaRegCivil" />
+  </wsdl:message>
+  <wsdl:message name="validaDeclaracionReferenciaRegCivilSoapOut">
+    <wsdl:part name="parameters" element="tns:validaDeclaracionReferenciaRegCivilResponse" />
+  </wsdl:message>
+  <wsdl:message name="validaDeclaracionReferenciaRPPSoapIn">
+    <wsdl:part name="parameters" element="tns:validaDeclaracionReferenciaRPP" />
+  </wsdl:message>
+  <wsdl:message name="validaDeclaracionReferenciaRPPSoapOut">
+    <wsdl:part name="parameters" element="tns:validaDeclaracionReferenciaRPPResponse" />
+  </wsdl:message>
+  <wsdl:message name="validaDeclaracionReferenciaPROESPASoapIn">
+    <wsdl:part name="parameters" element="tns:validaDeclaracionReferenciaPROESPA" />
+  </wsdl:message>
+  <wsdl:message name="validaDeclaracionReferenciaPROESPASoapOut">
+    <wsdl:part name="parameters" element="tns:validaDeclaracionReferenciaPROESPAResponse" />
+  </wsdl:message>
+  <wsdl:message name="costoCIESoapIn">
+    <wsdl:part name="parameters" element="tns:costoCIE" />
+  </wsdl:message>
+  <wsdl:message name="costoCIESoapOut">
+    <wsdl:part name="parameters" element="tns:costoCIEResponse" />
+  </wsdl:message>
+  <wsdl:portType name="SDeclaracionSoap">
+    <wsdl:operation name="validaDeclaracion">
+      <wsdl:input message="tns:validaDeclaracionSoapIn" />
+      <wsdl:output message="tns:validaDeclaracionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="validaDeclaracionReferencia">
+      <wsdl:input message="tns:validaDeclaracionReferenciaSoapIn" />
+      <wsdl:output message="tns:validaDeclaracionReferenciaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="validaDeclaracionReferenciaRegCivil">
+      <wsdl:input message="tns:validaDeclaracionReferenciaRegCivilSoapIn" />
+      <wsdl:output message="tns:validaDeclaracionReferenciaRegCivilSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="validaDeclaracionReferenciaRPP">
+      <wsdl:input message="tns:validaDeclaracionReferenciaRPPSoapIn" />
+      <wsdl:output message="tns:validaDeclaracionReferenciaRPPSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="validaDeclaracionReferenciaPROESPA">
+      <wsdl:input message="tns:validaDeclaracionReferenciaPROESPASoapIn" />
+      <wsdl:output message="tns:validaDeclaracionReferenciaPROESPASoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="costoCIE">
+      <wsdl:input message="tns:costoCIESoapIn" />
+      <wsdl:output message="tns:costoCIESoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SDeclaracionSoap" type="tns:SDeclaracionSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="validaDeclaracion">
+      <soap:operation soapAction="https://eservicios2.aguascalientes.gob.mx/WsIngresos/validaDeclaracion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="validaDeclaracionReferencia">
+      <soap:operation soapAction="https://eservicios2.aguascalientes.gob.mx/WsIngresos/validaDeclaracionReferencia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="validaDeclaracionReferenciaRegCivil">
+      <soap:operation soapAction="https://eservicios2.aguascalientes.gob.mx/WsIngresos/validaDeclaracionReferenciaRegCivil" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="validaDeclaracionReferenciaRPP">
+      <soap:operation soapAction="https://eservicios2.aguascalientes.gob.mx/WsIngresos/validaDeclaracionReferenciaRPP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="validaDeclaracionReferenciaPROESPA">
+      <soap:operation soapAction="https://eservicios2.aguascalientes.gob.mx/WsIngresos/validaDeclaracionReferenciaPROESPA" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="costoCIE">
+      <soap:operation soapAction="https://eservicios2.aguascalientes.gob.mx/WsIngresos/costoCIE" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SDeclaracionSoap12" type="tns:SDeclaracionSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="validaDeclaracion">
+      <soap12:operation soapAction="https://eservicios2.aguascalientes.gob.mx/WsIngresos/validaDeclaracion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="validaDeclaracionReferencia">
+      <soap12:operation soapAction="https://eservicios2.aguascalientes.gob.mx/WsIngresos/validaDeclaracionReferencia" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="validaDeclaracionReferenciaRegCivil">
+      <soap12:operation soapAction="https://eservicios2.aguascalientes.gob.mx/WsIngresos/validaDeclaracionReferenciaRegCivil" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="validaDeclaracionReferenciaRPP">
+      <soap12:operation soapAction="https://eservicios2.aguascalientes.gob.mx/WsIngresos/validaDeclaracionReferenciaRPP" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="validaDeclaracionReferenciaPROESPA">
+      <soap12:operation soapAction="https://eservicios2.aguascalientes.gob.mx/WsIngresos/validaDeclaracionReferenciaPROESPA" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="costoCIE">
+      <soap12:operation soapAction="https://eservicios2.aguascalientes.gob.mx/WsIngresos/costoCIE" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SDeclaracion">
+    <wsdl:port name="SDeclaracionSoap" binding="tns:SDeclaracionSoap">
+      <soap:address location="https://eservicios2.aguascalientes.gob.mx/wsIngresos/Sdeclaracion.asmx" />
+    </wsdl:port>
+    <wsdl:port name="SDeclaracionSoap12" binding="tns:SDeclaracionSoap12">
+      <soap12:address location="https://eservicios2.aguascalientes.gob.mx/wsIngresos/Sdeclaracion.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
