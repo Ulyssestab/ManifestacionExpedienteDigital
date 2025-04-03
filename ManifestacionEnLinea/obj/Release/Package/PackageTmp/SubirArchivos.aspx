@@ -231,8 +231,8 @@
               <b>Dar clic en el botón "Enviar Archivos"</b><br />
               <label id="mcenviarcp" style="display:none; font-size:16px;">6. Dar clic en el botón "Enviar Archivos"</label><br />
               <div class="col-md-4">
-                  <asp:Button runat="server" ID="UploadButton" CssClass="hidden" onclick="UploadButton_Click" Text="Enviar Archivos" /> 
-                  <button type="button" id="BotonEnviar" class="btn btn-primary" data-toggle="modal" onclick="ValidarFormulario()" >Enviar Archivos</button>
+                  <asp:Button runat="server" ID="UploadButton" onclick="UploadButton_Click" Text="Enviar Archivos" CssClass="btn btn-primary" /> 
+                  <%--<button type="button" id="BotonEnviar" class="btn btn-primary" data-toggle="modal" onclick="ValidarFormulario()" >Enviar Archivos</button>--%>
               </div>
               <%--<div class="col-md-4">
                   <asp:Label runat="server" Text="Procesando..." Visible="false" ID="Lbl_MensajeEnviar"></asp:Label>

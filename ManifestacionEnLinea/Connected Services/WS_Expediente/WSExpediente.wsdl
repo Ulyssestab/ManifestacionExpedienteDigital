@@ -1,0 +1,3185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="https://expedientedigital.aguascalientes.gob.mx/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s1="https://expedientedigital.aguascalientes.gob.mx/AbstractTypes" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="https://expedientedigital.aguascalientes.gob.mx/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="https://expedientedigital.aguascalientes.gob.mx/">
+      <s:element name="GetDataByCatPadron">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Clave_Unica" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Usuario" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDataByCatPadronResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="Ws_ExpedienteConsulta">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="tipo_persona" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Identidad" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Ws_ExpedienteConsultaResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="Ws_ExpedienteConsultaIdTramite">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="tipo_persona" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Identidad" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="IdTramite" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Ws_ExpedienteConsultaIdTramiteResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="Ws_ExpedienteConsultaDocumento">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="tipodocumento" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="metadato" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Ws_ExpedienteConsultaDocumentoResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="Ws_ExpedienteConsultaFolio">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="tipo_persona" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Identidad" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Folio" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Ws_ExpedienteConsultaFolioResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="WS_CiudadanoLogin">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="usr" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pass" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_CiudadanoLoginResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="WS_ExpedienteCorreoActivar">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_ExpedienteCorreoActivarResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="WS_ExpedienteCorreoEnviar">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Titulo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Contenido" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="para" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="copia" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_ExpedienteCorreoEnviarResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="WS_ExpedienteCorreoEnviarAdjunto">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Titulo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Contenido" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="para" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="copia" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Adjunto" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="extension" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_ExpedienteCorreoEnviarAdjuntoResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="WS_ExpedienteCorreoRecuperar">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Identidad" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_ExpedienteCorreoRecuperarResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="WS_ExpedienteCorreoRestablecer">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Identidad" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="correo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_ExpedienteCorreoRestablecerResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="WS_ExpedienteSubir">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Tipopersona" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Identidad" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="IdDocumento" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="archivo" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="Expedicion" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Validado" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="Revisor" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="extencion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="folio" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="metaDato" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_ExpedienteSubirResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="WS_ExpedienteSubirResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_ExpedienteSubir64">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Tipopersona" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Identidad" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="IdDocumento" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="archivo64" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Expedicion" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Validado" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="Revisor" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="extencion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="folio" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="metaDato" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_ExpedienteSubir64Response">
+        <s:complexType />
+      </s:element>
+      <s:element name="WS_ExpedienteSubirTramite">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Tipopersona" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Identidad" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="IdDocumento" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IdTramite" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IdApoyo" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="archivo" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="Expedicion" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Validado" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="Revisor" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="extencion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="folio" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="metaDato" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_ExpedienteSubirTramiteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="WS_ExpedienteSubirTramiteResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_ExpedienteSubirTramite64">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Tipopersona" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Identidad" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="IdDocumento" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IdTramite" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IdApoyo" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="archivo64" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Expedicion" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Validado" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="Revisor" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="extencion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="folio" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="metaDato" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_ExpedienteSubirTramite64Response">
+        <s:complexType />
+      </s:element>
+      <s:element name="WS_ExpedienteValidaDocumento">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Tipopersona" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Identidad" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="IdArchivo" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Expedicion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Folio" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Validado" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Revisor" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_ExpedienteValidaDocumentoResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="WS_ExpedienteTramiteRespuesta">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Tipopersona" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Identidad" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Tramite" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Respuesta" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Estatus" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_ExpedienteTramiteRespuestaResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="WS_ExpedienteTramiteRequisitos">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IdApoyo" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_ExpedienteTramiteRequisitosResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="WS_ExpedienteTramiteRegistro">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Tipopersona" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Identidad" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="IdDep" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IdApoyo" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Solicitud" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Respuesta" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Estatus" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_ExpedienteTramiteRegistroResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="WS_ExpedienteRegistro">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Tipopersona" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="idNacionalidad" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="idDiscapacidad" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Nombre" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PrimerApellido" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SegundoApellido" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="RFC" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CURP" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fechaNacimiento" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="idlugarNacimiento" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="idSexo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="idEstadoCivil" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="razonSocial" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nombreComercial" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="representanteLegal" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fechaContitucion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="idEstado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="idMunicipio" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="idLocalidad" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="colonia" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="calle" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nEXterior" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nInterior" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="codigoPostal" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="telefono" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="celular" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="correoElectronico" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="contrasenia" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_ExpedienteRegistroResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="WS_ExpedienteFoto">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="TipoPersona" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="identidad" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="archivo" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="extension" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_ExpedienteFotoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="WS_ExpedienteFotoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_ExpedienteFoto64">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="TipoPersona" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="identidad" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="archivo64" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="extension" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_ExpedienteFoto64Response">
+        <s:complexType />
+      </s:element>
+      <s:element name="WS_ValidaLicencia">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CURP" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Licencia" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="duracion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_ValidaLicenciaResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="WS_Estado">
+        <s:complexType />
+      </s:element>
+      <s:element name="WS_EstadoResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="WS_Municipio">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="estado" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_MunicipioResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="WS_Localidad">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="estado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="municipio" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_LocalidadResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="WS_Dependencia">
+        <s:complexType />
+      </s:element>
+      <s:element name="WS_DependenciaResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="WS_Sexo">
+        <s:complexType />
+      </s:element>
+      <s:element name="WS_SexoResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="WS_Documentos">
+        <s:complexType />
+      </s:element>
+      <s:element name="WS_DocumentosResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="WS_EstadoCivil">
+        <s:complexType />
+      </s:element>
+      <s:element name="WS_EstadoCivilResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="WS_Nacionalidad">
+        <s:complexType />
+      </s:element>
+      <s:element name="WS_NacionalidadResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="Ws_ExpedienteSMS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Mensaje" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="telefono" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Ws_ExpedienteSMSResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="WS_Estatus">
+        <s:complexType />
+      </s:element>
+      <s:element name="WS_EstatusResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="WS_ExpedienteTramites">
+        <s:complexType />
+      </s:element>
+      <s:element name="WS_ExpedienteTramitesResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="WS_WhatsAppSend">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Telefono" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Mensaje" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="url" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_WhatsAppSendResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="WS_WhatsAppSendSoluciones">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Telefono" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nombre" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="wallet" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fileurl" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_WhatsAppSendSolucionesResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="WS_WhatsAppSendAdjunto">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Telefono" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="mensaje" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="portal" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fileurl" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_WhatsAppSendAdjuntoResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="WS_WhatsAppValida">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Telefono" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Aplicacion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_WhatsAppValidaResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="WS_ExpedienteValidaNAT">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ValidationId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CURP" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_ExpedienteValidaNATResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="JsonSEFIPaseCaja">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PaseCaja" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="JsonSEFIPaseCajaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="JsonSEFIPaseCajaResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="string" nillable="true" type="s:string" />
+    </s:schema>
+    <s:schema targetNamespace="https://expedientedigital.aguascalientes.gob.mx/AbstractTypes">
+      <s:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <s:complexType name="StringArray">
+        <s:complexContent mixed="false">
+          <s:restriction base="soapenc:Array">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="unbounded" name="String" type="s:string" />
+            </s:sequence>
+          </s:restriction>
+        </s:complexContent>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetDataByCatPadronSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDataByCatPadron" />
+  </wsdl:message>
+  <wsdl:message name="GetDataByCatPadronSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDataByCatPadronResponse" />
+  </wsdl:message>
+  <wsdl:message name="Ws_ExpedienteConsultaSoapIn">
+    <wsdl:part name="parameters" element="tns:Ws_ExpedienteConsulta" />
+  </wsdl:message>
+  <wsdl:message name="Ws_ExpedienteConsultaSoapOut">
+    <wsdl:part name="parameters" element="tns:Ws_ExpedienteConsultaResponse" />
+  </wsdl:message>
+  <wsdl:message name="Ws_ExpedienteConsultaIdTramiteSoapIn">
+    <wsdl:part name="parameters" element="tns:Ws_ExpedienteConsultaIdTramite" />
+  </wsdl:message>
+  <wsdl:message name="Ws_ExpedienteConsultaIdTramiteSoapOut">
+    <wsdl:part name="parameters" element="tns:Ws_ExpedienteConsultaIdTramiteResponse" />
+  </wsdl:message>
+  <wsdl:message name="Ws_ExpedienteConsultaDocumentoSoapIn">
+    <wsdl:part name="parameters" element="tns:Ws_ExpedienteConsultaDocumento" />
+  </wsdl:message>
+  <wsdl:message name="Ws_ExpedienteConsultaDocumentoSoapOut">
+    <wsdl:part name="parameters" element="tns:Ws_ExpedienteConsultaDocumentoResponse" />
+  </wsdl:message>
+  <wsdl:message name="Ws_ExpedienteConsultaFolioSoapIn">
+    <wsdl:part name="parameters" element="tns:Ws_ExpedienteConsultaFolio" />
+  </wsdl:message>
+  <wsdl:message name="Ws_ExpedienteConsultaFolioSoapOut">
+    <wsdl:part name="parameters" element="tns:Ws_ExpedienteConsultaFolioResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_CiudadanoLoginSoapIn">
+    <wsdl:part name="parameters" element="tns:WS_CiudadanoLogin" />
+  </wsdl:message>
+  <wsdl:message name="WS_CiudadanoLoginSoapOut">
+    <wsdl:part name="parameters" element="tns:WS_CiudadanoLoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_ExpedienteCorreoActivarSoapIn">
+    <wsdl:part name="parameters" element="tns:WS_ExpedienteCorreoActivar" />
+  </wsdl:message>
+  <wsdl:message name="WS_ExpedienteCorreoActivarSoapOut">
+    <wsdl:part name="parameters" element="tns:WS_ExpedienteCorreoActivarResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_ExpedienteCorreoEnviarSoapIn">
+    <wsdl:part name="parameters" element="tns:WS_ExpedienteCorreoEnviar" />
+  </wsdl:message>
+  <wsdl:message name="WS_ExpedienteCorreoEnviarSoapOut">
+    <wsdl:part name="parameters" element="tns:WS_ExpedienteCorreoEnviarResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_ExpedienteCorreoEnviarAdjuntoSoapIn">
+    <wsdl:part name="parameters" element="tns:WS_ExpedienteCorreoEnviarAdjunto" />
+  </wsdl:message>
+  <wsdl:message name="WS_ExpedienteCorreoEnviarAdjuntoSoapOut">
+    <wsdl:part name="parameters" element="tns:WS_ExpedienteCorreoEnviarAdjuntoResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_ExpedienteCorreoRecuperarSoapIn">
+    <wsdl:part name="parameters" element="tns:WS_ExpedienteCorreoRecuperar" />
+  </wsdl:message>
+  <wsdl:message name="WS_ExpedienteCorreoRecuperarSoapOut">
+    <wsdl:part name="parameters" element="tns:WS_ExpedienteCorreoRecuperarResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_ExpedienteCorreoRestablecerSoapIn">
+    <wsdl:part name="parameters" element="tns:WS_ExpedienteCorreoRestablecer" />
+  </wsdl:message>
+  <wsdl:message name="WS_ExpedienteCorreoRestablecerSoapOut">
+    <wsdl:part name="parameters" element="tns:WS_ExpedienteCorreoRestablecerResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_ExpedienteSubirSoapIn">
+    <wsdl:part name="parameters" element="tns:WS_ExpedienteSubir" />
+  </wsdl:message>
+  <wsdl:message name="WS_ExpedienteSubirSoapOut">
+    <wsdl:part name="parameters" element="tns:WS_ExpedienteSubirResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_ExpedienteSubir64SoapIn">
+    <wsdl:part name="parameters" element="tns:WS_ExpedienteSubir64" />
+  </wsdl:message>
+  <wsdl:message name="WS_ExpedienteSubir64SoapOut">
+    <wsdl:part name="parameters" element="tns:WS_ExpedienteSubir64Response" />
+  </wsdl:message>
+  <wsdl:message name="WS_ExpedienteSubirTramiteSoapIn">
+    <wsdl:part name="parameters" element="tns:WS_ExpedienteSubirTramite" />
+  </wsdl:message>
+  <wsdl:message name="WS_ExpedienteSubirTramiteSoapOut">
+    <wsdl:part name="parameters" element="tns:WS_ExpedienteSubirTramiteResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_ExpedienteSubirTramite64SoapIn">
+    <wsdl:part name="parameters" element="tns:WS_ExpedienteSubirTramite64" />
+  </wsdl:message>
+  <wsdl:message name="WS_ExpedienteSubirTramite64SoapOut">
+    <wsdl:part name="parameters" element="tns:WS_ExpedienteSubirTramite64Response" />
+  </wsdl:message>
+  <wsdl:message name="WS_ExpedienteValidaDocumentoSoapIn">
+    <wsdl:part name="parameters" element="tns:WS_ExpedienteValidaDocumento" />
+  </wsdl:message>
+  <wsdl:message name="WS_ExpedienteValidaDocumentoSoapOut">
+    <wsdl:part name="parameters" element="tns:WS_ExpedienteValidaDocumentoResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_ExpedienteTramiteRespuestaSoapIn">
+    <wsdl:part name="parameters" element="tns:WS_ExpedienteTramiteRespuesta" />
+  </wsdl:message>
+  <wsdl:message name="WS_ExpedienteTramiteRespuestaSoapOut">
+    <wsdl:part name="parameters" element="tns:WS_ExpedienteTramiteRespuestaResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_ExpedienteTramiteRequisitosSoapIn">
+    <wsdl:part name="parameters" element="tns:WS_ExpedienteTramiteRequisitos" />
+  </wsdl:message>
+  <wsdl:message name="WS_ExpedienteTramiteRequisitosSoapOut">
+    <wsdl:part name="parameters" element="tns:WS_ExpedienteTramiteRequisitosResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_ExpedienteTramiteRegistroSoapIn">
+    <wsdl:part name="parameters" element="tns:WS_ExpedienteTramiteRegistro" />
+  </wsdl:message>
+  <wsdl:message name="WS_ExpedienteTramiteRegistroSoapOut">
+    <wsdl:part name="parameters" element="tns:WS_ExpedienteTramiteRegistroResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_ExpedienteRegistroSoapIn">
+    <wsdl:part name="parameters" element="tns:WS_ExpedienteRegistro" />
+  </wsdl:message>
+  <wsdl:message name="WS_ExpedienteRegistroSoapOut">
+    <wsdl:part name="parameters" element="tns:WS_ExpedienteRegistroResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_ExpedienteFotoSoapIn">
+    <wsdl:part name="parameters" element="tns:WS_ExpedienteFoto" />
+  </wsdl:message>
+  <wsdl:message name="WS_ExpedienteFotoSoapOut">
+    <wsdl:part name="parameters" element="tns:WS_ExpedienteFotoResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_ExpedienteFoto64SoapIn">
+    <wsdl:part name="parameters" element="tns:WS_ExpedienteFoto64" />
+  </wsdl:message>
+  <wsdl:message name="WS_ExpedienteFoto64SoapOut">
+    <wsdl:part name="parameters" element="tns:WS_ExpedienteFoto64Response" />
+  </wsdl:message>
+  <wsdl:message name="WS_ValidaLicenciaSoapIn">
+    <wsdl:part name="parameters" element="tns:WS_ValidaLicencia" />
+  </wsdl:message>
+  <wsdl:message name="WS_ValidaLicenciaSoapOut">
+    <wsdl:part name="parameters" element="tns:WS_ValidaLicenciaResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_EstadoSoapIn">
+    <wsdl:part name="parameters" element="tns:WS_Estado" />
+  </wsdl:message>
+  <wsdl:message name="WS_EstadoSoapOut">
+    <wsdl:part name="parameters" element="tns:WS_EstadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_MunicipioSoapIn">
+    <wsdl:part name="parameters" element="tns:WS_Municipio" />
+  </wsdl:message>
+  <wsdl:message name="WS_MunicipioSoapOut">
+    <wsdl:part name="parameters" element="tns:WS_MunicipioResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_LocalidadSoapIn">
+    <wsdl:part name="parameters" element="tns:WS_Localidad" />
+  </wsdl:message>
+  <wsdl:message name="WS_LocalidadSoapOut">
+    <wsdl:part name="parameters" element="tns:WS_LocalidadResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_DependenciaSoapIn">
+    <wsdl:part name="parameters" element="tns:WS_Dependencia" />
+  </wsdl:message>
+  <wsdl:message name="WS_DependenciaSoapOut">
+    <wsdl:part name="parameters" element="tns:WS_DependenciaResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_SexoSoapIn">
+    <wsdl:part name="parameters" element="tns:WS_Sexo" />
+  </wsdl:message>
+  <wsdl:message name="WS_SexoSoapOut">
+    <wsdl:part name="parameters" element="tns:WS_SexoResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_DocumentosSoapIn">
+    <wsdl:part name="parameters" element="tns:WS_Documentos" />
+  </wsdl:message>
+  <wsdl:message name="WS_DocumentosSoapOut">
+    <wsdl:part name="parameters" element="tns:WS_DocumentosResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_EstadoCivilSoapIn">
+    <wsdl:part name="parameters" element="tns:WS_EstadoCivil" />
+  </wsdl:message>
+  <wsdl:message name="WS_EstadoCivilSoapOut">
+    <wsdl:part name="parameters" element="tns:WS_EstadoCivilResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_NacionalidadSoapIn">
+    <wsdl:part name="parameters" element="tns:WS_Nacionalidad" />
+  </wsdl:message>
+  <wsdl:message name="WS_NacionalidadSoapOut">
+    <wsdl:part name="parameters" element="tns:WS_NacionalidadResponse" />
+  </wsdl:message>
+  <wsdl:message name="Ws_ExpedienteSMSSoapIn">
+    <wsdl:part name="parameters" element="tns:Ws_ExpedienteSMS" />
+  </wsdl:message>
+  <wsdl:message name="Ws_ExpedienteSMSSoapOut">
+    <wsdl:part name="parameters" element="tns:Ws_ExpedienteSMSResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_EstatusSoapIn">
+    <wsdl:part name="parameters" element="tns:WS_Estatus" />
+  </wsdl:message>
+  <wsdl:message name="WS_EstatusSoapOut">
+    <wsdl:part name="parameters" element="tns:WS_EstatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_ExpedienteTramitesSoapIn">
+    <wsdl:part name="parameters" element="tns:WS_ExpedienteTramites" />
+  </wsdl:message>
+  <wsdl:message name="WS_ExpedienteTramitesSoapOut">
+    <wsdl:part name="parameters" element="tns:WS_ExpedienteTramitesResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_WhatsAppSendSoapIn">
+    <wsdl:part name="parameters" element="tns:WS_WhatsAppSend" />
+  </wsdl:message>
+  <wsdl:message name="WS_WhatsAppSendSoapOut">
+    <wsdl:part name="parameters" element="tns:WS_WhatsAppSendResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_WhatsAppSendSolucionesSoapIn">
+    <wsdl:part name="parameters" element="tns:WS_WhatsAppSendSoluciones" />
+  </wsdl:message>
+  <wsdl:message name="WS_WhatsAppSendSolucionesSoapOut">
+    <wsdl:part name="parameters" element="tns:WS_WhatsAppSendSolucionesResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_WhatsAppSendAdjuntoSoapIn">
+    <wsdl:part name="parameters" element="tns:WS_WhatsAppSendAdjunto" />
+  </wsdl:message>
+  <wsdl:message name="WS_WhatsAppSendAdjuntoSoapOut">
+    <wsdl:part name="parameters" element="tns:WS_WhatsAppSendAdjuntoResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_WhatsAppValidaSoapIn">
+    <wsdl:part name="parameters" element="tns:WS_WhatsAppValida" />
+  </wsdl:message>
+  <wsdl:message name="WS_WhatsAppValidaSoapOut">
+    <wsdl:part name="parameters" element="tns:WS_WhatsAppValidaResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_ExpedienteValidaNATSoapIn">
+    <wsdl:part name="parameters" element="tns:WS_ExpedienteValidaNAT" />
+  </wsdl:message>
+  <wsdl:message name="WS_ExpedienteValidaNATSoapOut">
+    <wsdl:part name="parameters" element="tns:WS_ExpedienteValidaNATResponse" />
+  </wsdl:message>
+  <wsdl:message name="JsonSEFIPaseCajaSoapIn">
+    <wsdl:part name="parameters" element="tns:JsonSEFIPaseCaja" />
+  </wsdl:message>
+  <wsdl:message name="JsonSEFIPaseCajaSoapOut">
+    <wsdl:part name="parameters" element="tns:JsonSEFIPaseCajaResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDataByCatPadronHttpGetIn">
+    <wsdl:part name="Clave_Unica" type="s:string" />
+    <wsdl:part name="token" type="s:string" />
+    <wsdl:part name="Usuario" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDataByCatPadronHttpGetOut" />
+  <wsdl:message name="Ws_ExpedienteConsultaHttpGetIn">
+    <wsdl:part name="tipo_persona" type="s:string" />
+    <wsdl:part name="Identidad" type="s:string" />
+    <wsdl:part name="token" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Ws_ExpedienteConsultaHttpGetOut" />
+  <wsdl:message name="Ws_ExpedienteConsultaIdTramiteHttpGetIn">
+    <wsdl:part name="tipo_persona" type="s:string" />
+    <wsdl:part name="Identidad" type="s:string" />
+    <wsdl:part name="IdTramite" type="s:string" />
+    <wsdl:part name="token" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Ws_ExpedienteConsultaIdTramiteHttpGetOut" />
+  <wsdl:message name="Ws_ExpedienteConsultaDocumentoHttpGetIn">
+    <wsdl:part name="tipodocumento" type="s:string" />
+    <wsdl:part name="metadato" type="s:string" />
+    <wsdl:part name="token" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Ws_ExpedienteConsultaDocumentoHttpGetOut" />
+  <wsdl:message name="Ws_ExpedienteConsultaFolioHttpGetIn">
+    <wsdl:part name="tipo_persona" type="s:string" />
+    <wsdl:part name="Identidad" type="s:string" />
+    <wsdl:part name="Folio" type="s:string" />
+    <wsdl:part name="token" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Ws_ExpedienteConsultaFolioHttpGetOut" />
+  <wsdl:message name="WS_CiudadanoLoginHttpGetIn">
+    <wsdl:part name="usr" type="s:string" />
+    <wsdl:part name="pass" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="WS_CiudadanoLoginHttpGetOut" />
+  <wsdl:message name="WS_ExpedienteCorreoActivarHttpGetIn">
+    <wsdl:part name="id" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="WS_ExpedienteCorreoActivarHttpGetOut" />
+  <wsdl:message name="WS_ExpedienteCorreoEnviarHttpGetIn">
+    <wsdl:part name="Titulo" type="s:string" />
+    <wsdl:part name="Contenido" type="s:string" />
+    <wsdl:part name="para" type="s:string" />
+    <wsdl:part name="copia" type="s:string" />
+    <wsdl:part name="token" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="WS_ExpedienteCorreoEnviarHttpGetOut" />
+  <wsdl:message name="WS_ExpedienteCorreoEnviarAdjuntoHttpGetIn">
+    <wsdl:part name="Titulo" type="s:string" />
+    <wsdl:part name="Contenido" type="s:string" />
+    <wsdl:part name="para" type="s:string" />
+    <wsdl:part name="copia" type="s:string" />
+    <wsdl:part name="Adjunto" type="s1:StringArray" />
+    <wsdl:part name="extension" type="s:string" />
+    <wsdl:part name="token" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="WS_ExpedienteCorreoEnviarAdjuntoHttpGetOut" />
+  <wsdl:message name="WS_ExpedienteCorreoRecuperarHttpGetIn">
+    <wsdl:part name="Identidad" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="WS_ExpedienteCorreoRecuperarHttpGetOut" />
+  <wsdl:message name="WS_ExpedienteCorreoRestablecerHttpGetIn">
+    <wsdl:part name="Identidad" type="s:string" />
+    <wsdl:part name="correo" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="WS_ExpedienteCorreoRestablecerHttpGetOut" />
+  <wsdl:message name="WS_ExpedienteSubirHttpGetIn">
+    <wsdl:part name="Tipopersona" type="s:string" />
+    <wsdl:part name="Identidad" type="s:string" />
+    <wsdl:part name="token" type="s:string" />
+    <wsdl:part name="IdDocumento" type="s:string" />
+    <wsdl:part name="archivo" type="s1:StringArray" />
+    <wsdl:part name="Expedicion" type="s:string" />
+    <wsdl:part name="Validado" type="s:string" />
+    <wsdl:part name="Revisor" type="s:string" />
+    <wsdl:part name="extencion" type="s:string" />
+    <wsdl:part name="folio" type="s:string" />
+    <wsdl:part name="metaDato" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="WS_ExpedienteSubirHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="WS_ExpedienteSubir64HttpGetIn">
+    <wsdl:part name="Tipopersona" type="s:string" />
+    <wsdl:part name="Identidad" type="s:string" />
+    <wsdl:part name="token" type="s:string" />
+    <wsdl:part name="IdDocumento" type="s:string" />
+    <wsdl:part name="archivo64" type="s:string" />
+    <wsdl:part name="Expedicion" type="s:string" />
+    <wsdl:part name="Validado" type="s:string" />
+    <wsdl:part name="Revisor" type="s:string" />
+    <wsdl:part name="extencion" type="s:string" />
+    <wsdl:part name="folio" type="s:string" />
+    <wsdl:part name="metaDato" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="WS_ExpedienteSubir64HttpGetOut" />
+  <wsdl:message name="WS_ExpedienteSubirTramiteHttpGetIn">
+    <wsdl:part name="Tipopersona" type="s:string" />
+    <wsdl:part name="Identidad" type="s:string" />
+    <wsdl:part name="token" type="s:string" />
+    <wsdl:part name="IdDocumento" type="s:string" />
+    <wsdl:part name="IdTramite" type="s:string" />
+    <wsdl:part name="IdApoyo" type="s:string" />
+    <wsdl:part name="archivo" type="s1:StringArray" />
+    <wsdl:part name="Expedicion" type="s:string" />
+    <wsdl:part name="Validado" type="s:string" />
+    <wsdl:part name="Revisor" type="s:string" />
+    <wsdl:part name="extencion" type="s:string" />
+    <wsdl:part name="folio" type="s:string" />
+    <wsdl:part name="metaDato" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="WS_ExpedienteSubirTramiteHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="WS_ExpedienteSubirTramite64HttpGetIn">
+    <wsdl:part name="Tipopersona" type="s:string" />
+    <wsdl:part name="Identidad" type="s:string" />
+    <wsdl:part name="token" type="s:string" />
+    <wsdl:part name="IdDocumento" type="s:string" />
+    <wsdl:part name="IdTramite" type="s:string" />
+    <wsdl:part name="IdApoyo" type="s:string" />
+    <wsdl:part name="archivo64" type="s:string" />
+    <wsdl:part name="Expedicion" type="s:string" />
+    <wsdl:part name="Validado" type="s:string" />
+    <wsdl:part name="Revisor" type="s:string" />
+    <wsdl:part name="extencion" type="s:string" />
+    <wsdl:part name="folio" type="s:string" />
+    <wsdl:part name="metaDato" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="WS_ExpedienteSubirTramite64HttpGetOut" />
+  <wsdl:message name="WS_ExpedienteValidaDocumentoHttpGetIn">
+    <wsdl:part name="Tipopersona" type="s:string" />
+    <wsdl:part name="Identidad" type="s:string" />
+    <wsdl:part name="token" type="s:string" />
+    <wsdl:part name="IdArchivo" type="s:string" />
+    <wsdl:part name="Expedicion" type="s:string" />
+    <wsdl:part name="Folio" type="s:string" />
+    <wsdl:part name="Validado" type="s:string" />
+    <wsdl:part name="Revisor" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="WS_ExpedienteValidaDocumentoHttpGetOut" />
+  <wsdl:message name="WS_ExpedienteTramiteRespuestaHttpGetIn">
+    <wsdl:part name="Tipopersona" type="s:string" />
+    <wsdl:part name="Identidad" type="s:string" />
+    <wsdl:part name="token" type="s:string" />
+    <wsdl:part name="Tramite" type="s:string" />
+    <wsdl:part name="Respuesta" type="s:string" />
+    <wsdl:part name="Estatus" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="WS_ExpedienteTramiteRespuestaHttpGetOut" />
+  <wsdl:message name="WS_ExpedienteTramiteRequisitosHttpGetIn">
+    <wsdl:part name="IdApoyo" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="WS_ExpedienteTramiteRequisitosHttpGetOut" />
+  <wsdl:message name="WS_ExpedienteTramiteRegistroHttpGetIn">
+    <wsdl:part name="Tipopersona" type="s:string" />
+    <wsdl:part name="Identidad" type="s:string" />
+    <wsdl:part name="token" type="s:string" />
+    <wsdl:part name="IdDep" type="s:string" />
+    <wsdl:part name="IdApoyo" type="s:string" />
+    <wsdl:part name="Solicitud" type="s:string" />
+    <wsdl:part name="Respuesta" type="s:string" />
+    <wsdl:part name="Estatus" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="WS_ExpedienteTramiteRegistroHttpGetOut" />
+  <wsdl:message name="WS_ExpedienteRegistroHttpGetIn">
+    <wsdl:part name="Tipopersona" type="s:string" />
+    <wsdl:part name="idNacionalidad" type="s:string" />
+    <wsdl:part name="idDiscapacidad" type="s:string" />
+    <wsdl:part name="Nombre" type="s:string" />
+    <wsdl:part name="PrimerApellido" type="s:string" />
+    <wsdl:part name="SegundoApellido" type="s:string" />
+    <wsdl:part name="RFC" type="s:string" />
+    <wsdl:part name="CURP" type="s:string" />
+    <wsdl:part name="fechaNacimiento" type="s:string" />
+    <wsdl:part name="idlugarNacimiento" type="s:string" />
+    <wsdl:part name="idSexo" type="s:string" />
+    <wsdl:part name="idEstadoCivil" type="s:string" />
+    <wsdl:part name="razonSocial" type="s:string" />
+    <wsdl:part name="nombreComercial" type="s:string" />
+    <wsdl:part name="representanteLegal" type="s:string" />
+    <wsdl:part name="fechaContitucion" type="s:string" />
+    <wsdl:part name="idEstado" type="s:string" />
+    <wsdl:part name="idMunicipio" type="s:string" />
+    <wsdl:part name="idLocalidad" type="s:string" />
+    <wsdl:part name="colonia" type="s:string" />
+    <wsdl:part name="calle" type="s:string" />
+    <wsdl:part name="nEXterior" type="s:string" />
+    <wsdl:part name="nInterior" type="s:string" />
+    <wsdl:part name="codigoPostal" type="s:string" />
+    <wsdl:part name="telefono" type="s:string" />
+    <wsdl:part name="celular" type="s:string" />
+    <wsdl:part name="correoElectronico" type="s:string" />
+    <wsdl:part name="contrasenia" type="s:string" />
+    <wsdl:part name="token" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="WS_ExpedienteRegistroHttpGetOut" />
+  <wsdl:message name="WS_ExpedienteFotoHttpGetIn">
+    <wsdl:part name="TipoPersona" type="s:string" />
+    <wsdl:part name="identidad" type="s:string" />
+    <wsdl:part name="archivo" type="s1:StringArray" />
+    <wsdl:part name="extension" type="s:string" />
+    <wsdl:part name="token" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="WS_ExpedienteFotoHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="WS_ExpedienteFoto64HttpGetIn">
+    <wsdl:part name="TipoPersona" type="s:string" />
+    <wsdl:part name="identidad" type="s:string" />
+    <wsdl:part name="archivo64" type="s:string" />
+    <wsdl:part name="extension" type="s:string" />
+    <wsdl:part name="token" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="WS_ExpedienteFoto64HttpGetOut" />
+  <wsdl:message name="WS_ValidaLicenciaHttpGetIn">
+    <wsdl:part name="CURP" type="s:string" />
+    <wsdl:part name="Licencia" type="s:string" />
+    <wsdl:part name="duracion" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="WS_ValidaLicenciaHttpGetOut" />
+  <wsdl:message name="WS_EstadoHttpGetIn" />
+  <wsdl:message name="WS_EstadoHttpGetOut" />
+  <wsdl:message name="WS_MunicipioHttpGetIn">
+    <wsdl:part name="estado" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="WS_MunicipioHttpGetOut" />
+  <wsdl:message name="WS_LocalidadHttpGetIn">
+    <wsdl:part name="estado" type="s:string" />
+    <wsdl:part name="municipio" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="WS_LocalidadHttpGetOut" />
+  <wsdl:message name="WS_DependenciaHttpGetIn" />
+  <wsdl:message name="WS_DependenciaHttpGetOut" />
+  <wsdl:message name="WS_SexoHttpGetIn" />
+  <wsdl:message name="WS_SexoHttpGetOut" />
+  <wsdl:message name="WS_DocumentosHttpGetIn" />
+  <wsdl:message name="WS_DocumentosHttpGetOut" />
+  <wsdl:message name="WS_EstadoCivilHttpGetIn" />
+  <wsdl:message name="WS_EstadoCivilHttpGetOut" />
+  <wsdl:message name="WS_NacionalidadHttpGetIn" />
+  <wsdl:message name="WS_NacionalidadHttpGetOut" />
+  <wsdl:message name="Ws_ExpedienteSMSHttpGetIn">
+    <wsdl:part name="Mensaje" type="s:string" />
+    <wsdl:part name="telefono" type="s:string" />
+    <wsdl:part name="token" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Ws_ExpedienteSMSHttpGetOut" />
+  <wsdl:message name="WS_EstatusHttpGetIn" />
+  <wsdl:message name="WS_EstatusHttpGetOut" />
+  <wsdl:message name="WS_ExpedienteTramitesHttpGetIn" />
+  <wsdl:message name="WS_ExpedienteTramitesHttpGetOut" />
+  <wsdl:message name="WS_WhatsAppSendHttpGetIn">
+    <wsdl:part name="Telefono" type="s:string" />
+    <wsdl:part name="Mensaje" type="s:string" />
+    <wsdl:part name="url" type="s:string" />
+    <wsdl:part name="token" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="WS_WhatsAppSendHttpGetOut" />
+  <wsdl:message name="WS_WhatsAppSendSolucionesHttpGetIn">
+    <wsdl:part name="Telefono" type="s:string" />
+    <wsdl:part name="nombre" type="s:string" />
+    <wsdl:part name="wallet" type="s:string" />
+    <wsdl:part name="fileurl" type="s:string" />
+    <wsdl:part name="token" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="WS_WhatsAppSendSolucionesHttpGetOut" />
+  <wsdl:message name="WS_WhatsAppSendAdjuntoHttpGetIn">
+    <wsdl:part name="Telefono" type="s:string" />
+    <wsdl:part name="mensaje" type="s:string" />
+    <wsdl:part name="portal" type="s:string" />
+    <wsdl:part name="fileurl" type="s:string" />
+    <wsdl:part name="token" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="WS_WhatsAppSendAdjuntoHttpGetOut" />
+  <wsdl:message name="WS_WhatsAppValidaHttpGetIn">
+    <wsdl:part name="Telefono" type="s:string" />
+    <wsdl:part name="Aplicacion" type="s:string" />
+    <wsdl:part name="token" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="WS_WhatsAppValidaHttpGetOut" />
+  <wsdl:message name="WS_ExpedienteValidaNATHttpGetIn">
+    <wsdl:part name="ValidationId" type="s:string" />
+    <wsdl:part name="CURP" type="s:string" />
+    <wsdl:part name="token" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="WS_ExpedienteValidaNATHttpGetOut" />
+  <wsdl:message name="JsonSEFIPaseCajaHttpGetIn">
+    <wsdl:part name="PaseCaja" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="JsonSEFIPaseCajaHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDataByCatPadronHttpPostIn">
+    <wsdl:part name="Clave_Unica" type="s:string" />
+    <wsdl:part name="token" type="s:string" />
+    <wsdl:part name="Usuario" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDataByCatPadronHttpPostOut" />
+  <wsdl:message name="Ws_ExpedienteConsultaHttpPostIn">
+    <wsdl:part name="tipo_persona" type="s:string" />
+    <wsdl:part name="Identidad" type="s:string" />
+    <wsdl:part name="token" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Ws_ExpedienteConsultaHttpPostOut" />
+  <wsdl:message name="Ws_ExpedienteConsultaIdTramiteHttpPostIn">
+    <wsdl:part name="tipo_persona" type="s:string" />
+    <wsdl:part name="Identidad" type="s:string" />
+    <wsdl:part name="IdTramite" type="s:string" />
+    <wsdl:part name="token" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Ws_ExpedienteConsultaIdTramiteHttpPostOut" />
+  <wsdl:message name="Ws_ExpedienteConsultaDocumentoHttpPostIn">
+    <wsdl:part name="tipodocumento" type="s:string" />
+    <wsdl:part name="metadato" type="s:string" />
+    <wsdl:part name="token" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Ws_ExpedienteConsultaDocumentoHttpPostOut" />
+  <wsdl:message name="Ws_ExpedienteConsultaFolioHttpPostIn">
+    <wsdl:part name="tipo_persona" type="s:string" />
+    <wsdl:part name="Identidad" type="s:string" />
+    <wsdl:part name="Folio" type="s:string" />
+    <wsdl:part name="token" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Ws_ExpedienteConsultaFolioHttpPostOut" />
+  <wsdl:message name="WS_CiudadanoLoginHttpPostIn">
+    <wsdl:part name="usr" type="s:string" />
+    <wsdl:part name="pass" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="WS_CiudadanoLoginHttpPostOut" />
+  <wsdl:message name="WS_ExpedienteCorreoActivarHttpPostIn">
+    <wsdl:part name="id" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="WS_ExpedienteCorreoActivarHttpPostOut" />
+  <wsdl:message name="WS_ExpedienteCorreoEnviarHttpPostIn">
+    <wsdl:part name="Titulo" type="s:string" />
+    <wsdl:part name="Contenido" type="s:string" />
+    <wsdl:part name="para" type="s:string" />
+    <wsdl:part name="copia" type="s:string" />
+    <wsdl:part name="token" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="WS_ExpedienteCorreoEnviarHttpPostOut" />
+  <wsdl:message name="WS_ExpedienteCorreoEnviarAdjuntoHttpPostIn">
+    <wsdl:part name="Titulo" type="s:string" />
+    <wsdl:part name="Contenido" type="s:string" />
+    <wsdl:part name="para" type="s:string" />
+    <wsdl:part name="copia" type="s:string" />
+    <wsdl:part name="Adjunto" type="s1:StringArray" />
+    <wsdl:part name="extension" type="s:string" />
+    <wsdl:part name="token" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="WS_ExpedienteCorreoEnviarAdjuntoHttpPostOut" />
+  <wsdl:message name="WS_ExpedienteCorreoRecuperarHttpPostIn">
+    <wsdl:part name="Identidad" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="WS_ExpedienteCorreoRecuperarHttpPostOut" />
+  <wsdl:message name="WS_ExpedienteCorreoRestablecerHttpPostIn">
+    <wsdl:part name="Identidad" type="s:string" />
+    <wsdl:part name="correo" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="WS_ExpedienteCorreoRestablecerHttpPostOut" />
+  <wsdl:message name="WS_ExpedienteSubirHttpPostIn">
+    <wsdl:part name="Tipopersona" type="s:string" />
+    <wsdl:part name="Identidad" type="s:string" />
+    <wsdl:part name="token" type="s:string" />
+    <wsdl:part name="IdDocumento" type="s:string" />
+    <wsdl:part name="archivo" type="s1:StringArray" />
+    <wsdl:part name="Expedicion" type="s:string" />
+    <wsdl:part name="Validado" type="s:string" />
+    <wsdl:part name="Revisor" type="s:string" />
+    <wsdl:part name="extencion" type="s:string" />
+    <wsdl:part name="folio" type="s:string" />
+    <wsdl:part name="metaDato" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="WS_ExpedienteSubirHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="WS_ExpedienteSubir64HttpPostIn">
+    <wsdl:part name="Tipopersona" type="s:string" />
+    <wsdl:part name="Identidad" type="s:string" />
+    <wsdl:part name="token" type="s:string" />
+    <wsdl:part name="IdDocumento" type="s:string" />
+    <wsdl:part name="archivo64" type="s:string" />
+    <wsdl:part name="Expedicion" type="s:string" />
+    <wsdl:part name="Validado" type="s:string" />
+    <wsdl:part name="Revisor" type="s:string" />
+    <wsdl:part name="extencion" type="s:string" />
+    <wsdl:part name="folio" type="s:string" />
+    <wsdl:part name="metaDato" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="WS_ExpedienteSubir64HttpPostOut" />
+  <wsdl:message name="WS_ExpedienteSubirTramiteHttpPostIn">
+    <wsdl:part name="Tipopersona" type="s:string" />
+    <wsdl:part name="Identidad" type="s:string" />
+    <wsdl:part name="token" type="s:string" />
+    <wsdl:part name="IdDocumento" type="s:string" />
+    <wsdl:part name="IdTramite" type="s:string" />
+    <wsdl:part name="IdApoyo" type="s:string" />
+    <wsdl:part name="archivo" type="s1:StringArray" />
+    <wsdl:part name="Expedicion" type="s:string" />
+    <wsdl:part name="Validado" type="s:string" />
+    <wsdl:part name="Revisor" type="s:string" />
+    <wsdl:part name="extencion" type="s:string" />
+    <wsdl:part name="folio" type="s:string" />
+    <wsdl:part name="metaDato" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="WS_ExpedienteSubirTramiteHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="WS_ExpedienteSubirTramite64HttpPostIn">
+    <wsdl:part name="Tipopersona" type="s:string" />
+    <wsdl:part name="Identidad" type="s:string" />
+    <wsdl:part name="token" type="s:string" />
+    <wsdl:part name="IdDocumento" type="s:string" />
+    <wsdl:part name="IdTramite" type="s:string" />
+    <wsdl:part name="IdApoyo" type="s:string" />
+    <wsdl:part name="archivo64" type="s:string" />
+    <wsdl:part name="Expedicion" type="s:string" />
+    <wsdl:part name="Validado" type="s:string" />
+    <wsdl:part name="Revisor" type="s:string" />
+    <wsdl:part name="extencion" type="s:string" />
+    <wsdl:part name="folio" type="s:string" />
+    <wsdl:part name="metaDato" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="WS_ExpedienteSubirTramite64HttpPostOut" />
+  <wsdl:message name="WS_ExpedienteValidaDocumentoHttpPostIn">
+    <wsdl:part name="Tipopersona" type="s:string" />
+    <wsdl:part name="Identidad" type="s:string" />
+    <wsdl:part name="token" type="s:string" />
+    <wsdl:part name="IdArchivo" type="s:string" />
+    <wsdl:part name="Expedicion" type="s:string" />
+    <wsdl:part name="Folio" type="s:string" />
+    <wsdl:part name="Validado" type="s:string" />
+    <wsdl:part name="Revisor" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="WS_ExpedienteValidaDocumentoHttpPostOut" />
+  <wsdl:message name="WS_ExpedienteTramiteRespuestaHttpPostIn">
+    <wsdl:part name="Tipopersona" type="s:string" />
+    <wsdl:part name="Identidad" type="s:string" />
+    <wsdl:part name="token" type="s:string" />
+    <wsdl:part name="Tramite" type="s:string" />
+    <wsdl:part name="Respuesta" type="s:string" />
+    <wsdl:part name="Estatus" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="WS_ExpedienteTramiteRespuestaHttpPostOut" />
+  <wsdl:message name="WS_ExpedienteTramiteRequisitosHttpPostIn">
+    <wsdl:part name="IdApoyo" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="WS_ExpedienteTramiteRequisitosHttpPostOut" />
+  <wsdl:message name="WS_ExpedienteTramiteRegistroHttpPostIn">
+    <wsdl:part name="Tipopersona" type="s:string" />
+    <wsdl:part name="Identidad" type="s:string" />
+    <wsdl:part name="token" type="s:string" />
+    <wsdl:part name="IdDep" type="s:string" />
+    <wsdl:part name="IdApoyo" type="s:string" />
+    <wsdl:part name="Solicitud" type="s:string" />
+    <wsdl:part name="Respuesta" type="s:string" />
+    <wsdl:part name="Estatus" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="WS_ExpedienteTramiteRegistroHttpPostOut" />
+  <wsdl:message name="WS_ExpedienteRegistroHttpPostIn">
+    <wsdl:part name="Tipopersona" type="s:string" />
+    <wsdl:part name="idNacionalidad" type="s:string" />
+    <wsdl:part name="idDiscapacidad" type="s:string" />
+    <wsdl:part name="Nombre" type="s:string" />
+    <wsdl:part name="PrimerApellido" type="s:string" />
+    <wsdl:part name="SegundoApellido" type="s:string" />
+    <wsdl:part name="RFC" type="s:string" />
+    <wsdl:part name="CURP" type="s:string" />
+    <wsdl:part name="fechaNacimiento" type="s:string" />
+    <wsdl:part name="idlugarNacimiento" type="s:string" />
+    <wsdl:part name="idSexo" type="s:string" />
+    <wsdl:part name="idEstadoCivil" type="s:string" />
+    <wsdl:part name="razonSocial" type="s:string" />
+    <wsdl:part name="nombreComercial" type="s:string" />
+    <wsdl:part name="representanteLegal" type="s:string" />
+    <wsdl:part name="fechaContitucion" type="s:string" />
+    <wsdl:part name="idEstado" type="s:string" />
+    <wsdl:part name="idMunicipio" type="s:string" />
+    <wsdl:part name="idLocalidad" type="s:string" />
+    <wsdl:part name="colonia" type="s:string" />
+    <wsdl:part name="calle" type="s:string" />
+    <wsdl:part name="nEXterior" type="s:string" />
+    <wsdl:part name="nInterior" type="s:string" />
+    <wsdl:part name="codigoPostal" type="s:string" />
+    <wsdl:part name="telefono" type="s:string" />
+    <wsdl:part name="celular" type="s:string" />
+    <wsdl:part name="correoElectronico" type="s:string" />
+    <wsdl:part name="contrasenia" type="s:string" />
+    <wsdl:part name="token" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="WS_ExpedienteRegistroHttpPostOut" />
+  <wsdl:message name="WS_ExpedienteFotoHttpPostIn">
+    <wsdl:part name="TipoPersona" type="s:string" />
+    <wsdl:part name="identidad" type="s:string" />
+    <wsdl:part name="archivo" type="s1:StringArray" />
+    <wsdl:part name="extension" type="s:string" />
+    <wsdl:part name="token" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="WS_ExpedienteFotoHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="WS_ExpedienteFoto64HttpPostIn">
+    <wsdl:part name="TipoPersona" type="s:string" />
+    <wsdl:part name="identidad" type="s:string" />
+    <wsdl:part name="archivo64" type="s:string" />
+    <wsdl:part name="extension" type="s:string" />
+    <wsdl:part name="token" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="WS_ExpedienteFoto64HttpPostOut" />
+  <wsdl:message name="WS_ValidaLicenciaHttpPostIn">
+    <wsdl:part name="CURP" type="s:string" />
+    <wsdl:part name="Licencia" type="s:string" />
+    <wsdl:part name="duracion" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="WS_ValidaLicenciaHttpPostOut" />
+  <wsdl:message name="WS_EstadoHttpPostIn" />
+  <wsdl:message name="WS_EstadoHttpPostOut" />
+  <wsdl:message name="WS_MunicipioHttpPostIn">
+    <wsdl:part name="estado" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="WS_MunicipioHttpPostOut" />
+  <wsdl:message name="WS_LocalidadHttpPostIn">
+    <wsdl:part name="estado" type="s:string" />
+    <wsdl:part name="municipio" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="WS_LocalidadHttpPostOut" />
+  <wsdl:message name="WS_DependenciaHttpPostIn" />
+  <wsdl:message name="WS_DependenciaHttpPostOut" />
+  <wsdl:message name="WS_SexoHttpPostIn" />
+  <wsdl:message name="WS_SexoHttpPostOut" />
+  <wsdl:message name="WS_DocumentosHttpPostIn" />
+  <wsdl:message name="WS_DocumentosHttpPostOut" />
+  <wsdl:message name="WS_EstadoCivilHttpPostIn" />
+  <wsdl:message name="WS_EstadoCivilHttpPostOut" />
+  <wsdl:message name="WS_NacionalidadHttpPostIn" />
+  <wsdl:message name="WS_NacionalidadHttpPostOut" />
+  <wsdl:message name="Ws_ExpedienteSMSHttpPostIn">
+    <wsdl:part name="Mensaje" type="s:string" />
+    <wsdl:part name="telefono" type="s:string" />
+    <wsdl:part name="token" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Ws_ExpedienteSMSHttpPostOut" />
+  <wsdl:message name="WS_EstatusHttpPostIn" />
+  <wsdl:message name="WS_EstatusHttpPostOut" />
+  <wsdl:message name="WS_ExpedienteTramitesHttpPostIn" />
+  <wsdl:message name="WS_ExpedienteTramitesHttpPostOut" />
+  <wsdl:message name="WS_WhatsAppSendHttpPostIn">
+    <wsdl:part name="Telefono" type="s:string" />
+    <wsdl:part name="Mensaje" type="s:string" />
+    <wsdl:part name="url" type="s:string" />
+    <wsdl:part name="token" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="WS_WhatsAppSendHttpPostOut" />
+  <wsdl:message name="WS_WhatsAppSendSolucionesHttpPostIn">
+    <wsdl:part name="Telefono" type="s:string" />
+    <wsdl:part name="nombre" type="s:string" />
+    <wsdl:part name="wallet" type="s:string" />
+    <wsdl:part name="fileurl" type="s:string" />
+    <wsdl:part name="token" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="WS_WhatsAppSendSolucionesHttpPostOut" />
+  <wsdl:message name="WS_WhatsAppSendAdjuntoHttpPostIn">
+    <wsdl:part name="Telefono" type="s:string" />
+    <wsdl:part name="mensaje" type="s:string" />
+    <wsdl:part name="portal" type="s:string" />
+    <wsdl:part name="fileurl" type="s:string" />
+    <wsdl:part name="token" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="WS_WhatsAppSendAdjuntoHttpPostOut" />
+  <wsdl:message name="WS_WhatsAppValidaHttpPostIn">
+    <wsdl:part name="Telefono" type="s:string" />
+    <wsdl:part name="Aplicacion" type="s:string" />
+    <wsdl:part name="token" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="WS_WhatsAppValidaHttpPostOut" />
+  <wsdl:message name="WS_ExpedienteValidaNATHttpPostIn">
+    <wsdl:part name="ValidationId" type="s:string" />
+    <wsdl:part name="CURP" type="s:string" />
+    <wsdl:part name="token" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="WS_ExpedienteValidaNATHttpPostOut" />
+  <wsdl:message name="JsonSEFIPaseCajaHttpPostIn">
+    <wsdl:part name="PaseCaja" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="JsonSEFIPaseCajaHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:portType name="WSExpedienteSoap">
+    <wsdl:operation name="GetDataByCatPadron">
+      <wsdl:input message="tns:GetDataByCatPadronSoapIn" />
+      <wsdl:output message="tns:GetDataByCatPadronSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Ws_ExpedienteConsulta">
+      <wsdl:input message="tns:Ws_ExpedienteConsultaSoapIn" />
+      <wsdl:output message="tns:Ws_ExpedienteConsultaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Ws_ExpedienteConsultaIdTramite">
+      <wsdl:input message="tns:Ws_ExpedienteConsultaIdTramiteSoapIn" />
+      <wsdl:output message="tns:Ws_ExpedienteConsultaIdTramiteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Ws_ExpedienteConsultaDocumento">
+      <wsdl:input message="tns:Ws_ExpedienteConsultaDocumentoSoapIn" />
+      <wsdl:output message="tns:Ws_ExpedienteConsultaDocumentoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Ws_ExpedienteConsultaFolio">
+      <wsdl:input message="tns:Ws_ExpedienteConsultaFolioSoapIn" />
+      <wsdl:output message="tns:Ws_ExpedienteConsultaFolioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_CiudadanoLogin">
+      <wsdl:input message="tns:WS_CiudadanoLoginSoapIn" />
+      <wsdl:output message="tns:WS_CiudadanoLoginSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_ExpedienteCorreoActivar">
+      <wsdl:input message="tns:WS_ExpedienteCorreoActivarSoapIn" />
+      <wsdl:output message="tns:WS_ExpedienteCorreoActivarSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_ExpedienteCorreoEnviar">
+      <wsdl:input message="tns:WS_ExpedienteCorreoEnviarSoapIn" />
+      <wsdl:output message="tns:WS_ExpedienteCorreoEnviarSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_ExpedienteCorreoEnviarAdjunto">
+      <wsdl:input message="tns:WS_ExpedienteCorreoEnviarAdjuntoSoapIn" />
+      <wsdl:output message="tns:WS_ExpedienteCorreoEnviarAdjuntoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_ExpedienteCorreoRecuperar">
+      <wsdl:input message="tns:WS_ExpedienteCorreoRecuperarSoapIn" />
+      <wsdl:output message="tns:WS_ExpedienteCorreoRecuperarSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_ExpedienteCorreoRestablecer">
+      <wsdl:input message="tns:WS_ExpedienteCorreoRestablecerSoapIn" />
+      <wsdl:output message="tns:WS_ExpedienteCorreoRestablecerSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_ExpedienteSubir">
+      <wsdl:input message="tns:WS_ExpedienteSubirSoapIn" />
+      <wsdl:output message="tns:WS_ExpedienteSubirSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_ExpedienteSubir64">
+      <wsdl:input message="tns:WS_ExpedienteSubir64SoapIn" />
+      <wsdl:output message="tns:WS_ExpedienteSubir64SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_ExpedienteSubirTramite">
+      <wsdl:input message="tns:WS_ExpedienteSubirTramiteSoapIn" />
+      <wsdl:output message="tns:WS_ExpedienteSubirTramiteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_ExpedienteSubirTramite64">
+      <wsdl:input message="tns:WS_ExpedienteSubirTramite64SoapIn" />
+      <wsdl:output message="tns:WS_ExpedienteSubirTramite64SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_ExpedienteValidaDocumento">
+      <wsdl:input message="tns:WS_ExpedienteValidaDocumentoSoapIn" />
+      <wsdl:output message="tns:WS_ExpedienteValidaDocumentoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_ExpedienteTramiteRespuesta">
+      <wsdl:input message="tns:WS_ExpedienteTramiteRespuestaSoapIn" />
+      <wsdl:output message="tns:WS_ExpedienteTramiteRespuestaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_ExpedienteTramiteRequisitos">
+      <wsdl:input message="tns:WS_ExpedienteTramiteRequisitosSoapIn" />
+      <wsdl:output message="tns:WS_ExpedienteTramiteRequisitosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_ExpedienteTramiteRegistro">
+      <wsdl:input message="tns:WS_ExpedienteTramiteRegistroSoapIn" />
+      <wsdl:output message="tns:WS_ExpedienteTramiteRegistroSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_ExpedienteRegistro">
+      <wsdl:input message="tns:WS_ExpedienteRegistroSoapIn" />
+      <wsdl:output message="tns:WS_ExpedienteRegistroSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_ExpedienteFoto">
+      <wsdl:input message="tns:WS_ExpedienteFotoSoapIn" />
+      <wsdl:output message="tns:WS_ExpedienteFotoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_ExpedienteFoto64">
+      <wsdl:input message="tns:WS_ExpedienteFoto64SoapIn" />
+      <wsdl:output message="tns:WS_ExpedienteFoto64SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_ValidaLicencia">
+      <wsdl:input message="tns:WS_ValidaLicenciaSoapIn" />
+      <wsdl:output message="tns:WS_ValidaLicenciaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_Estado">
+      <wsdl:input message="tns:WS_EstadoSoapIn" />
+      <wsdl:output message="tns:WS_EstadoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_Municipio">
+      <wsdl:input message="tns:WS_MunicipioSoapIn" />
+      <wsdl:output message="tns:WS_MunicipioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_Localidad">
+      <wsdl:input message="tns:WS_LocalidadSoapIn" />
+      <wsdl:output message="tns:WS_LocalidadSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_Dependencia">
+      <wsdl:input message="tns:WS_DependenciaSoapIn" />
+      <wsdl:output message="tns:WS_DependenciaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_Sexo">
+      <wsdl:input message="tns:WS_SexoSoapIn" />
+      <wsdl:output message="tns:WS_SexoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_Documentos">
+      <wsdl:input message="tns:WS_DocumentosSoapIn" />
+      <wsdl:output message="tns:WS_DocumentosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_EstadoCivil">
+      <wsdl:input message="tns:WS_EstadoCivilSoapIn" />
+      <wsdl:output message="tns:WS_EstadoCivilSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_Nacionalidad">
+      <wsdl:input message="tns:WS_NacionalidadSoapIn" />
+      <wsdl:output message="tns:WS_NacionalidadSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Ws_ExpedienteSMS">
+      <wsdl:input message="tns:Ws_ExpedienteSMSSoapIn" />
+      <wsdl:output message="tns:Ws_ExpedienteSMSSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_Estatus">
+      <wsdl:input message="tns:WS_EstatusSoapIn" />
+      <wsdl:output message="tns:WS_EstatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_ExpedienteTramites">
+      <wsdl:input message="tns:WS_ExpedienteTramitesSoapIn" />
+      <wsdl:output message="tns:WS_ExpedienteTramitesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_WhatsAppSend">
+      <wsdl:input message="tns:WS_WhatsAppSendSoapIn" />
+      <wsdl:output message="tns:WS_WhatsAppSendSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_WhatsAppSendSoluciones">
+      <wsdl:input message="tns:WS_WhatsAppSendSolucionesSoapIn" />
+      <wsdl:output message="tns:WS_WhatsAppSendSolucionesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_WhatsAppSendAdjunto">
+      <wsdl:input message="tns:WS_WhatsAppSendAdjuntoSoapIn" />
+      <wsdl:output message="tns:WS_WhatsAppSendAdjuntoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_WhatsAppValida">
+      <wsdl:input message="tns:WS_WhatsAppValidaSoapIn" />
+      <wsdl:output message="tns:WS_WhatsAppValidaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_ExpedienteValidaNAT">
+      <wsdl:input message="tns:WS_ExpedienteValidaNATSoapIn" />
+      <wsdl:output message="tns:WS_ExpedienteValidaNATSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="JsonSEFIPaseCaja">
+      <wsdl:input message="tns:JsonSEFIPaseCajaSoapIn" />
+      <wsdl:output message="tns:JsonSEFIPaseCajaSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="WSExpedienteHttpGet">
+    <wsdl:operation name="GetDataByCatPadron">
+      <wsdl:input message="tns:GetDataByCatPadronHttpGetIn" />
+      <wsdl:output message="tns:GetDataByCatPadronHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Ws_ExpedienteConsulta">
+      <wsdl:input message="tns:Ws_ExpedienteConsultaHttpGetIn" />
+      <wsdl:output message="tns:Ws_ExpedienteConsultaHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Ws_ExpedienteConsultaIdTramite">
+      <wsdl:input message="tns:Ws_ExpedienteConsultaIdTramiteHttpGetIn" />
+      <wsdl:output message="tns:Ws_ExpedienteConsultaIdTramiteHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Ws_ExpedienteConsultaDocumento">
+      <wsdl:input message="tns:Ws_ExpedienteConsultaDocumentoHttpGetIn" />
+      <wsdl:output message="tns:Ws_ExpedienteConsultaDocumentoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Ws_ExpedienteConsultaFolio">
+      <wsdl:input message="tns:Ws_ExpedienteConsultaFolioHttpGetIn" />
+      <wsdl:output message="tns:Ws_ExpedienteConsultaFolioHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_CiudadanoLogin">
+      <wsdl:input message="tns:WS_CiudadanoLoginHttpGetIn" />
+      <wsdl:output message="tns:WS_CiudadanoLoginHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_ExpedienteCorreoActivar">
+      <wsdl:input message="tns:WS_ExpedienteCorreoActivarHttpGetIn" />
+      <wsdl:output message="tns:WS_ExpedienteCorreoActivarHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_ExpedienteCorreoEnviar">
+      <wsdl:input message="tns:WS_ExpedienteCorreoEnviarHttpGetIn" />
+      <wsdl:output message="tns:WS_ExpedienteCorreoEnviarHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_ExpedienteCorreoEnviarAdjunto">
+      <wsdl:input message="tns:WS_ExpedienteCorreoEnviarAdjuntoHttpGetIn" />
+      <wsdl:output message="tns:WS_ExpedienteCorreoEnviarAdjuntoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_ExpedienteCorreoRecuperar">
+      <wsdl:input message="tns:WS_ExpedienteCorreoRecuperarHttpGetIn" />
+      <wsdl:output message="tns:WS_ExpedienteCorreoRecuperarHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_ExpedienteCorreoRestablecer">
+      <wsdl:input message="tns:WS_ExpedienteCorreoRestablecerHttpGetIn" />
+      <wsdl:output message="tns:WS_ExpedienteCorreoRestablecerHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_ExpedienteSubir">
+      <wsdl:input message="tns:WS_ExpedienteSubirHttpGetIn" />
+      <wsdl:output message="tns:WS_ExpedienteSubirHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_ExpedienteSubir64">
+      <wsdl:input message="tns:WS_ExpedienteSubir64HttpGetIn" />
+      <wsdl:output message="tns:WS_ExpedienteSubir64HttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_ExpedienteSubirTramite">
+      <wsdl:input message="tns:WS_ExpedienteSubirTramiteHttpGetIn" />
+      <wsdl:output message="tns:WS_ExpedienteSubirTramiteHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_ExpedienteSubirTramite64">
+      <wsdl:input message="tns:WS_ExpedienteSubirTramite64HttpGetIn" />
+      <wsdl:output message="tns:WS_ExpedienteSubirTramite64HttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_ExpedienteValidaDocumento">
+      <wsdl:input message="tns:WS_ExpedienteValidaDocumentoHttpGetIn" />
+      <wsdl:output message="tns:WS_ExpedienteValidaDocumentoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_ExpedienteTramiteRespuesta">
+      <wsdl:input message="tns:WS_ExpedienteTramiteRespuestaHttpGetIn" />
+      <wsdl:output message="tns:WS_ExpedienteTramiteRespuestaHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_ExpedienteTramiteRequisitos">
+      <wsdl:input message="tns:WS_ExpedienteTramiteRequisitosHttpGetIn" />
+      <wsdl:output message="tns:WS_ExpedienteTramiteRequisitosHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_ExpedienteTramiteRegistro">
+      <wsdl:input message="tns:WS_ExpedienteTramiteRegistroHttpGetIn" />
+      <wsdl:output message="tns:WS_ExpedienteTramiteRegistroHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_ExpedienteRegistro">
+      <wsdl:input message="tns:WS_ExpedienteRegistroHttpGetIn" />
+      <wsdl:output message="tns:WS_ExpedienteRegistroHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_ExpedienteFoto">
+      <wsdl:input message="tns:WS_ExpedienteFotoHttpGetIn" />
+      <wsdl:output message="tns:WS_ExpedienteFotoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_ExpedienteFoto64">
+      <wsdl:input message="tns:WS_ExpedienteFoto64HttpGetIn" />
+      <wsdl:output message="tns:WS_ExpedienteFoto64HttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_ValidaLicencia">
+      <wsdl:input message="tns:WS_ValidaLicenciaHttpGetIn" />
+      <wsdl:output message="tns:WS_ValidaLicenciaHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_Estado">
+      <wsdl:input message="tns:WS_EstadoHttpGetIn" />
+      <wsdl:output message="tns:WS_EstadoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_Municipio">
+      <wsdl:input message="tns:WS_MunicipioHttpGetIn" />
+      <wsdl:output message="tns:WS_MunicipioHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_Localidad">
+      <wsdl:input message="tns:WS_LocalidadHttpGetIn" />
+      <wsdl:output message="tns:WS_LocalidadHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_Dependencia">
+      <wsdl:input message="tns:WS_DependenciaHttpGetIn" />
+      <wsdl:output message="tns:WS_DependenciaHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_Sexo">
+      <wsdl:input message="tns:WS_SexoHttpGetIn" />
+      <wsdl:output message="tns:WS_SexoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_Documentos">
+      <wsdl:input message="tns:WS_DocumentosHttpGetIn" />
+      <wsdl:output message="tns:WS_DocumentosHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_EstadoCivil">
+      <wsdl:input message="tns:WS_EstadoCivilHttpGetIn" />
+      <wsdl:output message="tns:WS_EstadoCivilHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_Nacionalidad">
+      <wsdl:input message="tns:WS_NacionalidadHttpGetIn" />
+      <wsdl:output message="tns:WS_NacionalidadHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Ws_ExpedienteSMS">
+      <wsdl:input message="tns:Ws_ExpedienteSMSHttpGetIn" />
+      <wsdl:output message="tns:Ws_ExpedienteSMSHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_Estatus">
+      <wsdl:input message="tns:WS_EstatusHttpGetIn" />
+      <wsdl:output message="tns:WS_EstatusHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_ExpedienteTramites">
+      <wsdl:input message="tns:WS_ExpedienteTramitesHttpGetIn" />
+      <wsdl:output message="tns:WS_ExpedienteTramitesHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_WhatsAppSend">
+      <wsdl:input message="tns:WS_WhatsAppSendHttpGetIn" />
+      <wsdl:output message="tns:WS_WhatsAppSendHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_WhatsAppSendSoluciones">
+      <wsdl:input message="tns:WS_WhatsAppSendSolucionesHttpGetIn" />
+      <wsdl:output message="tns:WS_WhatsAppSendSolucionesHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_WhatsAppSendAdjunto">
+      <wsdl:input message="tns:WS_WhatsAppSendAdjuntoHttpGetIn" />
+      <wsdl:output message="tns:WS_WhatsAppSendAdjuntoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_WhatsAppValida">
+      <wsdl:input message="tns:WS_WhatsAppValidaHttpGetIn" />
+      <wsdl:output message="tns:WS_WhatsAppValidaHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_ExpedienteValidaNAT">
+      <wsdl:input message="tns:WS_ExpedienteValidaNATHttpGetIn" />
+      <wsdl:output message="tns:WS_ExpedienteValidaNATHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="JsonSEFIPaseCaja">
+      <wsdl:input message="tns:JsonSEFIPaseCajaHttpGetIn" />
+      <wsdl:output message="tns:JsonSEFIPaseCajaHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="WSExpedienteHttpPost">
+    <wsdl:operation name="GetDataByCatPadron">
+      <wsdl:input message="tns:GetDataByCatPadronHttpPostIn" />
+      <wsdl:output message="tns:GetDataByCatPadronHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Ws_ExpedienteConsulta">
+      <wsdl:input message="tns:Ws_ExpedienteConsultaHttpPostIn" />
+      <wsdl:output message="tns:Ws_ExpedienteConsultaHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Ws_ExpedienteConsultaIdTramite">
+      <wsdl:input message="tns:Ws_ExpedienteConsultaIdTramiteHttpPostIn" />
+      <wsdl:output message="tns:Ws_ExpedienteConsultaIdTramiteHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Ws_ExpedienteConsultaDocumento">
+      <wsdl:input message="tns:Ws_ExpedienteConsultaDocumentoHttpPostIn" />
+      <wsdl:output message="tns:Ws_ExpedienteConsultaDocumentoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Ws_ExpedienteConsultaFolio">
+      <wsdl:input message="tns:Ws_ExpedienteConsultaFolioHttpPostIn" />
+      <wsdl:output message="tns:Ws_ExpedienteConsultaFolioHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_CiudadanoLogin">
+      <wsdl:input message="tns:WS_CiudadanoLoginHttpPostIn" />
+      <wsdl:output message="tns:WS_CiudadanoLoginHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_ExpedienteCorreoActivar">
+      <wsdl:input message="tns:WS_ExpedienteCorreoActivarHttpPostIn" />
+      <wsdl:output message="tns:WS_ExpedienteCorreoActivarHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_ExpedienteCorreoEnviar">
+      <wsdl:input message="tns:WS_ExpedienteCorreoEnviarHttpPostIn" />
+      <wsdl:output message="tns:WS_ExpedienteCorreoEnviarHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_ExpedienteCorreoEnviarAdjunto">
+      <wsdl:input message="tns:WS_ExpedienteCorreoEnviarAdjuntoHttpPostIn" />
+      <wsdl:output message="tns:WS_ExpedienteCorreoEnviarAdjuntoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_ExpedienteCorreoRecuperar">
+      <wsdl:input message="tns:WS_ExpedienteCorreoRecuperarHttpPostIn" />
+      <wsdl:output message="tns:WS_ExpedienteCorreoRecuperarHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_ExpedienteCorreoRestablecer">
+      <wsdl:input message="tns:WS_ExpedienteCorreoRestablecerHttpPostIn" />
+      <wsdl:output message="tns:WS_ExpedienteCorreoRestablecerHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_ExpedienteSubir">
+      <wsdl:input message="tns:WS_ExpedienteSubirHttpPostIn" />
+      <wsdl:output message="tns:WS_ExpedienteSubirHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_ExpedienteSubir64">
+      <wsdl:input message="tns:WS_ExpedienteSubir64HttpPostIn" />
+      <wsdl:output message="tns:WS_ExpedienteSubir64HttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_ExpedienteSubirTramite">
+      <wsdl:input message="tns:WS_ExpedienteSubirTramiteHttpPostIn" />
+      <wsdl:output message="tns:WS_ExpedienteSubirTramiteHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_ExpedienteSubirTramite64">
+      <wsdl:input message="tns:WS_ExpedienteSubirTramite64HttpPostIn" />
+      <wsdl:output message="tns:WS_ExpedienteSubirTramite64HttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_ExpedienteValidaDocumento">
+      <wsdl:input message="tns:WS_ExpedienteValidaDocumentoHttpPostIn" />
+      <wsdl:output message="tns:WS_ExpedienteValidaDocumentoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_ExpedienteTramiteRespuesta">
+      <wsdl:input message="tns:WS_ExpedienteTramiteRespuestaHttpPostIn" />
+      <wsdl:output message="tns:WS_ExpedienteTramiteRespuestaHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_ExpedienteTramiteRequisitos">
+      <wsdl:input message="tns:WS_ExpedienteTramiteRequisitosHttpPostIn" />
+      <wsdl:output message="tns:WS_ExpedienteTramiteRequisitosHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_ExpedienteTramiteRegistro">
+      <wsdl:input message="tns:WS_ExpedienteTramiteRegistroHttpPostIn" />
+      <wsdl:output message="tns:WS_ExpedienteTramiteRegistroHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_ExpedienteRegistro">
+      <wsdl:input message="tns:WS_ExpedienteRegistroHttpPostIn" />
+      <wsdl:output message="tns:WS_ExpedienteRegistroHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_ExpedienteFoto">
+      <wsdl:input message="tns:WS_ExpedienteFotoHttpPostIn" />
+      <wsdl:output message="tns:WS_ExpedienteFotoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_ExpedienteFoto64">
+      <wsdl:input message="tns:WS_ExpedienteFoto64HttpPostIn" />
+      <wsdl:output message="tns:WS_ExpedienteFoto64HttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_ValidaLicencia">
+      <wsdl:input message="tns:WS_ValidaLicenciaHttpPostIn" />
+      <wsdl:output message="tns:WS_ValidaLicenciaHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_Estado">
+      <wsdl:input message="tns:WS_EstadoHttpPostIn" />
+      <wsdl:output message="tns:WS_EstadoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_Municipio">
+      <wsdl:input message="tns:WS_MunicipioHttpPostIn" />
+      <wsdl:output message="tns:WS_MunicipioHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_Localidad">
+      <wsdl:input message="tns:WS_LocalidadHttpPostIn" />
+      <wsdl:output message="tns:WS_LocalidadHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_Dependencia">
+      <wsdl:input message="tns:WS_DependenciaHttpPostIn" />
+      <wsdl:output message="tns:WS_DependenciaHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_Sexo">
+      <wsdl:input message="tns:WS_SexoHttpPostIn" />
+      <wsdl:output message="tns:WS_SexoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_Documentos">
+      <wsdl:input message="tns:WS_DocumentosHttpPostIn" />
+      <wsdl:output message="tns:WS_DocumentosHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_EstadoCivil">
+      <wsdl:input message="tns:WS_EstadoCivilHttpPostIn" />
+      <wsdl:output message="tns:WS_EstadoCivilHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_Nacionalidad">
+      <wsdl:input message="tns:WS_NacionalidadHttpPostIn" />
+      <wsdl:output message="tns:WS_NacionalidadHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Ws_ExpedienteSMS">
+      <wsdl:input message="tns:Ws_ExpedienteSMSHttpPostIn" />
+      <wsdl:output message="tns:Ws_ExpedienteSMSHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_Estatus">
+      <wsdl:input message="tns:WS_EstatusHttpPostIn" />
+      <wsdl:output message="tns:WS_EstatusHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_ExpedienteTramites">
+      <wsdl:input message="tns:WS_ExpedienteTramitesHttpPostIn" />
+      <wsdl:output message="tns:WS_ExpedienteTramitesHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_WhatsAppSend">
+      <wsdl:input message="tns:WS_WhatsAppSendHttpPostIn" />
+      <wsdl:output message="tns:WS_WhatsAppSendHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_WhatsAppSendSoluciones">
+      <wsdl:input message="tns:WS_WhatsAppSendSolucionesHttpPostIn" />
+      <wsdl:output message="tns:WS_WhatsAppSendSolucionesHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_WhatsAppSendAdjunto">
+      <wsdl:input message="tns:WS_WhatsAppSendAdjuntoHttpPostIn" />
+      <wsdl:output message="tns:WS_WhatsAppSendAdjuntoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_WhatsAppValida">
+      <wsdl:input message="tns:WS_WhatsAppValidaHttpPostIn" />
+      <wsdl:output message="tns:WS_WhatsAppValidaHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_ExpedienteValidaNAT">
+      <wsdl:input message="tns:WS_ExpedienteValidaNATHttpPostIn" />
+      <wsdl:output message="tns:WS_ExpedienteValidaNATHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="JsonSEFIPaseCaja">
+      <wsdl:input message="tns:JsonSEFIPaseCajaHttpPostIn" />
+      <wsdl:output message="tns:JsonSEFIPaseCajaHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WSExpedienteSoap" type="tns:WSExpedienteSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetDataByCatPadron">
+      <soap:operation soapAction="https://expedientedigital.aguascalientes.gob.mx/GetDataByCatPadron" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ws_ExpedienteConsulta">
+      <soap:operation soapAction="https://expedientedigital.aguascalientes.gob.mx/Ws_ExpedienteConsulta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ws_ExpedienteConsultaIdTramite">
+      <soap:operation soapAction="https://expedientedigital.aguascalientes.gob.mx/Ws_ExpedienteConsultaIdTramite" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ws_ExpedienteConsultaDocumento">
+      <soap:operation soapAction="https://expedientedigital.aguascalientes.gob.mx/Ws_ExpedienteConsultaDocumento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ws_ExpedienteConsultaFolio">
+      <soap:operation soapAction="https://expedientedigital.aguascalientes.gob.mx/Ws_ExpedienteConsultaFolio" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_CiudadanoLogin">
+      <soap:operation soapAction="https://expedientedigital.aguascalientes.gob.mx/WS_CiudadanoLogin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_ExpedienteCorreoActivar">
+      <soap:operation soapAction="https://expedientedigital.aguascalientes.gob.mx/WS_ExpedienteCorreoActivar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_ExpedienteCorreoEnviar">
+      <soap:operation soapAction="https://expedientedigital.aguascalientes.gob.mx/WS_ExpedienteCorreoEnviar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_ExpedienteCorreoEnviarAdjunto">
+      <soap:operation soapAction="https://expedientedigital.aguascalientes.gob.mx/WS_ExpedienteCorreoEnviarAdjunto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_ExpedienteCorreoRecuperar">
+      <soap:operation soapAction="https://expedientedigital.aguascalientes.gob.mx/WS_ExpedienteCorreoRecuperar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_ExpedienteCorreoRestablecer">
+      <soap:operation soapAction="https://expedientedigital.aguascalientes.gob.mx/WS_ExpedienteCorreoRestablecer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_ExpedienteSubir">
+      <soap:operation soapAction="https://expedientedigital.aguascalientes.gob.mx/WS_ExpedienteSubir" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_ExpedienteSubir64">
+      <soap:operation soapAction="https://expedientedigital.aguascalientes.gob.mx/WS_ExpedienteSubir64" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_ExpedienteSubirTramite">
+      <soap:operation soapAction="https://expedientedigital.aguascalientes.gob.mx/WS_ExpedienteSubirTramite" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_ExpedienteSubirTramite64">
+      <soap:operation soapAction="https://expedientedigital.aguascalientes.gob.mx/WS_ExpedienteSubirTramite64" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_ExpedienteValidaDocumento">
+      <soap:operation soapAction="https://expedientedigital.aguascalientes.gob.mx/WS_ExpedienteValidaDocumento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_ExpedienteTramiteRespuesta">
+      <soap:operation soapAction="https://expedientedigital.aguascalientes.gob.mx/WS_ExpedienteTramiteRespuesta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_ExpedienteTramiteRequisitos">
+      <soap:operation soapAction="https://expedientedigital.aguascalientes.gob.mx/WS_ExpedienteTramiteRequisitos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_ExpedienteTramiteRegistro">
+      <soap:operation soapAction="https://expedientedigital.aguascalientes.gob.mx/WS_ExpedienteTramiteRegistro" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_ExpedienteRegistro">
+      <soap:operation soapAction="https://expedientedigital.aguascalientes.gob.mx/WS_ExpedienteRegistro" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_ExpedienteFoto">
+      <soap:operation soapAction="https://expedientedigital.aguascalientes.gob.mx/WS_ExpedienteFoto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_ExpedienteFoto64">
+      <soap:operation soapAction="https://expedientedigital.aguascalientes.gob.mx/WS_ExpedienteFoto64" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_ValidaLicencia">
+      <soap:operation soapAction="https://expedientedigital.aguascalientes.gob.mx/WS_ValidaLicencia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_Estado">
+      <soap:operation soapAction="https://expedientedigital.aguascalientes.gob.mx/WS_Estado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_Municipio">
+      <soap:operation soapAction="https://expedientedigital.aguascalientes.gob.mx/WS_Municipio" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_Localidad">
+      <soap:operation soapAction="https://expedientedigital.aguascalientes.gob.mx/WS_Localidad" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_Dependencia">
+      <soap:operation soapAction="https://expedientedigital.aguascalientes.gob.mx/WS_Dependencia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_Sexo">
+      <soap:operation soapAction="https://expedientedigital.aguascalientes.gob.mx/WS_Sexo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_Documentos">
+      <soap:operation soapAction="https://expedientedigital.aguascalientes.gob.mx/WS_Documentos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_EstadoCivil">
+      <soap:operation soapAction="https://expedientedigital.aguascalientes.gob.mx/WS_EstadoCivil" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_Nacionalidad">
+      <soap:operation soapAction="https://expedientedigital.aguascalientes.gob.mx/WS_Nacionalidad" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ws_ExpedienteSMS">
+      <soap:operation soapAction="https://expedientedigital.aguascalientes.gob.mx/Ws_ExpedienteSMS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_Estatus">
+      <soap:operation soapAction="https://expedientedigital.aguascalientes.gob.mx/WS_Estatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_ExpedienteTramites">
+      <soap:operation soapAction="https://expedientedigital.aguascalientes.gob.mx/WS_ExpedienteTramites" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_WhatsAppSend">
+      <soap:operation soapAction="https://expedientedigital.aguascalientes.gob.mx/WS_WhatsAppSend" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_WhatsAppSendSoluciones">
+      <soap:operation soapAction="https://expedientedigital.aguascalientes.gob.mx/WS_WhatsAppSendSoluciones" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_WhatsAppSendAdjunto">
+      <soap:operation soapAction="https://expedientedigital.aguascalientes.gob.mx/WS_WhatsAppSendAdjunto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_WhatsAppValida">
+      <soap:operation soapAction="https://expedientedigital.aguascalientes.gob.mx/WS_WhatsAppValida" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_ExpedienteValidaNAT">
+      <soap:operation soapAction="https://expedientedigital.aguascalientes.gob.mx/WS_ExpedienteValidaNAT" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="JsonSEFIPaseCaja">
+      <soap:operation soapAction="https://expedientedigital.aguascalientes.gob.mx/JsonSEFIPaseCaja" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WSExpedienteSoap12" type="tns:WSExpedienteSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetDataByCatPadron">
+      <soap12:operation soapAction="https://expedientedigital.aguascalientes.gob.mx/GetDataByCatPadron" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ws_ExpedienteConsulta">
+      <soap12:operation soapAction="https://expedientedigital.aguascalientes.gob.mx/Ws_ExpedienteConsulta" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ws_ExpedienteConsultaIdTramite">
+      <soap12:operation soapAction="https://expedientedigital.aguascalientes.gob.mx/Ws_ExpedienteConsultaIdTramite" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ws_ExpedienteConsultaDocumento">
+      <soap12:operation soapAction="https://expedientedigital.aguascalientes.gob.mx/Ws_ExpedienteConsultaDocumento" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ws_ExpedienteConsultaFolio">
+      <soap12:operation soapAction="https://expedientedigital.aguascalientes.gob.mx/Ws_ExpedienteConsultaFolio" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_CiudadanoLogin">
+      <soap12:operation soapAction="https://expedientedigital.aguascalientes.gob.mx/WS_CiudadanoLogin" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_ExpedienteCorreoActivar">
+      <soap12:operation soapAction="https://expedientedigital.aguascalientes.gob.mx/WS_ExpedienteCorreoActivar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_ExpedienteCorreoEnviar">
+      <soap12:operation soapAction="https://expedientedigital.aguascalientes.gob.mx/WS_ExpedienteCorreoEnviar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_ExpedienteCorreoEnviarAdjunto">
+      <soap12:operation soapAction="https://expedientedigital.aguascalientes.gob.mx/WS_ExpedienteCorreoEnviarAdjunto" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_ExpedienteCorreoRecuperar">
+      <soap12:operation soapAction="https://expedientedigital.aguascalientes.gob.mx/WS_ExpedienteCorreoRecuperar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_ExpedienteCorreoRestablecer">
+      <soap12:operation soapAction="https://expedientedigital.aguascalientes.gob.mx/WS_ExpedienteCorreoRestablecer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_ExpedienteSubir">
+      <soap12:operation soapAction="https://expedientedigital.aguascalientes.gob.mx/WS_ExpedienteSubir" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_ExpedienteSubir64">
+      <soap12:operation soapAction="https://expedientedigital.aguascalientes.gob.mx/WS_ExpedienteSubir64" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_ExpedienteSubirTramite">
+      <soap12:operation soapAction="https://expedientedigital.aguascalientes.gob.mx/WS_ExpedienteSubirTramite" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_ExpedienteSubirTramite64">
+      <soap12:operation soapAction="https://expedientedigital.aguascalientes.gob.mx/WS_ExpedienteSubirTramite64" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_ExpedienteValidaDocumento">
+      <soap12:operation soapAction="https://expedientedigital.aguascalientes.gob.mx/WS_ExpedienteValidaDocumento" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_ExpedienteTramiteRespuesta">
+      <soap12:operation soapAction="https://expedientedigital.aguascalientes.gob.mx/WS_ExpedienteTramiteRespuesta" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_ExpedienteTramiteRequisitos">
+      <soap12:operation soapAction="https://expedientedigital.aguascalientes.gob.mx/WS_ExpedienteTramiteRequisitos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_ExpedienteTramiteRegistro">
+      <soap12:operation soapAction="https://expedientedigital.aguascalientes.gob.mx/WS_ExpedienteTramiteRegistro" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_ExpedienteRegistro">
+      <soap12:operation soapAction="https://expedientedigital.aguascalientes.gob.mx/WS_ExpedienteRegistro" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_ExpedienteFoto">
+      <soap12:operation soapAction="https://expedientedigital.aguascalientes.gob.mx/WS_ExpedienteFoto" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_ExpedienteFoto64">
+      <soap12:operation soapAction="https://expedientedigital.aguascalientes.gob.mx/WS_ExpedienteFoto64" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_ValidaLicencia">
+      <soap12:operation soapAction="https://expedientedigital.aguascalientes.gob.mx/WS_ValidaLicencia" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_Estado">
+      <soap12:operation soapAction="https://expedientedigital.aguascalientes.gob.mx/WS_Estado" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_Municipio">
+      <soap12:operation soapAction="https://expedientedigital.aguascalientes.gob.mx/WS_Municipio" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_Localidad">
+      <soap12:operation soapAction="https://expedientedigital.aguascalientes.gob.mx/WS_Localidad" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_Dependencia">
+      <soap12:operation soapAction="https://expedientedigital.aguascalientes.gob.mx/WS_Dependencia" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_Sexo">
+      <soap12:operation soapAction="https://expedientedigital.aguascalientes.gob.mx/WS_Sexo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_Documentos">
+      <soap12:operation soapAction="https://expedientedigital.aguascalientes.gob.mx/WS_Documentos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_EstadoCivil">
+      <soap12:operation soapAction="https://expedientedigital.aguascalientes.gob.mx/WS_EstadoCivil" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_Nacionalidad">
+      <soap12:operation soapAction="https://expedientedigital.aguascalientes.gob.mx/WS_Nacionalidad" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ws_ExpedienteSMS">
+      <soap12:operation soapAction="https://expedientedigital.aguascalientes.gob.mx/Ws_ExpedienteSMS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_Estatus">
+      <soap12:operation soapAction="https://expedientedigital.aguascalientes.gob.mx/WS_Estatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_ExpedienteTramites">
+      <soap12:operation soapAction="https://expedientedigital.aguascalientes.gob.mx/WS_ExpedienteTramites" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_WhatsAppSend">
+      <soap12:operation soapAction="https://expedientedigital.aguascalientes.gob.mx/WS_WhatsAppSend" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_WhatsAppSendSoluciones">
+      <soap12:operation soapAction="https://expedientedigital.aguascalientes.gob.mx/WS_WhatsAppSendSoluciones" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_WhatsAppSendAdjunto">
+      <soap12:operation soapAction="https://expedientedigital.aguascalientes.gob.mx/WS_WhatsAppSendAdjunto" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_WhatsAppValida">
+      <soap12:operation soapAction="https://expedientedigital.aguascalientes.gob.mx/WS_WhatsAppValida" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_ExpedienteValidaNAT">
+      <soap12:operation soapAction="https://expedientedigital.aguascalientes.gob.mx/WS_ExpedienteValidaNAT" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="JsonSEFIPaseCaja">
+      <soap12:operation soapAction="https://expedientedigital.aguascalientes.gob.mx/JsonSEFIPaseCaja" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WSExpedienteHttpGet" type="tns:WSExpedienteHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="GetDataByCatPadron">
+      <http:operation location="/GetDataByCatPadron" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="Ws_ExpedienteConsulta">
+      <http:operation location="/Ws_ExpedienteConsulta" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="Ws_ExpedienteConsultaIdTramite">
+      <http:operation location="/Ws_ExpedienteConsultaIdTramite" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="Ws_ExpedienteConsultaDocumento">
+      <http:operation location="/Ws_ExpedienteConsultaDocumento" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="Ws_ExpedienteConsultaFolio">
+      <http:operation location="/Ws_ExpedienteConsultaFolio" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="WS_CiudadanoLogin">
+      <http:operation location="/WS_CiudadanoLogin" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="WS_ExpedienteCorreoActivar">
+      <http:operation location="/WS_ExpedienteCorreoActivar" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="WS_ExpedienteCorreoEnviar">
+      <http:operation location="/WS_ExpedienteCorreoEnviar" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="WS_ExpedienteCorreoEnviarAdjunto">
+      <http:operation location="/WS_ExpedienteCorreoEnviarAdjunto" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="WS_ExpedienteCorreoRecuperar">
+      <http:operation location="/WS_ExpedienteCorreoRecuperar" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="WS_ExpedienteCorreoRestablecer">
+      <http:operation location="/WS_ExpedienteCorreoRestablecer" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="WS_ExpedienteSubir">
+      <http:operation location="/WS_ExpedienteSubir" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_ExpedienteSubir64">
+      <http:operation location="/WS_ExpedienteSubir64" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="WS_ExpedienteSubirTramite">
+      <http:operation location="/WS_ExpedienteSubirTramite" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_ExpedienteSubirTramite64">
+      <http:operation location="/WS_ExpedienteSubirTramite64" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="WS_ExpedienteValidaDocumento">
+      <http:operation location="/WS_ExpedienteValidaDocumento" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="WS_ExpedienteTramiteRespuesta">
+      <http:operation location="/WS_ExpedienteTramiteRespuesta" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="WS_ExpedienteTramiteRequisitos">
+      <http:operation location="/WS_ExpedienteTramiteRequisitos" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="WS_ExpedienteTramiteRegistro">
+      <http:operation location="/WS_ExpedienteTramiteRegistro" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="WS_ExpedienteRegistro">
+      <http:operation location="/WS_ExpedienteRegistro" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="WS_ExpedienteFoto">
+      <http:operation location="/WS_ExpedienteFoto" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_ExpedienteFoto64">
+      <http:operation location="/WS_ExpedienteFoto64" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="WS_ValidaLicencia">
+      <http:operation location="/WS_ValidaLicencia" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="WS_Estado">
+      <http:operation location="/WS_Estado" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="WS_Municipio">
+      <http:operation location="/WS_Municipio" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="WS_Localidad">
+      <http:operation location="/WS_Localidad" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="WS_Dependencia">
+      <http:operation location="/WS_Dependencia" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="WS_Sexo">
+      <http:operation location="/WS_Sexo" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="WS_Documentos">
+      <http:operation location="/WS_Documentos" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="WS_EstadoCivil">
+      <http:operation location="/WS_EstadoCivil" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="WS_Nacionalidad">
+      <http:operation location="/WS_Nacionalidad" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="Ws_ExpedienteSMS">
+      <http:operation location="/Ws_ExpedienteSMS" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="WS_Estatus">
+      <http:operation location="/WS_Estatus" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="WS_ExpedienteTramites">
+      <http:operation location="/WS_ExpedienteTramites" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="WS_WhatsAppSend">
+      <http:operation location="/WS_WhatsAppSend" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="WS_WhatsAppSendSoluciones">
+      <http:operation location="/WS_WhatsAppSendSoluciones" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="WS_WhatsAppSendAdjunto">
+      <http:operation location="/WS_WhatsAppSendAdjunto" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="WS_WhatsAppValida">
+      <http:operation location="/WS_WhatsAppValida" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="WS_ExpedienteValidaNAT">
+      <http:operation location="/WS_ExpedienteValidaNAT" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="JsonSEFIPaseCaja">
+      <http:operation location="/JsonSEFIPaseCaja" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WSExpedienteHttpPost" type="tns:WSExpedienteHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="GetDataByCatPadron">
+      <http:operation location="/GetDataByCatPadron" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="Ws_ExpedienteConsulta">
+      <http:operation location="/Ws_ExpedienteConsulta" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="Ws_ExpedienteConsultaIdTramite">
+      <http:operation location="/Ws_ExpedienteConsultaIdTramite" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="Ws_ExpedienteConsultaDocumento">
+      <http:operation location="/Ws_ExpedienteConsultaDocumento" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="Ws_ExpedienteConsultaFolio">
+      <http:operation location="/Ws_ExpedienteConsultaFolio" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="WS_CiudadanoLogin">
+      <http:operation location="/WS_CiudadanoLogin" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="WS_ExpedienteCorreoActivar">
+      <http:operation location="/WS_ExpedienteCorreoActivar" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="WS_ExpedienteCorreoEnviar">
+      <http:operation location="/WS_ExpedienteCorreoEnviar" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="WS_ExpedienteCorreoEnviarAdjunto">
+      <http:operation location="/WS_ExpedienteCorreoEnviarAdjunto" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="WS_ExpedienteCorreoRecuperar">
+      <http:operation location="/WS_ExpedienteCorreoRecuperar" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="WS_ExpedienteCorreoRestablecer">
+      <http:operation location="/WS_ExpedienteCorreoRestablecer" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="WS_ExpedienteSubir">
+      <http:operation location="/WS_ExpedienteSubir" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_ExpedienteSubir64">
+      <http:operation location="/WS_ExpedienteSubir64" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="WS_ExpedienteSubirTramite">
+      <http:operation location="/WS_ExpedienteSubirTramite" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_ExpedienteSubirTramite64">
+      <http:operation location="/WS_ExpedienteSubirTramite64" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="WS_ExpedienteValidaDocumento">
+      <http:operation location="/WS_ExpedienteValidaDocumento" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="WS_ExpedienteTramiteRespuesta">
+      <http:operation location="/WS_ExpedienteTramiteRespuesta" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="WS_ExpedienteTramiteRequisitos">
+      <http:operation location="/WS_ExpedienteTramiteRequisitos" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="WS_ExpedienteTramiteRegistro">
+      <http:operation location="/WS_ExpedienteTramiteRegistro" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="WS_ExpedienteRegistro">
+      <http:operation location="/WS_ExpedienteRegistro" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="WS_ExpedienteFoto">
+      <http:operation location="/WS_ExpedienteFoto" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_ExpedienteFoto64">
+      <http:operation location="/WS_ExpedienteFoto64" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="WS_ValidaLicencia">
+      <http:operation location="/WS_ValidaLicencia" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="WS_Estado">
+      <http:operation location="/WS_Estado" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="WS_Municipio">
+      <http:operation location="/WS_Municipio" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="WS_Localidad">
+      <http:operation location="/WS_Localidad" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="WS_Dependencia">
+      <http:operation location="/WS_Dependencia" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="WS_Sexo">
+      <http:operation location="/WS_Sexo" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="WS_Documentos">
+      <http:operation location="/WS_Documentos" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="WS_EstadoCivil">
+      <http:operation location="/WS_EstadoCivil" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="WS_Nacionalidad">
+      <http:operation location="/WS_Nacionalidad" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="Ws_ExpedienteSMS">
+      <http:operation location="/Ws_ExpedienteSMS" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="WS_Estatus">
+      <http:operation location="/WS_Estatus" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="WS_ExpedienteTramites">
+      <http:operation location="/WS_ExpedienteTramites" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="WS_WhatsAppSend">
+      <http:operation location="/WS_WhatsAppSend" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="WS_WhatsAppSendSoluciones">
+      <http:operation location="/WS_WhatsAppSendSoluciones" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="WS_WhatsAppSendAdjunto">
+      <http:operation location="/WS_WhatsAppSendAdjunto" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="WS_WhatsAppValida">
+      <http:operation location="/WS_WhatsAppValida" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="WS_ExpedienteValidaNAT">
+      <http:operation location="/WS_ExpedienteValidaNAT" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="JsonSEFIPaseCaja">
+      <http:operation location="/JsonSEFIPaseCaja" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WSExpediente">
+    <wsdl:port name="WSExpedienteSoap" binding="tns:WSExpedienteSoap">
+      <soap:address location="https://expedientedigital.aguascalientes.gob.mx/Expediente/WSExpediente.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WSExpedienteSoap12" binding="tns:WSExpedienteSoap12">
+      <soap12:address location="https://expedientedigital.aguascalientes.gob.mx/Expediente/WSExpediente.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WSExpedienteHttpGet" binding="tns:WSExpedienteHttpGet">
+      <http:address location="https://expedientedigital.aguascalientes.gob.mx/Expediente/WSExpediente.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WSExpedienteHttpPost" binding="tns:WSExpedienteHttpPost">
+      <http:address location="https://expedientedigital.aguascalientes.gob.mx/Expediente/WSExpediente.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

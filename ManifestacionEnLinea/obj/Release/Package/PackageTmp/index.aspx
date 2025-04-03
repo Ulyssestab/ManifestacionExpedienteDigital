@@ -107,7 +107,7 @@
             }
 
         </script>
-    <script>
+<%--    <script>
         function Notapopupin() {
             
             var imggoin = document.getElementById("<%= popupchrome.ClientID %>");
@@ -123,7 +123,7 @@
             imggoin.style.display = "none";
             imgpopin.style.display = "none";
         }
-    </script>
+    </script>--%>
     <script>
         $(document).ready(function () {
             $("#<%= MunicipiosList.ClientID %>").change(function () {
@@ -349,7 +349,8 @@
                 <h1 class="titulo"> Solicitud de Manifestación de Predio y/o Avalúo Catastral</h1>
                 <label style="font-size:16px;"><b> Seleccionar municipio:</b></label>
                 <asp:DropDownList style="width:auto;" CssClass="form-control" ID="MunicipiosList" runat="server">
-                    <asp:ListItem Selected="True" Value="01">AGUASCALIENTES</asp:ListItem>
+                    <asp:ListItem Selected="True" Value="00">SELECCIONE UN MUNICIPIO</asp:ListItem>
+                    <asp:ListItem Value="01">AGUASCALIENTES</asp:ListItem>
                     <asp:ListItem Value="02">ASIENTOS</asp:ListItem>
                     <asp:ListItem Value="03">CALVILLO</asp:ListItem>
                     <asp:ListItem Value="04">COSÍO</asp:ListItem>
@@ -365,7 +366,7 @@
         <label style="font-size:16px;"> <b>Ingrese su clave catastral: </b></label>
             <div class="row justify-content-center">
                 <div class="col-md-2" >
-                    <asp:TextBox CssClass="form-control" ID="TxtMunicipio" runat="server" placeholder="Municipio" Value="01"></asp:TextBox>
+                    <asp:TextBox CssClass="form-control" ID="TxtMunicipio" runat="server" placeholder="Municipio" Value="00"></asp:TextBox>
                 </div>
                 <div class="col-md-2" >
                     <asp:TextBox CssClass="form-control" ID="TxtLocalidad" runat="server" onkeypress="return soloNumeros(event);" placeholder="Localidad" MaxLength="3" required="required"></asp:TextBox>
@@ -402,8 +403,8 @@
                     <div class="card">
                         <div class="card-body">
                             <h5 class="titulo-cita" style="text-align:center">Pago de Avalúo Catastral</h5>
-                            <p class="card-text">Costo: $188.00 Clave:43060703 </p>
-                            <p class="card-text">Con fundamento el Artículo 7 fracción VII, Inciso 2) de la Ley de Ingresos del Estado de Aguascalientes para el Ejercicio Fiscal del Año 2024. </p>
+                            <p class="card-text">Costo: $198.00 Clave:43060703 </p>
+                            <p class="card-text">Con fundamento el Artículo 7 fracción VII, Inciso 2) de la Ley de Ingresos del Estado de Aguascalientes para el Ejercicio Fiscal del Año 2025. </p>
                             <button class="btn-form btn-form-descarga" onclick="PagarAvaluoEnLinea()">
                                 <i class="fas fa-money-bill-alt me-2"></i>Pagar Avalúo
                             </button>
@@ -414,8 +415,10 @@
                     <div class="card">
                         <div class="card-body">
                             <h5 class="card-title" style="text-align:center">Solicitud de Manifestación y/o Avalúo Catastral</h5>
+                            <p><b> Requisitos: Digitalize los siguientes documentos. </b></p>
                             <p class="card-text">1. Descargue, llene y firme la solicitud.  </p>
-                            <p class="card-text">2. Copia de identificación oficial. Nota: En caso de no ser el propietario: Carta poder simple en original firmada por el propietario, gestor y 2 testigos, así como copia de la identificación oficial de cada uno.</p>
+                            <p class="card-text">2. Realize el pago de Avalúo en caso de requerirlo</p>
+                            <p class="card-text">3. Copia de identificación oficial. Nota: En caso de no ser el propietario: Carta poder simple en original firmada por el propietario, gestor y 2 testigos, así como copia de la identificación oficial de cada uno.</p>
                             <div class="text-center">
                                 <button class="btn-form btn-form-descarga" onclick="descargarPDF()">
                                     <span class="iconify me-2" data-inline="true" data-icon="material-symbols:download"></span>Descargar Formato
@@ -487,7 +490,7 @@
       </div>
     </div>
   </div>
-  <div class="accordion-item">
+  <%--<div class="accordion-item">
     <h2 class="accordion-header" id="flush-headingTwo">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
         Requisitos
@@ -564,14 +567,11 @@
 
       </div>
     </div>
-  </div>
+  </div>--%>
 </div>
             <div style="margin-left:10px;">
-        <label>Utilizar un navegador actualizado, de preferencia Google Chrome. </label><asp:Image runat="server" CssClass="LogoNav" ImageUrl="~/Imagenes/Iconos/Chrome_Logo.png" />  <label>Reportar cualquier error al correo catastro@aguascalientes.gob.mx</label>
+        <label>Utilizar un navegador actualizado, de preferencia Google Chrome. </label><asp:Image runat="server" CssClass="LogoNav" ImageUrl="~/Imagenes/Iconos/Chrome_Logo.png" />  <%--<label>Reportar cualquier error al correo catastro@aguascalientes.gob.mx</label>--%>
     </div>
-                            <%-- Mantenimiento --%>
-   <%-- <div style="margin-left:10px;" >--%>
-      <%-- <asp:Image runat="server" ID="Mantenimiento" ImageUrl="~/Imagenes/Iconos/mantenimiento.png" />--%>
     </div>
 
     

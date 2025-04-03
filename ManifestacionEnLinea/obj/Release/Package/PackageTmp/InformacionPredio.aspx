@@ -364,66 +364,39 @@
          </div>--%>
         <br />
         <div align="center">
-            <label><b>CROQUIS</b></label>
+            <label><b>UBICACIÓN</b></label>
         </div><br />
         <div id="mapP" align="center" style="width: 600px; height: 400px; position:relative; left: 35%" ></div> 
         <script>
+            //var UTMScaleFactor = 0.9996;
+            //var pi = 3.14159265358979;
+            //var sm_a = 6378137.0;
+            //var sm_b = 6356752.314;
+            //var sm_EccSquared = 6.69437999013e-03;
+            //var Var_Coordinadas = [];
+            //var VAR_Coordinadasconst = [];
+            //var var_coordinada;
+            //var var_coordinadasconst;
+            //var VAR_definitive = [];
+            // Función para obtener los parámetros de la URL
+            const params = new URLSearchParams(window.location.search);
+            const latitud = parseFloat(params.get('latitud'));
+            const longitud = parseFloat(params.get('longitud'));
+            console.log("Latitud:" + latitud);
+            console.log("Longitud:" + longitud);
 
-            console.log("P: " + lista.var1); //Coordenadas UTM del Poligono del predio 
-
-            var UTMScaleFactor = 0.9996;
-            var pi = 3.14159265358979;
-            var sm_a = 6378137.0;
-            var sm_b = 6356752.314;
-            var sm_EccSquared = 6.69437999013e-03;
-            var Var_Coordinadas = [];
-            var VAR_Coordinadasconst = [];
-            var var_coordinada;
-            var var_coordinadasconst;
-            var VAR_definitive = [];
-
-            const map = L.map('mapP').setView([21.8823400, -102.2825900], 13);
-
-
-            var Esri_WorldImagery = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
-                maxZoom: 20,
-                attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
-            }).addTo(map);
-
-            ///*Convertir las coordendas de UTM a Latitud y Longitud*/
-            for (var i = 0; i < lista.var1.length; i++) {
-                const coords = lista.var1[i].split(' ');
-                var latlon = new Array(2);
-                var east, north, zone, hemi;
-                east = coords[0];
-                north = coords[1];
-                zone = 13;
-                hemi = "N";
-
-                UTMXYToLatLon(east, north, zone, hemi, latlon);
-                var lon = RadToDeg(latlon[1]);
-                var lat = RadToDeg(latlon[0]);
-
-                var_coordinada = [lat, lon];
-                Var_Coordinadas.push(var_coordinada);
-
-            }
-
-            console.log("Coordenadas  convertidas del predio: " + Var_Coordinadas);
-
-            var polygono = L.polygon(Var_Coordinadas, {
-                color: 'red',
-                fillOpacity: .01,
-                weight: 1
-            }).addTo(map);
-
-            map.fitBounds(polygono.getBounds());
-
-
-
+            const zonaUTM = 13; // O 14 dependiendo de la ubicación
+            const hemi = "N";
+            const latlon = new Array(2);
+            UTMXYToLatLon(longitud, latitud, zonaUTM, hemi, latlon);
+            const lon = RadToDeg(latlon[1]);
+            const lat = RadToDeg(latlon[0]);
+            latLng = [lat, lon];
+            let currentMarker = null;
+                
             function UTMXYToLatLon(x, y, zone, southhemi, latlon) {
                 var cmeridian;
-
+                var UTMScaleFactor = 0.9996;
                 x -= 500000.0;
                 x /= UTMScaleFactor;
 
@@ -444,9 +417,11 @@
             }
 
             function DegToRad(deg) {
+                var pi = 3.14159265358979;
                 return (deg / 180.0 * pi);
             }
             function RadToDeg(rad) {
+                var pi = 3.14159265358979;
                 return (rad / pi * 180.0);
             }
 
@@ -454,6 +429,9 @@
                 var phif, Nf, Nfpow, nuf2, ep2, tf, tf2, tf4, cf;
                 var x1frac, x2frac, x3frac, x4frac, x5frac, x6frac, x7frac, x8frac;
                 var x2poly, x3poly, x4poly, x5poly, x6poly, x7poly, x8poly;
+                var sm_a = 6378137.0;
+                var sm_b = 6356752.314;
+
 
                 /* Get the value of phif, the footpoint latitude. */
                 phif = FootpointLatitude(y);
@@ -537,7 +515,8 @@
             function FootpointLatitude(y) {
                 var y_, alpha_, beta_, gamma_, delta_, epsilon_, n;
                 var result;
-
+                var sm_a = 6378137.0;
+                var sm_b = 6356752.314;
                 /* Precalculate n (Eq. 10.18) */
                 n = (sm_a - sm_b) / (sm_a + sm_b);
 
@@ -573,7 +552,25 @@
                 return result;
             }
 
-            /*const polygon = L.polygon(Var_Coordinadas);*/
+            // Inicializar el mapa en una ubicación por defecto
+            const map = L.map('mapP').setView([21.8823400, -102.2825900], 13);
+
+            var Esri_WorldImagery = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+                maxZoom: 20,
+                attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
+            }).addTo(map);
+
+            if (latLng && latLng.every(coord => isFinite(coord))) {
+                if (currentMarker) {
+                    currentMarker.setLatLng(latLng);
+                } else {
+                    currentMarker = L.marker(latLng).addTo(map);
+                }
+                map.setView(latLng, 19);
+            } else {
+                alert("Por favor, ingresa coordenadas válidas.");
+            }
+            
 
         </script>
         <br />
@@ -658,8 +655,31 @@
                  <%--<asp:Button runat="server" ID="BotonCancelar" CssClass="btn btn-danger" OnClick="BotonCancelar_Click" Text="Cancelar"/>--%>
             </div>
         </div>
+
+        <div class="modal fade" id="miModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <!-- Añade la clase modal-dialog-centered para centrar verticalmente -->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Aviso de Trámite</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="Imagenes/AvisoTramite.jpg" alt="Aviso de Trámite" class="img-fluid"/>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">ENTENDIDO</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </form>
     <div id="fgea"></div>
-
+    <script type="text/javascript">
+        window.onload = function () {
+            var myModal = new bootstrap.Modal(document.getElementById('miModal'), {});
+            myModal.show();
+        };
+    </script>
 </body>
 </html>

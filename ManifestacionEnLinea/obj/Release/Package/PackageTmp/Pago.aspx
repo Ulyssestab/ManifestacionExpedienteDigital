@@ -158,9 +158,9 @@
                 "rfc": "SINRFC", "curp": "", "nombre": NombrePagoAvaluoJS,
                 "calle": "", "no_ext": "", "no_int": "0", "colonia": "",
                 "codpos": 0, "telefono": "", "municipio": 1, "ent_fede": 1, "poblacion": 1, "observacion":
-                    referenciaPago + " " + CuentaCatastral, "servicio": 2, "referencia": referenciaPago, "total": 188,
-                "vigencia": '2023-12-31', "urlRetorno": "https://eservicios2.aguascalientes.gob.mx/IRC/ManifestacionEnLinea/index.aspx",
-                "conceptos": [{ "concepto": "4020306010703", "cantidad": 1, "precio": 188 }],
+                    referenciaPago + " " + CuentaCatastral, "servicio": 2, "referencia": referenciaPago, "total": 198,
+                "vigencia": '2025-12-31', "urlRetorno": "https://eservicios2.aguascalientes.gob.mx/IRC/ManifestacionEnLinea/index.aspx",
+                "conceptos": [{ "concepto": "4020306010703", "cantidad": 1, "precio": 198 }],
             };
 
             var parametros = JSON.stringify(objdatoscobro, null, 2);

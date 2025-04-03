@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:tns="http://tempuri.org/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GetResguardoEmpleado">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NumeroEmpleado" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetResguardoEmpleadoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetResguardoEmpleadoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBienes">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NumeroBienes" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBienesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetBienesResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getInformacionRecibo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FolioReciboSefi" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getInformacionReciboResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getInformacionReciboResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="usarFolioRecibo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FolioReciboSefi" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FolioTramite" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="usarFolioReciboResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="usarFolioReciboResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="firmar">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cadenaoriginal" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NombreParametro" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="firmarResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="firmarResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetResguardoEmpleadoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetResguardoEmpleado" />
+  </wsdl:message>
+  <wsdl:message name="GetResguardoEmpleadoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetResguardoEmpleadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetBienesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetBienes" />
+  </wsdl:message>
+  <wsdl:message name="GetBienesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetBienesResponse" />
+  </wsdl:message>
+  <wsdl:message name="getInformacionReciboSoapIn">
+    <wsdl:part name="parameters" element="tns:getInformacionRecibo" />
+  </wsdl:message>
+  <wsdl:message name="getInformacionReciboSoapOut">
+    <wsdl:part name="parameters" element="tns:getInformacionReciboResponse" />
+  </wsdl:message>
+  <wsdl:message name="usarFolioReciboSoapIn">
+    <wsdl:part name="parameters" element="tns:usarFolioRecibo" />
+  </wsdl:message>
+  <wsdl:message name="usarFolioReciboSoapOut">
+    <wsdl:part name="parameters" element="tns:usarFolioReciboResponse" />
+  </wsdl:message>
+  <wsdl:message name="firmarSoapIn">
+    <wsdl:part name="parameters" element="tns:firmar" />
+  </wsdl:message>
+  <wsdl:message name="firmarSoapOut">
+    <wsdl:part name="parameters" element="tns:firmarResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WSResguardosSoap">
+    <wsdl:operation name="GetResguardoEmpleado">
+      <wsdl:input message="tns:GetResguardoEmpleadoSoapIn" />
+      <wsdl:output message="tns:GetResguardoEmpleadoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBienes">
+      <wsdl:input message="tns:GetBienesSoapIn" />
+      <wsdl:output message="tns:GetBienesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getInformacionRecibo">
+      <wsdl:input message="tns:getInformacionReciboSoapIn" />
+      <wsdl:output message="tns:getInformacionReciboSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="usarFolioRecibo">
+      <wsdl:input message="tns:usarFolioReciboSoapIn" />
+      <wsdl:output message="tns:usarFolioReciboSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="firmar">
+      <wsdl:input message="tns:firmarSoapIn" />
+      <wsdl:output message="tns:firmarSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WSResguardosSoap" type="tns:WSResguardosSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetResguardoEmpleado">
+      <soap:operation soapAction="http://tempuri.org/GetResguardoEmpleado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBienes">
+      <soap:operation soapAction="http://tempuri.org/GetBienes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getInformacionRecibo">
+      <soap:operation soapAction="http://tempuri.org/getInformacionRecibo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="usarFolioRecibo">
+      <soap:operation soapAction="http://tempuri.org/usarFolioRecibo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="firmar">
+      <soap:operation soapAction="http://tempuri.org/firmar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WSResguardosSoap12" type="tns:WSResguardosSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetResguardoEmpleado">
+      <soap12:operation soapAction="http://tempuri.org/GetResguardoEmpleado" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBienes">
+      <soap12:operation soapAction="http://tempuri.org/GetBienes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getInformacionRecibo">
+      <soap12:operation soapAction="http://tempuri.org/getInformacionRecibo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="usarFolioRecibo">
+      <soap12:operation soapAction="http://tempuri.org/usarFolioRecibo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="firmar">
+      <soap12:operation soapAction="http://tempuri.org/firmar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WSResguardos">
+    <wsdl:port name="WSResguardosSoap" binding="tns:WSResguardosSoap">
+      <soap:address location="https://eservicios2.aguascalientes.gob.mx/WSResguardos/WSResguardos.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WSResguardosSoap12" binding="tns:WSResguardosSoap12">
+      <soap12:address location="https://eservicios2.aguascalientes.gob.mx/WSResguardos/WSResguardos.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
