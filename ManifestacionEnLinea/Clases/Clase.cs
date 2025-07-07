@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Net;
 using System.Web;
 using ManifestacionEnLinea.DataModel;
 
@@ -11,6 +13,34 @@ namespace ManifestacionEnLinea.Clases
         GDB01001DataContext ContextoGDB = new GDB01001DataContext();
         WFTRAMITESDataContext ContextWftramites = new WFTRAMITESDataContext();
 
+        public SIS_PC_UBICACION ObtenerUbicacionInmueble(string claveCatastral)
+        {
+            try
+            {
+                string muni = "GDB01";
+                string NombreGDB = "";
+                if (claveCatastral.Length == 17)
+                {
+                    NombreGDB = muni + "0" + claveCatastral.Substring(0, 2);
+                }
+                else
+                {
+                    NombreGDB = muni + claveCatastral.Substring(5, 3);
+                }
+                string conexionGDB = System.Configuration.ConfigurationManager.ConnectionStrings[NombreGDB + "ConnectionString"].ConnectionString;
+                ContextoGDB = new GDB01001DataContext(conexionGDB);
+
+                SIS_PC_UBICACION ubicacionInmueble = (from record in ContextoGDB.SIS_PC_UBICACION
+                                                      where (record.CVE_CAT_EST == claveCatastral || record.CVE_CAT_ORI == claveCatastral) && record.STATUSREGISTROTABLA == "ACTIVO"
+                                                      select record).FirstOrDefault();
+                return ubicacionInmueble;
+            }
+            catch (Exception ex)
+            {
+                // Puedes agregar aquí el log de errores
+                return null;
+            }
+        }
         public SIS_PC_CLAVE_CATASTRAL Predio_Clave_Catastral(string CuentaOriginal)
         {
             try
@@ -50,54 +80,63 @@ namespace ManifestacionEnLinea.Clases
             }
         }
 
-        public SIS_PC_CENTROIDES CoordenadaCentro(string CuentaEstandar)
+        public SIS_PC_CENTROIDES CoordenadaCentro(string claveCatastral)
         {
-            if (CuentaEstandar == null)
+            if (claveCatastral == null)
             {
                 return null;
             }
-            else
+
+            try
             {
+                string muni = "GDB01";
+                string NombreGDB = "";
 
-
-                try
+                if (claveCatastral.Length == 17)
                 {
-                    string muni = "GDB01";
-                    string NombreGDB = "";
-                    if (CuentaEstandar.Length == 17)
-                    {
-                        NombreGDB = muni + "0" + CuentaEstandar.Substring(0, 2);
-                    }
-                    else
-                    {
-                        NombreGDB = muni + CuentaEstandar.Substring(5, 3);
-                    }
-                    string conexionGDB = System.Configuration.ConfigurationManager.ConnectionStrings[NombreGDB + "ConnectionString"].ConnectionString;
-                    ContextoGDB = new GDB01001DataContext(conexionGDB);
-
-                    if (CuentaEstandar.Length == 17)
-                    {
-
-                        SIS_PC_CENTROIDES Info = (from record in ContextoGDB.SIS_PC_CENTROIDES
-                                                  where record.CVE_CAT_EST == CuentaEstandar && record.STATUSREGISTROTABLA == "ACTIVO"
-                                                  select record).FirstOrDefault();
-                        return Info;
-                    }
-                    else
-                    {
-                        SIS_PC_CENTROIDES Info = (from record in ContextoGDB.SIS_PC_CENTROIDES
-                                                  where record.CVE_CAT_EST == CuentaEstandar && record.STATUSREGISTROTABLA == "ACTIVO"
-                                                  select record).FirstOrDefault();
-                        return Info;
-                    }
+                    NombreGDB = muni + "0" + claveCatastral.Substring(0, 2);
                 }
-                catch (Exception ex)
+                else
                 {
-                    return null;
+                    NombreGDB = muni + claveCatastral.Substring(5, 3);
                 }
+
+                string conexionGDB = System.Configuration.ConfigurationManager.ConnectionStrings[NombreGDB + "ConnectionString"].ConnectionString;
+                ContextoGDB = new GDB01001DataContext(conexionGDB);
+
+                SIS_PC_CENTROIDES Info = null;
+
+                // Intentar convertir claveCatastral a decimal
+                decimal valorDecimal;
+                bool esDecimal = decimal.TryParse(claveCatastral, out valorDecimal);
+
+                if (claveCatastral.Length == 17 && esDecimal)
+                {
+                    Info = (from record in ContextoGDB.SIS_PC_CENTROIDES
+                            where (record.CVE_CAT_EST == claveCatastral ||
+                                   record.CVE_CAT_ORI == claveCatastral ||
+                                   record.CENT_PRED_X == valorDecimal ||
+                                   record.CENT_PRED_Y == valorDecimal) &&
+                                  record.STATUSREGISTROTABLA == "ACTIVO"
+                            select record).FirstOrDefault();
+                }
+                else
+                {
+                    Info = (from record in ContextoGDB.SIS_PC_CENTROIDES
+                            where record.CVE_CAT_EST == claveCatastral &&
+                                  record.STATUSREGISTROTABLA == "ACTIVO"
+                            select record).FirstOrDefault();
+                }
+
+                return Info;
             }
-
+            catch (Exception ex)
+            {
+               
+                return null;
+            }
         }
+
         public SIS_PC_SUPERFICIES2 InfoSuperficie(string CuentaOriginal)
         {
             try
@@ -250,7 +289,7 @@ namespace ManifestacionEnLinea.Clases
             }
         }
 
-        public SIS_TRACAT_MC_AV  ValidarSolicitudMCAV(string CuentaOriginal)
+        public SIS_TRACAT_SOLICITUD_MC_AV  ValidarSolicitudMCAV(string CuentaOriginal)
         {
             try
             {
@@ -270,7 +309,7 @@ namespace ManifestacionEnLinea.Clases
                 if (CuentaOriginal.Length == 17)
                 {
 
-                    SIS_TRACAT_MC_AV Info = (from record in ContextWftramites.SIS_TRACAT_MC_AV
+                    SIS_TRACAT_SOLICITUD_MC_AV Info = (from record in ContextWftramites.SIS_TRACAT_SOLICITUD_MC_AV
                                              where record.CVE_CAT_ORI == CuentaOriginal && record.STATUSREGISTROTABLA == "ACTIVO"
                                                         select record).FirstOrDefault();
                     return Info;
@@ -606,6 +645,40 @@ namespace ManifestacionEnLinea.Clases
             sqlConnection1.Close();
         }
 
+        public void DescargarDocumento(string url, string ClaveCatastral, string NombreDocumento, string TipoTramite)
+        {
+            //string path = @"\\" + ServidorIP + "\\irc\\Archivos\\LevantamientoTopograficoEnLinea\\" + ClaveCatastral;
+            string path = @"C:\Archivos\" + TipoTramite + "\\" + ClaveCatastral;
+            string strFolder = @"C:\Archivos\" + TipoTramite +"\\" + ClaveCatastral + "\\" + NombreDocumento;
+            //string strFolder = @"\\" + ServidorIP + "\\irc\\Archivos\\LevantamientoTopograficoEnLinea\\" + ClaveCatastral + "\\" + NombreDocumento;
+            if (!Directory.Exists(path))
+            {
+                Directory.CreateDirectory(path);
+                try
+                {
+                    using (WebClient webClient = new WebClient())
+                    {
+                        webClient.DownloadFile(url, strFolder);
+                    }
+                }
+                catch (Exception ex)
+                {
+                }
+            }
+            else
+            {
+                try
+                {
+                    using (WebClient webClient = new WebClient())
+                    {
+                        webClient.DownloadFile(url, strFolder);
+                    }
+                }
+                catch (Exception EX)
+                {
+                }
+            }
+        }
 
     }
 }

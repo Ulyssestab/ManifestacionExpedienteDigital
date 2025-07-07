@@ -1675,7 +1675,7 @@ namespace ManifestacionEnLinea
                             if (Archivo == true)
                             {
                                 /*Valida si ya se registro en SIS_TRACAT_MC_AV*/
-                                SIS_TRACAT_MC_AV infoMCAV = ObjetosPago.ValidarSolicitudMCAV(Txt_ClaveCatastral);
+                                SIS_TRACAT_SOLICITUD_MC_AV infoMCAV = ObjetosPago.ValidarSolicitudMCAV(Txt_ClaveCatastral);
                                 if (infoMCAV == null)
                                 {
                                     GuardarArchivosManiAvaluo(Txt_ClaveCatastral);

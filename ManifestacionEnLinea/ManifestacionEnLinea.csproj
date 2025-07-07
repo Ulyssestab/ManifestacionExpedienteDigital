@@ -239,6 +239,7 @@
     </None>
     <Content Include="DescargaBoleta.aspx" />
     <Content Include="Documentos.aspx" />
+    <Content Include="FormularioDeTramite.aspx" />
     <Content Include="FormularioPago.aspx" />
     <Content Include="Imagenes\AvisoTramite.jpg" />
     <Content Include="Imagenes\CapturaSeleccionDocumentos.JPG" />
@@ -290,6 +291,7 @@
     <Content Include="Imagenes\Predial\TEPEZALAPREDIAL.jpg" />
     <Content Include="index.aspx" />
     <Content Include="InformacionPredio.aspx" />
+    <Content Include="Motor.aspx" />
     <Content Include="PaginaError.aspx" />
     <Content Include="Pago.aspx" />
     <Content Include="SubirArchivos.aspx" />
@@ -300,11 +302,14 @@
     <Compile Include="Clases\Avaluo.cs" />
     <Compile Include="Clases\Clase.cs" />
     <Compile Include="Clases\Construccion.cs" />
+    <Compile Include="Clases\DocumentoExpedienteDigital.cs" />
     <Compile Include="Clases\D_EnvioCorreo.cs" />
+    <Compile Include="Clases\ExpedienteDIgital.cs" />
     <Compile Include="Clases\Manifestacion.cs" />
     <Compile Include="Clases\ManifestacionAvaluo.cs" />
     <Compile Include="Clases\ResponseData.cs" />
     <Compile Include="Clases\RevisionPago.cs" />
+    <Compile Include="Clases\SolicitudMCAV.cs" />
     <Compile Include="Connected Services\ControlDeFolioDesa\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -354,6 +359,13 @@
     <Compile Include="Documentos.aspx.designer.cs">
       <DependentUpon>Documentos.aspx</DependentUpon>
     </Compile>
+    <Compile Include="FormularioDeTramite.aspx.cs">
+      <DependentUpon>FormularioDeTramite.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormularioDeTramite.aspx.designer.cs">
+      <DependentUpon>FormularioDeTramite.aspx</DependentUpon>
+    </Compile>
     <Compile Include="FormularioPago.aspx.cs">
       <DependentUpon>FormularioPago.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -374,6 +386,12 @@
     </Compile>
     <Compile Include="InformacionPredio.aspx.designer.cs">
       <DependentUpon>InformacionPredio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Motor.aspx.cs">
+      <DependentUpon>Motor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Motor.aspx.designer.cs">
+      <DependentUpon>Motor.aspx</DependentUpon>
     </Compile>
     <Compile Include="PaginaError.aspx.cs">
       <DependentUpon>PaginaError.aspx</DependentUpon>

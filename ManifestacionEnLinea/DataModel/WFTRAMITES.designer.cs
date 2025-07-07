@@ -30,30 +30,6 @@ namespace ManifestacionEnLinea.DataModel
 		
     #region Definiciones de métodos de extensibilidad
     partial void OnCreated();
-    partial void InsertSIS_TRACAT_ABSTENCIONES(SIS_TRACAT_ABSTENCIONES instance);
-    partial void UpdateSIS_TRACAT_ABSTENCIONES(SIS_TRACAT_ABSTENCIONES instance);
-    partial void DeleteSIS_TRACAT_ABSTENCIONES(SIS_TRACAT_ABSTENCIONES instance);
-    partial void InsertTramite(Tramite instance);
-    partial void UpdateTramite(Tramite instance);
-    partial void DeleteTramite(Tramite instance);
-    partial void InsertSeguimientoTramite(SeguimientoTramite instance);
-    partial void UpdateSeguimientoTramite(SeguimientoTramite instance);
-    partial void DeleteSeguimientoTramite(SeguimientoTramite instance);
-    partial void InsertFOLIOPAGOAVALUO(FOLIOPAGOAVALUO instance);
-    partial void UpdateFOLIOPAGOAVALUO(FOLIOPAGOAVALUO instance);
-    partial void DeleteFOLIOPAGOAVALUO(FOLIOPAGOAVALUO instance);
-    partial void InsertSIS_TRACAT_MC_AV(SIS_TRACAT_MC_AV instance);
-    partial void UpdateSIS_TRACAT_MC_AV(SIS_TRACAT_MC_AV instance);
-    partial void DeleteSIS_TRACAT_MC_AV(SIS_TRACAT_MC_AV instance);
-    partial void InsertSIS_TRACAT_MC(SIS_TRACAT_MC instance);
-    partial void UpdateSIS_TRACAT_MC(SIS_TRACAT_MC instance);
-    partial void DeleteSIS_TRACAT_MC(SIS_TRACAT_MC instance);
-    partial void InsertSIS_TRACAT_AC(SIS_TRACAT_AC instance);
-    partial void UpdateSIS_TRACAT_AC(SIS_TRACAT_AC instance);
-    partial void DeleteSIS_TRACAT_AC(SIS_TRACAT_AC instance);
-    partial void InsertCOORDENADAS_MANIFESTACION_AVALUO(COORDENADAS_MANIFESTACION_AVALUO instance);
-    partial void UpdateCOORDENADAS_MANIFESTACION_AVALUO(COORDENADAS_MANIFESTACION_AVALUO instance);
-    partial void DeleteCOORDENADAS_MANIFESTACION_AVALUO(COORDENADAS_MANIFESTACION_AVALUO instance);
     #endregion
 		
 		public WFTRAMITESDataContext() : 
@@ -86,6 +62,30 @@ namespace ManifestacionEnLinea.DataModel
 			OnCreated();
 		}
 		
+		public System.Data.Linq.Table<COORDENADAS_MANIFESTACION_AVALUO> COORDENADAS_MANIFESTACION_AVALUO
+		{
+			get
+			{
+				return this.GetTable<COORDENADAS_MANIFESTACION_AVALUO>();
+			}
+		}
+		
+		public System.Data.Linq.Table<FOLIOPAGOAVALUO> FOLIOPAGOAVALUO
+		{
+			get
+			{
+				return this.GetTable<FOLIOPAGOAVALUO>();
+			}
+		}
+		
+		public System.Data.Linq.Table<SeguimientoTramite> SeguimientoTramite
+		{
+			get
+			{
+				return this.GetTable<SeguimientoTramite>();
+			}
+		}
+		
 		public System.Data.Linq.Table<SIS_TRACAT_ABSTENCIONES> SIS_TRACAT_ABSTENCIONES
 		{
 			get
@@ -99,30 +99,6 @@ namespace ManifestacionEnLinea.DataModel
 			get
 			{
 				return this.GetTable<Tramite>();
-			}
-		}
-		
-		public System.Data.Linq.Table<SeguimientoTramite> SeguimientoTramite
-		{
-			get
-			{
-				return this.GetTable<SeguimientoTramite>();
-			}
-		}
-		
-		public System.Data.Linq.Table<FOLIOPAGOAVALUO> FOLIOPAGOAVALUO
-		{
-			get
-			{
-				return this.GetTable<FOLIOPAGOAVALUO>();
-			}
-		}
-		
-		public System.Data.Linq.Table<SIS_TRACAT_MC_AV> SIS_TRACAT_MC_AV
-		{
-			get
-			{
-				return this.GetTable<SIS_TRACAT_MC_AV>();
 			}
 		}
 		
@@ -142,20 +118,585 @@ namespace ManifestacionEnLinea.DataModel
 			}
 		}
 		
-		public System.Data.Linq.Table<COORDENADAS_MANIFESTACION_AVALUO> COORDENADAS_MANIFESTACION_AVALUO
+		public System.Data.Linq.Table<SIS_TRACAT_SOLICITUD_MC_AV> SIS_TRACAT_SOLICITUD_MC_AV
 		{
 			get
 			{
-				return this.GetTable<COORDENADAS_MANIFESTACION_AVALUO>();
+				return this.GetTable<SIS_TRACAT_SOLICITUD_MC_AV>();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.COORDENADAS_MANIFESTACION_AVALUO")]
+	public partial class COORDENADAS_MANIFESTACION_AVALUO
+	{
+		
+		private int _ID;
+		
+		private string _CVE_CAT_ORI;
+		
+		private string _STATUSREGISTROTABLA;
+		
+		private string _LATITUD;
+		
+		private string _LONGITUD;
+		
+		private string _UTM_X;
+		
+		private string _UTM_Y;
+		
+		public COORDENADAS_MANIFESTACION_AVALUO()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID", AutoSync=AutoSync.Always, DbType="Int NOT NULL IDENTITY", IsDbGenerated=true)]
+		public int ID
+		{
+			get
+			{
+				return this._ID;
+			}
+			set
+			{
+				if ((this._ID != value))
+				{
+					this._ID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CVE_CAT_ORI", DbType="NVarChar(17)")]
+		public string CVE_CAT_ORI
+		{
+			get
+			{
+				return this._CVE_CAT_ORI;
+			}
+			set
+			{
+				if ((this._CVE_CAT_ORI != value))
+				{
+					this._CVE_CAT_ORI = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_STATUSREGISTROTABLA", DbType="NVarChar(50)")]
+		public string STATUSREGISTROTABLA
+		{
+			get
+			{
+				return this._STATUSREGISTROTABLA;
+			}
+			set
+			{
+				if ((this._STATUSREGISTROTABLA != value))
+				{
+					this._STATUSREGISTROTABLA = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LATITUD", DbType="NVarChar(50)")]
+		public string LATITUD
+		{
+			get
+			{
+				return this._LATITUD;
+			}
+			set
+			{
+				if ((this._LATITUD != value))
+				{
+					this._LATITUD = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LONGITUD", DbType="NVarChar(50)")]
+		public string LONGITUD
+		{
+			get
+			{
+				return this._LONGITUD;
+			}
+			set
+			{
+				if ((this._LONGITUD != value))
+				{
+					this._LONGITUD = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UTM_X", DbType="NVarChar(50)")]
+		public string UTM_X
+		{
+			get
+			{
+				return this._UTM_X;
+			}
+			set
+			{
+				if ((this._UTM_X != value))
+				{
+					this._UTM_X = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UTM_Y", DbType="NVarChar(50)")]
+		public string UTM_Y
+		{
+			get
+			{
+				return this._UTM_Y;
+			}
+			set
+			{
+				if ((this._UTM_Y != value))
+				{
+					this._UTM_Y = value;
+				}
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.FOLIOPAGOAVALUO")]
+	public partial class FOLIOPAGOAVALUO
+	{
+		
+		private int _ID;
+		
+		private string _CUENTACATASTRAL;
+		
+		private string _REFERENCIAFOLIO;
+		
+		private string _DECLARACION;
+		
+		private string _FOLIOSIC;
+		
+		private string _NOMBRE;
+		
+		private string _CORREOELECTRONICO;
+		
+		private System.Nullable<System.DateTime> _FECHAALTA;
+		
+		private System.Nullable<System.DateTime> _FECHAEJERCIDO;
+		
+		private string _ESTADO;
+		
+		private string _OBSERVACIONES;
+		
+		private string _STATUSREGISTROTABLA;
+		
+		public FOLIOPAGOAVALUO()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID", AutoSync=AutoSync.Always, DbType="Int NOT NULL IDENTITY", IsDbGenerated=true)]
+		public int ID
+		{
+			get
+			{
+				return this._ID;
+			}
+			set
+			{
+				if ((this._ID != value))
+				{
+					this._ID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CUENTACATASTRAL", DbType="NVarChar(17)")]
+		public string CUENTACATASTRAL
+		{
+			get
+			{
+				return this._CUENTACATASTRAL;
+			}
+			set
+			{
+				if ((this._CUENTACATASTRAL != value))
+				{
+					this._CUENTACATASTRAL = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_REFERENCIAFOLIO", DbType="VarChar(20)")]
+		public string REFERENCIAFOLIO
+		{
+			get
+			{
+				return this._REFERENCIAFOLIO;
+			}
+			set
+			{
+				if ((this._REFERENCIAFOLIO != value))
+				{
+					this._REFERENCIAFOLIO = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DECLARACION", DbType="VarChar(7)")]
+		public string DECLARACION
+		{
+			get
+			{
+				return this._DECLARACION;
+			}
+			set
+			{
+				if ((this._DECLARACION != value))
+				{
+					this._DECLARACION = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FOLIOSIC", DbType="VarChar(255)")]
+		public string FOLIOSIC
+		{
+			get
+			{
+				return this._FOLIOSIC;
+			}
+			set
+			{
+				if ((this._FOLIOSIC != value))
+				{
+					this._FOLIOSIC = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NOMBRE", DbType="VarChar(255)")]
+		public string NOMBRE
+		{
+			get
+			{
+				return this._NOMBRE;
+			}
+			set
+			{
+				if ((this._NOMBRE != value))
+				{
+					this._NOMBRE = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CORREOELECTRONICO", DbType="VarChar(255)")]
+		public string CORREOELECTRONICO
+		{
+			get
+			{
+				return this._CORREOELECTRONICO;
+			}
+			set
+			{
+				if ((this._CORREOELECTRONICO != value))
+				{
+					this._CORREOELECTRONICO = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FECHAALTA", DbType="DateTime")]
+		public System.Nullable<System.DateTime> FECHAALTA
+		{
+			get
+			{
+				return this._FECHAALTA;
+			}
+			set
+			{
+				if ((this._FECHAALTA != value))
+				{
+					this._FECHAALTA = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FECHAEJERCIDO", DbType="DateTime")]
+		public System.Nullable<System.DateTime> FECHAEJERCIDO
+		{
+			get
+			{
+				return this._FECHAEJERCIDO;
+			}
+			set
+			{
+				if ((this._FECHAEJERCIDO != value))
+				{
+					this._FECHAEJERCIDO = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ESTADO", DbType="VarChar(255)")]
+		public string ESTADO
+		{
+			get
+			{
+				return this._ESTADO;
+			}
+			set
+			{
+				if ((this._ESTADO != value))
+				{
+					this._ESTADO = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_OBSERVACIONES", DbType="VarChar(255)")]
+		public string OBSERVACIONES
+		{
+			get
+			{
+				return this._OBSERVACIONES;
+			}
+			set
+			{
+				if ((this._OBSERVACIONES != value))
+				{
+					this._OBSERVACIONES = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_STATUSREGISTROTABLA", DbType="VarChar(255)")]
+		public string STATUSREGISTROTABLA
+		{
+			get
+			{
+				return this._STATUSREGISTROTABLA;
+			}
+			set
+			{
+				if ((this._STATUSREGISTROTABLA != value))
+				{
+					this._STATUSREGISTROTABLA = value;
+				}
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.SeguimientoTramite")]
+	public partial class SeguimientoTramite
+	{
+		
+		private int _Id;
+		
+		private string _FK_NumeroTramite;
+		
+		private int _FK_Cat_TipoProcesoTramite;
+		
+		private int _FK_Cat_Coordinacion;
+		
+		private int _FK_Cat_EstatusTramite;
+		
+		private string _Tarea;
+		
+		private string _TipoFlujo;
+		
+		private string _Observaciones;
+		
+		private System.Nullable<int> _Duracion;
+		
+		private int _Orden;
+		
+		private System.Nullable<int> _FK_Cat_OpcionesSistema;
+		
+		public SeguimientoTramite()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id", AutoSync=AutoSync.Always, DbType="Int NOT NULL IDENTITY", IsDbGenerated=true)]
+		public int Id
+		{
+			get
+			{
+				return this._Id;
+			}
+			set
+			{
+				if ((this._Id != value))
+				{
+					this._Id = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FK_NumeroTramite", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+		public string FK_NumeroTramite
+		{
+			get
+			{
+				return this._FK_NumeroTramite;
+			}
+			set
+			{
+				if ((this._FK_NumeroTramite != value))
+				{
+					this._FK_NumeroTramite = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FK_Cat_TipoProcesoTramite", DbType="Int NOT NULL")]
+		public int FK_Cat_TipoProcesoTramite
+		{
+			get
+			{
+				return this._FK_Cat_TipoProcesoTramite;
+			}
+			set
+			{
+				if ((this._FK_Cat_TipoProcesoTramite != value))
+				{
+					this._FK_Cat_TipoProcesoTramite = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FK_Cat_Coordinacion", DbType="Int NOT NULL")]
+		public int FK_Cat_Coordinacion
+		{
+			get
+			{
+				return this._FK_Cat_Coordinacion;
+			}
+			set
+			{
+				if ((this._FK_Cat_Coordinacion != value))
+				{
+					this._FK_Cat_Coordinacion = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FK_Cat_EstatusTramite", DbType="Int NOT NULL")]
+		public int FK_Cat_EstatusTramite
+		{
+			get
+			{
+				return this._FK_Cat_EstatusTramite;
+			}
+			set
+			{
+				if ((this._FK_Cat_EstatusTramite != value))
+				{
+					this._FK_Cat_EstatusTramite = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Tarea", DbType="NVarChar(150) NOT NULL", CanBeNull=false)]
+		public string Tarea
+		{
+			get
+			{
+				return this._Tarea;
+			}
+			set
+			{
+				if ((this._Tarea != value))
+				{
+					this._Tarea = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TipoFlujo", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+		public string TipoFlujo
+		{
+			get
+			{
+				return this._TipoFlujo;
+			}
+			set
+			{
+				if ((this._TipoFlujo != value))
+				{
+					this._TipoFlujo = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Observaciones", DbType="NVarChar(450)")]
+		public string Observaciones
+		{
+			get
+			{
+				return this._Observaciones;
+			}
+			set
+			{
+				if ((this._Observaciones != value))
+				{
+					this._Observaciones = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Duracion", DbType="Int")]
+		public System.Nullable<int> Duracion
+		{
+			get
+			{
+				return this._Duracion;
+			}
+			set
+			{
+				if ((this._Duracion != value))
+				{
+					this._Duracion = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Orden", DbType="Int NOT NULL")]
+		public int Orden
+		{
+			get
+			{
+				return this._Orden;
+			}
+			set
+			{
+				if ((this._Orden != value))
+				{
+					this._Orden = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FK_Cat_OpcionesSistema", DbType="Int")]
+		public System.Nullable<int> FK_Cat_OpcionesSistema
+		{
+			get
+			{
+				return this._FK_Cat_OpcionesSistema;
+			}
+			set
+			{
+				if ((this._FK_Cat_OpcionesSistema != value))
+				{
+					this._FK_Cat_OpcionesSistema = value;
+				}
 			}
 		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.SIS_TRACAT_ABSTENCIONES")]
-	public partial class SIS_TRACAT_ABSTENCIONES : INotifyPropertyChanging, INotifyPropertyChanged
+	public partial class SIS_TRACAT_ABSTENCIONES
 	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
 		
 		private int _ID;
 		
@@ -179,40 +720,11 @@ namespace ManifestacionEnLinea.DataModel
 		
 		private string _OBS_ELIMINAR;
 		
-    #region Definiciones de métodos de extensibilidad
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnIDChanging(int value);
-    partial void OnIDChanged();
-    partial void OnSTATUSREGISTROTABLAChanging(string value);
-    partial void OnSTATUSREGISTROTABLAChanged();
-    partial void OnALTAREGISTROTABLAChanging(System.Nullable<System.DateTime> value);
-    partial void OnALTAREGISTROTABLAChanged();
-    partial void OnBAJAREGISTROTABLAChanging(System.Nullable<System.DateTime> value);
-    partial void OnBAJAREGISTROTABLAChanged();
-    partial void OnUSUARIOBAJAChanging(string value);
-    partial void OnUSUARIOBAJAChanged();
-    partial void OnUSUARIOALTAChanging(string value);
-    partial void OnUSUARIOALTAChanged();
-    partial void OnCVE_CAT_ESTChanging(string value);
-    partial void OnCVE_CAT_ESTChanged();
-    partial void OnCVE_CAT_ORIChanging(string value);
-    partial void OnCVE_CAT_ORIChanged();
-    partial void OnOBSChanging(string value);
-    partial void OnOBSChanged();
-    partial void OnPISOChanging(string value);
-    partial void OnPISOChanged();
-    partial void OnOBS_ELIMINARChanging(string value);
-    partial void OnOBS_ELIMINARChanged();
-    #endregion
-		
 		public SIS_TRACAT_ABSTENCIONES()
 		{
-			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID", AutoSync=AutoSync.Always, DbType="Int NOT NULL IDENTITY", IsDbGenerated=true)]
 		public int ID
 		{
 			get
@@ -223,11 +735,7 @@ namespace ManifestacionEnLinea.DataModel
 			{
 				if ((this._ID != value))
 				{
-					this.OnIDChanging(value);
-					this.SendPropertyChanging();
 					this._ID = value;
-					this.SendPropertyChanged("ID");
-					this.OnIDChanged();
 				}
 			}
 		}
@@ -243,11 +751,7 @@ namespace ManifestacionEnLinea.DataModel
 			{
 				if ((this._STATUSREGISTROTABLA != value))
 				{
-					this.OnSTATUSREGISTROTABLAChanging(value);
-					this.SendPropertyChanging();
 					this._STATUSREGISTROTABLA = value;
-					this.SendPropertyChanged("STATUSREGISTROTABLA");
-					this.OnSTATUSREGISTROTABLAChanged();
 				}
 			}
 		}
@@ -263,11 +767,7 @@ namespace ManifestacionEnLinea.DataModel
 			{
 				if ((this._ALTAREGISTROTABLA != value))
 				{
-					this.OnALTAREGISTROTABLAChanging(value);
-					this.SendPropertyChanging();
 					this._ALTAREGISTROTABLA = value;
-					this.SendPropertyChanged("ALTAREGISTROTABLA");
-					this.OnALTAREGISTROTABLAChanged();
 				}
 			}
 		}
@@ -283,11 +783,7 @@ namespace ManifestacionEnLinea.DataModel
 			{
 				if ((this._BAJAREGISTROTABLA != value))
 				{
-					this.OnBAJAREGISTROTABLAChanging(value);
-					this.SendPropertyChanging();
 					this._BAJAREGISTROTABLA = value;
-					this.SendPropertyChanged("BAJAREGISTROTABLA");
-					this.OnBAJAREGISTROTABLAChanged();
 				}
 			}
 		}
@@ -303,11 +799,7 @@ namespace ManifestacionEnLinea.DataModel
 			{
 				if ((this._USUARIOBAJA != value))
 				{
-					this.OnUSUARIOBAJAChanging(value);
-					this.SendPropertyChanging();
 					this._USUARIOBAJA = value;
-					this.SendPropertyChanged("USUARIOBAJA");
-					this.OnUSUARIOBAJAChanged();
 				}
 			}
 		}
@@ -323,11 +815,7 @@ namespace ManifestacionEnLinea.DataModel
 			{
 				if ((this._USUARIOALTA != value))
 				{
-					this.OnUSUARIOALTAChanging(value);
-					this.SendPropertyChanging();
 					this._USUARIOALTA = value;
-					this.SendPropertyChanged("USUARIOALTA");
-					this.OnUSUARIOALTAChanged();
 				}
 			}
 		}
@@ -343,11 +831,7 @@ namespace ManifestacionEnLinea.DataModel
 			{
 				if ((this._CVE_CAT_EST != value))
 				{
-					this.OnCVE_CAT_ESTChanging(value);
-					this.SendPropertyChanging();
 					this._CVE_CAT_EST = value;
-					this.SendPropertyChanged("CVE_CAT_EST");
-					this.OnCVE_CAT_ESTChanged();
 				}
 			}
 		}
@@ -363,11 +847,7 @@ namespace ManifestacionEnLinea.DataModel
 			{
 				if ((this._CVE_CAT_ORI != value))
 				{
-					this.OnCVE_CAT_ORIChanging(value);
-					this.SendPropertyChanging();
 					this._CVE_CAT_ORI = value;
-					this.SendPropertyChanged("CVE_CAT_ORI");
-					this.OnCVE_CAT_ORIChanged();
 				}
 			}
 		}
@@ -383,11 +863,7 @@ namespace ManifestacionEnLinea.DataModel
 			{
 				if ((this._OBS != value))
 				{
-					this.OnOBSChanging(value);
-					this.SendPropertyChanging();
 					this._OBS = value;
-					this.SendPropertyChanged("OBS");
-					this.OnOBSChanged();
 				}
 			}
 		}
@@ -403,11 +879,7 @@ namespace ManifestacionEnLinea.DataModel
 			{
 				if ((this._PISO != value))
 				{
-					this.OnPISOChanging(value);
-					this.SendPropertyChanging();
 					this._PISO = value;
-					this.SendPropertyChanged("PISO");
-					this.OnPISOChanged();
 				}
 			}
 		}
@@ -423,41 +895,15 @@ namespace ManifestacionEnLinea.DataModel
 			{
 				if ((this._OBS_ELIMINAR != value))
 				{
-					this.OnOBS_ELIMINARChanging(value);
-					this.SendPropertyChanging();
 					this._OBS_ELIMINAR = value;
-					this.SendPropertyChanged("OBS_ELIMINAR");
-					this.OnOBS_ELIMINARChanged();
 				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
 		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Tramite")]
-	public partial class Tramite : INotifyPropertyChanging, INotifyPropertyChanged
+	public partial class Tramite
 	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
 		
 		private int _Id;
 		
@@ -587,143 +1033,8 @@ namespace ManifestacionEnLinea.DataModel
 		
 		private string _USUARIOCANCELA;
 		
-    #region Definiciones de métodos de extensibilidad
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnIdChanging(int value);
-    partial void OnIdChanged();
-    partial void OnClaveCatastralOriginalChanging(string value);
-    partial void OnClaveCatastralOriginalChanged();
-    partial void OnClaveCatastralEstandarChanging(string value);
-    partial void OnClaveCatastralEstandarChanged();
-    partial void OnFechaInicialChanging(System.DateTime value);
-    partial void OnFechaInicialChanged();
-    partial void OnFechaFinalChanging(System.Nullable<System.DateTime> value);
-    partial void OnFechaFinalChanged();
-    partial void OnFK_CatEstatusChanging(int value);
-    partial void OnFK_CatEstatusChanged();
-    partial void OnPagadoChanging(System.Nullable<bool> value);
-    partial void OnPagadoChanged();
-    partial void OnCondonadoChanging(System.Nullable<bool> value);
-    partial void OnCondonadoChanged();
-    partial void OnFK_Cat_NotariaChanging(int value);
-    partial void OnFK_Cat_NotariaChanged();
-    partial void OnPrioridadChanging(string value);
-    partial void OnPrioridadChanged();
-    partial void OnObservacionesChanging(string value);
-    partial void OnObservacionesChanged();
-    partial void OnFK_Cat_TipodeProcesoTramiteChanging(int value);
-    partial void OnFK_Cat_TipodeProcesoTramiteChanged();
-    partial void OnFK_NombreUsuarioChanging(string value);
-    partial void OnFK_NombreUsuarioChanged();
-    partial void OnRegionChanging(System.Nullable<int> value);
-    partial void OnRegionChanged();
-    partial void OnManzanaChanging(System.Nullable<int> value);
-    partial void OnManzanaChanged();
-    partial void OnLoteChanging(System.Nullable<int> value);
-    partial void OnLoteChanged();
-    partial void OnDepartamentoChanging(System.Nullable<int> value);
-    partial void OnDepartamentoChanged();
-    partial void OnFK_Cat_TipodePredioChanging(int value);
-    partial void OnFK_Cat_TipodePredioChanged();
-    partial void OnNumeroCuentaChanging(System.Nullable<int> value);
-    partial void OnNumeroCuentaChanged();
-    partial void OnDelegacionChanging(int value);
-    partial void OnDelegacionChanged();
-    partial void OnNumeroTramiteChanging(string value);
-    partial void OnNumeroTramiteChanged();
-    partial void OnFK_Cat_SolicitanteChanging(int value);
-    partial void OnFK_Cat_SolicitanteChanged();
-    partial void OnNombrePersonalSolicitanteChanging(string value);
-    partial void OnNombrePersonalSolicitanteChanged();
-    partial void OnObservacionAclaracionChanging(string value);
-    partial void OnObservacionAclaracionChanged();
-    partial void OnProcedeChanging(System.Nullable<bool> value);
-    partial void OnProcedeChanged();
-    partial void OnEntidadChanging(string value);
-    partial void OnEntidadChanged();
-    partial void OnTipoChanging(string value);
-    partial void OnTipoChanged();
-    partial void OnAñoChanging(string value);
-    partial void OnAñoChanged();
-    partial void OnConsecutivoChanging(string value);
-    partial void OnConsecutivoChanged();
-    partial void OnDerivadaChanging(string value);
-    partial void OnDerivadaChanged();
-    partial void OnTipoBusquedaChanging(string value);
-    partial void OnTipoBusquedaChanged();
-    partial void OnBloqueadoChanging(System.Nullable<bool> value);
-    partial void OnBloqueadoChanged();
-    partial void OnReservaChanging(System.Nullable<bool> value);
-    partial void OnReservaChanged();
-    partial void OnRechazadoChanging(System.Nullable<bool> value);
-    partial void OnRechazadoChanged();
-    partial void OnNumeroClaveChanging(System.Nullable<int> value);
-    partial void OnNumeroClaveChanged();
-    partial void OnNumeroCuentasChanging(System.Nullable<int> value);
-    partial void OnNumeroCuentasChanged();
-    partial void OnExcentopagoChanging(System.Nullable<bool> value);
-    partial void OnExcentopagoChanged();
-    partial void OnFK_Cat_TipoClaveCatastralGeneradaChanging(string value);
-    partial void OnFK_Cat_TipoClaveCatastralGeneradaChanged();
-    partial void OnFK_Cat_TipoInspeccionChanging(string value);
-    partial void OnFK_Cat_TipoInspeccionChanged();
-    partial void OnPagarReingresoChanging(System.Nullable<bool> value);
-    partial void OnPagarReingresoChanged();
-    partial void OnNumeroTramiteSICChanging(string value);
-    partial void OnNumeroTramiteSICChanged();
-    partial void OnNumeroTramiteValuacionChanging(string value);
-    partial void OnNumeroTramiteValuacionChanged();
-    partial void OnProntoPagoChanging(System.Nullable<bool> value);
-    partial void OnProntoPagoChanged();
-    partial void OnSectorChanging(string value);
-    partial void OnSectorChanged();
-    partial void OnLocalidadChanging(string value);
-    partial void OnLocalidadChanged();
-    partial void OnPredioChanging(string value);
-    partial void OnPredioChanged();
-    partial void OnEdificioChanging(string value);
-    partial void OnEdificioChanged();
-    partial void OnUnidadChanging(string value);
-    partial void OnUnidadChanged();
-    partial void OnZonaChanging(string value);
-    partial void OnZonaChanged();
-    partial void OnFK_Cat_MunicipioChanging(System.Nullable<int> value);
-    partial void OnFK_Cat_MunicipioChanged();
-    partial void OnRequiereCartografiaChanging(bool value);
-    partial void OnRequiereCartografiaChanged();
-    partial void OnObjectId_CartograficoChanging(System.Nullable<int> value);
-    partial void OnObjectId_CartograficoChanged();
-    partial void OnCondominioChanging(string value);
-    partial void OnCondominioChanged();
-    partial void OnOtroEstadoChanging(string value);
-    partial void OnOtroEstadoChanged();
-    partial void OnFolioChanging(string value);
-    partial void OnFolioChanged();
-    partial void OnCorettChanging(string value);
-    partial void OnCorettChanged();
-    partial void OnFK_Cat_DependenciaChanging(System.Nullable<int> value);
-    partial void OnFK_Cat_DependenciaChanged();
-    partial void OnHabilitadoChanging(System.Nullable<bool> value);
-    partial void OnHabilitadoChanged();
-    partial void OnSuperficieConstruccionChanging(System.Nullable<double> value);
-    partial void OnSuperficieConstruccionChanged();
-    partial void OnSuperficieTerrenoChanging(System.Nullable<double> value);
-    partial void OnSuperficieTerrenoChanged();
-    partial void OnusuarioSolicitanteChanging(string value);
-    partial void OnusuarioSolicitanteChanged();
-    partial void OnObservaciones_Rechazo_DireccionChanging(string value);
-    partial void OnObservaciones_Rechazo_DireccionChanged();
-    partial void OnFK_CatCoordinacionChanging(string value);
-    partial void OnFK_CatCoordinacionChanged();
-    partial void OnUSUARIOCANCELAChanging(string value);
-    partial void OnUSUARIOCANCELAChanged();
-    #endregion
-		
 		public Tramite()
 		{
-			OnCreated();
 		}
 		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id", AutoSync=AutoSync.Always, DbType="Int NOT NULL IDENTITY", IsDbGenerated=true)]
@@ -737,11 +1048,7 @@ namespace ManifestacionEnLinea.DataModel
 			{
 				if ((this._Id != value))
 				{
-					this.OnIdChanging(value);
-					this.SendPropertyChanging();
 					this._Id = value;
-					this.SendPropertyChanged("Id");
-					this.OnIdChanged();
 				}
 			}
 		}
@@ -757,11 +1064,7 @@ namespace ManifestacionEnLinea.DataModel
 			{
 				if ((this._ClaveCatastralOriginal != value))
 				{
-					this.OnClaveCatastralOriginalChanging(value);
-					this.SendPropertyChanging();
 					this._ClaveCatastralOriginal = value;
-					this.SendPropertyChanged("ClaveCatastralOriginal");
-					this.OnClaveCatastralOriginalChanged();
 				}
 			}
 		}
@@ -777,11 +1080,7 @@ namespace ManifestacionEnLinea.DataModel
 			{
 				if ((this._ClaveCatastralEstandar != value))
 				{
-					this.OnClaveCatastralEstandarChanging(value);
-					this.SendPropertyChanging();
 					this._ClaveCatastralEstandar = value;
-					this.SendPropertyChanged("ClaveCatastralEstandar");
-					this.OnClaveCatastralEstandarChanged();
 				}
 			}
 		}
@@ -797,11 +1096,7 @@ namespace ManifestacionEnLinea.DataModel
 			{
 				if ((this._FechaInicial != value))
 				{
-					this.OnFechaInicialChanging(value);
-					this.SendPropertyChanging();
 					this._FechaInicial = value;
-					this.SendPropertyChanged("FechaInicial");
-					this.OnFechaInicialChanged();
 				}
 			}
 		}
@@ -817,11 +1112,7 @@ namespace ManifestacionEnLinea.DataModel
 			{
 				if ((this._FechaFinal != value))
 				{
-					this.OnFechaFinalChanging(value);
-					this.SendPropertyChanging();
 					this._FechaFinal = value;
-					this.SendPropertyChanged("FechaFinal");
-					this.OnFechaFinalChanged();
 				}
 			}
 		}
@@ -837,11 +1128,7 @@ namespace ManifestacionEnLinea.DataModel
 			{
 				if ((this._FK_CatEstatus != value))
 				{
-					this.OnFK_CatEstatusChanging(value);
-					this.SendPropertyChanging();
 					this._FK_CatEstatus = value;
-					this.SendPropertyChanged("FK_CatEstatus");
-					this.OnFK_CatEstatusChanged();
 				}
 			}
 		}
@@ -857,11 +1144,7 @@ namespace ManifestacionEnLinea.DataModel
 			{
 				if ((this._Pagado != value))
 				{
-					this.OnPagadoChanging(value);
-					this.SendPropertyChanging();
 					this._Pagado = value;
-					this.SendPropertyChanged("Pagado");
-					this.OnPagadoChanged();
 				}
 			}
 		}
@@ -877,11 +1160,7 @@ namespace ManifestacionEnLinea.DataModel
 			{
 				if ((this._Condonado != value))
 				{
-					this.OnCondonadoChanging(value);
-					this.SendPropertyChanging();
 					this._Condonado = value;
-					this.SendPropertyChanged("Condonado");
-					this.OnCondonadoChanged();
 				}
 			}
 		}
@@ -897,11 +1176,7 @@ namespace ManifestacionEnLinea.DataModel
 			{
 				if ((this._FK_Cat_Notaria != value))
 				{
-					this.OnFK_Cat_NotariaChanging(value);
-					this.SendPropertyChanging();
 					this._FK_Cat_Notaria = value;
-					this.SendPropertyChanged("FK_Cat_Notaria");
-					this.OnFK_Cat_NotariaChanged();
 				}
 			}
 		}
@@ -917,11 +1192,7 @@ namespace ManifestacionEnLinea.DataModel
 			{
 				if ((this._Prioridad != value))
 				{
-					this.OnPrioridadChanging(value);
-					this.SendPropertyChanging();
 					this._Prioridad = value;
-					this.SendPropertyChanged("Prioridad");
-					this.OnPrioridadChanged();
 				}
 			}
 		}
@@ -937,11 +1208,7 @@ namespace ManifestacionEnLinea.DataModel
 			{
 				if ((this._Observaciones != value))
 				{
-					this.OnObservacionesChanging(value);
-					this.SendPropertyChanging();
 					this._Observaciones = value;
-					this.SendPropertyChanged("Observaciones");
-					this.OnObservacionesChanged();
 				}
 			}
 		}
@@ -957,11 +1224,7 @@ namespace ManifestacionEnLinea.DataModel
 			{
 				if ((this._FK_Cat_TipodeProcesoTramite != value))
 				{
-					this.OnFK_Cat_TipodeProcesoTramiteChanging(value);
-					this.SendPropertyChanging();
 					this._FK_Cat_TipodeProcesoTramite = value;
-					this.SendPropertyChanged("FK_Cat_TipodeProcesoTramite");
-					this.OnFK_Cat_TipodeProcesoTramiteChanged();
 				}
 			}
 		}
@@ -977,11 +1240,7 @@ namespace ManifestacionEnLinea.DataModel
 			{
 				if ((this._FK_NombreUsuario != value))
 				{
-					this.OnFK_NombreUsuarioChanging(value);
-					this.SendPropertyChanging();
 					this._FK_NombreUsuario = value;
-					this.SendPropertyChanged("FK_NombreUsuario");
-					this.OnFK_NombreUsuarioChanged();
 				}
 			}
 		}
@@ -997,11 +1256,7 @@ namespace ManifestacionEnLinea.DataModel
 			{
 				if ((this._Region != value))
 				{
-					this.OnRegionChanging(value);
-					this.SendPropertyChanging();
 					this._Region = value;
-					this.SendPropertyChanged("Region");
-					this.OnRegionChanged();
 				}
 			}
 		}
@@ -1017,11 +1272,7 @@ namespace ManifestacionEnLinea.DataModel
 			{
 				if ((this._Manzana != value))
 				{
-					this.OnManzanaChanging(value);
-					this.SendPropertyChanging();
 					this._Manzana = value;
-					this.SendPropertyChanged("Manzana");
-					this.OnManzanaChanged();
 				}
 			}
 		}
@@ -1037,11 +1288,7 @@ namespace ManifestacionEnLinea.DataModel
 			{
 				if ((this._Lote != value))
 				{
-					this.OnLoteChanging(value);
-					this.SendPropertyChanging();
 					this._Lote = value;
-					this.SendPropertyChanged("Lote");
-					this.OnLoteChanged();
 				}
 			}
 		}
@@ -1057,11 +1304,7 @@ namespace ManifestacionEnLinea.DataModel
 			{
 				if ((this._Departamento != value))
 				{
-					this.OnDepartamentoChanging(value);
-					this.SendPropertyChanging();
 					this._Departamento = value;
-					this.SendPropertyChanged("Departamento");
-					this.OnDepartamentoChanged();
 				}
 			}
 		}
@@ -1077,11 +1320,7 @@ namespace ManifestacionEnLinea.DataModel
 			{
 				if ((this._FK_Cat_TipodePredio != value))
 				{
-					this.OnFK_Cat_TipodePredioChanging(value);
-					this.SendPropertyChanging();
 					this._FK_Cat_TipodePredio = value;
-					this.SendPropertyChanged("FK_Cat_TipodePredio");
-					this.OnFK_Cat_TipodePredioChanged();
 				}
 			}
 		}
@@ -1097,11 +1336,7 @@ namespace ManifestacionEnLinea.DataModel
 			{
 				if ((this._NumeroCuenta != value))
 				{
-					this.OnNumeroCuentaChanging(value);
-					this.SendPropertyChanging();
 					this._NumeroCuenta = value;
-					this.SendPropertyChanged("NumeroCuenta");
-					this.OnNumeroCuentaChanged();
 				}
 			}
 		}
@@ -1117,16 +1352,12 @@ namespace ManifestacionEnLinea.DataModel
 			{
 				if ((this._Delegacion != value))
 				{
-					this.OnDelegacionChanging(value);
-					this.SendPropertyChanging();
 					this._Delegacion = value;
-					this.SendPropertyChanged("Delegacion");
-					this.OnDelegacionChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NumeroTramite", DbType="NVarChar(30) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NumeroTramite", DbType="NVarChar(30) NOT NULL", CanBeNull=false)]
 		public string NumeroTramite
 		{
 			get
@@ -1137,11 +1368,7 @@ namespace ManifestacionEnLinea.DataModel
 			{
 				if ((this._NumeroTramite != value))
 				{
-					this.OnNumeroTramiteChanging(value);
-					this.SendPropertyChanging();
 					this._NumeroTramite = value;
-					this.SendPropertyChanged("NumeroTramite");
-					this.OnNumeroTramiteChanged();
 				}
 			}
 		}
@@ -1157,11 +1384,7 @@ namespace ManifestacionEnLinea.DataModel
 			{
 				if ((this._FK_Cat_Solicitante != value))
 				{
-					this.OnFK_Cat_SolicitanteChanging(value);
-					this.SendPropertyChanging();
 					this._FK_Cat_Solicitante = value;
-					this.SendPropertyChanged("FK_Cat_Solicitante");
-					this.OnFK_Cat_SolicitanteChanged();
 				}
 			}
 		}
@@ -1177,11 +1400,7 @@ namespace ManifestacionEnLinea.DataModel
 			{
 				if ((this._NombrePersonalSolicitante != value))
 				{
-					this.OnNombrePersonalSolicitanteChanging(value);
-					this.SendPropertyChanging();
 					this._NombrePersonalSolicitante = value;
-					this.SendPropertyChanged("NombrePersonalSolicitante");
-					this.OnNombrePersonalSolicitanteChanged();
 				}
 			}
 		}
@@ -1197,11 +1416,7 @@ namespace ManifestacionEnLinea.DataModel
 			{
 				if ((this._ObservacionAclaracion != value))
 				{
-					this.OnObservacionAclaracionChanging(value);
-					this.SendPropertyChanging();
 					this._ObservacionAclaracion = value;
-					this.SendPropertyChanged("ObservacionAclaracion");
-					this.OnObservacionAclaracionChanged();
 				}
 			}
 		}
@@ -1217,11 +1432,7 @@ namespace ManifestacionEnLinea.DataModel
 			{
 				if ((this._Procede != value))
 				{
-					this.OnProcedeChanging(value);
-					this.SendPropertyChanging();
 					this._Procede = value;
-					this.SendPropertyChanged("Procede");
-					this.OnProcedeChanged();
 				}
 			}
 		}
@@ -1237,11 +1448,7 @@ namespace ManifestacionEnLinea.DataModel
 			{
 				if ((this._Entidad != value))
 				{
-					this.OnEntidadChanging(value);
-					this.SendPropertyChanging();
 					this._Entidad = value;
-					this.SendPropertyChanged("Entidad");
-					this.OnEntidadChanged();
 				}
 			}
 		}
@@ -1257,11 +1464,7 @@ namespace ManifestacionEnLinea.DataModel
 			{
 				if ((this._Tipo != value))
 				{
-					this.OnTipoChanging(value);
-					this.SendPropertyChanging();
 					this._Tipo = value;
-					this.SendPropertyChanged("Tipo");
-					this.OnTipoChanged();
 				}
 			}
 		}
@@ -1277,11 +1480,7 @@ namespace ManifestacionEnLinea.DataModel
 			{
 				if ((this._Año != value))
 				{
-					this.OnAñoChanging(value);
-					this.SendPropertyChanging();
 					this._Año = value;
-					this.SendPropertyChanged("Año");
-					this.OnAñoChanged();
 				}
 			}
 		}
@@ -1297,11 +1496,7 @@ namespace ManifestacionEnLinea.DataModel
 			{
 				if ((this._Consecutivo != value))
 				{
-					this.OnConsecutivoChanging(value);
-					this.SendPropertyChanging();
 					this._Consecutivo = value;
-					this.SendPropertyChanged("Consecutivo");
-					this.OnConsecutivoChanged();
 				}
 			}
 		}
@@ -1317,11 +1512,7 @@ namespace ManifestacionEnLinea.DataModel
 			{
 				if ((this._Derivada != value))
 				{
-					this.OnDerivadaChanging(value);
-					this.SendPropertyChanging();
 					this._Derivada = value;
-					this.SendPropertyChanged("Derivada");
-					this.OnDerivadaChanged();
 				}
 			}
 		}
@@ -1337,11 +1528,7 @@ namespace ManifestacionEnLinea.DataModel
 			{
 				if ((this._TipoBusqueda != value))
 				{
-					this.OnTipoBusquedaChanging(value);
-					this.SendPropertyChanging();
 					this._TipoBusqueda = value;
-					this.SendPropertyChanged("TipoBusqueda");
-					this.OnTipoBusquedaChanged();
 				}
 			}
 		}
@@ -1357,11 +1544,7 @@ namespace ManifestacionEnLinea.DataModel
 			{
 				if ((this._Bloqueado != value))
 				{
-					this.OnBloqueadoChanging(value);
-					this.SendPropertyChanging();
 					this._Bloqueado = value;
-					this.SendPropertyChanged("Bloqueado");
-					this.OnBloqueadoChanged();
 				}
 			}
 		}
@@ -1377,11 +1560,7 @@ namespace ManifestacionEnLinea.DataModel
 			{
 				if ((this._Reserva != value))
 				{
-					this.OnReservaChanging(value);
-					this.SendPropertyChanging();
 					this._Reserva = value;
-					this.SendPropertyChanged("Reserva");
-					this.OnReservaChanged();
 				}
 			}
 		}
@@ -1397,11 +1576,7 @@ namespace ManifestacionEnLinea.DataModel
 			{
 				if ((this._Rechazado != value))
 				{
-					this.OnRechazadoChanging(value);
-					this.SendPropertyChanging();
 					this._Rechazado = value;
-					this.SendPropertyChanged("Rechazado");
-					this.OnRechazadoChanged();
 				}
 			}
 		}
@@ -1417,11 +1592,7 @@ namespace ManifestacionEnLinea.DataModel
 			{
 				if ((this._NumeroClave != value))
 				{
-					this.OnNumeroClaveChanging(value);
-					this.SendPropertyChanging();
 					this._NumeroClave = value;
-					this.SendPropertyChanged("NumeroClave");
-					this.OnNumeroClaveChanged();
 				}
 			}
 		}
@@ -1437,11 +1608,7 @@ namespace ManifestacionEnLinea.DataModel
 			{
 				if ((this._NumeroCuentas != value))
 				{
-					this.OnNumeroCuentasChanging(value);
-					this.SendPropertyChanging();
 					this._NumeroCuentas = value;
-					this.SendPropertyChanged("NumeroCuentas");
-					this.OnNumeroCuentasChanged();
 				}
 			}
 		}
@@ -1457,11 +1624,7 @@ namespace ManifestacionEnLinea.DataModel
 			{
 				if ((this._Excentopago != value))
 				{
-					this.OnExcentopagoChanging(value);
-					this.SendPropertyChanging();
 					this._Excentopago = value;
-					this.SendPropertyChanged("Excentopago");
-					this.OnExcentopagoChanged();
 				}
 			}
 		}
@@ -1477,11 +1640,7 @@ namespace ManifestacionEnLinea.DataModel
 			{
 				if ((this._FK_Cat_TipoClaveCatastralGenerada != value))
 				{
-					this.OnFK_Cat_TipoClaveCatastralGeneradaChanging(value);
-					this.SendPropertyChanging();
 					this._FK_Cat_TipoClaveCatastralGenerada = value;
-					this.SendPropertyChanged("FK_Cat_TipoClaveCatastralGenerada");
-					this.OnFK_Cat_TipoClaveCatastralGeneradaChanged();
 				}
 			}
 		}
@@ -1497,11 +1656,7 @@ namespace ManifestacionEnLinea.DataModel
 			{
 				if ((this._FK_Cat_TipoInspeccion != value))
 				{
-					this.OnFK_Cat_TipoInspeccionChanging(value);
-					this.SendPropertyChanging();
 					this._FK_Cat_TipoInspeccion = value;
-					this.SendPropertyChanged("FK_Cat_TipoInspeccion");
-					this.OnFK_Cat_TipoInspeccionChanged();
 				}
 			}
 		}
@@ -1517,11 +1672,7 @@ namespace ManifestacionEnLinea.DataModel
 			{
 				if ((this._PagarReingreso != value))
 				{
-					this.OnPagarReingresoChanging(value);
-					this.SendPropertyChanging();
 					this._PagarReingreso = value;
-					this.SendPropertyChanged("PagarReingreso");
-					this.OnPagarReingresoChanged();
 				}
 			}
 		}
@@ -1537,11 +1688,7 @@ namespace ManifestacionEnLinea.DataModel
 			{
 				if ((this._NumeroTramiteSIC != value))
 				{
-					this.OnNumeroTramiteSICChanging(value);
-					this.SendPropertyChanging();
 					this._NumeroTramiteSIC = value;
-					this.SendPropertyChanged("NumeroTramiteSIC");
-					this.OnNumeroTramiteSICChanged();
 				}
 			}
 		}
@@ -1557,11 +1704,7 @@ namespace ManifestacionEnLinea.DataModel
 			{
 				if ((this._NumeroTramiteValuacion != value))
 				{
-					this.OnNumeroTramiteValuacionChanging(value);
-					this.SendPropertyChanging();
 					this._NumeroTramiteValuacion = value;
-					this.SendPropertyChanged("NumeroTramiteValuacion");
-					this.OnNumeroTramiteValuacionChanged();
 				}
 			}
 		}
@@ -1577,11 +1720,7 @@ namespace ManifestacionEnLinea.DataModel
 			{
 				if ((this._ProntoPago != value))
 				{
-					this.OnProntoPagoChanging(value);
-					this.SendPropertyChanging();
 					this._ProntoPago = value;
-					this.SendPropertyChanged("ProntoPago");
-					this.OnProntoPagoChanged();
 				}
 			}
 		}
@@ -1597,11 +1736,7 @@ namespace ManifestacionEnLinea.DataModel
 			{
 				if ((this._Sector != value))
 				{
-					this.OnSectorChanging(value);
-					this.SendPropertyChanging();
 					this._Sector = value;
-					this.SendPropertyChanged("Sector");
-					this.OnSectorChanged();
 				}
 			}
 		}
@@ -1617,11 +1752,7 @@ namespace ManifestacionEnLinea.DataModel
 			{
 				if ((this._Localidad != value))
 				{
-					this.OnLocalidadChanging(value);
-					this.SendPropertyChanging();
 					this._Localidad = value;
-					this.SendPropertyChanged("Localidad");
-					this.OnLocalidadChanged();
 				}
 			}
 		}
@@ -1637,11 +1768,7 @@ namespace ManifestacionEnLinea.DataModel
 			{
 				if ((this._Predio != value))
 				{
-					this.OnPredioChanging(value);
-					this.SendPropertyChanging();
 					this._Predio = value;
-					this.SendPropertyChanged("Predio");
-					this.OnPredioChanged();
 				}
 			}
 		}
@@ -1657,11 +1784,7 @@ namespace ManifestacionEnLinea.DataModel
 			{
 				if ((this._Edificio != value))
 				{
-					this.OnEdificioChanging(value);
-					this.SendPropertyChanging();
 					this._Edificio = value;
-					this.SendPropertyChanged("Edificio");
-					this.OnEdificioChanged();
 				}
 			}
 		}
@@ -1677,11 +1800,7 @@ namespace ManifestacionEnLinea.DataModel
 			{
 				if ((this._Unidad != value))
 				{
-					this.OnUnidadChanging(value);
-					this.SendPropertyChanging();
 					this._Unidad = value;
-					this.SendPropertyChanged("Unidad");
-					this.OnUnidadChanged();
 				}
 			}
 		}
@@ -1697,11 +1816,7 @@ namespace ManifestacionEnLinea.DataModel
 			{
 				if ((this._Zona != value))
 				{
-					this.OnZonaChanging(value);
-					this.SendPropertyChanging();
 					this._Zona = value;
-					this.SendPropertyChanged("Zona");
-					this.OnZonaChanged();
 				}
 			}
 		}
@@ -1717,11 +1832,7 @@ namespace ManifestacionEnLinea.DataModel
 			{
 				if ((this._FK_Cat_Municipio != value))
 				{
-					this.OnFK_Cat_MunicipioChanging(value);
-					this.SendPropertyChanging();
 					this._FK_Cat_Municipio = value;
-					this.SendPropertyChanged("FK_Cat_Municipio");
-					this.OnFK_Cat_MunicipioChanged();
 				}
 			}
 		}
@@ -1737,11 +1848,7 @@ namespace ManifestacionEnLinea.DataModel
 			{
 				if ((this._RequiereCartografia != value))
 				{
-					this.OnRequiereCartografiaChanging(value);
-					this.SendPropertyChanging();
 					this._RequiereCartografia = value;
-					this.SendPropertyChanged("RequiereCartografia");
-					this.OnRequiereCartografiaChanged();
 				}
 			}
 		}
@@ -1757,11 +1864,7 @@ namespace ManifestacionEnLinea.DataModel
 			{
 				if ((this._ObjectId_Cartografico != value))
 				{
-					this.OnObjectId_CartograficoChanging(value);
-					this.SendPropertyChanging();
 					this._ObjectId_Cartografico = value;
-					this.SendPropertyChanged("ObjectId_Cartografico");
-					this.OnObjectId_CartograficoChanged();
 				}
 			}
 		}
@@ -1777,11 +1880,7 @@ namespace ManifestacionEnLinea.DataModel
 			{
 				if ((this._Condominio != value))
 				{
-					this.OnCondominioChanging(value);
-					this.SendPropertyChanging();
 					this._Condominio = value;
-					this.SendPropertyChanged("Condominio");
-					this.OnCondominioChanged();
 				}
 			}
 		}
@@ -1797,11 +1896,7 @@ namespace ManifestacionEnLinea.DataModel
 			{
 				if ((this._OtroEstado != value))
 				{
-					this.OnOtroEstadoChanging(value);
-					this.SendPropertyChanging();
 					this._OtroEstado = value;
-					this.SendPropertyChanged("OtroEstado");
-					this.OnOtroEstadoChanged();
 				}
 			}
 		}
@@ -1817,11 +1912,7 @@ namespace ManifestacionEnLinea.DataModel
 			{
 				if ((this._Folio != value))
 				{
-					this.OnFolioChanging(value);
-					this.SendPropertyChanging();
 					this._Folio = value;
-					this.SendPropertyChanged("Folio");
-					this.OnFolioChanged();
 				}
 			}
 		}
@@ -1837,11 +1928,7 @@ namespace ManifestacionEnLinea.DataModel
 			{
 				if ((this._Corett != value))
 				{
-					this.OnCorettChanging(value);
-					this.SendPropertyChanging();
 					this._Corett = value;
-					this.SendPropertyChanged("Corett");
-					this.OnCorettChanged();
 				}
 			}
 		}
@@ -1857,11 +1944,7 @@ namespace ManifestacionEnLinea.DataModel
 			{
 				if ((this._FK_Cat_Dependencia != value))
 				{
-					this.OnFK_Cat_DependenciaChanging(value);
-					this.SendPropertyChanging();
 					this._FK_Cat_Dependencia = value;
-					this.SendPropertyChanged("FK_Cat_Dependencia");
-					this.OnFK_Cat_DependenciaChanged();
 				}
 			}
 		}
@@ -1877,11 +1960,7 @@ namespace ManifestacionEnLinea.DataModel
 			{
 				if ((this._Habilitado != value))
 				{
-					this.OnHabilitadoChanging(value);
-					this.SendPropertyChanging();
 					this._Habilitado = value;
-					this.SendPropertyChanged("Habilitado");
-					this.OnHabilitadoChanged();
 				}
 			}
 		}
@@ -1897,11 +1976,7 @@ namespace ManifestacionEnLinea.DataModel
 			{
 				if ((this._SuperficieConstruccion != value))
 				{
-					this.OnSuperficieConstruccionChanging(value);
-					this.SendPropertyChanging();
 					this._SuperficieConstruccion = value;
-					this.SendPropertyChanged("SuperficieConstruccion");
-					this.OnSuperficieConstruccionChanged();
 				}
 			}
 		}
@@ -1917,11 +1992,7 @@ namespace ManifestacionEnLinea.DataModel
 			{
 				if ((this._SuperficieTerreno != value))
 				{
-					this.OnSuperficieTerrenoChanging(value);
-					this.SendPropertyChanging();
 					this._SuperficieTerreno = value;
-					this.SendPropertyChanged("SuperficieTerreno");
-					this.OnSuperficieTerrenoChanged();
 				}
 			}
 		}
@@ -1937,11 +2008,7 @@ namespace ManifestacionEnLinea.DataModel
 			{
 				if ((this._usuarioSolicitante != value))
 				{
-					this.OnusuarioSolicitanteChanging(value);
-					this.SendPropertyChanging();
 					this._usuarioSolicitante = value;
-					this.SendPropertyChanged("usuarioSolicitante");
-					this.OnusuarioSolicitanteChanged();
 				}
 			}
 		}
@@ -1957,11 +2024,7 @@ namespace ManifestacionEnLinea.DataModel
 			{
 				if ((this._Observaciones_Rechazo_Direccion != value))
 				{
-					this.OnObservaciones_Rechazo_DireccionChanging(value);
-					this.SendPropertyChanging();
 					this._Observaciones_Rechazo_Direccion = value;
-					this.SendPropertyChanged("Observaciones_Rechazo_Direccion");
-					this.OnObservaciones_Rechazo_DireccionChanged();
 				}
 			}
 		}
@@ -1977,11 +2040,7 @@ namespace ManifestacionEnLinea.DataModel
 			{
 				if ((this._FK_CatCoordinacion != value))
 				{
-					this.OnFK_CatCoordinacionChanging(value);
-					this.SendPropertyChanging();
 					this._FK_CatCoordinacion = value;
-					this.SendPropertyChanged("FK_CatCoordinacion");
-					this.OnFK_CatCoordinacionChanged();
 				}
 			}
 		}
@@ -1997,1307 +2056,15 @@ namespace ManifestacionEnLinea.DataModel
 			{
 				if ((this._USUARIOCANCELA != value))
 				{
-					this.OnUSUARIOCANCELAChanging(value);
-					this.SendPropertyChanging();
 					this._USUARIOCANCELA = value;
-					this.SendPropertyChanged("USUARIOCANCELA");
-					this.OnUSUARIOCANCELAChanged();
 				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.SeguimientoTramite")]
-	public partial class SeguimientoTramite : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _Id;
-		
-		private string _FK_NumeroTramite;
-		
-		private int _FK_Cat_TipoProcesoTramite;
-		
-		private int _FK_Cat_Coordinacion;
-		
-		private int _FK_Cat_EstatusTramite;
-		
-		private string _Tarea;
-		
-		private string _TipoFlujo;
-		
-		private string _Observaciones;
-		
-		private System.Nullable<int> _Duracion;
-		
-		private int _Orden;
-		
-		private System.Nullable<int> _FK_Cat_OpcionesSistema;
-		
-    #region Definiciones de métodos de extensibilidad
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnIdChanging(int value);
-    partial void OnIdChanged();
-    partial void OnFK_NumeroTramiteChanging(string value);
-    partial void OnFK_NumeroTramiteChanged();
-    partial void OnFK_Cat_TipoProcesoTramiteChanging(int value);
-    partial void OnFK_Cat_TipoProcesoTramiteChanged();
-    partial void OnFK_Cat_CoordinacionChanging(int value);
-    partial void OnFK_Cat_CoordinacionChanged();
-    partial void OnFK_Cat_EstatusTramiteChanging(int value);
-    partial void OnFK_Cat_EstatusTramiteChanged();
-    partial void OnTareaChanging(string value);
-    partial void OnTareaChanged();
-    partial void OnTipoFlujoChanging(string value);
-    partial void OnTipoFlujoChanged();
-    partial void OnObservacionesChanging(string value);
-    partial void OnObservacionesChanged();
-    partial void OnDuracionChanging(System.Nullable<int> value);
-    partial void OnDuracionChanged();
-    partial void OnOrdenChanging(int value);
-    partial void OnOrdenChanged();
-    partial void OnFK_Cat_OpcionesSistemaChanging(System.Nullable<int> value);
-    partial void OnFK_Cat_OpcionesSistemaChanged();
-    #endregion
-		
-		public SeguimientoTramite()
-		{
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int Id
-		{
-			get
-			{
-				return this._Id;
-			}
-			set
-			{
-				if ((this._Id != value))
-				{
-					this.OnIdChanging(value);
-					this.SendPropertyChanging();
-					this._Id = value;
-					this.SendPropertyChanged("Id");
-					this.OnIdChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FK_NumeroTramite", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
-		public string FK_NumeroTramite
-		{
-			get
-			{
-				return this._FK_NumeroTramite;
-			}
-			set
-			{
-				if ((this._FK_NumeroTramite != value))
-				{
-					this.OnFK_NumeroTramiteChanging(value);
-					this.SendPropertyChanging();
-					this._FK_NumeroTramite = value;
-					this.SendPropertyChanged("FK_NumeroTramite");
-					this.OnFK_NumeroTramiteChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FK_Cat_TipoProcesoTramite", DbType="Int NOT NULL")]
-		public int FK_Cat_TipoProcesoTramite
-		{
-			get
-			{
-				return this._FK_Cat_TipoProcesoTramite;
-			}
-			set
-			{
-				if ((this._FK_Cat_TipoProcesoTramite != value))
-				{
-					this.OnFK_Cat_TipoProcesoTramiteChanging(value);
-					this.SendPropertyChanging();
-					this._FK_Cat_TipoProcesoTramite = value;
-					this.SendPropertyChanged("FK_Cat_TipoProcesoTramite");
-					this.OnFK_Cat_TipoProcesoTramiteChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FK_Cat_Coordinacion", DbType="Int NOT NULL")]
-		public int FK_Cat_Coordinacion
-		{
-			get
-			{
-				return this._FK_Cat_Coordinacion;
-			}
-			set
-			{
-				if ((this._FK_Cat_Coordinacion != value))
-				{
-					this.OnFK_Cat_CoordinacionChanging(value);
-					this.SendPropertyChanging();
-					this._FK_Cat_Coordinacion = value;
-					this.SendPropertyChanged("FK_Cat_Coordinacion");
-					this.OnFK_Cat_CoordinacionChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FK_Cat_EstatusTramite", DbType="Int NOT NULL")]
-		public int FK_Cat_EstatusTramite
-		{
-			get
-			{
-				return this._FK_Cat_EstatusTramite;
-			}
-			set
-			{
-				if ((this._FK_Cat_EstatusTramite != value))
-				{
-					this.OnFK_Cat_EstatusTramiteChanging(value);
-					this.SendPropertyChanging();
-					this._FK_Cat_EstatusTramite = value;
-					this.SendPropertyChanged("FK_Cat_EstatusTramite");
-					this.OnFK_Cat_EstatusTramiteChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Tarea", DbType="NVarChar(150) NOT NULL", CanBeNull=false)]
-		public string Tarea
-		{
-			get
-			{
-				return this._Tarea;
-			}
-			set
-			{
-				if ((this._Tarea != value))
-				{
-					this.OnTareaChanging(value);
-					this.SendPropertyChanging();
-					this._Tarea = value;
-					this.SendPropertyChanged("Tarea");
-					this.OnTareaChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TipoFlujo", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
-		public string TipoFlujo
-		{
-			get
-			{
-				return this._TipoFlujo;
-			}
-			set
-			{
-				if ((this._TipoFlujo != value))
-				{
-					this.OnTipoFlujoChanging(value);
-					this.SendPropertyChanging();
-					this._TipoFlujo = value;
-					this.SendPropertyChanged("TipoFlujo");
-					this.OnTipoFlujoChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Observaciones", DbType="NVarChar(450)")]
-		public string Observaciones
-		{
-			get
-			{
-				return this._Observaciones;
-			}
-			set
-			{
-				if ((this._Observaciones != value))
-				{
-					this.OnObservacionesChanging(value);
-					this.SendPropertyChanging();
-					this._Observaciones = value;
-					this.SendPropertyChanged("Observaciones");
-					this.OnObservacionesChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Duracion", DbType="Int")]
-		public System.Nullable<int> Duracion
-		{
-			get
-			{
-				return this._Duracion;
-			}
-			set
-			{
-				if ((this._Duracion != value))
-				{
-					this.OnDuracionChanging(value);
-					this.SendPropertyChanging();
-					this._Duracion = value;
-					this.SendPropertyChanged("Duracion");
-					this.OnDuracionChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Orden", DbType="Int NOT NULL")]
-		public int Orden
-		{
-			get
-			{
-				return this._Orden;
-			}
-			set
-			{
-				if ((this._Orden != value))
-				{
-					this.OnOrdenChanging(value);
-					this.SendPropertyChanging();
-					this._Orden = value;
-					this.SendPropertyChanged("Orden");
-					this.OnOrdenChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FK_Cat_OpcionesSistema", DbType="Int")]
-		public System.Nullable<int> FK_Cat_OpcionesSistema
-		{
-			get
-			{
-				return this._FK_Cat_OpcionesSistema;
-			}
-			set
-			{
-				if ((this._FK_Cat_OpcionesSistema != value))
-				{
-					this.OnFK_Cat_OpcionesSistemaChanging(value);
-					this.SendPropertyChanging();
-					this._FK_Cat_OpcionesSistema = value;
-					this.SendPropertyChanged("FK_Cat_OpcionesSistema");
-					this.OnFK_Cat_OpcionesSistemaChanged();
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.FOLIOPAGOAVALUO")]
-	public partial class FOLIOPAGOAVALUO : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _ID;
-		
-		private string _CUENTACATASTRAL;
-		
-		private string _REFERENCIAFOLIO;
-		
-		private string _DECLARACION;
-		
-		private string _FOLIOSIC;
-		
-		private string _NOMBRE;
-		
-		private string _CORREOELECTRONICO;
-		
-		private System.Nullable<System.DateTime> _FECHAALTA;
-		
-		private System.Nullable<System.DateTime> _FECHAEJERCIDO;
-		
-		private string _ESTADO;
-		
-		private string _OBSERVACIONES;
-		
-		private string _STATUSREGISTROTABLA;
-		
-    #region Definiciones de métodos de extensibilidad
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnIDChanging(int value);
-    partial void OnIDChanged();
-    partial void OnCUENTACATASTRALChanging(string value);
-    partial void OnCUENTACATASTRALChanged();
-    partial void OnREFERENCIAFOLIOChanging(string value);
-    partial void OnREFERENCIAFOLIOChanged();
-    partial void OnDECLARACIONChanging(string value);
-    partial void OnDECLARACIONChanged();
-    partial void OnFOLIOSICChanging(string value);
-    partial void OnFOLIOSICChanged();
-    partial void OnNOMBREChanging(string value);
-    partial void OnNOMBREChanged();
-    partial void OnCORREOELECTRONICOChanging(string value);
-    partial void OnCORREOELECTRONICOChanged();
-    partial void OnFECHAALTAChanging(System.Nullable<System.DateTime> value);
-    partial void OnFECHAALTAChanged();
-    partial void OnFECHAEJERCIDOChanging(System.Nullable<System.DateTime> value);
-    partial void OnFECHAEJERCIDOChanged();
-    partial void OnESTADOChanging(string value);
-    partial void OnESTADOChanged();
-    partial void OnOBSERVACIONESChanging(string value);
-    partial void OnOBSERVACIONESChanged();
-    partial void OnSTATUSREGISTROTABLAChanging(string value);
-    partial void OnSTATUSREGISTROTABLAChanged();
-    #endregion
-		
-		public FOLIOPAGOAVALUO()
-		{
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int ID
-		{
-			get
-			{
-				return this._ID;
-			}
-			set
-			{
-				if ((this._ID != value))
-				{
-					this.OnIDChanging(value);
-					this.SendPropertyChanging();
-					this._ID = value;
-					this.SendPropertyChanged("ID");
-					this.OnIDChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CUENTACATASTRAL", DbType="NVarChar(17)")]
-		public string CUENTACATASTRAL
-		{
-			get
-			{
-				return this._CUENTACATASTRAL;
-			}
-			set
-			{
-				if ((this._CUENTACATASTRAL != value))
-				{
-					this.OnCUENTACATASTRALChanging(value);
-					this.SendPropertyChanging();
-					this._CUENTACATASTRAL = value;
-					this.SendPropertyChanged("CUENTACATASTRAL");
-					this.OnCUENTACATASTRALChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_REFERENCIAFOLIO", DbType="VarChar(20)")]
-		public string REFERENCIAFOLIO
-		{
-			get
-			{
-				return this._REFERENCIAFOLIO;
-			}
-			set
-			{
-				if ((this._REFERENCIAFOLIO != value))
-				{
-					this.OnREFERENCIAFOLIOChanging(value);
-					this.SendPropertyChanging();
-					this._REFERENCIAFOLIO = value;
-					this.SendPropertyChanged("REFERENCIAFOLIO");
-					this.OnREFERENCIAFOLIOChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DECLARACION", DbType="VarChar(7)")]
-		public string DECLARACION
-		{
-			get
-			{
-				return this._DECLARACION;
-			}
-			set
-			{
-				if ((this._DECLARACION != value))
-				{
-					this.OnDECLARACIONChanging(value);
-					this.SendPropertyChanging();
-					this._DECLARACION = value;
-					this.SendPropertyChanged("DECLARACION");
-					this.OnDECLARACIONChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FOLIOSIC", DbType="VarChar(255)")]
-		public string FOLIOSIC
-		{
-			get
-			{
-				return this._FOLIOSIC;
-			}
-			set
-			{
-				if ((this._FOLIOSIC != value))
-				{
-					this.OnFOLIOSICChanging(value);
-					this.SendPropertyChanging();
-					this._FOLIOSIC = value;
-					this.SendPropertyChanged("FOLIOSIC");
-					this.OnFOLIOSICChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NOMBRE", DbType="VarChar(255)")]
-		public string NOMBRE
-		{
-			get
-			{
-				return this._NOMBRE;
-			}
-			set
-			{
-				if ((this._NOMBRE != value))
-				{
-					this.OnNOMBREChanging(value);
-					this.SendPropertyChanging();
-					this._NOMBRE = value;
-					this.SendPropertyChanged("NOMBRE");
-					this.OnNOMBREChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CORREOELECTRONICO", DbType="VarChar(255)")]
-		public string CORREOELECTRONICO
-		{
-			get
-			{
-				return this._CORREOELECTRONICO;
-			}
-			set
-			{
-				if ((this._CORREOELECTRONICO != value))
-				{
-					this.OnCORREOELECTRONICOChanging(value);
-					this.SendPropertyChanging();
-					this._CORREOELECTRONICO = value;
-					this.SendPropertyChanged("CORREOELECTRONICO");
-					this.OnCORREOELECTRONICOChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FECHAALTA", DbType="DateTime")]
-		public System.Nullable<System.DateTime> FECHAALTA
-		{
-			get
-			{
-				return this._FECHAALTA;
-			}
-			set
-			{
-				if ((this._FECHAALTA != value))
-				{
-					this.OnFECHAALTAChanging(value);
-					this.SendPropertyChanging();
-					this._FECHAALTA = value;
-					this.SendPropertyChanged("FECHAALTA");
-					this.OnFECHAALTAChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FECHAEJERCIDO", DbType="DateTime")]
-		public System.Nullable<System.DateTime> FECHAEJERCIDO
-		{
-			get
-			{
-				return this._FECHAEJERCIDO;
-			}
-			set
-			{
-				if ((this._FECHAEJERCIDO != value))
-				{
-					this.OnFECHAEJERCIDOChanging(value);
-					this.SendPropertyChanging();
-					this._FECHAEJERCIDO = value;
-					this.SendPropertyChanged("FECHAEJERCIDO");
-					this.OnFECHAEJERCIDOChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ESTADO", DbType="VarChar(255)")]
-		public string ESTADO
-		{
-			get
-			{
-				return this._ESTADO;
-			}
-			set
-			{
-				if ((this._ESTADO != value))
-				{
-					this.OnESTADOChanging(value);
-					this.SendPropertyChanging();
-					this._ESTADO = value;
-					this.SendPropertyChanged("ESTADO");
-					this.OnESTADOChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_OBSERVACIONES", DbType="VarChar(255)")]
-		public string OBSERVACIONES
-		{
-			get
-			{
-				return this._OBSERVACIONES;
-			}
-			set
-			{
-				if ((this._OBSERVACIONES != value))
-				{
-					this.OnOBSERVACIONESChanging(value);
-					this.SendPropertyChanging();
-					this._OBSERVACIONES = value;
-					this.SendPropertyChanged("OBSERVACIONES");
-					this.OnOBSERVACIONESChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_STATUSREGISTROTABLA", DbType="VarChar(255)")]
-		public string STATUSREGISTROTABLA
-		{
-			get
-			{
-				return this._STATUSREGISTROTABLA;
-			}
-			set
-			{
-				if ((this._STATUSREGISTROTABLA != value))
-				{
-					this.OnSTATUSREGISTROTABLAChanging(value);
-					this.SendPropertyChanging();
-					this._STATUSREGISTROTABLA = value;
-					this.SendPropertyChanged("STATUSREGISTROTABLA");
-					this.OnSTATUSREGISTROTABLAChanged();
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.SIS_TRACAT_MC_AV")]
-	public partial class SIS_TRACAT_MC_AV : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _OBJECTID;
-		
-		private string _STATUSREGISTROTABLA;
-		
-		private System.Nullable<System.DateTime> _ALTAREGISTROTABLA;
-		
-		private System.Nullable<System.DateTime> _BAJAREGISTROTABLA;
-		
-		private string _USUARIOALTA;
-		
-		private string _USUARIOBAJA;
-		
-		private string _FOLIO_TRAMITE;
-		
-		private string _TIPO_TRAMITE;
-		
-		private string _CVE_CAT_EST;
-		
-		private string _CVE_CAT_ORI;
-		
-		private string _CVE_PREDIAL;
-		
-		private string _OBSERVACIONES;
-		
-		private string _TRAMITADOR;
-		
-		private System.Nullable<bool> _EN_USO;
-		
-		private System.Data.Linq.Binary _IMAGEN;
-		
-		private string _SOLICITANTE;
-		
-		private string _PROPIETARIO;
-		
-		private string _UBICACION;
-		
-		private string _NOTIFICACION;
-		
-		private bool _NOTIFICACION_RECHAZO;
-		
-		private System.Nullable<bool> _AVALUO;
-		
-		private string _FOLIO_PAGO_AVALUO;
-		
-		private System.Nullable<bool> _IGUAL_CARTOGRAFIA;
-		
-		private string _CORREOELECTRONICO;
-		
-		private System.Nullable<int> _CONTROLFOLIO;
-		
-    #region Definiciones de métodos de extensibilidad
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnOBJECTIDChanging(int value);
-    partial void OnOBJECTIDChanged();
-    partial void OnSTATUSREGISTROTABLAChanging(string value);
-    partial void OnSTATUSREGISTROTABLAChanged();
-    partial void OnALTAREGISTROTABLAChanging(System.Nullable<System.DateTime> value);
-    partial void OnALTAREGISTROTABLAChanged();
-    partial void OnBAJAREGISTROTABLAChanging(System.Nullable<System.DateTime> value);
-    partial void OnBAJAREGISTROTABLAChanged();
-    partial void OnUSUARIOALTAChanging(string value);
-    partial void OnUSUARIOALTAChanged();
-    partial void OnUSUARIOBAJAChanging(string value);
-    partial void OnUSUARIOBAJAChanged();
-    partial void OnFOLIO_TRAMITEChanging(string value);
-    partial void OnFOLIO_TRAMITEChanged();
-    partial void OnTIPO_TRAMITEChanging(string value);
-    partial void OnTIPO_TRAMITEChanged();
-    partial void OnCVE_CAT_ESTChanging(string value);
-    partial void OnCVE_CAT_ESTChanged();
-    partial void OnCVE_CAT_ORIChanging(string value);
-    partial void OnCVE_CAT_ORIChanged();
-    partial void OnCVE_PREDIALChanging(string value);
-    partial void OnCVE_PREDIALChanged();
-    partial void OnOBSERVACIONESChanging(string value);
-    partial void OnOBSERVACIONESChanged();
-    partial void OnTRAMITADORChanging(string value);
-    partial void OnTRAMITADORChanged();
-    partial void OnEN_USOChanging(System.Nullable<bool> value);
-    partial void OnEN_USOChanged();
-    partial void OnIMAGENChanging(System.Data.Linq.Binary value);
-    partial void OnIMAGENChanged();
-    partial void OnSOLICITANTEChanging(string value);
-    partial void OnSOLICITANTEChanged();
-    partial void OnPROPIETARIOChanging(string value);
-    partial void OnPROPIETARIOChanged();
-    partial void OnUBICACIONChanging(string value);
-    partial void OnUBICACIONChanged();
-    partial void OnNOTIFICACIONChanging(string value);
-    partial void OnNOTIFICACIONChanged();
-    partial void OnNOTIFICACION_RECHAZOChanging(bool value);
-    partial void OnNOTIFICACION_RECHAZOChanged();
-    partial void OnAVALUOChanging(System.Nullable<bool> value);
-    partial void OnAVALUOChanged();
-    partial void OnFOLIO_PAGO_AVALUOChanging(string value);
-    partial void OnFOLIO_PAGO_AVALUOChanged();
-    partial void OnIGUAL_CARTOGRAFIAChanging(System.Nullable<bool> value);
-    partial void OnIGUAL_CARTOGRAFIAChanged();
-    partial void OnCORREOELECTRONICOChanging(string value);
-    partial void OnCORREOELECTRONICOChanged();
-    partial void OnCONTROLFOLIOChanging(System.Nullable<int> value);
-    partial void OnCONTROLFOLIOChanged();
-    #endregion
-		
-		public SIS_TRACAT_MC_AV()
-		{
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_OBJECTID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int OBJECTID
-		{
-			get
-			{
-				return this._OBJECTID;
-			}
-			set
-			{
-				if ((this._OBJECTID != value))
-				{
-					this.OnOBJECTIDChanging(value);
-					this.SendPropertyChanging();
-					this._OBJECTID = value;
-					this.SendPropertyChanged("OBJECTID");
-					this.OnOBJECTIDChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_STATUSREGISTROTABLA", DbType="NVarChar(10)")]
-		public string STATUSREGISTROTABLA
-		{
-			get
-			{
-				return this._STATUSREGISTROTABLA;
-			}
-			set
-			{
-				if ((this._STATUSREGISTROTABLA != value))
-				{
-					this.OnSTATUSREGISTROTABLAChanging(value);
-					this.SendPropertyChanging();
-					this._STATUSREGISTROTABLA = value;
-					this.SendPropertyChanged("STATUSREGISTROTABLA");
-					this.OnSTATUSREGISTROTABLAChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ALTAREGISTROTABLA", DbType="DateTime")]
-		public System.Nullable<System.DateTime> ALTAREGISTROTABLA
-		{
-			get
-			{
-				return this._ALTAREGISTROTABLA;
-			}
-			set
-			{
-				if ((this._ALTAREGISTROTABLA != value))
-				{
-					this.OnALTAREGISTROTABLAChanging(value);
-					this.SendPropertyChanging();
-					this._ALTAREGISTROTABLA = value;
-					this.SendPropertyChanged("ALTAREGISTROTABLA");
-					this.OnALTAREGISTROTABLAChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_BAJAREGISTROTABLA", DbType="DateTime")]
-		public System.Nullable<System.DateTime> BAJAREGISTROTABLA
-		{
-			get
-			{
-				return this._BAJAREGISTROTABLA;
-			}
-			set
-			{
-				if ((this._BAJAREGISTROTABLA != value))
-				{
-					this.OnBAJAREGISTROTABLAChanging(value);
-					this.SendPropertyChanging();
-					this._BAJAREGISTROTABLA = value;
-					this.SendPropertyChanged("BAJAREGISTROTABLA");
-					this.OnBAJAREGISTROTABLAChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_USUARIOALTA", DbType="NVarChar(200)")]
-		public string USUARIOALTA
-		{
-			get
-			{
-				return this._USUARIOALTA;
-			}
-			set
-			{
-				if ((this._USUARIOALTA != value))
-				{
-					this.OnUSUARIOALTAChanging(value);
-					this.SendPropertyChanging();
-					this._USUARIOALTA = value;
-					this.SendPropertyChanged("USUARIOALTA");
-					this.OnUSUARIOALTAChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_USUARIOBAJA", DbType="NVarChar(200)")]
-		public string USUARIOBAJA
-		{
-			get
-			{
-				return this._USUARIOBAJA;
-			}
-			set
-			{
-				if ((this._USUARIOBAJA != value))
-				{
-					this.OnUSUARIOBAJAChanging(value);
-					this.SendPropertyChanging();
-					this._USUARIOBAJA = value;
-					this.SendPropertyChanged("USUARIOBAJA");
-					this.OnUSUARIOBAJAChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FOLIO_TRAMITE", DbType="NVarChar(30)")]
-		public string FOLIO_TRAMITE
-		{
-			get
-			{
-				return this._FOLIO_TRAMITE;
-			}
-			set
-			{
-				if ((this._FOLIO_TRAMITE != value))
-				{
-					this.OnFOLIO_TRAMITEChanging(value);
-					this.SendPropertyChanging();
-					this._FOLIO_TRAMITE = value;
-					this.SendPropertyChanged("FOLIO_TRAMITE");
-					this.OnFOLIO_TRAMITEChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TIPO_TRAMITE", DbType="NVarChar(200)")]
-		public string TIPO_TRAMITE
-		{
-			get
-			{
-				return this._TIPO_TRAMITE;
-			}
-			set
-			{
-				if ((this._TIPO_TRAMITE != value))
-				{
-					this.OnTIPO_TRAMITEChanging(value);
-					this.SendPropertyChanging();
-					this._TIPO_TRAMITE = value;
-					this.SendPropertyChanged("TIPO_TRAMITE");
-					this.OnTIPO_TRAMITEChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CVE_CAT_EST", DbType="NVarChar(31)")]
-		public string CVE_CAT_EST
-		{
-			get
-			{
-				return this._CVE_CAT_EST;
-			}
-			set
-			{
-				if ((this._CVE_CAT_EST != value))
-				{
-					this.OnCVE_CAT_ESTChanging(value);
-					this.SendPropertyChanging();
-					this._CVE_CAT_EST = value;
-					this.SendPropertyChanged("CVE_CAT_EST");
-					this.OnCVE_CAT_ESTChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CVE_CAT_ORI", DbType="NVarChar(31)")]
-		public string CVE_CAT_ORI
-		{
-			get
-			{
-				return this._CVE_CAT_ORI;
-			}
-			set
-			{
-				if ((this._CVE_CAT_ORI != value))
-				{
-					this.OnCVE_CAT_ORIChanging(value);
-					this.SendPropertyChanging();
-					this._CVE_CAT_ORI = value;
-					this.SendPropertyChanged("CVE_CAT_ORI");
-					this.OnCVE_CAT_ORIChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CVE_PREDIAL", DbType="NVarChar(30)")]
-		public string CVE_PREDIAL
-		{
-			get
-			{
-				return this._CVE_PREDIAL;
-			}
-			set
-			{
-				if ((this._CVE_PREDIAL != value))
-				{
-					this.OnCVE_PREDIALChanging(value);
-					this.SendPropertyChanging();
-					this._CVE_PREDIAL = value;
-					this.SendPropertyChanged("CVE_PREDIAL");
-					this.OnCVE_PREDIALChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_OBSERVACIONES", DbType="NVarChar(MAX)")]
-		public string OBSERVACIONES
-		{
-			get
-			{
-				return this._OBSERVACIONES;
-			}
-			set
-			{
-				if ((this._OBSERVACIONES != value))
-				{
-					this.OnOBSERVACIONESChanging(value);
-					this.SendPropertyChanging();
-					this._OBSERVACIONES = value;
-					this.SendPropertyChanged("OBSERVACIONES");
-					this.OnOBSERVACIONESChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TRAMITADOR", DbType="NVarChar(200)")]
-		public string TRAMITADOR
-		{
-			get
-			{
-				return this._TRAMITADOR;
-			}
-			set
-			{
-				if ((this._TRAMITADOR != value))
-				{
-					this.OnTRAMITADORChanging(value);
-					this.SendPropertyChanging();
-					this._TRAMITADOR = value;
-					this.SendPropertyChanged("TRAMITADOR");
-					this.OnTRAMITADORChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EN_USO", DbType="Bit")]
-		public System.Nullable<bool> EN_USO
-		{
-			get
-			{
-				return this._EN_USO;
-			}
-			set
-			{
-				if ((this._EN_USO != value))
-				{
-					this.OnEN_USOChanging(value);
-					this.SendPropertyChanging();
-					this._EN_USO = value;
-					this.SendPropertyChanged("EN_USO");
-					this.OnEN_USOChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IMAGEN", DbType="VarBinary(MAX)", UpdateCheck=UpdateCheck.Never)]
-		public System.Data.Linq.Binary IMAGEN
-		{
-			get
-			{
-				return this._IMAGEN;
-			}
-			set
-			{
-				if ((this._IMAGEN != value))
-				{
-					this.OnIMAGENChanging(value);
-					this.SendPropertyChanging();
-					this._IMAGEN = value;
-					this.SendPropertyChanged("IMAGEN");
-					this.OnIMAGENChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SOLICITANTE", DbType="NVarChar(255)")]
-		public string SOLICITANTE
-		{
-			get
-			{
-				return this._SOLICITANTE;
-			}
-			set
-			{
-				if ((this._SOLICITANTE != value))
-				{
-					this.OnSOLICITANTEChanging(value);
-					this.SendPropertyChanging();
-					this._SOLICITANTE = value;
-					this.SendPropertyChanged("SOLICITANTE");
-					this.OnSOLICITANTEChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PROPIETARIO", DbType="VarChar(200)")]
-		public string PROPIETARIO
-		{
-			get
-			{
-				return this._PROPIETARIO;
-			}
-			set
-			{
-				if ((this._PROPIETARIO != value))
-				{
-					this.OnPROPIETARIOChanging(value);
-					this.SendPropertyChanging();
-					this._PROPIETARIO = value;
-					this.SendPropertyChanged("PROPIETARIO");
-					this.OnPROPIETARIOChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UBICACION", DbType="NVarChar(MAX)")]
-		public string UBICACION
-		{
-			get
-			{
-				return this._UBICACION;
-			}
-			set
-			{
-				if ((this._UBICACION != value))
-				{
-					this.OnUBICACIONChanging(value);
-					this.SendPropertyChanging();
-					this._UBICACION = value;
-					this.SendPropertyChanged("UBICACION");
-					this.OnUBICACIONChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NOTIFICACION", DbType="VarChar(250)")]
-		public string NOTIFICACION
-		{
-			get
-			{
-				return this._NOTIFICACION;
-			}
-			set
-			{
-				if ((this._NOTIFICACION != value))
-				{
-					this.OnNOTIFICACIONChanging(value);
-					this.SendPropertyChanging();
-					this._NOTIFICACION = value;
-					this.SendPropertyChanged("NOTIFICACION");
-					this.OnNOTIFICACIONChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NOTIFICACION_RECHAZO", DbType="Bit NOT NULL")]
-		public bool NOTIFICACION_RECHAZO
-		{
-			get
-			{
-				return this._NOTIFICACION_RECHAZO;
-			}
-			set
-			{
-				if ((this._NOTIFICACION_RECHAZO != value))
-				{
-					this.OnNOTIFICACION_RECHAZOChanging(value);
-					this.SendPropertyChanging();
-					this._NOTIFICACION_RECHAZO = value;
-					this.SendPropertyChanged("NOTIFICACION_RECHAZO");
-					this.OnNOTIFICACION_RECHAZOChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AVALUO", DbType="Bit")]
-		public System.Nullable<bool> AVALUO
-		{
-			get
-			{
-				return this._AVALUO;
-			}
-			set
-			{
-				if ((this._AVALUO != value))
-				{
-					this.OnAVALUOChanging(value);
-					this.SendPropertyChanging();
-					this._AVALUO = value;
-					this.SendPropertyChanged("AVALUO");
-					this.OnAVALUOChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FOLIO_PAGO_AVALUO", DbType="VarChar(50)")]
-		public string FOLIO_PAGO_AVALUO
-		{
-			get
-			{
-				return this._FOLIO_PAGO_AVALUO;
-			}
-			set
-			{
-				if ((this._FOLIO_PAGO_AVALUO != value))
-				{
-					this.OnFOLIO_PAGO_AVALUOChanging(value);
-					this.SendPropertyChanging();
-					this._FOLIO_PAGO_AVALUO = value;
-					this.SendPropertyChanged("FOLIO_PAGO_AVALUO");
-					this.OnFOLIO_PAGO_AVALUOChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IGUAL_CARTOGRAFIA", DbType="Bit")]
-		public System.Nullable<bool> IGUAL_CARTOGRAFIA
-		{
-			get
-			{
-				return this._IGUAL_CARTOGRAFIA;
-			}
-			set
-			{
-				if ((this._IGUAL_CARTOGRAFIA != value))
-				{
-					this.OnIGUAL_CARTOGRAFIAChanging(value);
-					this.SendPropertyChanging();
-					this._IGUAL_CARTOGRAFIA = value;
-					this.SendPropertyChanged("IGUAL_CARTOGRAFIA");
-					this.OnIGUAL_CARTOGRAFIAChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CORREOELECTRONICO", DbType="VarChar(255)")]
-		public string CORREOELECTRONICO
-		{
-			get
-			{
-				return this._CORREOELECTRONICO;
-			}
-			set
-			{
-				if ((this._CORREOELECTRONICO != value))
-				{
-					this.OnCORREOELECTRONICOChanging(value);
-					this.SendPropertyChanging();
-					this._CORREOELECTRONICO = value;
-					this.SendPropertyChanged("CORREOELECTRONICO");
-					this.OnCORREOELECTRONICOChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CONTROLFOLIO", DbType="Int")]
-		public System.Nullable<int> CONTROLFOLIO
-		{
-			get
-			{
-				return this._CONTROLFOLIO;
-			}
-			set
-			{
-				if ((this._CONTROLFOLIO != value))
-				{
-					this.OnCONTROLFOLIOChanging(value);
-					this.SendPropertyChanging();
-					this._CONTROLFOLIO = value;
-					this.SendPropertyChanged("CONTROLFOLIO");
-					this.OnCONTROLFOLIOChanged();
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
 		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.SIS_TRACAT_MC")]
-	public partial class SIS_TRACAT_MC : INotifyPropertyChanging, INotifyPropertyChanged
+	public partial class SIS_TRACAT_MC
 	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
 		
 		private int _OBJECTID;
 		
@@ -3349,68 +2116,63 @@ namespace ManifestacionEnLinea.DataModel
 		
 		private System.Nullable<int> _CONTROLFOLIO;
 		
-    #region Definiciones de métodos de extensibilidad
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnOBJECTIDChanging(int value);
-    partial void OnOBJECTIDChanged();
-    partial void OnSTATUSREGISTROTABLAChanging(string value);
-    partial void OnSTATUSREGISTROTABLAChanged();
-    partial void OnALTAREGISTROTABLAChanging(System.Nullable<System.DateTime> value);
-    partial void OnALTAREGISTROTABLAChanged();
-    partial void OnBAJAREGISTROTABLAChanging(System.Nullable<System.DateTime> value);
-    partial void OnBAJAREGISTROTABLAChanged();
-    partial void OnUSUARIOALTAChanging(string value);
-    partial void OnUSUARIOALTAChanged();
-    partial void OnUSUARIOBAJAChanging(string value);
-    partial void OnUSUARIOBAJAChanged();
-    partial void OnFOLIO_TRAMITEChanging(string value);
-    partial void OnFOLIO_TRAMITEChanged();
-    partial void OnTIPO_TRAMITEChanging(string value);
-    partial void OnTIPO_TRAMITEChanged();
-    partial void OnCVE_CAT_ESTChanging(string value);
-    partial void OnCVE_CAT_ESTChanged();
-    partial void OnCVE_CAT_ORIChanging(string value);
-    partial void OnCVE_CAT_ORIChanged();
-    partial void OnCVE_PREDIALChanging(string value);
-    partial void OnCVE_PREDIALChanged();
-    partial void OnOBSERVACIONESChanging(string value);
-    partial void OnOBSERVACIONESChanged();
-    partial void OnTRAMITADORChanging(string value);
-    partial void OnTRAMITADORChanged();
-    partial void OnEN_USOChanging(System.Nullable<bool> value);
-    partial void OnEN_USOChanged();
-    partial void OnIMAGENChanging(System.Data.Linq.Binary value);
-    partial void OnIMAGENChanged();
-    partial void OnSOLICITANTEChanging(string value);
-    partial void OnSOLICITANTEChanged();
-    partial void OnPROPIETARIOChanging(string value);
-    partial void OnPROPIETARIOChanged();
-    partial void OnUBICACIONChanging(string value);
-    partial void OnUBICACIONChanged();
-    partial void OnNOTIFICACIONChanging(string value);
-    partial void OnNOTIFICACIONChanged();
-    partial void OnNOTIFICACION_RECHAZOChanging(bool value);
-    partial void OnNOTIFICACION_RECHAZOChanged();
-    partial void OnAVALUOChanging(System.Nullable<bool> value);
-    partial void OnAVALUOChanged();
-    partial void OnFOLIO_PAGO_AVALUOChanging(string value);
-    partial void OnFOLIO_PAGO_AVALUOChanged();
-    partial void OnIGUAL_CARTOGRAFIAChanging(System.Nullable<bool> value);
-    partial void OnIGUAL_CARTOGRAFIAChanged();
-    partial void OnCORREOELECTRONICOChanging(string value);
-    partial void OnCORREOELECTRONICOChanged();
-    partial void OnCONTROLFOLIOChanging(System.Nullable<int> value);
-    partial void OnCONTROLFOLIOChanged();
-    #endregion
+		private string _PROPIETARIO_CURP;
+		
+		private string _PROPIETARIO_RFC;
+		
+		private string _PROPIETARIO_TELEFONO;
+		
+		private string _PROPIETARIO_DOMICILIO_CALLE;
+		
+		private string _PROPIETARIO_DOMICILIO_NO_EXT;
+		
+		private string _PROPIETARIO_DOMICILIO_COLONIA;
+		
+		private string _PROPIETARIO_DOMICILIO_CP;
+		
+		private string _PROPIETARIO_DOMICILIO_LOCALIDAD;
+		
+		private string _PROPIETARIO_DOMICILIO_MUNICIPIO;
+		
+		private string _INMUEBLE_DOMICILIO_CALLE;
+		
+		private string _INMUEBLE_DOMICILIO_NO_EXT;
+		
+		private string _INMUEBLE_DOMICILIO_COLONIA;
+		
+		private string _INMUEBLE_DOMICILIO_CP;
+		
+		private string _INMUEBLE_DOMICILIO_LOCALIDAD;
+		
+		private string _INMUEBLE_DOMICILIO_MUNICIPIO;
+		
+		private string _INMUEBLE_TIPO_PREDIO;
+		
+		private System.Nullable<decimal> _INMUEBLE_SUPERFICIE_M2;
+		
+		private System.Nullable<decimal> _INMUEBLE_CONSTRUCCION_CONCRETO_M2;
+		
+		private System.Nullable<decimal> _INMUEBLE_CONSTRUCCION_TEJABAN_M2;
+		
+		private System.Nullable<decimal> _INMUEBLE_CONSTRUCCION_TOTAL_M2;
+		
+		private string _INMUEBLE_AVANCE_OBRA;
+		
+		private string _INMUEBLE_ESTADO_CONSERVACION;
+		
+		private System.Nullable<int> _INMUEBLE_ANTIGUEDAD_ANIOS;
+		
+		private string _INMUEBLE_TIPO_USO;
+		
+		private string _INMUEBLE_TIPO_INDUSTRIAL;
+		
+		private string _INMUEBLE_COMERCIAL_Y_SERVICIO;
 		
 		public SIS_TRACAT_MC()
 		{
-			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_OBJECTID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_OBJECTID", AutoSync=AutoSync.Always, DbType="Int NOT NULL IDENTITY", IsDbGenerated=true)]
 		public int OBJECTID
 		{
 			get
@@ -3421,11 +2183,7 @@ namespace ManifestacionEnLinea.DataModel
 			{
 				if ((this._OBJECTID != value))
 				{
-					this.OnOBJECTIDChanging(value);
-					this.SendPropertyChanging();
 					this._OBJECTID = value;
-					this.SendPropertyChanged("OBJECTID");
-					this.OnOBJECTIDChanged();
 				}
 			}
 		}
@@ -3441,11 +2199,7 @@ namespace ManifestacionEnLinea.DataModel
 			{
 				if ((this._STATUSREGISTROTABLA != value))
 				{
-					this.OnSTATUSREGISTROTABLAChanging(value);
-					this.SendPropertyChanging();
 					this._STATUSREGISTROTABLA = value;
-					this.SendPropertyChanged("STATUSREGISTROTABLA");
-					this.OnSTATUSREGISTROTABLAChanged();
 				}
 			}
 		}
@@ -3461,11 +2215,7 @@ namespace ManifestacionEnLinea.DataModel
 			{
 				if ((this._ALTAREGISTROTABLA != value))
 				{
-					this.OnALTAREGISTROTABLAChanging(value);
-					this.SendPropertyChanging();
 					this._ALTAREGISTROTABLA = value;
-					this.SendPropertyChanged("ALTAREGISTROTABLA");
-					this.OnALTAREGISTROTABLAChanged();
 				}
 			}
 		}
@@ -3481,11 +2231,7 @@ namespace ManifestacionEnLinea.DataModel
 			{
 				if ((this._BAJAREGISTROTABLA != value))
 				{
-					this.OnBAJAREGISTROTABLAChanging(value);
-					this.SendPropertyChanging();
 					this._BAJAREGISTROTABLA = value;
-					this.SendPropertyChanged("BAJAREGISTROTABLA");
-					this.OnBAJAREGISTROTABLAChanged();
 				}
 			}
 		}
@@ -3501,11 +2247,7 @@ namespace ManifestacionEnLinea.DataModel
 			{
 				if ((this._USUARIOALTA != value))
 				{
-					this.OnUSUARIOALTAChanging(value);
-					this.SendPropertyChanging();
 					this._USUARIOALTA = value;
-					this.SendPropertyChanged("USUARIOALTA");
-					this.OnUSUARIOALTAChanged();
 				}
 			}
 		}
@@ -3521,11 +2263,7 @@ namespace ManifestacionEnLinea.DataModel
 			{
 				if ((this._USUARIOBAJA != value))
 				{
-					this.OnUSUARIOBAJAChanging(value);
-					this.SendPropertyChanging();
 					this._USUARIOBAJA = value;
-					this.SendPropertyChanged("USUARIOBAJA");
-					this.OnUSUARIOBAJAChanged();
 				}
 			}
 		}
@@ -3541,11 +2279,7 @@ namespace ManifestacionEnLinea.DataModel
 			{
 				if ((this._FOLIO_TRAMITE != value))
 				{
-					this.OnFOLIO_TRAMITEChanging(value);
-					this.SendPropertyChanging();
 					this._FOLIO_TRAMITE = value;
-					this.SendPropertyChanged("FOLIO_TRAMITE");
-					this.OnFOLIO_TRAMITEChanged();
 				}
 			}
 		}
@@ -3561,11 +2295,7 @@ namespace ManifestacionEnLinea.DataModel
 			{
 				if ((this._TIPO_TRAMITE != value))
 				{
-					this.OnTIPO_TRAMITEChanging(value);
-					this.SendPropertyChanging();
 					this._TIPO_TRAMITE = value;
-					this.SendPropertyChanged("TIPO_TRAMITE");
-					this.OnTIPO_TRAMITEChanged();
 				}
 			}
 		}
@@ -3581,11 +2311,7 @@ namespace ManifestacionEnLinea.DataModel
 			{
 				if ((this._CVE_CAT_EST != value))
 				{
-					this.OnCVE_CAT_ESTChanging(value);
-					this.SendPropertyChanging();
 					this._CVE_CAT_EST = value;
-					this.SendPropertyChanged("CVE_CAT_EST");
-					this.OnCVE_CAT_ESTChanged();
 				}
 			}
 		}
@@ -3601,11 +2327,7 @@ namespace ManifestacionEnLinea.DataModel
 			{
 				if ((this._CVE_CAT_ORI != value))
 				{
-					this.OnCVE_CAT_ORIChanging(value);
-					this.SendPropertyChanging();
 					this._CVE_CAT_ORI = value;
-					this.SendPropertyChanged("CVE_CAT_ORI");
-					this.OnCVE_CAT_ORIChanged();
 				}
 			}
 		}
@@ -3621,11 +2343,7 @@ namespace ManifestacionEnLinea.DataModel
 			{
 				if ((this._CVE_PREDIAL != value))
 				{
-					this.OnCVE_PREDIALChanging(value);
-					this.SendPropertyChanging();
 					this._CVE_PREDIAL = value;
-					this.SendPropertyChanged("CVE_PREDIAL");
-					this.OnCVE_PREDIALChanged();
 				}
 			}
 		}
@@ -3641,11 +2359,7 @@ namespace ManifestacionEnLinea.DataModel
 			{
 				if ((this._OBSERVACIONES != value))
 				{
-					this.OnOBSERVACIONESChanging(value);
-					this.SendPropertyChanging();
 					this._OBSERVACIONES = value;
-					this.SendPropertyChanged("OBSERVACIONES");
-					this.OnOBSERVACIONESChanged();
 				}
 			}
 		}
@@ -3661,11 +2375,7 @@ namespace ManifestacionEnLinea.DataModel
 			{
 				if ((this._TRAMITADOR != value))
 				{
-					this.OnTRAMITADORChanging(value);
-					this.SendPropertyChanging();
 					this._TRAMITADOR = value;
-					this.SendPropertyChanged("TRAMITADOR");
-					this.OnTRAMITADORChanged();
 				}
 			}
 		}
@@ -3681,11 +2391,7 @@ namespace ManifestacionEnLinea.DataModel
 			{
 				if ((this._EN_USO != value))
 				{
-					this.OnEN_USOChanging(value);
-					this.SendPropertyChanging();
 					this._EN_USO = value;
-					this.SendPropertyChanged("EN_USO");
-					this.OnEN_USOChanged();
 				}
 			}
 		}
@@ -3701,11 +2407,7 @@ namespace ManifestacionEnLinea.DataModel
 			{
 				if ((this._IMAGEN != value))
 				{
-					this.OnIMAGENChanging(value);
-					this.SendPropertyChanging();
 					this._IMAGEN = value;
-					this.SendPropertyChanged("IMAGEN");
-					this.OnIMAGENChanged();
 				}
 			}
 		}
@@ -3721,11 +2423,7 @@ namespace ManifestacionEnLinea.DataModel
 			{
 				if ((this._SOLICITANTE != value))
 				{
-					this.OnSOLICITANTEChanging(value);
-					this.SendPropertyChanging();
 					this._SOLICITANTE = value;
-					this.SendPropertyChanged("SOLICITANTE");
-					this.OnSOLICITANTEChanged();
 				}
 			}
 		}
@@ -3741,11 +2439,7 @@ namespace ManifestacionEnLinea.DataModel
 			{
 				if ((this._PROPIETARIO != value))
 				{
-					this.OnPROPIETARIOChanging(value);
-					this.SendPropertyChanging();
 					this._PROPIETARIO = value;
-					this.SendPropertyChanged("PROPIETARIO");
-					this.OnPROPIETARIOChanged();
 				}
 			}
 		}
@@ -3761,11 +2455,7 @@ namespace ManifestacionEnLinea.DataModel
 			{
 				if ((this._UBICACION != value))
 				{
-					this.OnUBICACIONChanging(value);
-					this.SendPropertyChanging();
 					this._UBICACION = value;
-					this.SendPropertyChanged("UBICACION");
-					this.OnUBICACIONChanged();
 				}
 			}
 		}
@@ -3781,11 +2471,7 @@ namespace ManifestacionEnLinea.DataModel
 			{
 				if ((this._NOTIFICACION != value))
 				{
-					this.OnNOTIFICACIONChanging(value);
-					this.SendPropertyChanging();
 					this._NOTIFICACION = value;
-					this.SendPropertyChanged("NOTIFICACION");
-					this.OnNOTIFICACIONChanged();
 				}
 			}
 		}
@@ -3801,11 +2487,7 @@ namespace ManifestacionEnLinea.DataModel
 			{
 				if ((this._NOTIFICACION_RECHAZO != value))
 				{
-					this.OnNOTIFICACION_RECHAZOChanging(value);
-					this.SendPropertyChanging();
 					this._NOTIFICACION_RECHAZO = value;
-					this.SendPropertyChanged("NOTIFICACION_RECHAZO");
-					this.OnNOTIFICACION_RECHAZOChanged();
 				}
 			}
 		}
@@ -3821,11 +2503,7 @@ namespace ManifestacionEnLinea.DataModel
 			{
 				if ((this._AVALUO != value))
 				{
-					this.OnAVALUOChanging(value);
-					this.SendPropertyChanging();
 					this._AVALUO = value;
-					this.SendPropertyChanged("AVALUO");
-					this.OnAVALUOChanged();
 				}
 			}
 		}
@@ -3841,11 +2519,7 @@ namespace ManifestacionEnLinea.DataModel
 			{
 				if ((this._FOLIO_PAGO_AVALUO != value))
 				{
-					this.OnFOLIO_PAGO_AVALUOChanging(value);
-					this.SendPropertyChanging();
 					this._FOLIO_PAGO_AVALUO = value;
-					this.SendPropertyChanged("FOLIO_PAGO_AVALUO");
-					this.OnFOLIO_PAGO_AVALUOChanged();
 				}
 			}
 		}
@@ -3861,11 +2535,7 @@ namespace ManifestacionEnLinea.DataModel
 			{
 				if ((this._IGUAL_CARTOGRAFIA != value))
 				{
-					this.OnIGUAL_CARTOGRAFIAChanging(value);
-					this.SendPropertyChanging();
 					this._IGUAL_CARTOGRAFIA = value;
-					this.SendPropertyChanged("IGUAL_CARTOGRAFIA");
-					this.OnIGUAL_CARTOGRAFIAChanged();
 				}
 			}
 		}
@@ -3881,11 +2551,7 @@ namespace ManifestacionEnLinea.DataModel
 			{
 				if ((this._CORREOELECTRONICO != value))
 				{
-					this.OnCORREOELECTRONICOChanging(value);
-					this.SendPropertyChanging();
 					this._CORREOELECTRONICO = value;
-					this.SendPropertyChanged("CORREOELECTRONICO");
-					this.OnCORREOELECTRONICOChanged();
 				}
 			}
 		}
@@ -3901,41 +2567,431 @@ namespace ManifestacionEnLinea.DataModel
 			{
 				if ((this._CONTROLFOLIO != value))
 				{
-					this.OnCONTROLFOLIOChanging(value);
-					this.SendPropertyChanging();
 					this._CONTROLFOLIO = value;
-					this.SendPropertyChanged("CONTROLFOLIO");
-					this.OnCONTROLFOLIOChanged();
 				}
 			}
 		}
 		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PROPIETARIO_CURP", DbType="NVarChar(255)")]
+		public string PROPIETARIO_CURP
 		{
-			if ((this.PropertyChanging != null))
+			get
 			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
+				return this._PROPIETARIO_CURP;
+			}
+			set
+			{
+				if ((this._PROPIETARIO_CURP != value))
+				{
+					this._PROPIETARIO_CURP = value;
+				}
 			}
 		}
 		
-		protected virtual void SendPropertyChanged(String propertyName)
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PROPIETARIO_RFC", DbType="NVarChar(255)")]
+		public string PROPIETARIO_RFC
 		{
-			if ((this.PropertyChanged != null))
+			get
 			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+				return this._PROPIETARIO_RFC;
+			}
+			set
+			{
+				if ((this._PROPIETARIO_RFC != value))
+				{
+					this._PROPIETARIO_RFC = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PROPIETARIO_TELEFONO", DbType="NVarChar(20)")]
+		public string PROPIETARIO_TELEFONO
+		{
+			get
+			{
+				return this._PROPIETARIO_TELEFONO;
+			}
+			set
+			{
+				if ((this._PROPIETARIO_TELEFONO != value))
+				{
+					this._PROPIETARIO_TELEFONO = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PROPIETARIO_DOMICILIO_CALLE", DbType="NVarChar(255)")]
+		public string PROPIETARIO_DOMICILIO_CALLE
+		{
+			get
+			{
+				return this._PROPIETARIO_DOMICILIO_CALLE;
+			}
+			set
+			{
+				if ((this._PROPIETARIO_DOMICILIO_CALLE != value))
+				{
+					this._PROPIETARIO_DOMICILIO_CALLE = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PROPIETARIO_DOMICILIO_NO_EXT", DbType="NVarChar(10)")]
+		public string PROPIETARIO_DOMICILIO_NO_EXT
+		{
+			get
+			{
+				return this._PROPIETARIO_DOMICILIO_NO_EXT;
+			}
+			set
+			{
+				if ((this._PROPIETARIO_DOMICILIO_NO_EXT != value))
+				{
+					this._PROPIETARIO_DOMICILIO_NO_EXT = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PROPIETARIO_DOMICILIO_COLONIA", DbType="NVarChar(255)")]
+		public string PROPIETARIO_DOMICILIO_COLONIA
+		{
+			get
+			{
+				return this._PROPIETARIO_DOMICILIO_COLONIA;
+			}
+			set
+			{
+				if ((this._PROPIETARIO_DOMICILIO_COLONIA != value))
+				{
+					this._PROPIETARIO_DOMICILIO_COLONIA = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PROPIETARIO_DOMICILIO_CP", DbType="NVarChar(10)")]
+		public string PROPIETARIO_DOMICILIO_CP
+		{
+			get
+			{
+				return this._PROPIETARIO_DOMICILIO_CP;
+			}
+			set
+			{
+				if ((this._PROPIETARIO_DOMICILIO_CP != value))
+				{
+					this._PROPIETARIO_DOMICILIO_CP = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PROPIETARIO_DOMICILIO_LOCALIDAD", DbType="NVarChar(255)")]
+		public string PROPIETARIO_DOMICILIO_LOCALIDAD
+		{
+			get
+			{
+				return this._PROPIETARIO_DOMICILIO_LOCALIDAD;
+			}
+			set
+			{
+				if ((this._PROPIETARIO_DOMICILIO_LOCALIDAD != value))
+				{
+					this._PROPIETARIO_DOMICILIO_LOCALIDAD = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PROPIETARIO_DOMICILIO_MUNICIPIO", DbType="NVarChar(255)")]
+		public string PROPIETARIO_DOMICILIO_MUNICIPIO
+		{
+			get
+			{
+				return this._PROPIETARIO_DOMICILIO_MUNICIPIO;
+			}
+			set
+			{
+				if ((this._PROPIETARIO_DOMICILIO_MUNICIPIO != value))
+				{
+					this._PROPIETARIO_DOMICILIO_MUNICIPIO = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_INMUEBLE_DOMICILIO_CALLE", DbType="NVarChar(255)")]
+		public string INMUEBLE_DOMICILIO_CALLE
+		{
+			get
+			{
+				return this._INMUEBLE_DOMICILIO_CALLE;
+			}
+			set
+			{
+				if ((this._INMUEBLE_DOMICILIO_CALLE != value))
+				{
+					this._INMUEBLE_DOMICILIO_CALLE = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_INMUEBLE_DOMICILIO_NO_EXT", DbType="NVarChar(10)")]
+		public string INMUEBLE_DOMICILIO_NO_EXT
+		{
+			get
+			{
+				return this._INMUEBLE_DOMICILIO_NO_EXT;
+			}
+			set
+			{
+				if ((this._INMUEBLE_DOMICILIO_NO_EXT != value))
+				{
+					this._INMUEBLE_DOMICILIO_NO_EXT = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_INMUEBLE_DOMICILIO_COLONIA", DbType="NVarChar(255)")]
+		public string INMUEBLE_DOMICILIO_COLONIA
+		{
+			get
+			{
+				return this._INMUEBLE_DOMICILIO_COLONIA;
+			}
+			set
+			{
+				if ((this._INMUEBLE_DOMICILIO_COLONIA != value))
+				{
+					this._INMUEBLE_DOMICILIO_COLONIA = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_INMUEBLE_DOMICILIO_CP", DbType="NVarChar(10)")]
+		public string INMUEBLE_DOMICILIO_CP
+		{
+			get
+			{
+				return this._INMUEBLE_DOMICILIO_CP;
+			}
+			set
+			{
+				if ((this._INMUEBLE_DOMICILIO_CP != value))
+				{
+					this._INMUEBLE_DOMICILIO_CP = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_INMUEBLE_DOMICILIO_LOCALIDAD", DbType="NVarChar(255)")]
+		public string INMUEBLE_DOMICILIO_LOCALIDAD
+		{
+			get
+			{
+				return this._INMUEBLE_DOMICILIO_LOCALIDAD;
+			}
+			set
+			{
+				if ((this._INMUEBLE_DOMICILIO_LOCALIDAD != value))
+				{
+					this._INMUEBLE_DOMICILIO_LOCALIDAD = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_INMUEBLE_DOMICILIO_MUNICIPIO", DbType="NVarChar(255)")]
+		public string INMUEBLE_DOMICILIO_MUNICIPIO
+		{
+			get
+			{
+				return this._INMUEBLE_DOMICILIO_MUNICIPIO;
+			}
+			set
+			{
+				if ((this._INMUEBLE_DOMICILIO_MUNICIPIO != value))
+				{
+					this._INMUEBLE_DOMICILIO_MUNICIPIO = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_INMUEBLE_TIPO_PREDIO", DbType="NVarChar(50)")]
+		public string INMUEBLE_TIPO_PREDIO
+		{
+			get
+			{
+				return this._INMUEBLE_TIPO_PREDIO;
+			}
+			set
+			{
+				if ((this._INMUEBLE_TIPO_PREDIO != value))
+				{
+					this._INMUEBLE_TIPO_PREDIO = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_INMUEBLE_SUPERFICIE_M2", DbType="Decimal(10,2)")]
+		public System.Nullable<decimal> INMUEBLE_SUPERFICIE_M2
+		{
+			get
+			{
+				return this._INMUEBLE_SUPERFICIE_M2;
+			}
+			set
+			{
+				if ((this._INMUEBLE_SUPERFICIE_M2 != value))
+				{
+					this._INMUEBLE_SUPERFICIE_M2 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_INMUEBLE_CONSTRUCCION_CONCRETO_M2", DbType="Decimal(10,2)")]
+		public System.Nullable<decimal> INMUEBLE_CONSTRUCCION_CONCRETO_M2
+		{
+			get
+			{
+				return this._INMUEBLE_CONSTRUCCION_CONCRETO_M2;
+			}
+			set
+			{
+				if ((this._INMUEBLE_CONSTRUCCION_CONCRETO_M2 != value))
+				{
+					this._INMUEBLE_CONSTRUCCION_CONCRETO_M2 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_INMUEBLE_CONSTRUCCION_TEJABAN_M2", DbType="Decimal(10,2)")]
+		public System.Nullable<decimal> INMUEBLE_CONSTRUCCION_TEJABAN_M2
+		{
+			get
+			{
+				return this._INMUEBLE_CONSTRUCCION_TEJABAN_M2;
+			}
+			set
+			{
+				if ((this._INMUEBLE_CONSTRUCCION_TEJABAN_M2 != value))
+				{
+					this._INMUEBLE_CONSTRUCCION_TEJABAN_M2 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_INMUEBLE_CONSTRUCCION_TOTAL_M2", DbType="Decimal(10,2)")]
+		public System.Nullable<decimal> INMUEBLE_CONSTRUCCION_TOTAL_M2
+		{
+			get
+			{
+				return this._INMUEBLE_CONSTRUCCION_TOTAL_M2;
+			}
+			set
+			{
+				if ((this._INMUEBLE_CONSTRUCCION_TOTAL_M2 != value))
+				{
+					this._INMUEBLE_CONSTRUCCION_TOTAL_M2 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_INMUEBLE_AVANCE_OBRA", DbType="NVarChar(50)")]
+		public string INMUEBLE_AVANCE_OBRA
+		{
+			get
+			{
+				return this._INMUEBLE_AVANCE_OBRA;
+			}
+			set
+			{
+				if ((this._INMUEBLE_AVANCE_OBRA != value))
+				{
+					this._INMUEBLE_AVANCE_OBRA = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_INMUEBLE_ESTADO_CONSERVACION", DbType="NVarChar(50)")]
+		public string INMUEBLE_ESTADO_CONSERVACION
+		{
+			get
+			{
+				return this._INMUEBLE_ESTADO_CONSERVACION;
+			}
+			set
+			{
+				if ((this._INMUEBLE_ESTADO_CONSERVACION != value))
+				{
+					this._INMUEBLE_ESTADO_CONSERVACION = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_INMUEBLE_ANTIGUEDAD_ANIOS", DbType="Int")]
+		public System.Nullable<int> INMUEBLE_ANTIGUEDAD_ANIOS
+		{
+			get
+			{
+				return this._INMUEBLE_ANTIGUEDAD_ANIOS;
+			}
+			set
+			{
+				if ((this._INMUEBLE_ANTIGUEDAD_ANIOS != value))
+				{
+					this._INMUEBLE_ANTIGUEDAD_ANIOS = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_INMUEBLE_TIPO_USO", DbType="NVarChar(50)")]
+		public string INMUEBLE_TIPO_USO
+		{
+			get
+			{
+				return this._INMUEBLE_TIPO_USO;
+			}
+			set
+			{
+				if ((this._INMUEBLE_TIPO_USO != value))
+				{
+					this._INMUEBLE_TIPO_USO = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_INMUEBLE_TIPO_INDUSTRIAL", DbType="NVarChar(50)")]
+		public string INMUEBLE_TIPO_INDUSTRIAL
+		{
+			get
+			{
+				return this._INMUEBLE_TIPO_INDUSTRIAL;
+			}
+			set
+			{
+				if ((this._INMUEBLE_TIPO_INDUSTRIAL != value))
+				{
+					this._INMUEBLE_TIPO_INDUSTRIAL = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_INMUEBLE_COMERCIAL_Y_SERVICIO", DbType="NVarChar(50)")]
+		public string INMUEBLE_COMERCIAL_Y_SERVICIO
+		{
+			get
+			{
+				return this._INMUEBLE_COMERCIAL_Y_SERVICIO;
+			}
+			set
+			{
+				if ((this._INMUEBLE_COMERCIAL_Y_SERVICIO != value))
+				{
+					this._INMUEBLE_COMERCIAL_Y_SERVICIO = value;
+				}
 			}
 		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.SIS_TRACAT_AC")]
-	public partial class SIS_TRACAT_AC : INotifyPropertyChanging, INotifyPropertyChanged
+	public partial class SIS_TRACAT_AC
 	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
 		
 		private int _OBJECTID;
 		
@@ -3985,66 +3041,63 @@ namespace ManifestacionEnLinea.DataModel
 		
 		private System.Nullable<int> _CONTROLFOLIO;
 		
-    #region Definiciones de métodos de extensibilidad
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnOBJECTIDChanging(int value);
-    partial void OnOBJECTIDChanged();
-    partial void OnSTATUSREGISTROTABLAChanging(string value);
-    partial void OnSTATUSREGISTROTABLAChanged();
-    partial void OnALTAREGISTROTABLAChanging(System.Nullable<System.DateTime> value);
-    partial void OnALTAREGISTROTABLAChanged();
-    partial void OnBAJAREGISTROTABLAChanging(System.Nullable<System.DateTime> value);
-    partial void OnBAJAREGISTROTABLAChanged();
-    partial void OnUSUARIOALTAChanging(string value);
-    partial void OnUSUARIOALTAChanged();
-    partial void OnUSUARIOBAJAChanging(string value);
-    partial void OnUSUARIOBAJAChanged();
-    partial void OnTIPO_TRAMITEChanging(string value);
-    partial void OnTIPO_TRAMITEChanged();
-    partial void OnFOLIO_TRAMITEChanging(string value);
-    partial void OnFOLIO_TRAMITEChanged();
-    partial void OnCVE_CAT_ESTChanging(string value);
-    partial void OnCVE_CAT_ESTChanged();
-    partial void OnCVE_CAT_ORIChanging(string value);
-    partial void OnCVE_CAT_ORIChanged();
-    partial void OnOBSERVACIONESChanging(string value);
-    partial void OnOBSERVACIONESChanged();
-    partial void OnTRAMITADORChanging(string value);
-    partial void OnTRAMITADORChanged();
-    partial void OnSOLICITANTEChanging(string value);
-    partial void OnSOLICITANTEChanged();
-    partial void OnUBICACIONChanging(string value);
-    partial void OnUBICACIONChanged();
-    partial void OnFOLIO_MCChanging(string value);
-    partial void OnFOLIO_MCChanged();
-    partial void OnFOLIO_PAGO_AVALUOChanging(string value);
-    partial void OnFOLIO_PAGO_AVALUOChanged();
-    partial void OnNO_NOTARIAChanging(string value);
-    partial void OnNO_NOTARIAChanged();
-    partial void OnNO_ESCRITURAChanging(string value);
-    partial void OnNO_ESCRITURAChanged();
-    partial void OnNATURALEZA_DEL_ACTOChanging(string value);
-    partial void OnNATURALEZA_DEL_ACTOChanged();
-    partial void OnBANDERA_EXTERNOChanging(System.Nullable<bool> value);
-    partial void OnBANDERA_EXTERNOChanged();
-    partial void OnBANDERA_ACEPTADOChanging(System.Nullable<bool> value);
-    partial void OnBANDERA_ACEPTADOChanged();
-    partial void OnBANDERA_TDChanging(System.Nullable<bool> value);
-    partial void OnBANDERA_TDChanged();
-    partial void OnCORREOELECTRONICOChanging(string value);
-    partial void OnCORREOELECTRONICOChanged();
-    partial void OnCONTROLFOLIOChanging(System.Nullable<int> value);
-    partial void OnCONTROLFOLIOChanged();
-    #endregion
+		private string _PROPIETARIO_CURP;
+		
+		private string _PROPIETARIO_RFC;
+		
+		private string _PROPIETARIO_TELEFONO;
+		
+		private string _PROPIETARIO_DOMICILIO_CALLE;
+		
+		private string _PROPIETARIO_DOMICILIO_NO_EXT;
+		
+		private string _PROPIETARIO_DOMICILIO_COLONIA;
+		
+		private string _PROPIETARIO_DOMICILIO_CP;
+		
+		private string _PROPIETARIO_DOMICILIO_LOCALIDAD;
+		
+		private string _PROPIETARIO_DOMICILIO_MUNICIPIO;
+		
+		private string _INMUEBLE_DOMICILIO_CALLE;
+		
+		private string _INMUEBLE_DOMICILIO_NO_EXT;
+		
+		private string _INMUEBLE_DOMICILIO_COLONIA;
+		
+		private string _INMUEBLE_DOMICILIO_CP;
+		
+		private string _INMUEBLE_DOMICILIO_LOCALIDAD;
+		
+		private string _INMUEBLE_DOMICILIO_MUNICIPIO;
+		
+		private string _INMUEBLE_TIPO_PREDIO;
+		
+		private System.Nullable<decimal> _INMUEBLE_SUPERFICIE_M2;
+		
+		private System.Nullable<decimal> _INMUEBLE_CONSTRUCCION_CONCRETO_M2;
+		
+		private System.Nullable<decimal> _INMUEBLE_CONSTRUCCION_TEJABAN_M2;
+		
+		private System.Nullable<decimal> _INMUEBLE_CONSTRUCCION_TOTAL_M2;
+		
+		private string _INMUEBLE_AVANCE_OBRA;
+		
+		private string _INMUEBLE_ESTADO_CONSERVACION;
+		
+		private System.Nullable<int> _INMUEBLE_ANTIGUEDAD_ANIOS;
+		
+		private string _INMUEBLE_TIPO_USO;
+		
+		private string _INMUEBLE_TIPO_INDUSTRIAL;
+		
+		private string _INMUEBLE_COMERCIAL_Y_SERVICIO;
 		
 		public SIS_TRACAT_AC()
 		{
-			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_OBJECTID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_OBJECTID", AutoSync=AutoSync.Always, DbType="Int NOT NULL IDENTITY", IsDbGenerated=true)]
 		public int OBJECTID
 		{
 			get
@@ -4055,11 +3108,7 @@ namespace ManifestacionEnLinea.DataModel
 			{
 				if ((this._OBJECTID != value))
 				{
-					this.OnOBJECTIDChanging(value);
-					this.SendPropertyChanging();
 					this._OBJECTID = value;
-					this.SendPropertyChanged("OBJECTID");
-					this.OnOBJECTIDChanged();
 				}
 			}
 		}
@@ -4075,11 +3124,7 @@ namespace ManifestacionEnLinea.DataModel
 			{
 				if ((this._STATUSREGISTROTABLA != value))
 				{
-					this.OnSTATUSREGISTROTABLAChanging(value);
-					this.SendPropertyChanging();
 					this._STATUSREGISTROTABLA = value;
-					this.SendPropertyChanged("STATUSREGISTROTABLA");
-					this.OnSTATUSREGISTROTABLAChanged();
 				}
 			}
 		}
@@ -4095,11 +3140,7 @@ namespace ManifestacionEnLinea.DataModel
 			{
 				if ((this._ALTAREGISTROTABLA != value))
 				{
-					this.OnALTAREGISTROTABLAChanging(value);
-					this.SendPropertyChanging();
 					this._ALTAREGISTROTABLA = value;
-					this.SendPropertyChanged("ALTAREGISTROTABLA");
-					this.OnALTAREGISTROTABLAChanged();
 				}
 			}
 		}
@@ -4115,11 +3156,7 @@ namespace ManifestacionEnLinea.DataModel
 			{
 				if ((this._BAJAREGISTROTABLA != value))
 				{
-					this.OnBAJAREGISTROTABLAChanging(value);
-					this.SendPropertyChanging();
 					this._BAJAREGISTROTABLA = value;
-					this.SendPropertyChanged("BAJAREGISTROTABLA");
-					this.OnBAJAREGISTROTABLAChanged();
 				}
 			}
 		}
@@ -4135,11 +3172,7 @@ namespace ManifestacionEnLinea.DataModel
 			{
 				if ((this._USUARIOALTA != value))
 				{
-					this.OnUSUARIOALTAChanging(value);
-					this.SendPropertyChanging();
 					this._USUARIOALTA = value;
-					this.SendPropertyChanged("USUARIOALTA");
-					this.OnUSUARIOALTAChanged();
 				}
 			}
 		}
@@ -4155,11 +3188,7 @@ namespace ManifestacionEnLinea.DataModel
 			{
 				if ((this._USUARIOBAJA != value))
 				{
-					this.OnUSUARIOBAJAChanging(value);
-					this.SendPropertyChanging();
 					this._USUARIOBAJA = value;
-					this.SendPropertyChanged("USUARIOBAJA");
-					this.OnUSUARIOBAJAChanged();
 				}
 			}
 		}
@@ -4175,11 +3204,7 @@ namespace ManifestacionEnLinea.DataModel
 			{
 				if ((this._TIPO_TRAMITE != value))
 				{
-					this.OnTIPO_TRAMITEChanging(value);
-					this.SendPropertyChanging();
 					this._TIPO_TRAMITE = value;
-					this.SendPropertyChanged("TIPO_TRAMITE");
-					this.OnTIPO_TRAMITEChanged();
 				}
 			}
 		}
@@ -4195,11 +3220,7 @@ namespace ManifestacionEnLinea.DataModel
 			{
 				if ((this._FOLIO_TRAMITE != value))
 				{
-					this.OnFOLIO_TRAMITEChanging(value);
-					this.SendPropertyChanging();
 					this._FOLIO_TRAMITE = value;
-					this.SendPropertyChanged("FOLIO_TRAMITE");
-					this.OnFOLIO_TRAMITEChanged();
 				}
 			}
 		}
@@ -4215,11 +3236,7 @@ namespace ManifestacionEnLinea.DataModel
 			{
 				if ((this._CVE_CAT_EST != value))
 				{
-					this.OnCVE_CAT_ESTChanging(value);
-					this.SendPropertyChanging();
 					this._CVE_CAT_EST = value;
-					this.SendPropertyChanged("CVE_CAT_EST");
-					this.OnCVE_CAT_ESTChanged();
 				}
 			}
 		}
@@ -4235,11 +3252,7 @@ namespace ManifestacionEnLinea.DataModel
 			{
 				if ((this._CVE_CAT_ORI != value))
 				{
-					this.OnCVE_CAT_ORIChanging(value);
-					this.SendPropertyChanging();
 					this._CVE_CAT_ORI = value;
-					this.SendPropertyChanged("CVE_CAT_ORI");
-					this.OnCVE_CAT_ORIChanged();
 				}
 			}
 		}
@@ -4255,11 +3268,7 @@ namespace ManifestacionEnLinea.DataModel
 			{
 				if ((this._OBSERVACIONES != value))
 				{
-					this.OnOBSERVACIONESChanging(value);
-					this.SendPropertyChanging();
 					this._OBSERVACIONES = value;
-					this.SendPropertyChanged("OBSERVACIONES");
-					this.OnOBSERVACIONESChanged();
 				}
 			}
 		}
@@ -4275,11 +3284,7 @@ namespace ManifestacionEnLinea.DataModel
 			{
 				if ((this._TRAMITADOR != value))
 				{
-					this.OnTRAMITADORChanging(value);
-					this.SendPropertyChanging();
 					this._TRAMITADOR = value;
-					this.SendPropertyChanged("TRAMITADOR");
-					this.OnTRAMITADORChanged();
 				}
 			}
 		}
@@ -4295,11 +3300,7 @@ namespace ManifestacionEnLinea.DataModel
 			{
 				if ((this._SOLICITANTE != value))
 				{
-					this.OnSOLICITANTEChanging(value);
-					this.SendPropertyChanging();
 					this._SOLICITANTE = value;
-					this.SendPropertyChanged("SOLICITANTE");
-					this.OnSOLICITANTEChanged();
 				}
 			}
 		}
@@ -4315,11 +3316,7 @@ namespace ManifestacionEnLinea.DataModel
 			{
 				if ((this._UBICACION != value))
 				{
-					this.OnUBICACIONChanging(value);
-					this.SendPropertyChanging();
 					this._UBICACION = value;
-					this.SendPropertyChanged("UBICACION");
-					this.OnUBICACIONChanged();
 				}
 			}
 		}
@@ -4335,11 +3332,7 @@ namespace ManifestacionEnLinea.DataModel
 			{
 				if ((this._FOLIO_MC != value))
 				{
-					this.OnFOLIO_MCChanging(value);
-					this.SendPropertyChanging();
 					this._FOLIO_MC = value;
-					this.SendPropertyChanged("FOLIO_MC");
-					this.OnFOLIO_MCChanged();
 				}
 			}
 		}
@@ -4355,11 +3348,7 @@ namespace ManifestacionEnLinea.DataModel
 			{
 				if ((this._FOLIO_PAGO_AVALUO != value))
 				{
-					this.OnFOLIO_PAGO_AVALUOChanging(value);
-					this.SendPropertyChanging();
 					this._FOLIO_PAGO_AVALUO = value;
-					this.SendPropertyChanged("FOLIO_PAGO_AVALUO");
-					this.OnFOLIO_PAGO_AVALUOChanged();
 				}
 			}
 		}
@@ -4375,11 +3364,7 @@ namespace ManifestacionEnLinea.DataModel
 			{
 				if ((this._NO_NOTARIA != value))
 				{
-					this.OnNO_NOTARIAChanging(value);
-					this.SendPropertyChanging();
 					this._NO_NOTARIA = value;
-					this.SendPropertyChanged("NO_NOTARIA");
-					this.OnNO_NOTARIAChanged();
 				}
 			}
 		}
@@ -4395,11 +3380,7 @@ namespace ManifestacionEnLinea.DataModel
 			{
 				if ((this._NO_ESCRITURA != value))
 				{
-					this.OnNO_ESCRITURAChanging(value);
-					this.SendPropertyChanging();
 					this._NO_ESCRITURA = value;
-					this.SendPropertyChanged("NO_ESCRITURA");
-					this.OnNO_ESCRITURAChanged();
 				}
 			}
 		}
@@ -4415,11 +3396,7 @@ namespace ManifestacionEnLinea.DataModel
 			{
 				if ((this._NATURALEZA_DEL_ACTO != value))
 				{
-					this.OnNATURALEZA_DEL_ACTOChanging(value);
-					this.SendPropertyChanging();
 					this._NATURALEZA_DEL_ACTO = value;
-					this.SendPropertyChanged("NATURALEZA_DEL_ACTO");
-					this.OnNATURALEZA_DEL_ACTOChanged();
 				}
 			}
 		}
@@ -4435,11 +3412,7 @@ namespace ManifestacionEnLinea.DataModel
 			{
 				if ((this._BANDERA_EXTERNO != value))
 				{
-					this.OnBANDERA_EXTERNOChanging(value);
-					this.SendPropertyChanging();
 					this._BANDERA_EXTERNO = value;
-					this.SendPropertyChanged("BANDERA_EXTERNO");
-					this.OnBANDERA_EXTERNOChanged();
 				}
 			}
 		}
@@ -4455,11 +3428,7 @@ namespace ManifestacionEnLinea.DataModel
 			{
 				if ((this._BANDERA_ACEPTADO != value))
 				{
-					this.OnBANDERA_ACEPTADOChanging(value);
-					this.SendPropertyChanging();
 					this._BANDERA_ACEPTADO = value;
-					this.SendPropertyChanged("BANDERA_ACEPTADO");
-					this.OnBANDERA_ACEPTADOChanged();
 				}
 			}
 		}
@@ -4475,11 +3444,7 @@ namespace ManifestacionEnLinea.DataModel
 			{
 				if ((this._BANDERA_TD != value))
 				{
-					this.OnBANDERA_TDChanging(value);
-					this.SendPropertyChanging();
 					this._BANDERA_TD = value;
-					this.SendPropertyChanged("BANDERA_TD");
-					this.OnBANDERA_TDChanged();
 				}
 			}
 		}
@@ -4495,11 +3460,7 @@ namespace ManifestacionEnLinea.DataModel
 			{
 				if ((this._CORREOELECTRONICO != value))
 				{
-					this.OnCORREOELECTRONICOChanging(value);
-					this.SendPropertyChanging();
 					this._CORREOELECTRONICO = value;
-					this.SendPropertyChanged("CORREOELECTRONICO");
-					this.OnCORREOELECTRONICOChanged();
 				}
 			}
 		}
@@ -4515,122 +3476,567 @@ namespace ManifestacionEnLinea.DataModel
 			{
 				if ((this._CONTROLFOLIO != value))
 				{
-					this.OnCONTROLFOLIOChanging(value);
-					this.SendPropertyChanging();
 					this._CONTROLFOLIO = value;
-					this.SendPropertyChanged("CONTROLFOLIO");
-					this.OnCONTROLFOLIOChanged();
 				}
 			}
 		}
 		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PROPIETARIO_CURP", DbType="NVarChar(255)")]
+		public string PROPIETARIO_CURP
 		{
-			if ((this.PropertyChanging != null))
+			get
 			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
+				return this._PROPIETARIO_CURP;
+			}
+			set
+			{
+				if ((this._PROPIETARIO_CURP != value))
+				{
+					this._PROPIETARIO_CURP = value;
+				}
 			}
 		}
 		
-		protected virtual void SendPropertyChanged(String propertyName)
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PROPIETARIO_RFC", DbType="NVarChar(255)")]
+		public string PROPIETARIO_RFC
 		{
-			if ((this.PropertyChanged != null))
+			get
 			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+				return this._PROPIETARIO_RFC;
+			}
+			set
+			{
+				if ((this._PROPIETARIO_RFC != value))
+				{
+					this._PROPIETARIO_RFC = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PROPIETARIO_TELEFONO", DbType="NVarChar(20)")]
+		public string PROPIETARIO_TELEFONO
+		{
+			get
+			{
+				return this._PROPIETARIO_TELEFONO;
+			}
+			set
+			{
+				if ((this._PROPIETARIO_TELEFONO != value))
+				{
+					this._PROPIETARIO_TELEFONO = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PROPIETARIO_DOMICILIO_CALLE", DbType="NVarChar(255)")]
+		public string PROPIETARIO_DOMICILIO_CALLE
+		{
+			get
+			{
+				return this._PROPIETARIO_DOMICILIO_CALLE;
+			}
+			set
+			{
+				if ((this._PROPIETARIO_DOMICILIO_CALLE != value))
+				{
+					this._PROPIETARIO_DOMICILIO_CALLE = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PROPIETARIO_DOMICILIO_NO_EXT", DbType="NVarChar(10)")]
+		public string PROPIETARIO_DOMICILIO_NO_EXT
+		{
+			get
+			{
+				return this._PROPIETARIO_DOMICILIO_NO_EXT;
+			}
+			set
+			{
+				if ((this._PROPIETARIO_DOMICILIO_NO_EXT != value))
+				{
+					this._PROPIETARIO_DOMICILIO_NO_EXT = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PROPIETARIO_DOMICILIO_COLONIA", DbType="NVarChar(255)")]
+		public string PROPIETARIO_DOMICILIO_COLONIA
+		{
+			get
+			{
+				return this._PROPIETARIO_DOMICILIO_COLONIA;
+			}
+			set
+			{
+				if ((this._PROPIETARIO_DOMICILIO_COLONIA != value))
+				{
+					this._PROPIETARIO_DOMICILIO_COLONIA = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PROPIETARIO_DOMICILIO_CP", DbType="NVarChar(10)")]
+		public string PROPIETARIO_DOMICILIO_CP
+		{
+			get
+			{
+				return this._PROPIETARIO_DOMICILIO_CP;
+			}
+			set
+			{
+				if ((this._PROPIETARIO_DOMICILIO_CP != value))
+				{
+					this._PROPIETARIO_DOMICILIO_CP = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PROPIETARIO_DOMICILIO_LOCALIDAD", DbType="NVarChar(255)")]
+		public string PROPIETARIO_DOMICILIO_LOCALIDAD
+		{
+			get
+			{
+				return this._PROPIETARIO_DOMICILIO_LOCALIDAD;
+			}
+			set
+			{
+				if ((this._PROPIETARIO_DOMICILIO_LOCALIDAD != value))
+				{
+					this._PROPIETARIO_DOMICILIO_LOCALIDAD = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PROPIETARIO_DOMICILIO_MUNICIPIO", DbType="NVarChar(255)")]
+		public string PROPIETARIO_DOMICILIO_MUNICIPIO
+		{
+			get
+			{
+				return this._PROPIETARIO_DOMICILIO_MUNICIPIO;
+			}
+			set
+			{
+				if ((this._PROPIETARIO_DOMICILIO_MUNICIPIO != value))
+				{
+					this._PROPIETARIO_DOMICILIO_MUNICIPIO = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_INMUEBLE_DOMICILIO_CALLE", DbType="NVarChar(255)")]
+		public string INMUEBLE_DOMICILIO_CALLE
+		{
+			get
+			{
+				return this._INMUEBLE_DOMICILIO_CALLE;
+			}
+			set
+			{
+				if ((this._INMUEBLE_DOMICILIO_CALLE != value))
+				{
+					this._INMUEBLE_DOMICILIO_CALLE = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_INMUEBLE_DOMICILIO_NO_EXT", DbType="NVarChar(10)")]
+		public string INMUEBLE_DOMICILIO_NO_EXT
+		{
+			get
+			{
+				return this._INMUEBLE_DOMICILIO_NO_EXT;
+			}
+			set
+			{
+				if ((this._INMUEBLE_DOMICILIO_NO_EXT != value))
+				{
+					this._INMUEBLE_DOMICILIO_NO_EXT = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_INMUEBLE_DOMICILIO_COLONIA", DbType="NVarChar(255)")]
+		public string INMUEBLE_DOMICILIO_COLONIA
+		{
+			get
+			{
+				return this._INMUEBLE_DOMICILIO_COLONIA;
+			}
+			set
+			{
+				if ((this._INMUEBLE_DOMICILIO_COLONIA != value))
+				{
+					this._INMUEBLE_DOMICILIO_COLONIA = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_INMUEBLE_DOMICILIO_CP", DbType="NVarChar(10)")]
+		public string INMUEBLE_DOMICILIO_CP
+		{
+			get
+			{
+				return this._INMUEBLE_DOMICILIO_CP;
+			}
+			set
+			{
+				if ((this._INMUEBLE_DOMICILIO_CP != value))
+				{
+					this._INMUEBLE_DOMICILIO_CP = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_INMUEBLE_DOMICILIO_LOCALIDAD", DbType="NVarChar(255)")]
+		public string INMUEBLE_DOMICILIO_LOCALIDAD
+		{
+			get
+			{
+				return this._INMUEBLE_DOMICILIO_LOCALIDAD;
+			}
+			set
+			{
+				if ((this._INMUEBLE_DOMICILIO_LOCALIDAD != value))
+				{
+					this._INMUEBLE_DOMICILIO_LOCALIDAD = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_INMUEBLE_DOMICILIO_MUNICIPIO", DbType="NVarChar(255)")]
+		public string INMUEBLE_DOMICILIO_MUNICIPIO
+		{
+			get
+			{
+				return this._INMUEBLE_DOMICILIO_MUNICIPIO;
+			}
+			set
+			{
+				if ((this._INMUEBLE_DOMICILIO_MUNICIPIO != value))
+				{
+					this._INMUEBLE_DOMICILIO_MUNICIPIO = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_INMUEBLE_TIPO_PREDIO", DbType="NVarChar(50)")]
+		public string INMUEBLE_TIPO_PREDIO
+		{
+			get
+			{
+				return this._INMUEBLE_TIPO_PREDIO;
+			}
+			set
+			{
+				if ((this._INMUEBLE_TIPO_PREDIO != value))
+				{
+					this._INMUEBLE_TIPO_PREDIO = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_INMUEBLE_SUPERFICIE_M2", DbType="Decimal(10,2)")]
+		public System.Nullable<decimal> INMUEBLE_SUPERFICIE_M2
+		{
+			get
+			{
+				return this._INMUEBLE_SUPERFICIE_M2;
+			}
+			set
+			{
+				if ((this._INMUEBLE_SUPERFICIE_M2 != value))
+				{
+					this._INMUEBLE_SUPERFICIE_M2 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_INMUEBLE_CONSTRUCCION_CONCRETO_M2", DbType="Decimal(10,2)")]
+		public System.Nullable<decimal> INMUEBLE_CONSTRUCCION_CONCRETO_M2
+		{
+			get
+			{
+				return this._INMUEBLE_CONSTRUCCION_CONCRETO_M2;
+			}
+			set
+			{
+				if ((this._INMUEBLE_CONSTRUCCION_CONCRETO_M2 != value))
+				{
+					this._INMUEBLE_CONSTRUCCION_CONCRETO_M2 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_INMUEBLE_CONSTRUCCION_TEJABAN_M2", DbType="Decimal(10,2)")]
+		public System.Nullable<decimal> INMUEBLE_CONSTRUCCION_TEJABAN_M2
+		{
+			get
+			{
+				return this._INMUEBLE_CONSTRUCCION_TEJABAN_M2;
+			}
+			set
+			{
+				if ((this._INMUEBLE_CONSTRUCCION_TEJABAN_M2 != value))
+				{
+					this._INMUEBLE_CONSTRUCCION_TEJABAN_M2 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_INMUEBLE_CONSTRUCCION_TOTAL_M2", DbType="Decimal(10,2)")]
+		public System.Nullable<decimal> INMUEBLE_CONSTRUCCION_TOTAL_M2
+		{
+			get
+			{
+				return this._INMUEBLE_CONSTRUCCION_TOTAL_M2;
+			}
+			set
+			{
+				if ((this._INMUEBLE_CONSTRUCCION_TOTAL_M2 != value))
+				{
+					this._INMUEBLE_CONSTRUCCION_TOTAL_M2 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_INMUEBLE_AVANCE_OBRA", DbType="NVarChar(50)")]
+		public string INMUEBLE_AVANCE_OBRA
+		{
+			get
+			{
+				return this._INMUEBLE_AVANCE_OBRA;
+			}
+			set
+			{
+				if ((this._INMUEBLE_AVANCE_OBRA != value))
+				{
+					this._INMUEBLE_AVANCE_OBRA = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_INMUEBLE_ESTADO_CONSERVACION", DbType="NVarChar(50)")]
+		public string INMUEBLE_ESTADO_CONSERVACION
+		{
+			get
+			{
+				return this._INMUEBLE_ESTADO_CONSERVACION;
+			}
+			set
+			{
+				if ((this._INMUEBLE_ESTADO_CONSERVACION != value))
+				{
+					this._INMUEBLE_ESTADO_CONSERVACION = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_INMUEBLE_ANTIGUEDAD_ANIOS", DbType="Int")]
+		public System.Nullable<int> INMUEBLE_ANTIGUEDAD_ANIOS
+		{
+			get
+			{
+				return this._INMUEBLE_ANTIGUEDAD_ANIOS;
+			}
+			set
+			{
+				if ((this._INMUEBLE_ANTIGUEDAD_ANIOS != value))
+				{
+					this._INMUEBLE_ANTIGUEDAD_ANIOS = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_INMUEBLE_TIPO_USO", DbType="NVarChar(50)")]
+		public string INMUEBLE_TIPO_USO
+		{
+			get
+			{
+				return this._INMUEBLE_TIPO_USO;
+			}
+			set
+			{
+				if ((this._INMUEBLE_TIPO_USO != value))
+				{
+					this._INMUEBLE_TIPO_USO = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_INMUEBLE_TIPO_INDUSTRIAL", DbType="NVarChar(50)")]
+		public string INMUEBLE_TIPO_INDUSTRIAL
+		{
+			get
+			{
+				return this._INMUEBLE_TIPO_INDUSTRIAL;
+			}
+			set
+			{
+				if ((this._INMUEBLE_TIPO_INDUSTRIAL != value))
+				{
+					this._INMUEBLE_TIPO_INDUSTRIAL = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_INMUEBLE_COMERCIAL_Y_SERVICIO", DbType="NVarChar(50)")]
+		public string INMUEBLE_COMERCIAL_Y_SERVICIO
+		{
+			get
+			{
+				return this._INMUEBLE_COMERCIAL_Y_SERVICIO;
+			}
+			set
+			{
+				if ((this._INMUEBLE_COMERCIAL_Y_SERVICIO != value))
+				{
+					this._INMUEBLE_COMERCIAL_Y_SERVICIO = value;
+				}
 			}
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.COORDENADAS_MANIFESTACION_AVALUO")]
-	public partial class COORDENADAS_MANIFESTACION_AVALUO : INotifyPropertyChanging, INotifyPropertyChanged
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.SIS_TRACAT_SOLICITUD_MC_AV")]
+	public partial class SIS_TRACAT_SOLICITUD_MC_AV
 	{
 		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _ID;
-		
-		private string _CVE_CAT_ORI;
+		private int _OBJECTID;
 		
 		private string _STATUSREGISTROTABLA;
 		
-		private string _LATITUD;
+		private System.Nullable<System.DateTime> _ALTAREGISTROTABLA;
 		
-		private string _LONGITUD;
+		private System.Nullable<System.DateTime> _BAJAREGISTROTABLA;
 		
-		private string _UTM_X;
+		private string _USUARIOALTA;
 		
-		private string _UTM_Y;
+		private string _USUARIOBAJA;
 		
-    #region Definiciones de métodos de extensibilidad
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnIDChanging(int value);
-    partial void OnIDChanged();
-    partial void OnCVE_CAT_ORIChanging(string value);
-    partial void OnCVE_CAT_ORIChanged();
-    partial void OnSTATUSREGISTROTABLAChanging(string value);
-    partial void OnSTATUSREGISTROTABLAChanged();
-    partial void OnLATITUDChanging(string value);
-    partial void OnLATITUDChanged();
-    partial void OnLONGITUDChanging(string value);
-    partial void OnLONGITUDChanged();
-    partial void OnUTM_XChanging(string value);
-    partial void OnUTM_XChanged();
-    partial void OnUTM_YChanging(string value);
-    partial void OnUTM_YChanged();
-    #endregion
+		private string _FOLIO_TRAMITE;
 		
-		public COORDENADAS_MANIFESTACION_AVALUO()
+		private string _TIPO_TRAMITE;
+		
+		private string _CVE_CAT_EST;
+		
+		private string _CVE_CAT_ORI;
+		
+		private string _CVE_PREDIAL;
+		
+		private string _OBSERVACIONES;
+		
+		private string _TRAMITADOR;
+		
+		private string _SOLICITANTE;
+		
+		private string _PROPIETARIO;
+		
+		private string _UBICACION;
+		
+		private string _NOTIFICACION;
+		
+		private bool _NOTIFICACION_RECHAZO;
+		
+		private System.Nullable<bool> _AVALUO;
+		
+		private string _FOLIO_PAGO_AVALUO;
+		
+		private System.Nullable<bool> _IGUAL_CARTOGRAFIA;
+		
+		private string _CORREOELECTRONICO;
+		
+		private System.Nullable<int> _CONTROLFOLIO;
+		
+		private string _PROPIETARIO_CURP;
+		
+		private string _PROPIETARIO_RFC;
+		
+		private string _PROPIETARIO_TELEFONO;
+		
+		private string _PROPIETARIO_DOMICILIO_CALLE;
+		
+		private string _PROPIETARIO_DOMICILIO_NO_EXT;
+		
+		private string _PROPIETARIO_DOMICILIO_COLONIA;
+		
+		private string _PROPIETARIO_DOMICILIO_CP;
+		
+		private string _PROPIETARIO_DOMICILIO_LOCALIDAD;
+		
+		private string _PROPIETARIO_DOMICILIO_MUNICIPIO;
+		
+		private string _INMUEBLE_DOMICILIO_CALLE;
+		
+		private string _INMUEBLE_DOMICILIO_NO_EXT;
+		
+		private string _INMUEBLE_DOMICILIO_COLONIA;
+		
+		private string _INMUEBLE_DOMICILIO_CP;
+		
+		private string _INMUEBLE_DOMICILIO_LOCALIDAD;
+		
+		private string _INMUEBLE_DOMICILIO_MUNICIPIO;
+		
+		private string _INMUEBLE_TIPO_PREDIO;
+		
+		private System.Nullable<decimal> _INMUEBLE_SUPERFICIE_M2;
+		
+		private System.Nullable<decimal> _INMUEBLE_CONSTRUCCION_CONCRETO_M2;
+		
+		private System.Nullable<decimal> _INMUEBLE_CONSTRUCCION_TEJABAN_M2;
+		
+		private System.Nullable<decimal> _INMUEBLE_CONSTRUCCION_TOTAL_M2;
+		
+		private string _INMUEBLE_AVANCE_OBRA;
+		
+		private string _INMUEBLE_ESTADO_CONSERVACION;
+		
+		private System.Nullable<int> _INMUEBLE_ANTIGUEDAD_ANIOS;
+		
+		private string _INMUEBLE_TIPO_USO;
+		
+		private string _INMUEBLE_TIPO_INDUSTRIAL;
+		
+		private string _INMUEBLE_COMERCIAL_Y_SERVICIO;
+		
+		private string _PROPIETARIO_DOMICILIO_NO_INT;
+		
+		private string _INMUEBLE_DOMICILIO_NO_INT;
+		
+		private string _LOTE;
+		
+		private string _MANZANA;
+		
+		private string _INDIVISO;
+		
+		private string _FOLIOREAL;
+		
+		private System.Nullable<decimal> _CORDENADAX;
+		
+		private System.Nullable<decimal> _CORDENADAY;
+		
+		public SIS_TRACAT_SOLICITUD_MC_AV()
 		{
-			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int ID
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_OBJECTID", AutoSync=AutoSync.Always, DbType="Int NOT NULL IDENTITY", IsDbGenerated=true)]
+		public int OBJECTID
 		{
 			get
 			{
-				return this._ID;
+				return this._OBJECTID;
 			}
 			set
 			{
-				if ((this._ID != value))
+				if ((this._OBJECTID != value))
 				{
-					this.OnIDChanging(value);
-					this.SendPropertyChanging();
-					this._ID = value;
-					this.SendPropertyChanged("ID");
-					this.OnIDChanged();
+					this._OBJECTID = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CVE_CAT_ORI", DbType="NVarChar(17)")]
-		public string CVE_CAT_ORI
-		{
-			get
-			{
-				return this._CVE_CAT_ORI;
-			}
-			set
-			{
-				if ((this._CVE_CAT_ORI != value))
-				{
-					this.OnCVE_CAT_ORIChanging(value);
-					this.SendPropertyChanging();
-					this._CVE_CAT_ORI = value;
-					this.SendPropertyChanged("CVE_CAT_ORI");
-					this.OnCVE_CAT_ORIChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_STATUSREGISTROTABLA", DbType="NVarChar(50)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_STATUSREGISTROTABLA", DbType="NVarChar(10)")]
 		public string STATUSREGISTROTABLA
 		{
 			get
@@ -4641,112 +4047,888 @@ namespace ManifestacionEnLinea.DataModel
 			{
 				if ((this._STATUSREGISTROTABLA != value))
 				{
-					this.OnSTATUSREGISTROTABLAChanging(value);
-					this.SendPropertyChanging();
 					this._STATUSREGISTROTABLA = value;
-					this.SendPropertyChanged("STATUSREGISTROTABLA");
-					this.OnSTATUSREGISTROTABLAChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LATITUD", DbType="NVarChar(50)")]
-		public string LATITUD
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ALTAREGISTROTABLA", DbType="DateTime")]
+		public System.Nullable<System.DateTime> ALTAREGISTROTABLA
 		{
 			get
 			{
-				return this._LATITUD;
+				return this._ALTAREGISTROTABLA;
 			}
 			set
 			{
-				if ((this._LATITUD != value))
+				if ((this._ALTAREGISTROTABLA != value))
 				{
-					this.OnLATITUDChanging(value);
-					this.SendPropertyChanging();
-					this._LATITUD = value;
-					this.SendPropertyChanged("LATITUD");
-					this.OnLATITUDChanged();
+					this._ALTAREGISTROTABLA = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LONGITUD", DbType="NVarChar(50)")]
-		public string LONGITUD
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_BAJAREGISTROTABLA", DbType="DateTime")]
+		public System.Nullable<System.DateTime> BAJAREGISTROTABLA
 		{
 			get
 			{
-				return this._LONGITUD;
+				return this._BAJAREGISTROTABLA;
 			}
 			set
 			{
-				if ((this._LONGITUD != value))
+				if ((this._BAJAREGISTROTABLA != value))
 				{
-					this.OnLONGITUDChanging(value);
-					this.SendPropertyChanging();
-					this._LONGITUD = value;
-					this.SendPropertyChanged("LONGITUD");
-					this.OnLONGITUDChanged();
+					this._BAJAREGISTROTABLA = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UTM_X", DbType="NVarChar(50)")]
-		public string UTM_X
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_USUARIOALTA", DbType="NVarChar(200)")]
+		public string USUARIOALTA
 		{
 			get
 			{
-				return this._UTM_X;
+				return this._USUARIOALTA;
 			}
 			set
 			{
-				if ((this._UTM_X != value))
+				if ((this._USUARIOALTA != value))
 				{
-					this.OnUTM_XChanging(value);
-					this.SendPropertyChanging();
-					this._UTM_X = value;
-					this.SendPropertyChanged("UTM_X");
-					this.OnUTM_XChanged();
+					this._USUARIOALTA = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UTM_Y", DbType="NVarChar(50)")]
-		public string UTM_Y
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_USUARIOBAJA", DbType="NVarChar(200)")]
+		public string USUARIOBAJA
 		{
 			get
 			{
-				return this._UTM_Y;
+				return this._USUARIOBAJA;
 			}
 			set
 			{
-				if ((this._UTM_Y != value))
+				if ((this._USUARIOBAJA != value))
 				{
-					this.OnUTM_YChanging(value);
-					this.SendPropertyChanging();
-					this._UTM_Y = value;
-					this.SendPropertyChanged("UTM_Y");
-					this.OnUTM_YChanged();
+					this._USUARIOBAJA = value;
 				}
 			}
 		}
 		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FOLIO_TRAMITE", DbType="NVarChar(30)")]
+		public string FOLIO_TRAMITE
 		{
-			if ((this.PropertyChanging != null))
+			get
 			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
+				return this._FOLIO_TRAMITE;
+			}
+			set
+			{
+				if ((this._FOLIO_TRAMITE != value))
+				{
+					this._FOLIO_TRAMITE = value;
+				}
 			}
 		}
 		
-		protected virtual void SendPropertyChanged(String propertyName)
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TIPO_TRAMITE", DbType="NVarChar(200)")]
+		public string TIPO_TRAMITE
 		{
-			if ((this.PropertyChanged != null))
+			get
 			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+				return this._TIPO_TRAMITE;
+			}
+			set
+			{
+				if ((this._TIPO_TRAMITE != value))
+				{
+					this._TIPO_TRAMITE = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CVE_CAT_EST", DbType="NVarChar(31)")]
+		public string CVE_CAT_EST
+		{
+			get
+			{
+				return this._CVE_CAT_EST;
+			}
+			set
+			{
+				if ((this._CVE_CAT_EST != value))
+				{
+					this._CVE_CAT_EST = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CVE_CAT_ORI", DbType="NVarChar(31)")]
+		public string CVE_CAT_ORI
+		{
+			get
+			{
+				return this._CVE_CAT_ORI;
+			}
+			set
+			{
+				if ((this._CVE_CAT_ORI != value))
+				{
+					this._CVE_CAT_ORI = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CVE_PREDIAL", DbType="NVarChar(30)")]
+		public string CVE_PREDIAL
+		{
+			get
+			{
+				return this._CVE_PREDIAL;
+			}
+			set
+			{
+				if ((this._CVE_PREDIAL != value))
+				{
+					this._CVE_PREDIAL = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_OBSERVACIONES", DbType="NVarChar(MAX)")]
+		public string OBSERVACIONES
+		{
+			get
+			{
+				return this._OBSERVACIONES;
+			}
+			set
+			{
+				if ((this._OBSERVACIONES != value))
+				{
+					this._OBSERVACIONES = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TRAMITADOR", DbType="NVarChar(200)")]
+		public string TRAMITADOR
+		{
+			get
+			{
+				return this._TRAMITADOR;
+			}
+			set
+			{
+				if ((this._TRAMITADOR != value))
+				{
+					this._TRAMITADOR = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SOLICITANTE", DbType="NVarChar(255)")]
+		public string SOLICITANTE
+		{
+			get
+			{
+				return this._SOLICITANTE;
+			}
+			set
+			{
+				if ((this._SOLICITANTE != value))
+				{
+					this._SOLICITANTE = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PROPIETARIO", DbType="VarChar(200)")]
+		public string PROPIETARIO
+		{
+			get
+			{
+				return this._PROPIETARIO;
+			}
+			set
+			{
+				if ((this._PROPIETARIO != value))
+				{
+					this._PROPIETARIO = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UBICACION", DbType="NVarChar(MAX)")]
+		public string UBICACION
+		{
+			get
+			{
+				return this._UBICACION;
+			}
+			set
+			{
+				if ((this._UBICACION != value))
+				{
+					this._UBICACION = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NOTIFICACION", DbType="VarChar(250)")]
+		public string NOTIFICACION
+		{
+			get
+			{
+				return this._NOTIFICACION;
+			}
+			set
+			{
+				if ((this._NOTIFICACION != value))
+				{
+					this._NOTIFICACION = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NOTIFICACION_RECHAZO", DbType="Bit NOT NULL")]
+		public bool NOTIFICACION_RECHAZO
+		{
+			get
+			{
+				return this._NOTIFICACION_RECHAZO;
+			}
+			set
+			{
+				if ((this._NOTIFICACION_RECHAZO != value))
+				{
+					this._NOTIFICACION_RECHAZO = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AVALUO", DbType="Bit")]
+		public System.Nullable<bool> AVALUO
+		{
+			get
+			{
+				return this._AVALUO;
+			}
+			set
+			{
+				if ((this._AVALUO != value))
+				{
+					this._AVALUO = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FOLIO_PAGO_AVALUO", DbType="VarChar(50)")]
+		public string FOLIO_PAGO_AVALUO
+		{
+			get
+			{
+				return this._FOLIO_PAGO_AVALUO;
+			}
+			set
+			{
+				if ((this._FOLIO_PAGO_AVALUO != value))
+				{
+					this._FOLIO_PAGO_AVALUO = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IGUAL_CARTOGRAFIA", DbType="Bit")]
+		public System.Nullable<bool> IGUAL_CARTOGRAFIA
+		{
+			get
+			{
+				return this._IGUAL_CARTOGRAFIA;
+			}
+			set
+			{
+				if ((this._IGUAL_CARTOGRAFIA != value))
+				{
+					this._IGUAL_CARTOGRAFIA = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CORREOELECTRONICO", DbType="VarChar(255)")]
+		public string CORREOELECTRONICO
+		{
+			get
+			{
+				return this._CORREOELECTRONICO;
+			}
+			set
+			{
+				if ((this._CORREOELECTRONICO != value))
+				{
+					this._CORREOELECTRONICO = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CONTROLFOLIO", DbType="Int")]
+		public System.Nullable<int> CONTROLFOLIO
+		{
+			get
+			{
+				return this._CONTROLFOLIO;
+			}
+			set
+			{
+				if ((this._CONTROLFOLIO != value))
+				{
+					this._CONTROLFOLIO = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PROPIETARIO_CURP", DbType="NVarChar(255)")]
+		public string PROPIETARIO_CURP
+		{
+			get
+			{
+				return this._PROPIETARIO_CURP;
+			}
+			set
+			{
+				if ((this._PROPIETARIO_CURP != value))
+				{
+					this._PROPIETARIO_CURP = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PROPIETARIO_RFC", DbType="NVarChar(255)")]
+		public string PROPIETARIO_RFC
+		{
+			get
+			{
+				return this._PROPIETARIO_RFC;
+			}
+			set
+			{
+				if ((this._PROPIETARIO_RFC != value))
+				{
+					this._PROPIETARIO_RFC = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PROPIETARIO_TELEFONO", DbType="NVarChar(20)")]
+		public string PROPIETARIO_TELEFONO
+		{
+			get
+			{
+				return this._PROPIETARIO_TELEFONO;
+			}
+			set
+			{
+				if ((this._PROPIETARIO_TELEFONO != value))
+				{
+					this._PROPIETARIO_TELEFONO = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PROPIETARIO_DOMICILIO_CALLE", DbType="NVarChar(255)")]
+		public string PROPIETARIO_DOMICILIO_CALLE
+		{
+			get
+			{
+				return this._PROPIETARIO_DOMICILIO_CALLE;
+			}
+			set
+			{
+				if ((this._PROPIETARIO_DOMICILIO_CALLE != value))
+				{
+					this._PROPIETARIO_DOMICILIO_CALLE = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PROPIETARIO_DOMICILIO_NO_EXT", DbType="NVarChar(10)")]
+		public string PROPIETARIO_DOMICILIO_NO_EXT
+		{
+			get
+			{
+				return this._PROPIETARIO_DOMICILIO_NO_EXT;
+			}
+			set
+			{
+				if ((this._PROPIETARIO_DOMICILIO_NO_EXT != value))
+				{
+					this._PROPIETARIO_DOMICILIO_NO_EXT = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PROPIETARIO_DOMICILIO_COLONIA", DbType="NVarChar(255)")]
+		public string PROPIETARIO_DOMICILIO_COLONIA
+		{
+			get
+			{
+				return this._PROPIETARIO_DOMICILIO_COLONIA;
+			}
+			set
+			{
+				if ((this._PROPIETARIO_DOMICILIO_COLONIA != value))
+				{
+					this._PROPIETARIO_DOMICILIO_COLONIA = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PROPIETARIO_DOMICILIO_CP", DbType="NVarChar(10)")]
+		public string PROPIETARIO_DOMICILIO_CP
+		{
+			get
+			{
+				return this._PROPIETARIO_DOMICILIO_CP;
+			}
+			set
+			{
+				if ((this._PROPIETARIO_DOMICILIO_CP != value))
+				{
+					this._PROPIETARIO_DOMICILIO_CP = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PROPIETARIO_DOMICILIO_LOCALIDAD", DbType="NVarChar(255)")]
+		public string PROPIETARIO_DOMICILIO_LOCALIDAD
+		{
+			get
+			{
+				return this._PROPIETARIO_DOMICILIO_LOCALIDAD;
+			}
+			set
+			{
+				if ((this._PROPIETARIO_DOMICILIO_LOCALIDAD != value))
+				{
+					this._PROPIETARIO_DOMICILIO_LOCALIDAD = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PROPIETARIO_DOMICILIO_MUNICIPIO", DbType="NVarChar(255)")]
+		public string PROPIETARIO_DOMICILIO_MUNICIPIO
+		{
+			get
+			{
+				return this._PROPIETARIO_DOMICILIO_MUNICIPIO;
+			}
+			set
+			{
+				if ((this._PROPIETARIO_DOMICILIO_MUNICIPIO != value))
+				{
+					this._PROPIETARIO_DOMICILIO_MUNICIPIO = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_INMUEBLE_DOMICILIO_CALLE", DbType="NVarChar(255)")]
+		public string INMUEBLE_DOMICILIO_CALLE
+		{
+			get
+			{
+				return this._INMUEBLE_DOMICILIO_CALLE;
+			}
+			set
+			{
+				if ((this._INMUEBLE_DOMICILIO_CALLE != value))
+				{
+					this._INMUEBLE_DOMICILIO_CALLE = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_INMUEBLE_DOMICILIO_NO_EXT", DbType="NVarChar(10)")]
+		public string INMUEBLE_DOMICILIO_NO_EXT
+		{
+			get
+			{
+				return this._INMUEBLE_DOMICILIO_NO_EXT;
+			}
+			set
+			{
+				if ((this._INMUEBLE_DOMICILIO_NO_EXT != value))
+				{
+					this._INMUEBLE_DOMICILIO_NO_EXT = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_INMUEBLE_DOMICILIO_COLONIA", DbType="NVarChar(255)")]
+		public string INMUEBLE_DOMICILIO_COLONIA
+		{
+			get
+			{
+				return this._INMUEBLE_DOMICILIO_COLONIA;
+			}
+			set
+			{
+				if ((this._INMUEBLE_DOMICILIO_COLONIA != value))
+				{
+					this._INMUEBLE_DOMICILIO_COLONIA = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_INMUEBLE_DOMICILIO_CP", DbType="NVarChar(10)")]
+		public string INMUEBLE_DOMICILIO_CP
+		{
+			get
+			{
+				return this._INMUEBLE_DOMICILIO_CP;
+			}
+			set
+			{
+				if ((this._INMUEBLE_DOMICILIO_CP != value))
+				{
+					this._INMUEBLE_DOMICILIO_CP = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_INMUEBLE_DOMICILIO_LOCALIDAD", DbType="NVarChar(255)")]
+		public string INMUEBLE_DOMICILIO_LOCALIDAD
+		{
+			get
+			{
+				return this._INMUEBLE_DOMICILIO_LOCALIDAD;
+			}
+			set
+			{
+				if ((this._INMUEBLE_DOMICILIO_LOCALIDAD != value))
+				{
+					this._INMUEBLE_DOMICILIO_LOCALIDAD = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_INMUEBLE_DOMICILIO_MUNICIPIO", DbType="NVarChar(255)")]
+		public string INMUEBLE_DOMICILIO_MUNICIPIO
+		{
+			get
+			{
+				return this._INMUEBLE_DOMICILIO_MUNICIPIO;
+			}
+			set
+			{
+				if ((this._INMUEBLE_DOMICILIO_MUNICIPIO != value))
+				{
+					this._INMUEBLE_DOMICILIO_MUNICIPIO = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_INMUEBLE_TIPO_PREDIO", DbType="NVarChar(50)")]
+		public string INMUEBLE_TIPO_PREDIO
+		{
+			get
+			{
+				return this._INMUEBLE_TIPO_PREDIO;
+			}
+			set
+			{
+				if ((this._INMUEBLE_TIPO_PREDIO != value))
+				{
+					this._INMUEBLE_TIPO_PREDIO = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_INMUEBLE_SUPERFICIE_M2", DbType="Decimal(10,2)")]
+		public System.Nullable<decimal> INMUEBLE_SUPERFICIE_M2
+		{
+			get
+			{
+				return this._INMUEBLE_SUPERFICIE_M2;
+			}
+			set
+			{
+				if ((this._INMUEBLE_SUPERFICIE_M2 != value))
+				{
+					this._INMUEBLE_SUPERFICIE_M2 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_INMUEBLE_CONSTRUCCION_CONCRETO_M2", DbType="Decimal(10,2)")]
+		public System.Nullable<decimal> INMUEBLE_CONSTRUCCION_CONCRETO_M2
+		{
+			get
+			{
+				return this._INMUEBLE_CONSTRUCCION_CONCRETO_M2;
+			}
+			set
+			{
+				if ((this._INMUEBLE_CONSTRUCCION_CONCRETO_M2 != value))
+				{
+					this._INMUEBLE_CONSTRUCCION_CONCRETO_M2 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_INMUEBLE_CONSTRUCCION_TEJABAN_M2", DbType="Decimal(10,2)")]
+		public System.Nullable<decimal> INMUEBLE_CONSTRUCCION_TEJABAN_M2
+		{
+			get
+			{
+				return this._INMUEBLE_CONSTRUCCION_TEJABAN_M2;
+			}
+			set
+			{
+				if ((this._INMUEBLE_CONSTRUCCION_TEJABAN_M2 != value))
+				{
+					this._INMUEBLE_CONSTRUCCION_TEJABAN_M2 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_INMUEBLE_CONSTRUCCION_TOTAL_M2", DbType="Decimal(10,2)")]
+		public System.Nullable<decimal> INMUEBLE_CONSTRUCCION_TOTAL_M2
+		{
+			get
+			{
+				return this._INMUEBLE_CONSTRUCCION_TOTAL_M2;
+			}
+			set
+			{
+				if ((this._INMUEBLE_CONSTRUCCION_TOTAL_M2 != value))
+				{
+					this._INMUEBLE_CONSTRUCCION_TOTAL_M2 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_INMUEBLE_AVANCE_OBRA", DbType="NVarChar(50)")]
+		public string INMUEBLE_AVANCE_OBRA
+		{
+			get
+			{
+				return this._INMUEBLE_AVANCE_OBRA;
+			}
+			set
+			{
+				if ((this._INMUEBLE_AVANCE_OBRA != value))
+				{
+					this._INMUEBLE_AVANCE_OBRA = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_INMUEBLE_ESTADO_CONSERVACION", DbType="NVarChar(50)")]
+		public string INMUEBLE_ESTADO_CONSERVACION
+		{
+			get
+			{
+				return this._INMUEBLE_ESTADO_CONSERVACION;
+			}
+			set
+			{
+				if ((this._INMUEBLE_ESTADO_CONSERVACION != value))
+				{
+					this._INMUEBLE_ESTADO_CONSERVACION = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_INMUEBLE_ANTIGUEDAD_ANIOS", DbType="Int")]
+		public System.Nullable<int> INMUEBLE_ANTIGUEDAD_ANIOS
+		{
+			get
+			{
+				return this._INMUEBLE_ANTIGUEDAD_ANIOS;
+			}
+			set
+			{
+				if ((this._INMUEBLE_ANTIGUEDAD_ANIOS != value))
+				{
+					this._INMUEBLE_ANTIGUEDAD_ANIOS = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_INMUEBLE_TIPO_USO", DbType="NVarChar(50)")]
+		public string INMUEBLE_TIPO_USO
+		{
+			get
+			{
+				return this._INMUEBLE_TIPO_USO;
+			}
+			set
+			{
+				if ((this._INMUEBLE_TIPO_USO != value))
+				{
+					this._INMUEBLE_TIPO_USO = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_INMUEBLE_TIPO_INDUSTRIAL", DbType="NVarChar(50)")]
+		public string INMUEBLE_TIPO_INDUSTRIAL
+		{
+			get
+			{
+				return this._INMUEBLE_TIPO_INDUSTRIAL;
+			}
+			set
+			{
+				if ((this._INMUEBLE_TIPO_INDUSTRIAL != value))
+				{
+					this._INMUEBLE_TIPO_INDUSTRIAL = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_INMUEBLE_COMERCIAL_Y_SERVICIO", DbType="NVarChar(50)")]
+		public string INMUEBLE_COMERCIAL_Y_SERVICIO
+		{
+			get
+			{
+				return this._INMUEBLE_COMERCIAL_Y_SERVICIO;
+			}
+			set
+			{
+				if ((this._INMUEBLE_COMERCIAL_Y_SERVICIO != value))
+				{
+					this._INMUEBLE_COMERCIAL_Y_SERVICIO = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PROPIETARIO_DOMICILIO_NO_INT", DbType="NVarChar(10)")]
+		public string PROPIETARIO_DOMICILIO_NO_INT
+		{
+			get
+			{
+				return this._PROPIETARIO_DOMICILIO_NO_INT;
+			}
+			set
+			{
+				if ((this._PROPIETARIO_DOMICILIO_NO_INT != value))
+				{
+					this._PROPIETARIO_DOMICILIO_NO_INT = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_INMUEBLE_DOMICILIO_NO_INT", DbType="NVarChar(10)")]
+		public string INMUEBLE_DOMICILIO_NO_INT
+		{
+			get
+			{
+				return this._INMUEBLE_DOMICILIO_NO_INT;
+			}
+			set
+			{
+				if ((this._INMUEBLE_DOMICILIO_NO_INT != value))
+				{
+					this._INMUEBLE_DOMICILIO_NO_INT = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LOTE", DbType="NVarChar(50)")]
+		public string LOTE
+		{
+			get
+			{
+				return this._LOTE;
+			}
+			set
+			{
+				if ((this._LOTE != value))
+				{
+					this._LOTE = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MANZANA", DbType="NVarChar(50)")]
+		public string MANZANA
+		{
+			get
+			{
+				return this._MANZANA;
+			}
+			set
+			{
+				if ((this._MANZANA != value))
+				{
+					this._MANZANA = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_INDIVISO", DbType="NVarChar(50)")]
+		public string INDIVISO
+		{
+			get
+			{
+				return this._INDIVISO;
+			}
+			set
+			{
+				if ((this._INDIVISO != value))
+				{
+					this._INDIVISO = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FOLIOREAL", DbType="NVarChar(50)")]
+		public string FOLIOREAL
+		{
+			get
+			{
+				return this._FOLIOREAL;
+			}
+			set
+			{
+				if ((this._FOLIOREAL != value))
+				{
+					this._FOLIOREAL = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CORDENADAX", DbType="Decimal(38,8)")]
+		public System.Nullable<decimal> CORDENADAX
+		{
+			get
+			{
+				return this._CORDENADAX;
+			}
+			set
+			{
+				if ((this._CORDENADAX != value))
+				{
+					this._CORDENADAX = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CORDENADAY", DbType="Decimal(38,8)")]
+		public System.Nullable<decimal> CORDENADAY
+		{
+			get
+			{
+				return this._CORDENADAY;
+			}
+			set
+			{
+				if ((this._CORDENADAY != value))
+				{
+					this._CORDENADAY = value;
+				}
 			}
 		}
 	}

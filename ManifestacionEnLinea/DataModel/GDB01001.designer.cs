@@ -86,6 +86,22 @@ namespace ManifestacionEnLinea.DataModel
 			}
 		}
 		
+		public System.Data.Linq.Table<SIS_PC_UBICACION> SIS_PC_UBICACION
+		{
+			get
+			{
+				return this.GetTable<SIS_PC_UBICACION>();
+			}
+		}
+		
+		public System.Data.Linq.Table<SIS_PC_PROPIETARIOS> SIS_PC_PROPIETARIOS
+		{
+			get
+			{
+				return this.GetTable<SIS_PC_PROPIETARIOS>();
+			}
+		}
+		
 		public System.Data.Linq.Table<SIS_PC_CENTROIDES> SIS_PC_CENTROIDES
 		{
 			get
@@ -95,7 +111,7 @@ namespace ManifestacionEnLinea.DataModel
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="sde.SIS_PC_CLAVE_CATASTRAL")]
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.SIS_PC_CLAVE_CATASTRAL")]
 	public partial class SIS_PC_CLAVE_CATASTRAL
 	{
 		
@@ -572,7 +588,7 @@ namespace ManifestacionEnLinea.DataModel
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="sde.SIS_PC_CONSTRUCCIONES2")]
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.SIS_PC_CONSTRUCCIONES2")]
 	public partial class SIS_PC_CONSTRUCCIONES2
 	{
 		
@@ -1031,7 +1047,7 @@ namespace ManifestacionEnLinea.DataModel
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="sde.SIS_PC_SUPERFICIES2")]
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.SIS_PC_SUPERFICIES2")]
 	public partial class SIS_PC_SUPERFICIES2
 	{
 		
@@ -1760,7 +1776,1735 @@ namespace ManifestacionEnLinea.DataModel
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="sde.SIS_PC_CENTROIDES")]
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.SIS_PC_UBICACION")]
+	public partial class SIS_PC_UBICACION
+	{
+		
+		private int _OBJECTID;
+		
+		private System.Nullable<int> _CLAVEUNICA;
+		
+		private string _STATUSREGISTROTABLA;
+		
+		private System.Nullable<System.DateTime> _ALTAREGISTROTABLA;
+		
+		private System.Nullable<System.DateTime> _BAJAREGISTROTABLA;
+		
+		private string _HORAALTAREGISTROTABLA;
+		
+		private string _HORABAJAREGISTROTABLA;
+		
+		private string _USUARIOALTA;
+		
+		private string _USUARIOBAJA;
+		
+		private string _TERMINALALTA;
+		
+		private string _TERMINALBAJA;
+		
+		private string _CVE_CAT_EST;
+		
+		private string _CVE_CAT_ORI;
+		
+		private string _CVE_ENTIDAD;
+		
+		private string _NOM_ENTIDAD;
+		
+		private string _CVE_REGION_CATASTRAL;
+		
+		private string _CVE_MUNICIPIO;
+		
+		private string _NOM_MUNICIPIO;
+		
+		private string _CVE_ZONA_CATASTRAL;
+		
+		private string _CVE_LOCALIDAD;
+		
+		private string _NOM_LOCALIDAD;
+		
+		private string _CVE_SECTOR_CATASTRAL;
+		
+		private string _CVE_ASENTAMIENTO;
+		
+		private string _TIPO_ASENTAMIENTO;
+		
+		private string _NOMBRE_ASENTAMIENTO;
+		
+		private string _CP;
+		
+		private string _NOMBRE_COMPLETO_ASENTAMIENTO;
+		
+		private string _CVE_VIALIDAD;
+		
+		private string _TIPO_VIALIDAD;
+		
+		private string _NOMBRE_VIALIDAD;
+		
+		private string _NOMBRE_COMPLETO_VIALIDAD;
+		
+		private string _MANZANA;
+		
+		private string _LOTE;
+		
+		private string _NUMERO_EXTERIOR;
+		
+		private string _NUMERO_INTERIOR;
+		
+		private string _EDIFICIO_NOMBRE;
+		
+		private string _DESCRIPCION_UBICACION;
+		
+		private string _ID_CONDOMINIO;
+		
+		private string _NOMBRE_CONDOMINIO;
+		
+		private System.Nullable<short> _NIVEL;
+		
+		private string _CARTOG_NOM_DIV;
+		
+		private string _CVE_VIACOM;
+		
+		private string _VIACOM_NOM;
+		
+		private string _VIACOM_TERM_GEN;
+		
+		private string _VIACOM_ADMON;
+		
+		private string _VIACOM_DER_TRANS;
+		
+		private System.Nullable<short> _VIACOM_CODIGO;
+		
+		private string _CARRETERA_TRAMO;
+		
+		private string _CAMINO_TRAMO;
+		
+		private string _CARRETERA_CADENA;
+		
+		private string _CAMINO_CADENA;
+		
+		private string _CAMINO_MARGEN;
+		
+		private string _CVE_NA;
+		
+		private string _NOM_NA;
+		
+		private string _NUM_POL;
+		
+		private string _NUM_ZONA_TUC;
+		
+		private string _NUM_PARCELA;
+		
+		private string _IGUALUN;
+		
+		private string _UBI_OBSERVACIONES;
+		
+		public SIS_PC_UBICACION()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_OBJECTID", DbType="Int NOT NULL")]
+		public int OBJECTID
+		{
+			get
+			{
+				return this._OBJECTID;
+			}
+			set
+			{
+				if ((this._OBJECTID != value))
+				{
+					this._OBJECTID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CLAVEUNICA", DbType="Int")]
+		public System.Nullable<int> CLAVEUNICA
+		{
+			get
+			{
+				return this._CLAVEUNICA;
+			}
+			set
+			{
+				if ((this._CLAVEUNICA != value))
+				{
+					this._CLAVEUNICA = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_STATUSREGISTROTABLA", DbType="NVarChar(10)")]
+		public string STATUSREGISTROTABLA
+		{
+			get
+			{
+				return this._STATUSREGISTROTABLA;
+			}
+			set
+			{
+				if ((this._STATUSREGISTROTABLA != value))
+				{
+					this._STATUSREGISTROTABLA = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ALTAREGISTROTABLA", DbType="DateTime2")]
+		public System.Nullable<System.DateTime> ALTAREGISTROTABLA
+		{
+			get
+			{
+				return this._ALTAREGISTROTABLA;
+			}
+			set
+			{
+				if ((this._ALTAREGISTROTABLA != value))
+				{
+					this._ALTAREGISTROTABLA = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_BAJAREGISTROTABLA", DbType="DateTime2")]
+		public System.Nullable<System.DateTime> BAJAREGISTROTABLA
+		{
+			get
+			{
+				return this._BAJAREGISTROTABLA;
+			}
+			set
+			{
+				if ((this._BAJAREGISTROTABLA != value))
+				{
+					this._BAJAREGISTROTABLA = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_HORAALTAREGISTROTABLA", DbType="NVarChar(20)")]
+		public string HORAALTAREGISTROTABLA
+		{
+			get
+			{
+				return this._HORAALTAREGISTROTABLA;
+			}
+			set
+			{
+				if ((this._HORAALTAREGISTROTABLA != value))
+				{
+					this._HORAALTAREGISTROTABLA = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_HORABAJAREGISTROTABLA", DbType="NVarChar(20)")]
+		public string HORABAJAREGISTROTABLA
+		{
+			get
+			{
+				return this._HORABAJAREGISTROTABLA;
+			}
+			set
+			{
+				if ((this._HORABAJAREGISTROTABLA != value))
+				{
+					this._HORABAJAREGISTROTABLA = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_USUARIOALTA", DbType="NVarChar(50)")]
+		public string USUARIOALTA
+		{
+			get
+			{
+				return this._USUARIOALTA;
+			}
+			set
+			{
+				if ((this._USUARIOALTA != value))
+				{
+					this._USUARIOALTA = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_USUARIOBAJA", DbType="NVarChar(50)")]
+		public string USUARIOBAJA
+		{
+			get
+			{
+				return this._USUARIOBAJA;
+			}
+			set
+			{
+				if ((this._USUARIOBAJA != value))
+				{
+					this._USUARIOBAJA = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TERMINALALTA", DbType="NVarChar(50)")]
+		public string TERMINALALTA
+		{
+			get
+			{
+				return this._TERMINALALTA;
+			}
+			set
+			{
+				if ((this._TERMINALALTA != value))
+				{
+					this._TERMINALALTA = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TERMINALBAJA", DbType="NVarChar(50)")]
+		public string TERMINALBAJA
+		{
+			get
+			{
+				return this._TERMINALBAJA;
+			}
+			set
+			{
+				if ((this._TERMINALBAJA != value))
+				{
+					this._TERMINALBAJA = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CVE_CAT_EST", DbType="NVarChar(31)")]
+		public string CVE_CAT_EST
+		{
+			get
+			{
+				return this._CVE_CAT_EST;
+			}
+			set
+			{
+				if ((this._CVE_CAT_EST != value))
+				{
+					this._CVE_CAT_EST = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CVE_CAT_ORI", DbType="NVarChar(30)")]
+		public string CVE_CAT_ORI
+		{
+			get
+			{
+				return this._CVE_CAT_ORI;
+			}
+			set
+			{
+				if ((this._CVE_CAT_ORI != value))
+				{
+					this._CVE_CAT_ORI = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CVE_ENTIDAD", DbType="NVarChar(255)")]
+		public string CVE_ENTIDAD
+		{
+			get
+			{
+				return this._CVE_ENTIDAD;
+			}
+			set
+			{
+				if ((this._CVE_ENTIDAD != value))
+				{
+					this._CVE_ENTIDAD = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NOM_ENTIDAD", DbType="NVarChar(255)")]
+		public string NOM_ENTIDAD
+		{
+			get
+			{
+				return this._NOM_ENTIDAD;
+			}
+			set
+			{
+				if ((this._NOM_ENTIDAD != value))
+				{
+					this._NOM_ENTIDAD = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CVE_REGION_CATASTRAL", DbType="NVarChar(3)")]
+		public string CVE_REGION_CATASTRAL
+		{
+			get
+			{
+				return this._CVE_REGION_CATASTRAL;
+			}
+			set
+			{
+				if ((this._CVE_REGION_CATASTRAL != value))
+				{
+					this._CVE_REGION_CATASTRAL = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CVE_MUNICIPIO", DbType="NVarChar(3)")]
+		public string CVE_MUNICIPIO
+		{
+			get
+			{
+				return this._CVE_MUNICIPIO;
+			}
+			set
+			{
+				if ((this._CVE_MUNICIPIO != value))
+				{
+					this._CVE_MUNICIPIO = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NOM_MUNICIPIO", DbType="NVarChar(255)")]
+		public string NOM_MUNICIPIO
+		{
+			get
+			{
+				return this._NOM_MUNICIPIO;
+			}
+			set
+			{
+				if ((this._NOM_MUNICIPIO != value))
+				{
+					this._NOM_MUNICIPIO = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CVE_ZONA_CATASTRAL", DbType="NVarChar(2)")]
+		public string CVE_ZONA_CATASTRAL
+		{
+			get
+			{
+				return this._CVE_ZONA_CATASTRAL;
+			}
+			set
+			{
+				if ((this._CVE_ZONA_CATASTRAL != value))
+				{
+					this._CVE_ZONA_CATASTRAL = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CVE_LOCALIDAD", DbType="NVarChar(4)")]
+		public string CVE_LOCALIDAD
+		{
+			get
+			{
+				return this._CVE_LOCALIDAD;
+			}
+			set
+			{
+				if ((this._CVE_LOCALIDAD != value))
+				{
+					this._CVE_LOCALIDAD = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NOM_LOCALIDAD", DbType="NVarChar(255)")]
+		public string NOM_LOCALIDAD
+		{
+			get
+			{
+				return this._NOM_LOCALIDAD;
+			}
+			set
+			{
+				if ((this._NOM_LOCALIDAD != value))
+				{
+					this._NOM_LOCALIDAD = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CVE_SECTOR_CATASTRAL", DbType="NVarChar(3)")]
+		public string CVE_SECTOR_CATASTRAL
+		{
+			get
+			{
+				return this._CVE_SECTOR_CATASTRAL;
+			}
+			set
+			{
+				if ((this._CVE_SECTOR_CATASTRAL != value))
+				{
+					this._CVE_SECTOR_CATASTRAL = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CVE_ASENTAMIENTO", DbType="NVarChar(5)")]
+		public string CVE_ASENTAMIENTO
+		{
+			get
+			{
+				return this._CVE_ASENTAMIENTO;
+			}
+			set
+			{
+				if ((this._CVE_ASENTAMIENTO != value))
+				{
+					this._CVE_ASENTAMIENTO = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TIPO_ASENTAMIENTO", DbType="NVarChar(30)")]
+		public string TIPO_ASENTAMIENTO
+		{
+			get
+			{
+				return this._TIPO_ASENTAMIENTO;
+			}
+			set
+			{
+				if ((this._TIPO_ASENTAMIENTO != value))
+				{
+					this._TIPO_ASENTAMIENTO = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NOMBRE_ASENTAMIENTO", DbType="NVarChar(255)")]
+		public string NOMBRE_ASENTAMIENTO
+		{
+			get
+			{
+				return this._NOMBRE_ASENTAMIENTO;
+			}
+			set
+			{
+				if ((this._NOMBRE_ASENTAMIENTO != value))
+				{
+					this._NOMBRE_ASENTAMIENTO = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CP", DbType="NVarChar(5)")]
+		public string CP
+		{
+			get
+			{
+				return this._CP;
+			}
+			set
+			{
+				if ((this._CP != value))
+				{
+					this._CP = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NOMBRE_COMPLETO_ASENTAMIENTO", DbType="NVarChar(255)")]
+		public string NOMBRE_COMPLETO_ASENTAMIENTO
+		{
+			get
+			{
+				return this._NOMBRE_COMPLETO_ASENTAMIENTO;
+			}
+			set
+			{
+				if ((this._NOMBRE_COMPLETO_ASENTAMIENTO != value))
+				{
+					this._NOMBRE_COMPLETO_ASENTAMIENTO = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CVE_VIALIDAD", DbType="NVarChar(5)")]
+		public string CVE_VIALIDAD
+		{
+			get
+			{
+				return this._CVE_VIALIDAD;
+			}
+			set
+			{
+				if ((this._CVE_VIALIDAD != value))
+				{
+					this._CVE_VIALIDAD = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TIPO_VIALIDAD", DbType="NVarChar(14)")]
+		public string TIPO_VIALIDAD
+		{
+			get
+			{
+				return this._TIPO_VIALIDAD;
+			}
+			set
+			{
+				if ((this._TIPO_VIALIDAD != value))
+				{
+					this._TIPO_VIALIDAD = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NOMBRE_VIALIDAD", DbType="NVarChar(255)")]
+		public string NOMBRE_VIALIDAD
+		{
+			get
+			{
+				return this._NOMBRE_VIALIDAD;
+			}
+			set
+			{
+				if ((this._NOMBRE_VIALIDAD != value))
+				{
+					this._NOMBRE_VIALIDAD = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NOMBRE_COMPLETO_VIALIDAD", DbType="NVarChar(255)")]
+		public string NOMBRE_COMPLETO_VIALIDAD
+		{
+			get
+			{
+				return this._NOMBRE_COMPLETO_VIALIDAD;
+			}
+			set
+			{
+				if ((this._NOMBRE_COMPLETO_VIALIDAD != value))
+				{
+					this._NOMBRE_COMPLETO_VIALIDAD = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MANZANA", DbType="NVarChar(50)")]
+		public string MANZANA
+		{
+			get
+			{
+				return this._MANZANA;
+			}
+			set
+			{
+				if ((this._MANZANA != value))
+				{
+					this._MANZANA = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LOTE", DbType="NVarChar(50)")]
+		public string LOTE
+		{
+			get
+			{
+				return this._LOTE;
+			}
+			set
+			{
+				if ((this._LOTE != value))
+				{
+					this._LOTE = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NUMERO_EXTERIOR", DbType="NVarChar(100)")]
+		public string NUMERO_EXTERIOR
+		{
+			get
+			{
+				return this._NUMERO_EXTERIOR;
+			}
+			set
+			{
+				if ((this._NUMERO_EXTERIOR != value))
+				{
+					this._NUMERO_EXTERIOR = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NUMERO_INTERIOR", DbType="NVarChar(100)")]
+		public string NUMERO_INTERIOR
+		{
+			get
+			{
+				return this._NUMERO_INTERIOR;
+			}
+			set
+			{
+				if ((this._NUMERO_INTERIOR != value))
+				{
+					this._NUMERO_INTERIOR = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EDIFICIO_NOMBRE", DbType="NVarChar(100)")]
+		public string EDIFICIO_NOMBRE
+		{
+			get
+			{
+				return this._EDIFICIO_NOMBRE;
+			}
+			set
+			{
+				if ((this._EDIFICIO_NOMBRE != value))
+				{
+					this._EDIFICIO_NOMBRE = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DESCRIPCION_UBICACION", DbType="NVarChar(200)")]
+		public string DESCRIPCION_UBICACION
+		{
+			get
+			{
+				return this._DESCRIPCION_UBICACION;
+			}
+			set
+			{
+				if ((this._DESCRIPCION_UBICACION != value))
+				{
+					this._DESCRIPCION_UBICACION = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID_CONDOMINIO", DbType="NVarChar(5)")]
+		public string ID_CONDOMINIO
+		{
+			get
+			{
+				return this._ID_CONDOMINIO;
+			}
+			set
+			{
+				if ((this._ID_CONDOMINIO != value))
+				{
+					this._ID_CONDOMINIO = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NOMBRE_CONDOMINIO", DbType="NVarChar(200)")]
+		public string NOMBRE_CONDOMINIO
+		{
+			get
+			{
+				return this._NOMBRE_CONDOMINIO;
+			}
+			set
+			{
+				if ((this._NOMBRE_CONDOMINIO != value))
+				{
+					this._NOMBRE_CONDOMINIO = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NIVEL", DbType="SmallInt")]
+		public System.Nullable<short> NIVEL
+		{
+			get
+			{
+				return this._NIVEL;
+			}
+			set
+			{
+				if ((this._NIVEL != value))
+				{
+					this._NIVEL = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CARTOG_NOM_DIV", DbType="NVarChar(12)")]
+		public string CARTOG_NOM_DIV
+		{
+			get
+			{
+				return this._CARTOG_NOM_DIV;
+			}
+			set
+			{
+				if ((this._CARTOG_NOM_DIV != value))
+				{
+					this._CARTOG_NOM_DIV = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CVE_VIACOM", DbType="NVarChar(5)")]
+		public string CVE_VIACOM
+		{
+			get
+			{
+				return this._CVE_VIACOM;
+			}
+			set
+			{
+				if ((this._CVE_VIACOM != value))
+				{
+					this._CVE_VIACOM = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_VIACOM_NOM", DbType="NVarChar(255)")]
+		public string VIACOM_NOM
+		{
+			get
+			{
+				return this._VIACOM_NOM;
+			}
+			set
+			{
+				if ((this._VIACOM_NOM != value))
+				{
+					this._VIACOM_NOM = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_VIACOM_TERM_GEN", DbType="NVarChar(10)")]
+		public string VIACOM_TERM_GEN
+		{
+			get
+			{
+				return this._VIACOM_TERM_GEN;
+			}
+			set
+			{
+				if ((this._VIACOM_TERM_GEN != value))
+				{
+					this._VIACOM_TERM_GEN = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_VIACOM_ADMON", DbType="NVarChar(10)")]
+		public string VIACOM_ADMON
+		{
+			get
+			{
+				return this._VIACOM_ADMON;
+			}
+			set
+			{
+				if ((this._VIACOM_ADMON != value))
+				{
+					this._VIACOM_ADMON = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_VIACOM_DER_TRANS", DbType="NVarChar(5)")]
+		public string VIACOM_DER_TRANS
+		{
+			get
+			{
+				return this._VIACOM_DER_TRANS;
+			}
+			set
+			{
+				if ((this._VIACOM_DER_TRANS != value))
+				{
+					this._VIACOM_DER_TRANS = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_VIACOM_CODIGO", DbType="SmallInt")]
+		public System.Nullable<short> VIACOM_CODIGO
+		{
+			get
+			{
+				return this._VIACOM_CODIGO;
+			}
+			set
+			{
+				if ((this._VIACOM_CODIGO != value))
+				{
+					this._VIACOM_CODIGO = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CARRETERA_TRAMO", DbType="NVarChar(255)")]
+		public string CARRETERA_TRAMO
+		{
+			get
+			{
+				return this._CARRETERA_TRAMO;
+			}
+			set
+			{
+				if ((this._CARRETERA_TRAMO != value))
+				{
+					this._CARRETERA_TRAMO = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CAMINO_TRAMO", DbType="NVarChar(255)")]
+		public string CAMINO_TRAMO
+		{
+			get
+			{
+				return this._CAMINO_TRAMO;
+			}
+			set
+			{
+				if ((this._CAMINO_TRAMO != value))
+				{
+					this._CAMINO_TRAMO = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CARRETERA_CADENA", DbType="NVarChar(255)")]
+		public string CARRETERA_CADENA
+		{
+			get
+			{
+				return this._CARRETERA_CADENA;
+			}
+			set
+			{
+				if ((this._CARRETERA_CADENA != value))
+				{
+					this._CARRETERA_CADENA = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CAMINO_CADENA", DbType="NVarChar(255)")]
+		public string CAMINO_CADENA
+		{
+			get
+			{
+				return this._CAMINO_CADENA;
+			}
+			set
+			{
+				if ((this._CAMINO_CADENA != value))
+				{
+					this._CAMINO_CADENA = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CAMINO_MARGEN", DbType="NVarChar(9)")]
+		public string CAMINO_MARGEN
+		{
+			get
+			{
+				return this._CAMINO_MARGEN;
+			}
+			set
+			{
+				if ((this._CAMINO_MARGEN != value))
+				{
+					this._CAMINO_MARGEN = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CVE_NA", DbType="NVarChar(3)")]
+		public string CVE_NA
+		{
+			get
+			{
+				return this._CVE_NA;
+			}
+			set
+			{
+				if ((this._CVE_NA != value))
+				{
+					this._CVE_NA = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NOM_NA", DbType="NVarChar(255)")]
+		public string NOM_NA
+		{
+			get
+			{
+				return this._NOM_NA;
+			}
+			set
+			{
+				if ((this._NOM_NA != value))
+				{
+					this._NOM_NA = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NUM_POL", DbType="NVarChar(2)")]
+		public string NUM_POL
+		{
+			get
+			{
+				return this._NUM_POL;
+			}
+			set
+			{
+				if ((this._NUM_POL != value))
+				{
+					this._NUM_POL = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NUM_ZONA_TUC", DbType="NVarChar(2)")]
+		public string NUM_ZONA_TUC
+		{
+			get
+			{
+				return this._NUM_ZONA_TUC;
+			}
+			set
+			{
+				if ((this._NUM_ZONA_TUC != value))
+				{
+					this._NUM_ZONA_TUC = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NUM_PARCELA", DbType="NVarChar(5)")]
+		public string NUM_PARCELA
+		{
+			get
+			{
+				return this._NUM_PARCELA;
+			}
+			set
+			{
+				if ((this._NUM_PARCELA != value))
+				{
+					this._NUM_PARCELA = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IGUALUN", DbType="NVarChar(2)")]
+		public string IGUALUN
+		{
+			get
+			{
+				return this._IGUALUN;
+			}
+			set
+			{
+				if ((this._IGUALUN != value))
+				{
+					this._IGUALUN = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UBI_OBSERVACIONES", DbType="NVarChar(255)")]
+		public string UBI_OBSERVACIONES
+		{
+			get
+			{
+				return this._UBI_OBSERVACIONES;
+			}
+			set
+			{
+				if ((this._UBI_OBSERVACIONES != value))
+				{
+					this._UBI_OBSERVACIONES = value;
+				}
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.SIS_PC_PROPIETARIOS")]
+	public partial class SIS_PC_PROPIETARIOS
+	{
+		
+		private int _OBJECTID;
+		
+		private System.Nullable<int> _CLAVEUNICA;
+		
+		private string _STATUSREGISTROTABLA;
+		
+		private System.Nullable<System.DateTime> _ALTAREGISTROTABLA;
+		
+		private System.Nullable<System.DateTime> _BAJAREGISTROTABLA;
+		
+		private string _HORAALTAREGISTROTABLA;
+		
+		private string _HORABAJAREGISTROTABLA;
+		
+		private string _USUARIOALTA;
+		
+		private string _USUARIOBAJA;
+		
+		private string _TERMINALALTA;
+		
+		private string _TERMINALBAJA;
+		
+		private string _CVE_CAT_EST;
+		
+		private string _CVE_CAT_ORI;
+		
+		private System.Nullable<int> _ID_PROPIETARIO;
+		
+		private string _TIPO_PROPIETARIO;
+		
+		private string _TIPO_PERSONA;
+		
+		private string _APELLIDO_PATERNO;
+		
+		private string _APELLIDO_MATERNO;
+		
+		private string _NOMBRE_O_RAZON_SOCIAL;
+		
+		private string _CURP;
+		
+		private System.Nullable<System.DateTime> _FECHA_NACIMIENTO;
+		
+		private string _LUGAR_NACIMIENTO;
+		
+		private string _RFC;
+		
+		private System.Nullable<decimal> _PORCENTAJE_POSESION;
+		
+		private string _TELEFONO;
+		
+		private string _CORREO_ELECTRONICO;
+		
+		private System.Nullable<int> _TIPO_PERSONA_VULNERABLE;
+		
+		private string _PROPIETARIO_ORIGINAL;
+		
+		private string _APELLIDO_PATERNO_HIG;
+		
+		private string _APELLIDO_MATERNO_HIG;
+		
+		private string _NOMBRE_O_RAZON_SOCIAL_HIG;
+		
+		private string _PROP_OBSERVACIONES;
+		
+		private string _FOLIO_TD;
+		
+		private System.Nullable<decimal> _MONTO_OPERACION_TD;
+		
+		private string _NUMERO_DIPI;
+		
+		private System.Nullable<System.DateTime> _FECHA_DIPI;
+		
+		public SIS_PC_PROPIETARIOS()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_OBJECTID", DbType="Int NOT NULL")]
+		public int OBJECTID
+		{
+			get
+			{
+				return this._OBJECTID;
+			}
+			set
+			{
+				if ((this._OBJECTID != value))
+				{
+					this._OBJECTID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CLAVEUNICA", DbType="Int")]
+		public System.Nullable<int> CLAVEUNICA
+		{
+			get
+			{
+				return this._CLAVEUNICA;
+			}
+			set
+			{
+				if ((this._CLAVEUNICA != value))
+				{
+					this._CLAVEUNICA = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_STATUSREGISTROTABLA", DbType="NVarChar(10)")]
+		public string STATUSREGISTROTABLA
+		{
+			get
+			{
+				return this._STATUSREGISTROTABLA;
+			}
+			set
+			{
+				if ((this._STATUSREGISTROTABLA != value))
+				{
+					this._STATUSREGISTROTABLA = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ALTAREGISTROTABLA", DbType="DateTime2")]
+		public System.Nullable<System.DateTime> ALTAREGISTROTABLA
+		{
+			get
+			{
+				return this._ALTAREGISTROTABLA;
+			}
+			set
+			{
+				if ((this._ALTAREGISTROTABLA != value))
+				{
+					this._ALTAREGISTROTABLA = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_BAJAREGISTROTABLA", DbType="DateTime2")]
+		public System.Nullable<System.DateTime> BAJAREGISTROTABLA
+		{
+			get
+			{
+				return this._BAJAREGISTROTABLA;
+			}
+			set
+			{
+				if ((this._BAJAREGISTROTABLA != value))
+				{
+					this._BAJAREGISTROTABLA = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_HORAALTAREGISTROTABLA", DbType="NVarChar(20)")]
+		public string HORAALTAREGISTROTABLA
+		{
+			get
+			{
+				return this._HORAALTAREGISTROTABLA;
+			}
+			set
+			{
+				if ((this._HORAALTAREGISTROTABLA != value))
+				{
+					this._HORAALTAREGISTROTABLA = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_HORABAJAREGISTROTABLA", DbType="NVarChar(20)")]
+		public string HORABAJAREGISTROTABLA
+		{
+			get
+			{
+				return this._HORABAJAREGISTROTABLA;
+			}
+			set
+			{
+				if ((this._HORABAJAREGISTROTABLA != value))
+				{
+					this._HORABAJAREGISTROTABLA = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_USUARIOALTA", DbType="NVarChar(50)")]
+		public string USUARIOALTA
+		{
+			get
+			{
+				return this._USUARIOALTA;
+			}
+			set
+			{
+				if ((this._USUARIOALTA != value))
+				{
+					this._USUARIOALTA = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_USUARIOBAJA", DbType="NVarChar(50)")]
+		public string USUARIOBAJA
+		{
+			get
+			{
+				return this._USUARIOBAJA;
+			}
+			set
+			{
+				if ((this._USUARIOBAJA != value))
+				{
+					this._USUARIOBAJA = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TERMINALALTA", DbType="NVarChar(50)")]
+		public string TERMINALALTA
+		{
+			get
+			{
+				return this._TERMINALALTA;
+			}
+			set
+			{
+				if ((this._TERMINALALTA != value))
+				{
+					this._TERMINALALTA = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TERMINALBAJA", DbType="NVarChar(50)")]
+		public string TERMINALBAJA
+		{
+			get
+			{
+				return this._TERMINALBAJA;
+			}
+			set
+			{
+				if ((this._TERMINALBAJA != value))
+				{
+					this._TERMINALBAJA = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CVE_CAT_EST", DbType="NVarChar(31)")]
+		public string CVE_CAT_EST
+		{
+			get
+			{
+				return this._CVE_CAT_EST;
+			}
+			set
+			{
+				if ((this._CVE_CAT_EST != value))
+				{
+					this._CVE_CAT_EST = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CVE_CAT_ORI", DbType="NVarChar(30)")]
+		public string CVE_CAT_ORI
+		{
+			get
+			{
+				return this._CVE_CAT_ORI;
+			}
+			set
+			{
+				if ((this._CVE_CAT_ORI != value))
+				{
+					this._CVE_CAT_ORI = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID_PROPIETARIO", DbType="Int")]
+		public System.Nullable<int> ID_PROPIETARIO
+		{
+			get
+			{
+				return this._ID_PROPIETARIO;
+			}
+			set
+			{
+				if ((this._ID_PROPIETARIO != value))
+				{
+					this._ID_PROPIETARIO = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TIPO_PROPIETARIO", DbType="NVarChar(30)")]
+		public string TIPO_PROPIETARIO
+		{
+			get
+			{
+				return this._TIPO_PROPIETARIO;
+			}
+			set
+			{
+				if ((this._TIPO_PROPIETARIO != value))
+				{
+					this._TIPO_PROPIETARIO = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TIPO_PERSONA", DbType="NVarChar(30)")]
+		public string TIPO_PERSONA
+		{
+			get
+			{
+				return this._TIPO_PERSONA;
+			}
+			set
+			{
+				if ((this._TIPO_PERSONA != value))
+				{
+					this._TIPO_PERSONA = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_APELLIDO_PATERNO", DbType="NVarChar(100)")]
+		public string APELLIDO_PATERNO
+		{
+			get
+			{
+				return this._APELLIDO_PATERNO;
+			}
+			set
+			{
+				if ((this._APELLIDO_PATERNO != value))
+				{
+					this._APELLIDO_PATERNO = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_APELLIDO_MATERNO", DbType="NVarChar(100)")]
+		public string APELLIDO_MATERNO
+		{
+			get
+			{
+				return this._APELLIDO_MATERNO;
+			}
+			set
+			{
+				if ((this._APELLIDO_MATERNO != value))
+				{
+					this._APELLIDO_MATERNO = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NOMBRE_O_RAZON_SOCIAL", DbType="NVarChar(200)")]
+		public string NOMBRE_O_RAZON_SOCIAL
+		{
+			get
+			{
+				return this._NOMBRE_O_RAZON_SOCIAL;
+			}
+			set
+			{
+				if ((this._NOMBRE_O_RAZON_SOCIAL != value))
+				{
+					this._NOMBRE_O_RAZON_SOCIAL = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CURP", DbType="NVarChar(18)")]
+		public string CURP
+		{
+			get
+			{
+				return this._CURP;
+			}
+			set
+			{
+				if ((this._CURP != value))
+				{
+					this._CURP = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FECHA_NACIMIENTO", DbType="DateTime2")]
+		public System.Nullable<System.DateTime> FECHA_NACIMIENTO
+		{
+			get
+			{
+				return this._FECHA_NACIMIENTO;
+			}
+			set
+			{
+				if ((this._FECHA_NACIMIENTO != value))
+				{
+					this._FECHA_NACIMIENTO = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LUGAR_NACIMIENTO", DbType="NVarChar(100)")]
+		public string LUGAR_NACIMIENTO
+		{
+			get
+			{
+				return this._LUGAR_NACIMIENTO;
+			}
+			set
+			{
+				if ((this._LUGAR_NACIMIENTO != value))
+				{
+					this._LUGAR_NACIMIENTO = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_RFC", DbType="NVarChar(13)")]
+		public string RFC
+		{
+			get
+			{
+				return this._RFC;
+			}
+			set
+			{
+				if ((this._RFC != value))
+				{
+					this._RFC = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PORCENTAJE_POSESION", DbType="Decimal(38,8)")]
+		public System.Nullable<decimal> PORCENTAJE_POSESION
+		{
+			get
+			{
+				return this._PORCENTAJE_POSESION;
+			}
+			set
+			{
+				if ((this._PORCENTAJE_POSESION != value))
+				{
+					this._PORCENTAJE_POSESION = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TELEFONO", DbType="NVarChar(100)")]
+		public string TELEFONO
+		{
+			get
+			{
+				return this._TELEFONO;
+			}
+			set
+			{
+				if ((this._TELEFONO != value))
+				{
+					this._TELEFONO = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CORREO_ELECTRONICO", DbType="NVarChar(100)")]
+		public string CORREO_ELECTRONICO
+		{
+			get
+			{
+				return this._CORREO_ELECTRONICO;
+			}
+			set
+			{
+				if ((this._CORREO_ELECTRONICO != value))
+				{
+					this._CORREO_ELECTRONICO = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TIPO_PERSONA_VULNERABLE", DbType="Int")]
+		public System.Nullable<int> TIPO_PERSONA_VULNERABLE
+		{
+			get
+			{
+				return this._TIPO_PERSONA_VULNERABLE;
+			}
+			set
+			{
+				if ((this._TIPO_PERSONA_VULNERABLE != value))
+				{
+					this._TIPO_PERSONA_VULNERABLE = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PROPIETARIO_ORIGINAL", DbType="NVarChar(200)")]
+		public string PROPIETARIO_ORIGINAL
+		{
+			get
+			{
+				return this._PROPIETARIO_ORIGINAL;
+			}
+			set
+			{
+				if ((this._PROPIETARIO_ORIGINAL != value))
+				{
+					this._PROPIETARIO_ORIGINAL = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_APELLIDO_PATERNO_HIG", DbType="NVarChar(100)")]
+		public string APELLIDO_PATERNO_HIG
+		{
+			get
+			{
+				return this._APELLIDO_PATERNO_HIG;
+			}
+			set
+			{
+				if ((this._APELLIDO_PATERNO_HIG != value))
+				{
+					this._APELLIDO_PATERNO_HIG = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_APELLIDO_MATERNO_HIG", DbType="NVarChar(100)")]
+		public string APELLIDO_MATERNO_HIG
+		{
+			get
+			{
+				return this._APELLIDO_MATERNO_HIG;
+			}
+			set
+			{
+				if ((this._APELLIDO_MATERNO_HIG != value))
+				{
+					this._APELLIDO_MATERNO_HIG = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NOMBRE_O_RAZON_SOCIAL_HIG", DbType="NVarChar(200)")]
+		public string NOMBRE_O_RAZON_SOCIAL_HIG
+		{
+			get
+			{
+				return this._NOMBRE_O_RAZON_SOCIAL_HIG;
+			}
+			set
+			{
+				if ((this._NOMBRE_O_RAZON_SOCIAL_HIG != value))
+				{
+					this._NOMBRE_O_RAZON_SOCIAL_HIG = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PROP_OBSERVACIONES", DbType="NVarChar(255)")]
+		public string PROP_OBSERVACIONES
+		{
+			get
+			{
+				return this._PROP_OBSERVACIONES;
+			}
+			set
+			{
+				if ((this._PROP_OBSERVACIONES != value))
+				{
+					this._PROP_OBSERVACIONES = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FOLIO_TD", DbType="NVarChar(50)")]
+		public string FOLIO_TD
+		{
+			get
+			{
+				return this._FOLIO_TD;
+			}
+			set
+			{
+				if ((this._FOLIO_TD != value))
+				{
+					this._FOLIO_TD = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MONTO_OPERACION_TD", DbType="Decimal(38,2)")]
+		public System.Nullable<decimal> MONTO_OPERACION_TD
+		{
+			get
+			{
+				return this._MONTO_OPERACION_TD;
+			}
+			set
+			{
+				if ((this._MONTO_OPERACION_TD != value))
+				{
+					this._MONTO_OPERACION_TD = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NUMERO_DIPI", DbType="NVarChar(10)")]
+		public string NUMERO_DIPI
+		{
+			get
+			{
+				return this._NUMERO_DIPI;
+			}
+			set
+			{
+				if ((this._NUMERO_DIPI != value))
+				{
+					this._NUMERO_DIPI = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FECHA_DIPI", DbType="DateTime")]
+		public System.Nullable<System.DateTime> FECHA_DIPI
+		{
+			get
+			{
+				return this._FECHA_DIPI;
+			}
+			set
+			{
+				if ((this._FECHA_DIPI != value))
+				{
+					this._FECHA_DIPI = value;
+				}
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.SIS_PC_CENTROIDES")]
 	public partial class SIS_PC_CENTROIDES
 	{
 		
@@ -1797,6 +3541,8 @@ namespace ManifestacionEnLinea.DataModel
 		private System.Nullable<decimal> _CENT_PRED_X;
 		
 		private System.Nullable<decimal> _CENT_PRED_Y;
+		
+		private string _CVE_CAT_ORI;
 		
 		public SIS_PC_CENTROIDES()
 		{
@@ -2070,6 +3816,22 @@ namespace ManifestacionEnLinea.DataModel
 				if ((this._CENT_PRED_Y != value))
 				{
 					this._CENT_PRED_Y = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CVE_CAT_ORI", DbType="VarChar(20)")]
+		public string CVE_CAT_ORI
+		{
+			get
+			{
+				return this._CVE_CAT_ORI;
+			}
+			set
+			{
+				if ((this._CVE_CAT_ORI != value))
+				{
+					this._CVE_CAT_ORI = value;
 				}
 			}
 		}

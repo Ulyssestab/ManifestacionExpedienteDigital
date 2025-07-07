@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="GDB01001" Class="GDB01001DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="WebSettings" ConnectionString="Data Source=10.1.111.188;Initial Catalog=GDB01001;User ID=sa" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="GDB01001ConnectionString" Provider="System.Data.SqlClient" />
-  <Table Name="sde.SIS_PC_CLAVE_CATASTRAL" Member="SIS_PC_CLAVE_CATASTRAL">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=localhost\SQLEXPRESS;Initial Catalog=GDB01001;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="GDB01001ConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.SIS_PC_CLAVE_CATASTRAL" Member="SIS_PC_CLAVE_CATASTRAL">
     <Type Name="SIS_PC_CLAVE_CATASTRAL">
       <Column Name="OBJECTID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="CLAVEUNICA" Type="System.Int32" DbType="Int" CanBeNull="true" />
@@ -30,7 +30,7 @@
       <Column Name="ESCRITURA" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
     </Type>
   </Table>
-  <Table Name="sde.SIS_PC_CONSTRUCCIONES2" Member="SIS_PC_CONSTRUCCIONES2">
+  <Table Name="dbo.SIS_PC_CONSTRUCCIONES2" Member="SIS_PC_CONSTRUCCIONES2">
     <Type Name="SIS_PC_CONSTRUCCIONES2">
       <Column Name="OBJECTID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="CLAVEUNICA" Type="System.Int32" DbType="Int" CanBeNull="true" />
@@ -59,7 +59,7 @@
       <Column Name="VALOR_PARCIAL" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
     </Type>
   </Table>
-  <Table Name="sde.SIS_PC_SUPERFICIES2" Member="SIS_PC_SUPERFICIES2">
+  <Table Name="dbo.SIS_PC_SUPERFICIES2" Member="SIS_PC_SUPERFICIES2">
     <Type Name="SIS_PC_SUPERFICIES2">
       <Column Name="OBJECTID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="STATUSREGISTROTABLA" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
@@ -103,7 +103,110 @@
       <Column Name="ANIO_LEVANTAMIENTO_TOPOGRAFICO" Type="System.Int32" DbType="Int" CanBeNull="true" />
     </Type>
   </Table>
-  <Table Name="sde.SIS_PC_CENTROIDES" Member="SIS_PC_CENTROIDES">
+  <Table Name="dbo.SIS_PC_UBICACION" Member="SIS_PC_UBICACION">
+    <Type Name="SIS_PC_UBICACION">
+      <Column Name="OBJECTID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CLAVEUNICA" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="STATUSREGISTROTABLA" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="ALTAREGISTROTABLA" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="BAJAREGISTROTABLA" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="HORAALTAREGISTROTABLA" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="HORABAJAREGISTROTABLA" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="USUARIOALTA" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="USUARIOBAJA" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TERMINALALTA" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TERMINALBAJA" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CVE_CAT_EST" Type="System.String" DbType="NVarChar(31)" CanBeNull="true" />
+      <Column Name="CVE_CAT_ORI" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="CVE_ENTIDAD" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="NOM_ENTIDAD" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="CVE_REGION_CATASTRAL" Type="System.String" DbType="NVarChar(3)" CanBeNull="true" />
+      <Column Name="CVE_MUNICIPIO" Type="System.String" DbType="NVarChar(3)" CanBeNull="true" />
+      <Column Name="NOM_MUNICIPIO" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="CVE_ZONA_CATASTRAL" Type="System.String" DbType="NVarChar(2)" CanBeNull="true" />
+      <Column Name="CVE_LOCALIDAD" Type="System.String" DbType="NVarChar(4)" CanBeNull="true" />
+      <Column Name="NOM_LOCALIDAD" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="CVE_SECTOR_CATASTRAL" Type="System.String" DbType="NVarChar(3)" CanBeNull="true" />
+      <Column Name="CVE_ASENTAMIENTO" Type="System.String" DbType="NVarChar(5)" CanBeNull="true" />
+      <Column Name="TIPO_ASENTAMIENTO" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="NOMBRE_ASENTAMIENTO" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="CP" Type="System.String" DbType="NVarChar(5)" CanBeNull="true" />
+      <Column Name="NOMBRE_COMPLETO_ASENTAMIENTO" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="CVE_VIALIDAD" Type="System.String" DbType="NVarChar(5)" CanBeNull="true" />
+      <Column Name="TIPO_VIALIDAD" Type="System.String" DbType="NVarChar(14)" CanBeNull="true" />
+      <Column Name="NOMBRE_VIALIDAD" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="NOMBRE_COMPLETO_VIALIDAD" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="MANZANA" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LOTE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="NUMERO_EXTERIOR" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="NUMERO_INTERIOR" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="EDIFICIO_NOMBRE" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="DESCRIPCION_UBICACION" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="ID_CONDOMINIO" Type="System.String" DbType="NVarChar(5)" CanBeNull="true" />
+      <Column Name="NOMBRE_CONDOMINIO" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="NIVEL" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="CARTOG_NOM_DIV" Type="System.String" DbType="NVarChar(12)" CanBeNull="true" />
+      <Column Name="CVE_VIACOM" Type="System.String" DbType="NVarChar(5)" CanBeNull="true" />
+      <Column Name="VIACOM_NOM" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="VIACOM_TERM_GEN" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="VIACOM_ADMON" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="VIACOM_DER_TRANS" Type="System.String" DbType="NVarChar(5)" CanBeNull="true" />
+      <Column Name="VIACOM_CODIGO" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="CARRETERA_TRAMO" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="CAMINO_TRAMO" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="CARRETERA_CADENA" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="CAMINO_CADENA" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="CAMINO_MARGEN" Type="System.String" DbType="NVarChar(9)" CanBeNull="true" />
+      <Column Name="CVE_NA" Type="System.String" DbType="NVarChar(3)" CanBeNull="true" />
+      <Column Name="NOM_NA" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="NUM_POL" Type="System.String" DbType="NVarChar(2)" CanBeNull="true" />
+      <Column Name="NUM_ZONA_TUC" Type="System.String" DbType="NVarChar(2)" CanBeNull="true" />
+      <Column Name="NUM_PARCELA" Type="System.String" DbType="NVarChar(5)" CanBeNull="true" />
+      <Column Name="IGUALUN" Type="System.String" DbType="NVarChar(2)" CanBeNull="true" />
+      <Column Name="UBI_OBSERVACIONES" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SIS_PC_PROPIETARIOS" Member="SIS_PC_PROPIETARIOS">
+    <Type Name="SIS_PC_PROPIETARIOS">
+      <Column Name="OBJECTID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CLAVEUNICA" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="STATUSREGISTROTABLA" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="ALTAREGISTROTABLA" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="BAJAREGISTROTABLA" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="HORAALTAREGISTROTABLA" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="HORABAJAREGISTROTABLA" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="USUARIOALTA" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="USUARIOBAJA" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TERMINALALTA" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TERMINALBAJA" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CVE_CAT_EST" Type="System.String" DbType="NVarChar(31)" CanBeNull="true" />
+      <Column Name="CVE_CAT_ORI" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="ID_PROPIETARIO" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TIPO_PROPIETARIO" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="TIPO_PERSONA" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="APELLIDO_PATERNO" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="APELLIDO_MATERNO" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="NOMBRE_O_RAZON_SOCIAL" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="CURP" Type="System.String" DbType="NVarChar(18)" CanBeNull="true" />
+      <Column Name="FECHA_NACIMIENTO" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="LUGAR_NACIMIENTO" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="RFC" Type="System.String" DbType="NVarChar(13)" CanBeNull="true" />
+      <Column Name="PORCENTAJE_POSESION" Type="System.Decimal" DbType="Decimal(38,8)" CanBeNull="true" />
+      <Column Name="TELEFONO" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="CORREO_ELECTRONICO" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="TIPO_PERSONA_VULNERABLE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PROPIETARIO_ORIGINAL" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="APELLIDO_PATERNO_HIG" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="APELLIDO_MATERNO_HIG" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="NOMBRE_O_RAZON_SOCIAL_HIG" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="PROP_OBSERVACIONES" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="FOLIO_TD" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MONTO_OPERACION_TD" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
+      <Column Name="NUMERO_DIPI" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="FECHA_DIPI" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SIS_PC_CENTROIDES" Member="SIS_PC_CENTROIDES">
     <Type Name="SIS_PC_CENTROIDES">
       <Column Name="OBJECTID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="CLAVEUNICA" Type="System.Int32" DbType="Int" CanBeNull="true" />
@@ -122,6 +225,7 @@
       <Column Name="CENT_PRED_LON" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
       <Column Name="CENT_PRED_X" Type="System.Decimal" DbType="Decimal(38,8)" CanBeNull="true" />
       <Column Name="CENT_PRED_Y" Type="System.Decimal" DbType="Decimal(38,8)" CanBeNull="true" />
+      <Column Name="CVE_CAT_ORI" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
     </Type>
   </Table>
 </Database>

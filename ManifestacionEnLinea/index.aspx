@@ -387,7 +387,15 @@
             <div class="row justify-content-center">
                 <label>Si el sector en su clave catastral es 00 y no da resultados cambiarlo por 99 </label>
             </div>
+                <br />
+                <label style="font-size:16px;"><b> Seleccionar tipo de tramite:</b></label>
+                <asp:DropDownList style="width:auto;" CssClass="form-control" ID="TramiteList" runat="server">
+                    <asp:ListItem Selected="True" Value="00">SELECCIONE UN TRAMITE</asp:ListItem>
+                    <asp:ListItem Value="01">AVALUO CATRASTRAL</asp:ListItem>
+                    <asp:ListItem Value="02">MANIFESTACION DE PREDIO</asp:ListItem>
+                    <asp:ListItem Value="03">MANIFESTACION CON AVALUO CATASTRAL</asp:ListItem>
 
+                </asp:DropDownList> 
         <br />
                 <div class="col-md-4">
                      <asp:Button ID="BuscarInfo" runat="server" OnClick="BuscarInfo_Click" Text="Ingresar" CssClass="btn btn-primary"/> <br />

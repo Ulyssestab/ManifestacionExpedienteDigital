@@ -65,17 +65,17 @@ namespace ManifestacionEnLinea
             }
             
         }
-        public void GetInformacion(string CuentaCatastral )
+        public void GetInformacion(string CuentaCatastral)
         {
             //CultureInfo cul = new CultureInfo("es-MX");
             if (CuentaCatastral != null)
             {
-                
+
 
                 string Municipio = CuentaCatastral.Substring(0, 2);
                 SqlConnection conInfoSup = new SqlConnection(ConfigurationManager.ConnectionStrings["GDB010" + Municipio + "ConnectionString"].ToString());
                 conInfoSup.Open();
-                SqlCommand cmdInfoSup = new SqlCommand("select top 1 * from GDB010" + Municipio + ".sde.SIS_PC_SUPERFICIES2 where CVE_CAT_ORI='" + CuentaCatastral + "' and STATUSREGISTROTABLA='ACTIVO' order by OBJECTID desc", conInfoSup);
+                SqlCommand cmdInfoSup = new SqlCommand("select top 1 * from GDB010" + Municipio + ".DBO.SIS_PC_SUPERFICIES2 where CVE_CAT_ORI='" + CuentaCatastral + "' and STATUSREGISTROTABLA='ACTIVO' order by OBJECTID desc", conInfoSup);
                 using (SqlDataReader readerInfoSup = cmdInfoSup.ExecuteReader())
                 {
                     while (readerInfoSup.Read())
@@ -108,7 +108,7 @@ namespace ManifestacionEnLinea
                     TIPO_TABLE.Text = tipopredio;
                     REGIMEN_TABLE.Text = regimen;
                     hiddenRegimen.Value = regimen;
-                    SUPPRIV_TABLE.Text = superficie.ToString("N",culture) +" m2";
+                    SUPPRIV_TABLE.Text = superficie.ToString("N", culture) + " m2";
                 }
                 conInfoSup.Close();
 
@@ -143,7 +143,7 @@ namespace ManifestacionEnLinea
                 {
                     conInfoConst.Open();
                     string query = "SELECT DESCRIPCION_TIPO, DESCRIPCION_ESTADO, ANIO, DESCRIPCION_AVANCE, AREA " +
-                                   "FROM GDB010" + Municipio + ".sde.SIS_PC_CONSTRUCCIONES2 " +
+                                   "FROM GDB010" + Municipio + ".DBO.SIS_PC_CONSTRUCCIONES2 " +
                                    "WHERE CVE_CAT_ORI=@CuentaCatastral AND STATUSREGISTROTABLA='ACTIVO' " +
                                    "ORDER BY OBJECTID DESC";
 
@@ -167,7 +167,7 @@ namespace ManifestacionEnLinea
                                         AREA = Convert.ToDecimal(reader["AREA"]).ToString("N", culture)
                                     };
                                     construcciones.Add(construccion);
-                                } 
+                                }
                             }
                             else
                             {
@@ -182,7 +182,7 @@ namespace ManifestacionEnLinea
                                 construcciones.Add(sinConstrucciones);
                             }
 
-                           
+
                             GridConst.DataSource = construcciones;
                             GridConst.DataBind();
                         }
@@ -190,110 +190,111 @@ namespace ManifestacionEnLinea
                 }
 
 
-                SqlConnection conInfoCoordenada = new SqlConnection(ConfigurationManager.ConnectionStrings["GDB010" + Municipio + "ConnectionString"].ToString());
-                conInfoCoordenada.Open();
-                SqlCommand cmdInfoCoordenada = new SqlCommand("select top 1 * from GDB010" + Municipio + ".sde.SIS_PC_CENTROIDES where CVE_CAT_EST='" + std + "' and STATUSREGISTROTABLA='ACTIVO' order by OBJECTID desc", conInfoCoordenada);
-                using (SqlDataReader readerInfoCoordenada = cmdInfoCoordenada.ExecuteReader())
-                {
-                    if (readerInfoCoordenada.HasRows)
-                    {
-                        while (readerInfoCoordenada.Read())
-                        {
-                            latitudbd = readerInfoCoordenada.GetDecimal(15);//Centroide X
-                            longitudbd = readerInfoCoordenada.GetDecimal(16);//Centroide Y
-                        }
-                        hiddenLatitud.Value = latitudbd.ToString();
-                        CoordenadaX.Text = latitudbd.ToString("0.##");
-                        hiddenLongitud.Value = longitudbd.ToString();
-                        CoordenadaY.Text = longitudbd.ToString("0.##");
-                    }
-                    else
-                    {
-                        string LatitudP = Request.QueryString["latitud"].ToString();
-                        string LongitudP = Request.QueryString["longitud"].ToString();
-                        hiddenLatitud.Value = LatitudP;
-                        CoordenadaX.Text = LatitudP.Substring(0, 10);
-                        hiddenLongitud.Value = LongitudP;
-                        CoordenadaY.Text = LongitudP.Substring(0, 11);
+                //    SqlConnection conInfoCoordenada = new SqlConnection(ConfigurationManager.ConnectionStrings["GDB010" + Municipio + "ConnectionString"].ToString());
+                //    conInfoCoordenada.Open();
+                //    SqlCommand cmdInfoCoordenada = new SqlCommand("select top 1 * from GDB010" + Municipio + ".DBO.SIS_PC_CENTROIDES where CVE_CAT_EST='" + std + "' and STATUSREGISTROTABLA='ACTIVO' order by OBJECTID desc", conInfoCoordenada);
+                //    using (SqlDataReader readerInfoCoordenada = cmdInfoCoordenada.ExecuteReader())
+                //    {
+                //        if (readerInfoCoordenada.HasRows)
+                //        {
+                //            while (readerInfoCoordenada.Read())
+                //            {
+                //                latitudbd = readerInfoCoordenada.GetDecimal(15);//Centroide X
+                //                longitudbd = readerInfoCoordenada.GetDecimal(16);//Centroide Y
+                //            }
+                //            hiddenLatitud.Value = latitudbd.ToString();
+                //            CoordenadaX.Text = latitudbd.ToString("0.##");
+                //            hiddenLongitud.Value = longitudbd.ToString();
+                //            CoordenadaY.Text = longitudbd.ToString("0.##");
+                //        }
+                //        else
+                //        {
+                //            string LatitudP = Request.QueryString["latitud"].ToString();
+                //            string LongitudP = Request.QueryString["longitud"].ToString();
+                //            hiddenLatitud.Value = LatitudP;
+                //            CoordenadaX.Text = LatitudP.Substring(0, 10);
+                //            hiddenLongitud.Value = LongitudP;
+                //            CoordenadaY.Text = LongitudP.Substring(0, 11);
 
-                    }
+                //        }
 
-                }
-                conInfoCoordenada.Close();
+                //    }
+                //    conInfoCoordenada.Close();
 
-                string VAR_ResultCoordinate = string.Empty;
-                string[] coordenadas = new string[0];
-                int VAR_CantidadCoordendas = 0;
-                List<string> listadeCoordenadas = new List<string>();
-                string conexionGDBTL = System.Configuration.ConfigurationManager.ConnectionStrings["GDB010" + Municipio + "ConnectionString"].ConnectionString;
-                using (SqlConnection connectionP = new SqlConnection(conexionGDBTL))
-                {
-                    connectionP.Open();
+                //    string VAR_ResultCoordinate = string.Empty;
+                //    string[] coordenadas = new string[0];
+                //    int VAR_CantidadCoordendas = 0;
+                //    List<string> listadeCoordenadas = new List<string>();
+                //    string conexionGDBTL = System.Configuration.ConfigurationManager.ConnectionStrings["GDB010" + Municipio + "ConnectionString"].ConnectionString;
+                //    using (SqlConnection connectionP = new SqlConnection(conexionGDBTL))
+                //    {
+                //        connectionP.Open();
 
-                    using (SqlCommand command = new SqlCommand("ObtenerPoligonoP", connectionP))
-                    {
-                        command.CommandType = CommandType.StoredProcedure;
+                //        using (SqlCommand command = new SqlCommand("ObtenerPoligonoP", connectionP))
+                //        {
+                //            command.CommandType = CommandType.StoredProcedure;
 
-                        // Agregar parámetros al procedimiento almacenado
-                        command.Parameters.AddWithValue("@CVE_CAT_ORI", CuentaCatastral);
+                //            // Agregar parámetros al procedimiento almacenado
+                //            command.Parameters.AddWithValue("@CVE_CAT_ORI", CuentaCatastral);
 
-                        // Ejecutar el procedimiento almacenado
-                        using (SqlDataReader readerP = command.ExecuteReader())
-                        {
-                            while (readerP.Read())
-                            {
-                                // Acceder a los campos del resultado utilizando el índice o el nombre del campo
-                                object geomValue = readerP.GetValue(0);
-                                VAR_ResultCoordinate = geomValue.ToString();
-                                coordenadas = VAR_ResultCoordinate.Split(',');
-                                VAR_CantidadCoordendas = coordenadas.Length;
+                //            // Ejecutar el procedimiento almacenado
+                //            using (SqlDataReader readerP = command.ExecuteReader())
+                //            {
+                //                while (readerP.Read())
+                //                {
+                //                    // Acceder a los campos del resultado utilizando el índice o el nombre del campo
+                //                    object geomValue = readerP.GetValue(0);
+                //                    VAR_ResultCoordinate = geomValue.ToString();
+                //                    coordenadas = VAR_ResultCoordinate.Split(',');
+                //                    VAR_CantidadCoordendas = coordenadas.Length;
 
-                            }
+                //                }
 
-                        }
-                    }
-                    connectionP.Close();
-                }
-                for (int x = 0; x < VAR_CantidadCoordendas; x++)
-                {
-                    if (coordenadas[x].Contains("POLYGON"))
-                    {
-                        string VAR_SinEspacio1 = coordenadas[x].Trim();
-                        string VAR_SinPolygon = VAR_SinEspacio1.Replace("POLYGON ((", "");
-                        listadeCoordenadas.Add(VAR_SinPolygon);
-                    }
-                    else
-                    {
-                        if (coordenadas[x].Contains("))"))
-                        {
-                            string VAR_SinEspacio2 = coordenadas[x].Trim();
-                            string VAR_Sinparenectecis = VAR_SinEspacio2.Replace(")", "");
-                            listadeCoordenadas.Add(VAR_Sinparenectecis);
-                        }
-                        else
-                        {
-                            string VAR_SinEspacio3 = coordenadas[x].Trim();
-                            //punto = VAR_SinEspacio.Split(' ');
-                            listadeCoordenadas.Add(VAR_SinEspacio3);
-                        }
+                //            }
+                //        }
+                //        connectionP.Close();
+                //    }
+                //    for (int x = 0; x < VAR_CantidadCoordendas; x++)
+                //    {
+                //        if (coordenadas[x].Contains("POLYGON"))
+                //        {
+                //            string VAR_SinEspacio1 = coordenadas[x].Trim();
+                //            string VAR_SinPolygon = VAR_SinEspacio1.Replace("POLYGON ((", "");
+                //            listadeCoordenadas.Add(VAR_SinPolygon);
+                //        }
+                //        else
+                //        {
+                //            if (coordenadas[x].Contains("))"))
+                //            {
+                //                string VAR_SinEspacio2 = coordenadas[x].Trim();
+                //                string VAR_Sinparenectecis = VAR_SinEspacio2.Replace(")", "");
+                //                listadeCoordenadas.Add(VAR_Sinparenectecis);
+                //            }
+                //            else
+                //            {
+                //                string VAR_SinEspacio3 = coordenadas[x].Trim();
+                //                //punto = VAR_SinEspacio.Split(' ');
+                //                listadeCoordenadas.Add(VAR_SinEspacio3);
+                //            }
 
-                    }
-                }
-                JavaScriptSerializer js = new JavaScriptSerializer();
+                //        }
+                //    }
+                //    JavaScriptSerializer js = new JavaScriptSerializer();
 
 
-                string json = js.Serialize(new { var1 = listadeCoordenadas });
+                //    string json = js.Serialize(new { var1 = listadeCoordenadas });
 
-                //Enviar la lista al cliente a través de una respuesta de JavaScript.
-                ScriptManager.RegisterClientScriptBlock(this, GetType(), "lista", "var lista = " + json + ";", true);
+                //    //Enviar la lista al cliente a través de una respuesta de JavaScript.
+                //    ScriptManager.RegisterClientScriptBlock(this, GetType(), "lista", "var lista = " + json + ";", true);
+
+                //}
+                //else
+                //{
+                //    ScriptManager.RegisterStartupScript(this, GetType(), "Popup", "warningsalert('Error inesperado, comunicarse con el administrador');", true);
+                //}
+
 
             }
-            else
-            {
-                ScriptManager.RegisterStartupScript(this, GetType(), "Popup", "warningsalert('Error inesperado, comunicarse con el administrador');", true);
-            }
-
-
         }
         protected void btnUploadArchivos_Click(object sender, EventArgs e)
         {

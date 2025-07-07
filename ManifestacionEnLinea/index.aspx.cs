@@ -1,24 +1,17 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Data.SqlClient;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
-using System.Windows.Forms;
-using ManifestacionEnLinea.Clases;
-using ManifestacionEnLinea.DataModel;
-using iText.Barcodes;
-using iText.Kernel.Colors;
-using iText.Kernel.Pdf;
-using iText.Kernel.Pdf.Xobject;
+﻿using iText.Kernel.Pdf;
 using iText.Layout;
 using iText.Layout.Element;
 using iText.Layout.Properties;
+using ManifestacionEnLinea.Clases;
+using ManifestacionEnLinea.DataModel;
+using System;
+using System.Collections;
+using System.Configuration;
+using System.Data.SqlClient;
 using System.Text;
+using System.Web;
 using System.Web.Security;
+using System.Web.UI;
 
 namespace ManifestacionEnLinea
 {
@@ -26,31 +19,47 @@ namespace ManifestacionEnLinea
     {
         public static string ClaveCatastralOri { get; set; }
         Clase ws = new Clase();
-        string CAPAP;
+        //string CAPAP;
         string IPServidor = ConfigurationManager.AppSettings["IPServidor"].ToString();
+
         protected void Page_Load(object sender, EventArgs e)
         {
             TxtMunicipio.Attributes.Add("readonly", "readonly");
             if (!Page.IsPostBack)
             {
-                ///*Comprobar conexion SQL*/
-                //bool prueba = ws.Probarconexion();
-                //if (prueba == false)
-                //{
-                //    Mantenimiento.Visible = true;
-                //    form1.Visible = false;
-                //}
-                //else
-                //{
-                //    Mantenimiento.Visible = false;
-                //    form1.Visible = true;
-                //}
-            }
+                if (Request.QueryString["Tipo"] != null &&
+                    Request.QueryString["Identidad"] != null &&
+                    Request.QueryString["tramite"] != null)
+                {
+                    if (uint.TryParse(Request.QueryString["Tipo"], out uint tipoPersonaUint) &&
+                        !string.IsNullOrEmpty(Request.QueryString["Identidad"]) && uint.TryParse(Request.QueryString["tramite"], out uint TramieUint))
+                    {
 
+                        Session["TipoPersona"] = tipoPersonaUint;
+                        Session["ClavePersona"] = Request.QueryString["Identidad"];
+                        Session["idtramite"] = TramieUint;
+
+                    }
+                    ///*Comprobar conexion SQL*/
+                    //bool prueba = ws.Probarconexion();
+                    //if (prueba == false)
+                    //{
+                    //    Mantenimiento.Visible = true;
+                    //    form1.Visible = false;
+                    //}
+                    //else
+                    //{
+                    //    Mantenimiento.Visible = false;
+                    //    form1.Visible = true;
+                    //}
+                }
+            }
         }
+
 
         protected void BuscarInfo_Click(object sender, EventArgs e)
         {
+            string municipioSeleccionado = MunicipiosList.SelectedValue;
             string Municipio = TxtMunicipio.Text;
             string Localidad = TxtLocalidad.Text;
             string Sector = TxtSector.Text;
@@ -59,8 +68,20 @@ namespace ManifestacionEnLinea
             string Condominio = TxtCondominio.Text;
             string ClaveCatastralOriginal = Municipio + Localidad + Sector + Manzana + Predio + Condominio;
             string ClaveCatastralEstandar = string.Empty;
+            string TipoDeTramite = TramiteList.SelectedValue;
 
-            if (ClaveCatastralOriginal.Length != 17)
+
+            if (municipioSeleccionado == "00")
+            {
+                ScriptManager.RegisterStartupScript(this, GetType(), "Popup", "warningsalert('Municipio no ingresado');", true);
+                return;
+            }
+            else if (TipoDeTramite == "00")
+            {
+                ScriptManager.RegisterStartupScript(this, GetType(), "Popup", "warningsalert('Tipo de tramite no ingresado');", true);
+                return;
+            }
+            else if (ClaveCatastralOriginal.Length != 17)
             {
                 ScriptManager.RegisterStartupScript(this, GetType(), "Popup", "warningsalert('Verificar la clave catastral ingresada');", true);
             }
@@ -74,11 +95,10 @@ namespace ManifestacionEnLinea
                 dblibSup = ws.InfoSuperficie(ClaveCatastralOriginal);
 
                 /*Si existe*/
-                if (dblib != null || dblibSup != null )
+                if (dblib != null || dblibSup != null)
                 {
-
                     ClaveCatastralEstandar = dblib.CVE_CAT_EST;
-                    if(ClaveCatastralEstandar == null)
+                    if (ClaveCatastralEstandar == null)
                     {
                         ClaveCatastralEstandar = dblibSup.CVE_CAT_EST;
                     }
@@ -101,7 +121,9 @@ namespace ManifestacionEnLinea
                         }
                         else
                         {
-                            ValidarCartografia(Municipio, ClaveCatastralOriginal, ClaveCatastralEstandar);
+                            Session["TipoDeTramite"] = TipoDeTramite;
+                            Session["ClaveCatrastral"] = ClaveCatastralOriginal;
+                            Response.Redirect($"FormularioDeTramite.aspx");
                         }
                     }
                 }
@@ -111,6 +133,7 @@ namespace ManifestacionEnLinea
                 }
             }
         }
+
 
         protected void ServerCveValidar_Click(object sender, EventArgs e)
         {
@@ -147,7 +170,7 @@ namespace ManifestacionEnLinea
                         var plaintextBytes = Encoding.UTF8.GetBytes(CveCompleta);
                         var encryptedCode = Convert.ToBase64String(MachineKey.Protect(plaintextBytes, "value"));
                         var encryptedValue = HttpUtility.UrlEncode(encryptedCode);
-                        string url = "FormularioPago.aspx?value="+ encryptedValue;
+                        string url = "FormularioPago.aspx?value=" + encryptedValue;
                         string script = "window.open('" + url + "');";
                         Page.ClientScript.RegisterStartupScript(this.GetType(), "openWindow", script, true);
                         //Response.Redirect("FormularioPago.aspx?value=" + encryptedValue);
@@ -161,6 +184,7 @@ namespace ManifestacionEnLinea
             }
         }
 
+
         protected void ValidarCartografia(string Municipio, string ClaveCatastralOriginal, string ClaveCatastralEstandar)
         {
             /*Encriptar la clave catastral*/
@@ -173,7 +197,7 @@ namespace ManifestacionEnLinea
             var Superficie = "";
             var Construcciones = new ArrayList();
             string[] CoordenadasUTMSup;
-            
+
             string[] fullCoordenadas = new string[4];
             var CoordenadasUTMSinEspacios = new ArrayList();
             string LongitudUTM = string.Empty;
@@ -187,7 +211,7 @@ namespace ManifestacionEnLinea
             ManifestacionEnLinea.DataModel.SIS_PC_CENTROIDES dblibCent = new SIS_PC_CENTROIDES();
             dblibCent = ws.CoordenadaCentro(ClaveCatastralEstandar);
             /*Si encontramos centroide*/
-            if(dblibCent != null)
+            if (dblibCent != null)
             {
                 LongitudUTM = dblibCent.CENT_PRED_X.ToString();
                 LatitudUTM = dblibCent.CENT_PRED_Y.ToString();
@@ -209,7 +233,7 @@ namespace ManifestacionEnLinea
                         newsup3 = newsup2.Replace(")", "");
                         CoordenadasUTMSup = newsup3.Split(' ');
                         int tam = CoordenadasUTMSup.Length;
-                        string [] CoordenadasSeparadas = new string[tam];
+                        string[] CoordenadasSeparadas = new string[tam];
                         for (int x = 0; x < CoordenadasUTMSup.Length; x++)
                         {
 
@@ -1559,30 +1583,31 @@ namespace ManifestacionEnLinea
                 }
                 cnnCveP20_VW.Close();
 
-            }
 
-            if(LongitudUTM == "" && LatitudUTM == "")
-            {
-                Session["ClaveCatastral"] = ClaveCatastralOriginal;
-                //ScriptManager.RegisterStartupScript(this, GetType(), "Popup", "warningUbicacion('Para ubicar el predio.');", true);
-                Response.Redirect("UbicarPredio.aspx");
+
+                if (LongitudUTM == "" && LatitudUTM == "")
+                {
+                    Session["ClaveCatastral"] = ClaveCatastralOriginal;
+                    //ScriptManager.RegisterStartupScript(this, GetType(), "Popup", "warningUbicacion('Para ubicar el predio.');", true);
+                    Response.Redirect("UbicarPredio.aspx");
+                }
+                else
+                {
+                    Response.Redirect("InformacionPredio.aspx?value=" + encryptedValue + "&latitud=" + LatitudUTM + "&longitud=" + LongitudUTM);
+                }
+
             }
-            else
-            {
-                Response.Redirect("InformacionPredio.aspx?value=" + encryptedValue + "&latitud=" + LatitudUTM + "&longitud=" + LongitudUTM);
-            }
-           
         }
 
         public void CrearBoletaUbicacion(string ClaveCatastralOriginal)
         {
-            string strFolder = @"\\"+IPServidor +"\\irc\\Archivos\\ManifestacionCatastralEnLinea";
+            string strFolder = @"\\" + IPServidor + "\\irc\\Archivos\\ManifestacionCatastralEnLinea";
             string path = strFolder + "\\" + ClaveCatastralOriginal;
             System.IO.Directory.CreateDirectory(path);
 
             string FilePath = path + "\\BoletaUbicacion.pdf";
 
-            PdfWriter writer = new PdfWriter("\\\\"+IPServidor+"\\irc\\Archivos\\ManifestacionCatastralEnLinea\\" + ClaveCatastralOriginal + "\\BoletaUbicacion.pdf"); //Produccion
+            PdfWriter writer = new PdfWriter("\\\\" + IPServidor + "\\irc\\Archivos\\ManifestacionCatastralEnLinea\\" + ClaveCatastralOriginal + "\\BoletaUbicacion.pdf"); //Produccion
             PdfDocument pdfDoc = new PdfDocument(writer);
             Document document = new Document(pdfDoc);
             //BarcodeQRCode qrCode = new BarcodeQRCode("http://eservicios2.aguascalientes.gob.mx/seguot/seguimientomovil/Catastro.aspx" + "?folio=" + FolioControl.ToString());
